@@ -1,0 +1,145 @@
+{
+    "_meta": {
+        "name": "Default",
+        "author": "HumanAGEs Team",
+        "description": "This is a default session of the interactive map application.",
+        "lang": "en",
+        "creationDate": "Fri Jan 14 2022 14:00:45 GMT+0100 (Central European Standard Time)",
+        "editDate": "Fri Jan 14 2022 16:22:45 GMT+0100 (Central European Standard Time)",
+        "dataKeys": ["datasets", "layers", "strategies", "filters", "legend", "features", "map"],
+	    "hash": "ad23..,ew4xc334"
+    },
+    "datasets": {
+        "_order": ["dataset_def"],
+        "_counter": 1,
+        "dataset_def": {
+            "name": "Dataset #1",
+            "objectId": "RemainsAADR",
+            "databaseName": "AADR_v54.1.p1",
+            "entityName": "remains",
+            "query": "{\"database\":\"AADR_v54.1.p1\",\"objects\":\"remains\",\"filters\":{},\"lang\":\"en\"}",
+            "dating": [-33000, 2000],
+            "isPresent": false,
+            "samplingRatio": 1.0
+        }
+    },
+    "layers": {
+        "_order": ["layer_def"],
+        "_counter": 1,
+        "layer_def": {
+            "layerId": "layer_def",
+            "type": "piechart",
+            "datasetId": "dataset_def",
+            "attributeId": "haplogroup_y",
+            "attributeName": "Haplogroup Y",
+            "attributeType": "tree",
+            "style": {
+                "angle": 0,
+                "positionOffsetRatio": 3.0,
+              "displayLabelProperty": true,
+              "cardinalityByValue": true,
+              "cardinalityBySize": true,
+              "cardinalityByColor": false,
+              "size": [
+                16,
+                40
+              ],
+
+              "fontSizeRatio": 1.5,
+              "weightGrowth": "linear",
+              "weightGrowthFactor": 2,
+              "weightScalingFactor": 2,
+              "standardisationMethod": "max",
+              "valueDisplay": "count",
+              "blendingMode": "normal",
+              "drawingAlpha": 1.0,
+
+              "layerNameToggle": false,
+              "color": "#9f7cc2",
+              "colorToggle": true,
+              "gradient": null,
+
+              "componentValues": {
+                    "special": {
+                        "OTHER": true
+                    },
+                    "data": "selectAll"
+                },
+                "bodyToggle": true,
+
+                "piechartLabelsAppearance": "hover",
+                "piechartLabelsShowPercent": false,
+                "piechartLabelsShowCountData": true,
+                "piechartLabelsSizeRatio": 1,
+                "piechartLabelsOffsetRatio": 1,
+              "otherRatio": 0.02,
+              "otherCount": 0,
+                "showFullStop": false,
+                "outlineSizeRatio": 1,
+                "backgroundSizeRatio": 1,
+                "padding": 0.15,
+                "seed": 0.25,
+                "strategy": "archimedean"
+            },
+            "settings": {
+                "zIndex": 1000,
+                "opacity": 1.0,
+                "visible": true,
+                "title": "Layer default",
+                "blur": 100,
+                "radius": 100
+            }
+        }
+    },
+    "clustering": {
+        "features": {
+            "range": 200,
+            "distance": 0,
+            "useCentroids": true,
+            "showRegions": true,
+            "labelPosition": "cluster",
+            "method": {
+                "distance": "relative",
+                "region": null
+            }
+        },
+        "attributes": {}
+    },
+    "filters": {
+        "timeline": {
+            "isActive": true,
+            "yearFrom": -33000,
+            "yearTo": -27000,
+            "minYear": -36000,
+            "maxYear": 2000,
+
+            "showPresent": true,
+            "eventOnFinish": false,
+            "doFilterRegions": true,
+            "showPropability": true
+        },
+        "attributes": {
+            "isActive": true,
+            "available": [],
+            "configs": {}
+        },
+        "regions": {
+            "isActive": true
+        }
+    },
+    "legend": {
+        "attributes": {
+            "OTHER": {"color": "rgba(126,126,126,1.0)"},
+            "MISSING": {"color": "rgba(0,0,0,1.0)"}
+        },
+        "regions": {}
+    },
+    "features": {},
+    "map": {
+        "position": [19.657016, 52.205848],
+        "zoom": 4,
+        "dataProjection": "EPSG:4326",
+        "mapProjection": "EPSG:3857",
+        "baseLayers": {}
+    }
+}

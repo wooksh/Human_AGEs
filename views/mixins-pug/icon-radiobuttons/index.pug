@@ -1,0 +1,34 @@
+mixin icon-radiobuttons(options, checkedKey)
+	//-.icon-radiobuttons.btn-group.btn-group-toggle(data-toggle='buttons')&attributes(attributes)
+	.icon-checkbox-wrapper&attributes(attributes)
+		each data, key in options
+			if key == checkedKey
+				button.form-check-input.btn.icon-checkbox.active(name=key data-toggle="button" aria-pressed="true" autocomplete="off" class=data.class)
+					i.material-icons
+				label.form-check-label(for=id) !{data.label}
+				//-
+					label.btn.btn-secondary.active.option-btn
+						input(key=keyId type='radio' value=key name=groupName autocomplete='off' checked='')
+						img.icon(loading='eager' src=checkedUrl unchecked-url=uncheckedUrl checked-url=checkedUrl)
+						p.option-text #{data.name}
+			else
+				button.form-check-input.btn.icon-checkbox(name=key data-toggle="button" aria-pressed="false" autocomplete="off" class=data.class)
+					i.material-icons
+				label.form-check-label(for=id) !{data.label}
+				//-
+					label.btn.btn-secondary.option-btn
+						input(key=keyId type='radio' value=key name=groupName autocomplete='off')
+						img.icon(loading='eager' src=uncheckedUrl unchecked-url=uncheckedUrl checked-url=checkedUrl)
+						p.option-text #{data.name}
+
+//-
+			var regions = {
+				'geographical': {
+						'label': 'geograficzny',
+						'class': 'simple'
+				},
+				'political': {
+						'label': 'polityczny',
+						'class': 'simple'
+				}
+		};

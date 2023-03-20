@@ -1,0 +1,39 @@
+include /mixins-pug/custom-button/index.pug
+
+
+mixin tile(id, imgSrc, sessionLink, title, description, content = {steps: [], tags: []})
+    .grid-sizer
+    .grid-item(id=id)
+        .cancel--button
+            i.material-icons close
+        .layer
+        .grid-item--header
+            h5
+                span.title= title
+            hr
+            h6.tags
+                each tag in content.tags
+                    span(class='example-tag badge badge-primary mr-2')= tag
+        
+        .grid-item--image.d-inline-block
+            .position-absolute.top-0.start-0.tile-image(img-url=imgSrc, style="background-image: url(" + imgSrc + ")")
+            .position-absolute.top-0.start-0.w-100.h-100(style="padding: 8%;")
+                .step-image
+
+        span.grid-item--content
+            .header
+                h4.content--header= title
+                .mt-2
+                    each tag in content.tags
+                        span(class='badge badge-primary mr-2')= tag
+            .content
+                i.text-color-dark-faded.mb-1 Hover over a step to see an instruction image.
+                hr
+                .scrollable
+                    p.description= description
+                    each step in content.steps 
+                        p.step.content--text(id=step.id img-url=step.image) !{step.text}
+            .options
+                //-a(href="/en/map?example=" + sessionLink, target="_blank") Open session
+                +custom-button-link("/en/map?example=" + sessionLink, 'Open example', 'map', newPage=true)(class='palette-tertiary no-focus mb-0')
+                +custom-button-link("/en/examples?id=" + sessionLink, '</Link>', null)(class='palette-tertiary no-focus mb-0')

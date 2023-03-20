@@ -1,0 +1,10 @@
+bower_components
+node_modules
+dist
+doc
+.sass-cache
+.coverage-results
+.idea
+*.iml
+yarn.lock
+package-lock.json

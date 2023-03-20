@@ -1,0 +1,27 @@
+@import "mixins-sass/multi-browser-support";
+
+@mixin dot($size, $borderWidth, $hoverBorderWidth, $borderColor, $primaryColor, $secondaryColor, $animation) {
+    top: 0;
+    left: 0;
+    height: $size;
+    width: $size;
+    border-radius: 50%;
+    background-color: $primaryColor;
+    border: $borderWidth solid $borderColor;
+    
+    position: relative;
+
+    @if $animation == "shrink" {
+        &:hover {
+            $difference: $hoverBorderWidth - $borderWidth;
+            height: calc($size - $difference);
+            width: calc($size - $difference);
+            border: $hoverBorderWidth solid $secondaryColor;
+            cursor: pointer;
+        }
+
+        $anim-delay: 300ms;
+        $anim-function: ease;
+        @include transition(height $anim-delay $anim-function, width $anim-delay $anim-function, border $anim-delay $anim-function);
+    }
+}

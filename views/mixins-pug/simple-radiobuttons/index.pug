@@ -1,0 +1,29 @@
+mixin simple-radiobuttons(groupName, options, checkedKey)
+    .simple-radiobutton-wrapper(id=groupName)&attributes(attributes)
+        each data, key in options
+            if key == checkedKey
+                .form-check
+                    input.form-check-input(type='radio' name=groupName checked='' value=key) 
+                    //- add id?
+                    label.form-check-label(for=key) !{data.label}
+            else
+                .form-check
+                    input.form-check-input(type='radio' name=groupName value=key)
+                    //- add id?
+                    label.form-check-label(for=key) !{data.label}
+
+
+
+mixin simple-radiobuttons-inline(groupName, options, checkedKey)
+    span.simple-radiobutton-wrapper(id=groupName)&attributes(attributes)
+        each data, key in options
+            if key == checkedKey
+                .form-check.d-inline-block.mr-2
+                    input.form-check-input(type='radio' name=groupName checked='' value=key) 
+                    //- add id?
+                    label.form-check-label(for=key) !{data.label}
+            else
+                .form-check.d-inline-block.mr-2
+                    input.form-check-input(type='radio' name=groupName value=key)
+                    //- add id?
+                    label.form-check-label(for=key) !{data.label}

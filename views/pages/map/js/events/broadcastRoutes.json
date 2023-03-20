@@ -1,0 +1,65 @@
+{
+	"map-content-update": ["#legend-content"],
+	
+	"selected-dataset-update": ["#query-builder", "#query-filters-button"],
+
+	"time-filter-update": ["#timeline", "#time-filter", "#timeline-range", "#legend-content", "#map"],
+	"time-present-filter-update": ["#present-switch", "#time-filter-present-toggle", "#map"],
+
+	"query-builder-update": ["#query-filters-button"],
+
+	"layer-add": ["#map", "#legend-layers", "#features-clustering"],
+	"layer-map-change": ["#layers-container"],
+	"layer-remove": ["#map", "#new-layer-button", "#legend-layers"],
+
+	"layer-type-change": ["#map", "select.select-attribute", ".layer .setting", "#legend-layers"],
+	"layer-attribute-change": ["#map", "select.select-value"],
+	"layer-initialization": ["#new-layer-button", ".clone-button", ".layer", "select.select-layer-dataset", "select.select-attribute", "select.select-attribute-type", "select.select-value", "#map"],
+	"layer-value-change": ["#map"],
+	"layer-config-change": ["#map"],
+	"layer-color-change": ["#map", ".layer", "#legend-layers"],
+	"layer-gradient-change": ["#map", ".layer", ".layer-header", "#legend-layers"],
+	"layer-visibility-change": ["#legend-layers"],
+
+	"layer-dataset-change": ["select.select-attribute", "select.select-attribute-type", "#map"],
+
+	"layer-setting-change": ["#map"],
+
+	"layer-name-change": ["#legend-layers"],
+
+	"cluster-config-change": ["#features-clustering", ".layer", "#map"],
+	"cluster-distance-type-changed_REMOVE": ["#clustering-slider", "#distance-slider"],
+
+	"cluster-strategy-change": ["#features-clustering", "#features-clustering .session-option", "#clustering-slider", "#distance-slider", ".layer", "#map"],
+	"cluster-region-show": ["#map"],
+
+	"cluster-setting-change": [".layer", "#map"],
+
+	"cluster-range-change": ["#features-clustering"],
+
+	"panel-activated": ["#legend-wrapper"],
+
+	"select-features-clustering": ["#features-clustering", ".features-clustering .session-option"],
+
+	"clustering-attribute-change": ["#select-cluster-attribute", "#select-cluster-attribute-type", "#select-filter-attribute", "#select-filter-attribute-type", "select.select-value", "#map"],
+	"filter-attribute-change": ["#select-filter-attribute", "#select-filter-attribute-type", "select.select-value", "#map"],
+
+	"filter-region-change": ["#map"],
+
+	"session-load": ["#loading-session-wrapper", ".session-option", "#map", "#guide-button"],
+
+	"finished-fetching-attributes": ["#select-filter-attribute", "#select-filter-attribute-type", "#select-cluster-attribute", "#select-cluster-attribute-type", "select.select-attribute", "select.select-attribute-type"],
+	
+	"dataset-add": ["#query", "#map", "#select-cluster-attribute", "#select-cluster-attribute-type", "#select-filter-attribute", "#select-filter-attribute-type", "#new-layer-button", ".layer", "#clustering-mode-select"],
+	"dataset-update": [".layer"],
+	"dataset-remove": ["#map", "#select-cluster-attribute", "#select-cluster-attribute-type", "#select-filter-attribute", "#select-filter-attribute-type", "#new-layer-button", ".layer", "select.select-attribute"],
+	"update-session": [".session"],
+
+	"dataset-sampled": ["#clustering-mode-select"],
+
+	"dataset-shuffled": ["#clustering-mode-select"],
+
+	"attribute-fetched": [".layer"],
+
+	"map-modal": ["#map"]
+}

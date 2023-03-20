@@ -1,0 +1,182 @@
+extends /templates/basic/index.pug
+
+
+block append links
+	link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/css/bootstrap-slider.min.css' integrity='sha256-+xqVrdbLgHjiKF8ULvcwzQ545r7lCVfOqXlNJCB3XOg=' crossorigin='anonymous' referrerpolicy="no-referrer")
+	link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css' integrity='sha256-g7HgoMySZyonuPwHTORf+uGHEeOm7VRI2kfXWXlJnco=' crossorigin='anonymous' referrerpolicy="no-referrer")
+	link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/jQuery-QueryBuilder@2.5.2/dist/css/query-builder.default.min.css' integrity='sha256-t0OO5vutCzErqiAiLqVcVPbR3krMH9aTnzbtbjmiFUU=' crossorigin='anonymous' referrerpolicy="no-referrer")
+	link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css' integrity='sha256-O2vM7yYY3KvcJBl9KlWgcWIDi2Gw+oW39+WceHpZMeA=' crossorigin='anonymous' referrerpolicy="no-referrer")
+	link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap4-tagsinput@4.1.3/tagsinput.min.css' crossorigin='anonymous' referrerpolicy="no-referrer")
+	link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.css" integrity="sha512-KuSX+43gVS5MEIJD2ewtrFPOHqC1PJnL8o2f5ciggPC0JUZ8XV0QXlfArO1mSzKkVFdRjsBDfrTU96C5SuRfqQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
+	link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/grapick@0.1.13/dist/grapick.min.css" integrity="sha256-Mmwj4BhpOgPwY2KGqntBnifqo6bpTkrO72LpQzIilWM=" crossorigin="anonymous" referrerpolicy="no-referrer")
+	link(rel="stylesheet" href="https://unpkg.com/bootstrap-table@1.20.0/dist/bootstrap-table.min.css" crossorigin='anonymous' referrerpolicy="no-referrer")
+	//-link(rel="stylesheet" href="https://cdn.jsdelivr.net/npm/anno.js@1.0.3/dist/anno.min.css" crossorigin='anonymous' referrerpolicy="no-referrer")
+
+	//-link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/6.3.7/tippy.min.css" integrity="sha512-HbPh+j4V7pXprvQMt2dtmK/zCEsUeZWYXRln4sOwmoyHPQAPqy/k9lIquKUyKNpNbDGAY06UdiDHcEkBc72yCQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
+	link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/5.0.3/tippy.min.css" integrity="sha512-BK9juS9Nt9njTjarKxnzXbvMHxwsdE/SK109TTD5LX//FVd5+WCumh5QCzk2dhenr3PV4p6C/igRGbSqfWJ6QA==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+	//- LOCAL MODULES -//
+	link(rel="stylesheet" href="/css/modules/anglepicker-1.0.1.css")
+	link(rel="stylesheet" href="/css/modules/anno.css")
+
+	script. 
+		//-window.metadata = JSON.parse( !{JSON.stringify(metadata).replace(/<\//g, '<\\/')} );
+		window.example = "!{example}";
+
+	include /assets/map-styles.pug
+	include /assets/archeo_map-styles.pug
+
+
+block append navright
+	include /mixins-pug/custom-button/index.pug
+	i#guide-prompt.my-auto.mr-3.navbar-prompt.hidden Try our...
+		
+	+custom-button("Guided tour", "info_outline")(id="guide-button" class="palette-tertiary-outline no-focus mb-0" title="Run guide tour presenting main application features")
+
+
+block loading-page
+	.loading-page.loading-content.overlay.d-flex.align-items-center.justify-content-center(style="z-index: 99999999; font-size: 2rem;")
+		span Initializing map...
+		.ml-4.spinner-border(role='status')
+
+
+block left-sidebar
+	include includes/left-sidebar.pug
+
+block content
+	include /mixins-pug/timeline/index.pug
+	include /mixins-pug/spectrum-color-input/index.pug	
+	include /mixins-pug/gradient-input/index.pug
+	include includes/presets/dictionaries/patterns.pug
+	include includes/presets/dictionaries/mapToolbox.pug
+
+	include includes/presets/map-modals.pug
+
+	#content-wrapper.pt-4.overflow-hidden.active-left.active-right
+		.mb-4.position-relative
+			#loading-session-wrapper
+				.loading-content.overlay.d-flex.align-items-center.justify-content-center(style="z-index: 2; font-size: 1.5rem;")
+					span Loading session...
+					.ml-4.spinner-grow(role='status')
+			#map-wrapper
+				+pattern-modal()
+				+gradient-modal()
+				+photo-modal()
+				+basemap-modal()
+				+map-features-settings-modal()
+
+				#map.map 
+				//-#map.map .session-option
+				#top-controls-wrapper.viewport-wrapper.container-fluid
+					#top-controls-container.p-1.row
+						#map-controls-panel.map-panel
+							#zoom-slider.map-control
+							#print-control.map-control.d-none
+						.map-panel.pt-3
+							#map-options-menu-wrapper(style="pointer-events: auto;")
+								+custom-button-dropdown('map-options-menu', mapToolbox, text = '', iconName = 'settings', title="Show map settings")(class='palette-tertiary-light no-focus position-relative no-text' style='z-index:10;')
+							#zoom.map-control
+						.map-panel.pt-3.col.text-center
+							#map-title-wrapper.hidden
+								div
+									span#map-title
+								div
+									span#map-subtitle
+
+						#legend-panel.map-panel.pt-3
+							#legend-wrapper.map-control
+								- var targetId = 'legend';
+								+accordion-header(targetId, 'Legend')(id="legend-header" class="")
+								.show.collapse(id=targetId)
+									//- Colorpicker must be before scroll panel -//
+									#legend-layer-color-picker
+									#legend-attribute-color-picker
+
+									#legend-content-wrapper
+										#legend-content
+											#legend-layers.hidden
+												h6.section-header Data layers
+											#legend-regions.mt-2.hidden
+												h6.section-header Regions
+											#legend-attributes
+
+				#bottom-controls-wrapper.viewport-wrapper
+					.p-2.mb-5
+						.map-panel.float-left.w-50
+						.map-panel.float-right.w-50
+							#map-scale.position-relative
+
+					//- +timeline('gradient')
+					#time-controls-wrapper
+						+timeline('timeline', "time-theme", "present-switch")
+						//-(title="Determines interval of the time filter")
+						+timeline('timeline-range', "range-theme")
+						//-(title="Determines min-max range for the time filter")
+
+block right-sidebar
+	include includes/right-sidebar.pug
+
+block hidden
+	include includes/presets/map-modals.pug
+
+	+query-builder-modal()
+	+download-modal()
+	+session-modal()
+
+	include includes/presets/layer-templates.pug
+	include includes/presets/dataset-templates.pug
+	include includes/presets/session-templates.pug
+	include includes/presets/admixture-proportion-templates.pug
+	include /mixins-pug/map-modal/index.pug
+
+
+block footer
+
+
+block append scripts
+	//-
+		script(src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-chtml.js" integrity="sha256-z47L98YXVhVIaY0uyDzt675P5Ea+w3RsPh9VD5NuoTY=" crossorigin="anonymous" referrerpolicy="no-referrer")
+		script.
+			window.PlotlyConfig = {MathJaxConfig: 'local'};
+
+	script(defer type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js' integrity='sha256-Z639rJO57BiZzQDlWsGyF+EJ3Fs3nD4pQPkfimTy3S8=' crossorigin='anonymous' referrerpolicy="no-referrer")
+	script(defer type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js' integrity='sha256-sfG8c9ILUB8EXQ5muswfjZsKICbRIJUG/kBogvvV5sY=' crossorigin='anonymous' referrerpolicy="no-referrer")
+	script(defer type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/dot/1.1.3/doT.min.js' integrity='sha256-0Mj4wysSsxKrjqVsgnOgOeRZbPreFi/T3+zb+cyR7Jw=' crossorigin='anonymous' referrerpolicy="no-referrer")
+	script(defer type="text/javascript" src='https://cdn.jsdelivr.net/npm/jquery-extendext@1.0.0/jquery-extendext.min.js' referrerpolicy="no-referrer" crossorigin='anonymous')
+	script(defer type="text/javascript" src='https://cdn.polyfill.io/v2/polyfill.min.js?features=fetch,requestAnimationFrame,Element.prototype.classList,URL' referrerpolicy="no-referrer" crossorigin='anonymous')
+	script(defer type="text/javascript" src='https://cdn.jsdelivr.net/npm/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js' integrity='sha256-p6I+tuAqpKQhe7ldkP1yo/Du0QRYjm1O3reSKIiS4AM=' crossorigin='anonymous' referrerpolicy="no-referrer")
+	script(defer type="text/javascript" src='https://cdn.jsdelivr.net/npm/bootstrap4-tagsinput@4.1.3/tagsinput.min.js' crossorigin='anonymous' referrerpolicy="no-referrer")
+	script(defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.0/d3.min.js" integrity="sha512-0x7/VCkKLLt4wnkFqI8Cgv6no+AaS1TDgmHLOoU3hy/WVtYta2J6gnOIHhYYDJlDxPqEqAYLPS4gzVex4mGJLw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+	script(defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js" integrity="sha512-HjKxWye8lJGPu5q1u/ZYkHlJrJdm6KGr89E6tOrXeKm1mItb1xusPU8QPcKVhP8F9LjpZT7vsu1Fa+dQywP4eg==" crossorigin="anonymous" referrerpolicy="no-referrer")
+	
+	script(defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/spectrum.min.js" integrity="sha512-1aNp9qKP+hKU/VJwCtYqJP9tdZWbMDN5pEEXXoXT0pTAxZq1HHZhNBR/dtTNSrHO4U1FsFGGILbqG1O9nl8Mdg==" crossorigin="anonymous" referrerpolicy="no-referrer")
+	if lang === 'pl'
+		script(defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/spectrum/1.8.1/i18n/jquery.spectrum-pl.min.js" integrity="sha512-0UvyL53U6fv8w7tC67XkRppluiO3L3+CmybHSmBI44qCbq7uAnqh1FABbNuHXfLFAlWgfs225CCWppX7DELwnw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+	script(defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/grapick@0.1.13/dist/grapick.min.js" integrity="sha256-JJRsqxxtOYcINfLqsBhGYa/fQOBx6m/pk2xDnaPKEOI=" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+	script(defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/seedrandom@3.0.5/seedrandom.min.js" integrity="sha256-0usXoFraKr8ZyLyx8PGuYrttpdWaadxkFM7QhwSojNE=" crossorigin="anonymous" referrerpolicy="no-referrer")
+	script(defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js" referrerpolicy="no-referrer" crossorigin='anonymous')
+	script(defer type="text/javascript" src="https://unpkg.com/bootstrap-table@1.20.0/dist/bootstrap-table.min.js" referrerpolicy="no-referrer" crossorigin='anonymous')
+	script(defer type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js' integrity='sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==' crossorigin='anonymous' referrerpolicy="no-referrer")
+
+	script(defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollintoview/1.8/jquery.scrollintoview.min.js" integrity="sha512-+ZUCgnKxLSb0lRJ0zMblOFgJwx0gDkl3AcYnEf/JzKUY8zgFFWibpwJfute3VMwXXWy5L10qfxk7qHk6q1BKrQ==" crossorigin="anonymous" referrerpolicy="no-referrer")
+	
+	//-script(defer src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/6.3.7/tippy.umd.min.js" integrity="sha512-2TtfktSlvvPzopzBA49C+MX6sdc7ykHGbBQUTH8Vk78YpkXVD5r6vrNU+nOmhhl1MyTWdVfxXdZfyFsvBvOllw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/tippy.js/5.0.3/tippy-bundle.iife.min.js" integrity="sha512-a8JO1iPV/bLQBPmVJIedQQRNGyJgGEGYapD2beVsksjcyclDYPP/dGhovCLqCdUraatoJbda2E3xkm3/DHhMJA==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+	//- LOCAL MODULES -//
+	script(defer src="/js/modules/jquery.simulate.js" type="text/javascript")
+	script(defer src="/js/modules/anglepicker-1.0.1.js" type="text/javascript" )
+	script(defer src="/js/modules/anno.js" type="text/javascript" )
+
+
+	include /assets/archeo_ui-scripts.pug
+	include /assets/archeo_search-scripts.pug
+	include /assets/archeo_legend-scripts.pug
+	include /assets/ol-scripts.pug
+	include /assets/archeo_map-scripts.pug
+	include /assets/map-scripts.pug
+
+	script(src='https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.33.1/plotly-basic.min.js' integrity='sha256-qPutqhXQitI6ydhltlGqtkrcj2rkNRQde60nRB3BIgg=' crossorigin='anonymous')

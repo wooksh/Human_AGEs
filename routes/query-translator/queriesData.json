@@ -1,0 +1,26 @@
+{
+	"RemainsAADR": {
+		"selectionSet": [
+			"site(lang: $lang)",
+			"id",
+			"dating"
+		]
+	},
+	"PersonAADR": {
+		"selectionSet": [
+			"place(lang: $lang)",
+			"id"
+		]
+	},
+	"PersonEMPOP": {
+		"selectionSet": [
+			"place(lang: $lang)",
+			"id"
+		]
+	},
+	"default": {
+		"variablesDeclarations": {
+			"$lang": "String"
+		}
+	}
+}

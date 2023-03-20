@@ -1,0 +1,33 @@
+/*---------------------------------------------------*/
+/*** FAQ ***/
+/*---------------------------------------------------*/
+
+.question {
+    width: 100%;
+    position: relative;
+}
+
+.header {
+    cursor: pointer;
+    width: 100%;
+
+    .input-group-prepend {
+        width: 100%;
+
+        .input-group-text {
+            width: 100%;
+        }
+    }
+}
+
+.answer {
+    padding: 2rem;
+    height: 300px;
+    background: #fff;
+    border: 1px solid rgb(206, 206, 206);
+    border-width: 0px 1px 1px 1px;
+}
+
+#plot-pca {
+    min-height: 65vh;
+}

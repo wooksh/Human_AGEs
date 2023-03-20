@@ -1,0 +1,52 @@
+.gradient-input {
+    & .grp-wrapper {
+        border: 0.2em #113d64 solid;
+        box-sizing: content-box;
+    }
+
+    & .grp-handler-cp-c {
+        display: block !important;
+    }
+
+    & .grp-handler-drag {
+        background-color: rgba(255,255,255,0.7) !important;
+        box-shadow: 0 0 0.3em rgba(0,0,0,0.5) !important;
+    }
+
+    /*& .grp-handler-selected .grp-handler-drag {
+        background-color: rgba(0,0,0,0.7);
+        box-shadow: 0 0 0.3em rgba(255,255,255,0.8);
+    }*/
+    
+
+    & .grp-handler-cp-wrap {
+        width: 1.2em;
+        height: 1.2em;
+        margin-left: -0.5em;
+        border: 0.2em solid #fff;
+        box-shadow: 0 0 0.3em rgba(0,0,0,0.5);
+    }
+
+    & .grp-handler-close {
+        color: rgba(0,0,0,0.6);
+        box-shadow: 0 0 0.3em rgba(0,0,0,0.5);
+        background-color: #fff;
+        width: 1em;
+        height: 1em;
+        margin-left: -0.4em;
+        line-height: 1em;
+        font-size: 1.1em;
+    }
+
+    & .grp-handler {
+        width: 0.2em;
+        margin-left: -0.2em;
+
+        //&.grp-handler:first-child, &.grp-handler:last-child {
+        &.grp-handler-fixed {
+            & .grp-handler-close-c, & .grp-handler-drag {
+                visibility: hidden;
+            }
+        }
+    }
+}

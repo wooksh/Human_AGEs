@@ -1,0 +1,9 @@
+mixin results-accordion(resultsId, title, isCollapsed = true)
+	div(id=`${resultsId}-wrapper` class=`object-container results-wrapper`)&attributes(attributes)
+		+accordion-header(`${resultsId}-accordion`, title, isCollapsed = true)(class="handle accordion-subsection-header collapsed")
+		.collapse(id=`${resultsId}-accordion`)
+			.sidebar-setting.object-content.palette-bg-color-light-bg
+				.loading-results-wrapper.my-5.loading
+					.loading-content.d-flex.align-items-center.justify-content-center(style="z-index: 2; font-size: 1.5rem;")
+						span Loading results...
+						.ml-4.spinner-grow(role='status')

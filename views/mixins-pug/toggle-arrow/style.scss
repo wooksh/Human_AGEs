@@ -1,0 +1,54 @@
+@import "mixins-sass/_multi-browser-support";
+@import "mixins-sass/_colors";
+
+
+/* By default it's pointing right */
+.toggle-arrow {
+    width: 1.25em;
+    /*height: 1.25em;*/
+    display: inline-block;
+    position: relative;
+    margin: 0 1em;
+    font-size: 1em;
+
+    $angle: 45deg;
+
+    &.left {
+        @include transform(rotate(180deg));
+    }
+
+    &.top {
+        @include transform(rotate(90deg));
+    }
+
+    &.bottom {
+        @include transform(rotate(90deg));
+        $angle: -45deg;
+    }
+
+    & .tip {
+        position: absolute;
+        background-color: $text-color-dark; 
+        display: block;
+        @include transition( all 0.2s ease );
+        right: 0;
+    }
+
+    & .tip {
+        &:first-of-type {
+        @include transform( rotate($angle) );
+        }
+        &:last-of-type {
+        @include transform( rotate(-$angle) );
+        }
+    }
+
+    &.active .tip, .accordion-header.collapsed > & .tip {
+        &:first-of-type {
+        @include transform( rotate(-$angle) );
+        }
+        &:last-of-type {
+        @include transform( rotate($angle) );
+        }
+    }
+}

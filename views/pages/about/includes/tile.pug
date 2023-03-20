@@ -1,0 +1,42 @@
+//- Size - size of a tile in conventional units
+//- imgSrc - webpath to the image resource
+
+//- name - Name of a person
+//- surname - Surname of a person
+//- affiliation - Affiliation of a person
+//- degree - scientific degree, e.g. student bioinformatyki, profesor, magister, doktor, doktor habilitowany, inżynier
+//- profession - profession: webdeveloper, archeolog, genetyk
+//- role - role in a team, e.g. wykonawca (realizator), specjalista, analityk, koordynator, szef zespołu, kreator, ewaluator
+
+//- descr - description about a person inside a tile
+//- email - contact email
+//- phone - contact phone
+mixin tile(size, imgSrc, name, surname, affiliation, degree, role, profession, descr, email, phone)
+    - var fullName = name + " " + surname;
+    .grid-sizer
+    div(class="grid-item grid-item--width" + size.width + " grid-item--height" + size.height + " " + role)
+        .cancel--button
+        .layer
+        .grid-item--header
+            h5
+                span.name= name + " "
+                span.surname= surname
+            h6.role= role
+            hr
+            h6.affiliation= affiliation
+        .scrollable
+            .grid-item--image.float-left
+                img(src=imgSrc)
+            .grid-item--content.float-right
+                h4.content--header= fullName
+                h5.profession.font-italic.font-weight-normal= profession
+                hr
+                p.content--text= descr
+                hr
+                .contact
+                    .mail-text
+                        i.fa.fa-envelope(aria-hidden='true')
+                        span= email
+                    .phone-text
+                        i.fa.fa-phone(aria-hidden='true')
+                        span= phone

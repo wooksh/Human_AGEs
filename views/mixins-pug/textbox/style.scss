@@ -1,0 +1,77 @@
+@import "mixins-sass/colors";
+
+
+.rule-value-container .icon-textbox-wrapper {
+    width: 20em !important;
+}
+
+
+.icon-textbox-wrapper {
+    padding: 0;
+
+    & > input {
+       	border-radius: 0;
+        padding-right: 2.5em;
+    }
+
+    & > .input-group-append {
+		border-radius: 0;
+        background-color: rgba(0,0,0,0);
+        position: absolute;
+        right: 0.75em;
+        bottom: 0;
+        top: 0;
+
+        & .material-icons {
+            align-self: center;
+            color: $text-color-dark-faded;
+            z-index: 10;
+        }
+    }
+}
+
+
+.icon-button-textbox-wrapper {
+    padding: 0;
+
+    & input {
+        border-radius: 0;
+        padding-right: 2.5em;
+    }
+
+    & .icon-append {
+		border-radius: 0;
+        background-color: rgba(0,0,0,0);
+        position: absolute;
+        right: 0.75em;
+        bottom: 0;
+        top: 0;
+
+        & .material-icons {
+            align-self: center;
+            color: $text-color-dark-faded;
+            z-index: 10;
+        }
+    }
+
+    & .custom-button {
+        margin: 0;
+        padding: 0 .75rem;
+
+        & .material-icons {
+            margin-left: 0;
+        }
+    }
+}
+
+
+.button-textbox-wrapper {
+    & .custom-button {
+        margin: 0;
+        padding: 0 .75rem;
+
+        & .material-icons {
+            margin-left: 0;
+        }
+    }
+}

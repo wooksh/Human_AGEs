@@ -1,0 +1,31 @@
+#team-section.mb-5.container-fluid
+    h1.mb-4 Nasz zespół 
+    .mb-4
+        h5.d-inline.font-weight-normal.mr-3 Sortuj
+        button#sort-order.btn.btn-secondary.mr-2(type='button'): i.fas.fa-sort-up
+        button#sort-by-name.btn.btn-primary.mr-2(type='button') Imię
+        button#sort-by-surname.btn.btn-primary.mr-2(type='button') Nazwisko
+        button#sort-by-role.btn.btn-primary(type='button') Rola w zespole
+
+    .row.mb-4
+        h5.d-inline.font-weight-normal.mr-1 Filtruj
+        //-
+            - var roles = ["wykonawca", "specjalista", "analityk", "koordynator", "szef zespołu", "kreator", "ewaluator"]
+            +select("filter-by-role", "Rola w zespole", roles, "col-sm-4")
+            - var affilation = ["Rzeczpospolita Polska", "Królestwo Polskie"]
+            +select("filter-by-affiliation", "Afiliacja", affilation, "col-sm-4")
+
+    .content-fluid.mb-4
+        .grid
+            - var descr = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus facilis dolorum officiis nemo tempora ad non, aliquid sed similique cupiditate inventore impedit quae odio dolore soluta explicabo nisi laborum?'
+            +tile({width: 1, height: 1}, 'img/adas.png', 'Adam', 'Mickiewicz', 'Rzeczpospolita Polska', 'doktor poezji', 'specjalista', 'poeta', descr, 'adam.mickiewicz@nowogrodek.pl', "+48 017 981 855")
+            +tile({width: 1, height: 1}, 'img/adas.png', 'Adam', 'Mickiewicz', 'Rzeczpospolita Polska', 'doktor poezji', 'specjalista', 'poeta', descr, 'adam.mickiewicz@nowogrodek.pl', "+48 017 981 855")
+            
+            +tile({width: 1, height: 1}, 'img/słowacki.jpg', 'Juliusz', 'Słowacki', 'Rzeczpospolita Polska', 'magister poezji', 'wykonawca', 'poeta', descr, 'juliusz.slowacki@krzemieniec.pl', '+48 018 091 849')
+            +tile({width: 1, height: 1}, 'img/słowacki.jpg', 'Juliusz', 'Słowacki', 'Rzeczpospolita Polska', 'magister poezji', 'wykonawca', 'poeta', descr, 'juliusz.slowacki@krzemieniec.pl', '+48 018 091 849')
+            
+            +tile({width: 1, height: 1}, 'img/adas.png', 'Adam', 'Mickiewicz', 'Rzeczpospolita Polska', 'doktor poezji', 'specjalista', 'poeta', descr, 'adam.mickiewicz@nowogrodek.pl', "+48 017 981 855")
+            +tile({width: 1, height: 1}, 'img/słowacki.jpg', 'Juliusz', 'Słowacki', 'Rzeczpospolita Polska', 'magister poezji', 'wykonawca', 'poeta', descr, 'juliusz.slowacki@krzemieniec.pl', '+48 018 091 849')
+    
+            +tile({width: 1, height: 1}, 'img/chrobry.jpg', 'Bolesław', 'Chrobry', "Królestwo Polskie", 'profesor nauk humanistycznych', 'szef zespołu', 'król', descr, 'boleslaw.chrobry@malopolska.pl', '+48 009 921 025')
+            +tile({width: 1, height: 1}, 'img/chrobry.jpg', 'Bolesław', 'Chrobry', "Królestwo Polskie", 'profesor nauk humanistycznych', 'szef zespołu', 'król', descr, 'boleslaw.chrobry@malopolska.pl', '+48 009 921 025')

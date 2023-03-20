@@ -1,0 +1,273 @@
+include ./dictionaries/blending-modes.pug
+include ./dictionaries/layers.pug
+include ./dictionaries/growth-functions.pug
+include ./dictionaries/clustering.pug
+include ./dictionaries/standardisation.pug
+include ./dictionaries/clustersValue.pug
+include ./dictionaries/tagStrategies.pug
+include ./dictionaries/piechartsLabel.pug
+
+include /mixins-pug/textbox/index.pug
+include /mixins-pug/spectrum-color-input/index.pug
+include /mixins-pug/gradient-input/index.pug
+include /mixins-pug/simple-radiobuttons/index.pug
+include /mixins-pug/tooltip/index.pug
+
+//-include /mixins-pug/icon-checkbox/index.pug
+
+div
+	li(id="layer-template" class=`object-container` style='display: none;' layer-id = '', layer-type = '', database-id = '')&attributes(attributes)
+		+accordion-header-button('layer-template-accordion', 'Layer', 'visibility','visibility', false, true, iconTitle="Toggle layer visibility")(class="handle accordion-subsection-header layer-header")
+		.show.collapse(id='layer-template-accordion')
+			.sidebar-setting.object-content.palette-bg-color-light-bg
+				+custom-button('Clone layer', 'layers', null, true, "Cloning layer...")(class='clone-button mb-3 mr-2 palette-tertiary-light no-focus' title="Creates a clone of the layer")
+
+				//- layers
+				.subsection
+					h6.subsection-header.mt-0 Layer name
+					+icon-textbox('layer-name-textbox', 'Type in new layer name...', 'edit', 'layer-name')
+
+				.subsection
+					h6.subsection-header Layer source
+						+tooltip("tp_layer-src-sl")
+					+dropdown-no-picker('select-layer-dataset', {}, 'Choose a dataset...')(class='select-layer-dataset')
+
+				.subsection
+					h6.subsection-header Displayed attribute
+						+tooltip("tp_layer-attr-sl")
+					+dropdown-no-picker('select-attribute', {}, 'Choose an attribute...')(class='select-attribute')
+					div.mt-3.d-none
+						+dropdown-no-picker('select-attribute-type', {}, 'Choose a type...')(class='select-attribute-type')
+
+				.subsection
+					h6.subsection-header Layer type
+						+tooltip("tp_layer-type-sl")
+					+dropdown-no-picker('select-layer-type', layerTypes, 'Choose a layer type...')(class='select-layer-type')
+
+					.card.settings.layer-type-settings.mt-3
+						- targetId = 'layer-type-settings';
+						+accordion-header-settings(targetId, 'Layer type settings', true)(class="card-header")
+						.collapse.position-relative(id=targetId)
+							.point-settings.type-settings.d-none.position-relative(style="z-index: 11")
+								.card-body
+									.subsection 
+										h6.subsection-header Points appearance
+											+tooltip("tp_layer-point-app")
+										+icon-checkbox('point-appearance-body', 'simple', 'show point\'s body', true)(class='setting')
+										p.mb-2.mt-3 Body size ratio
+										input.setting.mb-4(id='point-appearance-body-size' type="text" class="js-range-slider")
+										p.mb-2.mt-3 Stroke size ratio
+										input.setting.mb-4(id='point-appearance-outline-size' type="text" class="js-range-slider")
+
+							.heatmap-settings.type-settings.d-none.position-relative
+								.card-body
+									.subsection
+										h6.subsection-header Heatmap radius
+											+tooltip("tp_layer-heat-rad")
+										input.setting(id='heatmap-radius' type="text" class="js-range-slider")
+										h6.subsection-header Heatmap blur
+											+tooltip("tp_layer-heat-blur")
+										input.setting(id='heatmap-blur' type="text" class="js-range-slider")
+
+							.piechart-settings.type-settings.d-none.position-relative
+								.card-body
+									.subsection
+										h6.subsection-header Labels appearance
+											+tooltip("tp_layer-pie-lab")
+										span Show piechart data labels
+										+simple-radiobuttons('piechart-label-appearance', piechartsLabel, 'hover')(class="session-option")
+										.mt-3
+											+icon-checkbox('piechart-label-count-toggle', 'simple', 'show count data', false)(class='setting piechart-label-count-toggle')
+										.mt-3
+											+icon-checkbox('piechart-label-percent', 'simple', 'show data percentages', false)(class='setting piechart-label-percent')
+
+										p.mb-2.mt-3 Labels text size ratio 
+										input.setting(id='piechart-label-size' type="text" class="js-range-slider")
+
+										p.mb-2.mt-3 Labels offset ratio
+										input.setting(id='piechart-label-offset' type="text" class="js-range-slider")
+
+							.tag-settings.type-settings.d-none.position-relative
+								.card-body
+									.subsection
+										h6.subsection-header Tag cloud appearance
+											+tooltip("tp_layer-tag-app")
+										+icon-checkbox('tag-appearance-dots', 'simple', 'append comma to each word', false)(class='setting')
+										p.mb-2.mt-3 Outline size ratio 
+										input.setting(id='tag-appearance-outline-size' type="text" class="js-range-slider")
+										p.mb-2.mt-3 Fill size ratio
+										input.setting(id='tag-appearance-fill-size' type="text" class="js-range-slider")
+										
+									.subsection 
+										h6.subsection-header Tags placement
+											+tooltip("tp_layer-tag-plac")
+										p.mb-2.mt-2 Placement strategy:
+										+simple-radiobuttons('tag-appearance-strategy', tagStrategies, 'archimedean')
+										p.mb-2.mt-3 Placement step size ratio
+										input.setting.mb-4(id='tag-appearance-seed' type="text" class="js-range-slider")
+										p.mb-2.mt-3 Padding size ratio 
+										input.setting(id='tag-appearance-padding' type="text" class="js-range-slider")
+
+							.card-body.position-absolute.default-message(style="top: 0; z-index: 10")
+								.subsection
+									.absence-prompt Layer type must be chosen first
+
+				.subsection
+					h6.subsection-header Layer style
+					.card.settings
+						- var targetId = 'layer-visibility-settings';
+						+accordion-header-settings(targetId, 'Layer appearance', true)(class="card-header")
+						.collapse(id=targetId)
+							.card-body
+								.subsection
+									.layer-name-toggle-wrapper
+										h6.subsection-header Layer name
+											+tooltip("tp_layer-app-name")
+										+icon-checkbox('layer-name-toggle', 'simple', 'show layer name', false)(class='setting')
+								.subsection
+									h6.subsection-header Layer color
+										+tooltip("tp_layer-app-color")
+									+spectrum-color-input("#ff0000", "Press to edit")(id="layer-color-input" class="setting layer-color-input w-100 h-100")
+									.layer-color-toggle-wrapper.mt-2
+										+icon-checkbox('layer-color-toggle', 'simple', 'show layer color', true)(class='setting')
+									.gradient-input-wrapper
+										+gradient-input()(id="layer-gradient-input" class="setting layer-gradient-input mb-4")
+										p 
+										| Click on a handle to edit it's color
+									.mt-3.mb-1 Opacity
+									.slider-wrapper
+										input(id='layer-opacity' type="text" class="js-range-slider")
+									.mt-3.mb-1 Blending mode
+									+dropdown-no-picker('select-layer-blending-mode', layerBlendingModes, 'Choose a mode...')(class='select-layer-blending-mode')
+
+								.subsection.layer-color-pointer-options
+									h6.subsection-header Layer pointer
+										+tooltip("tp_layer-app-point")
+									.layer-color-toggle-wrapper.mb-2
+										+icon-checkbox('layer-pointer-toggle', 'simple', 'show pointer', true)(class='setting')
+
+					
+					.card.settings.features-position-settings
+						- targetId = 'features-position';
+						+accordion-header-settings(targetId, 'Feature position', true)(class="card-header")
+						.collapse(id=targetId)
+							.card-body
+								.subsection
+									h6.subsection-header Offset angle
+										+tooltip("tp_layer-pos-ang")
+									#anglepicker.text-center
+								.subsection
+									h6.subsection-header Offset position ratio
+										+tooltip("tp_layer-pos-off")
+									input.setting(id='feature-offset-slider' type="text" class="js-range-slider")
+									.layer-color-toggle-wrapper.mb-2.mt-2
+										+icon-checkbox('feature-offset-relative-toggle', 'simple', 'is relative to size', true)(class='setting')
+
+
+					.card.settings.features-size-settings
+						- targetId = 'features-size';
+						+accordion-header-settings(targetId, 'Feature size', true)(class="card-header")
+						.collapse(id=targetId)
+							.card-body
+								.subsection
+									h6.subsection-header Size range
+										+tooltip("tp_layer-size-rang")
+									input.setting(id='features-size-slider' type="text" class="js-range-slider")
+									h6.subsection-header Font size ratio
+										+tooltip("tp_layer-size-font")
+									input.setting(id='font-size-slider' type="text" class="js-range-slider")
+
+
+					.card.settings
+						- var targetId = 'layer-weight';
+						+accordion-header-settings(targetId, 'Data weight', true)(class="card-header")
+						.collapse(id=targetId)
+							.card-body
+								.weight-appearance-wrapper
+									.subsection
+										h6.subsection-header Weight appearance
+											+tooltip("tp_layer-w-app")
+										+icon-checkbox('weight-by-value', 'simple', 'show weight by a value', true)(class='setting')
+										+icon-checkbox('weight-by-size', 'simple', 'show weight by size', true)(class='setting')
+										+icon-checkbox('weight-by-color', 'simple', 'show weight by color intensity', false)(class='setting')
+
+									.subsection.mb-3
+										h6.subsection-header Displayed value type
+											+tooltip("tp_layer-w-val")
+										+simple-radiobuttons('weight-value-display', clustersValue, 'count')
+								.subsection
+									h6.subsection-header Weight function
+										+tooltip("tp_layer-w-fun")
+									+dropdown-no-picker('select-weight-growth', growthFunctions, "Choose a function...")(class='select-growth')
+									h6.subsection-header Count normalization method
+										+tooltip("tp_layer-w-norm")
+									+dropdown-no-picker('select-stand-method', standardisationMethods, "Choose a method...")(class='stand-method')
+
+								.subsection
+									h6.subsection-header 
+										//-span Weight growth factor ( \(a\) )
+										span Weight growth factor (a)
+										+tooltip("tp_layer-w-growth")
+									input(id='weight-growth-factor')
+
+								.subsection
+									h6.subsection-header 
+										//-span Count scaling factor ( \(C\) )
+										span Count scaling factor (C)
+										+tooltip("tp_layer-w-scale")
+									input(id='weight-scaling-factor')
+				
+
+					.card.settings
+						- targetId = 'small-quantities-settings';
+						+accordion-header-settings(targetId, 'Other grouping', true)(class="card-header")
+						.collapse(id=targetId)
+							.card-body
+								.subsection
+									h6.subsection-header Group below frequency
+										+tooltip("tp_layer-other-freq")
+									input.setting(id='others-slider' type="text" class="js-range-slider")
+								.subsection.mt-2
+									h6.subsection-header Group below count
+										+tooltip("tp_layer-other-cn")
+									input.setting(id='others-count-slider' type="text" class="js-range-slider")
+
+
+					.card.settings
+						- targetId = 'values-settings';
+						+accordion-header-settings(targetId, 'Features filtering', true)(class="card-header")
+						.collapse(id=targetId)
+							.card-body
+								//-
+									.subsection
+										.attribute-value-wrapper
+											h6.subsection-header Values filter
+											+dropdown-no-picker('select-value', {}, "Choose a value...")(class='select-value' data-live-search="true" data-width='auto' multiple=true data-actions-box="true" data-selected-text-format="count")
+	
+								.subsection
+									h6.subsection-header Values browser
+										+tooltip("tp_layer-flt-bw")
+									.input-group
+										+custom-button('Reset settings', 'settings_backup_restore')(id="layer-attribute-filter-reset" class='palette-tertiary-light no-focus w-100')
+									.input-group
+										//-input#filter-attribute-search.form-control(placeholder="Search attributes")
+										+icon-textbox('layer-filter-attribute-search', 'Filter attributes...', 'filter_list', 'attribute-filter')
+
+									+icon-checkbox('layer-attribute-filter-regex', 'simple', 'use regex', false)(class='mt-1 mb-3 small-checkbox')
+									select#layer-select-attribute-filter-browser.select-value.form-control(multiple='' class="filter-box")
+
+									.input-group.mt-2
+										+custom-button('Select all')(id="layer-attribute-filter-select-all" class='mb-0 float-left palette-tertiary-light no-focus' style="width: 48%;" title="Select all values currently visible in the browser")
+										+custom-button('Deselect all')(id="layer-attribute-filter-unselect-all" class='ml-2 mb-0 float-right palette-tertiary-light no-focus' style="width: 48%;" title="Deselect all values currently visible in the browser")
+									.input-group.mt-2
+										+custom-button('Invert selection')(id="layer-attribute-filter-select-invert" class='w-100 mb-0 float-left palette-tertiary-light no-focus' title="Invert all values currently visible in the browser")
+
+									.input-group.mt-2
+										+custom-button('Filter')(id="layer-attribute-filter-unfilter-all" class='mb-0 float-left palette-tertiary-light no-focus positive' style="width: 48%;" title="Filter all selected values")
+										+custom-button('Filter out')(id="layer-attribute-filter-filter-all" class='ml-2 mb-0 float-right palette-tertiary-light no-focus negative' style="width: 48%;" title="Filter out all selected values")
+
+									#tree-filter-select-panel.hidden
+										.input-group.mt-2
+											+button-icon-textbox('layer-attribute-filtering-ancestors', 'Ancestors of...', 'Select', 'search', '', ariaLabel = '')(class='palette-tertiary-light no-focus')
+										.input-group.mt-2
+											+button-icon-textbox('layer-attribute-filtering-descendants', 'Descendants of...', 'Select', 'search', '', ariaLabel = '')(class='palette-tertiary-light no-focus')

@@ -1,0 +1,11 @@
+//- Possible slider classes: gradient, simple
+
+mixin timeline(timelineId, sliderClass = "simple", presentSwitchId=false)
+	- let widthCss = presentSwitchId === false ? 'width: 100%' : 'width: 87%'; 
+	.timeline-wrapper(class=sliderClass style=widthCss)&attributes(attributes)
+		input.session-option(id=timelineId type="text" class="js-range-slider" name="timeline" value="")
+	if presentSwitchId
+		.present-switch-wrapper(title="Toggle visibility of the contemporary samples")
+			- var iconHtmlFunc = (iconName) => `<i class="material-icons">${iconName}</i>`;
+			- var timeIconHtml = iconHtmlFunc('hourglass_empty');
+			input.session-option(id=presentSwitchId type='checkbox' checked='' data-toggle='toggle' data-on=`Present ${ timeIconHtml }` data-off=`No Present ${ timeIconHtml }` data-onstyle='present-time' data-offstyle='present-time')

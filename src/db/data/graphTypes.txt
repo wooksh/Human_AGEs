@@ -1,0 +1,2748 @@
+scalar JSON
+scalar JSONObject
+
+type Culture_FROM_TIME_TimePeriod @relation(name: "FROM_TIME") {
+	from: Culture
+	to: TimePeriod
+}
+
+type PhysicalDevelopmentStage_PART_OF_PhysicalDevelopmentStage @relation(name: "PART_OF") {
+	from: PhysicalDevelopmentStage
+	to: PhysicalDevelopmentStage
+}
+
+type ArchaeologicalPeriod_PART_OF_ArchaeologicalPeriod @relation(name: "PART_OF") {
+	from: ArchaeologicalPeriod
+	to: ArchaeologicalPeriod
+}
+
+type ArchaeologicalPeriod_PART_OF_Age @relation(name: "PART_OF") {
+	from: ArchaeologicalPeriod
+	to: Age
+}
+
+type ArchaeologicalPeriod_PART_OF_Period @relation(name: "PART_OF") {
+	from: ArchaeologicalPeriod
+	to: Period
+}
+
+type ArchaeologicalPeriod_PART_OF_Subperiod @relation(name: "PART_OF") {
+	from: ArchaeologicalPeriod
+	to: Subperiod
+}
+
+type ArchaeologicalPeriod_PART_OF_Phase @relation(name: "PART_OF") {
+	from: ArchaeologicalPeriod
+	to: Phase
+}
+
+type ArchaeologicalPeriod_PART_OF_Stage @relation(name: "PART_OF") {
+	from: ArchaeologicalPeriod
+	to: Stage
+}
+
+type HaplogroupY_PART_OF_HaplogroupY @relation(name: "PART_OF") {
+	from: HaplogroupY
+	to: HaplogroupY
+}
+
+type HaplogroupMt_PART_OF_HaplogroupMt @relation(name: "PART_OF") {
+	from: HaplogroupMt
+	to: HaplogroupMt
+}
+
+type UsePhase_IN_ArchaeologicalSite @relation(name: "IN") {
+	from: UsePhase
+	to: ArchaeologicalSite
+}
+
+type UsePhase_IN_Place @relation(name: "IN") {
+	from: UsePhase
+	to: Place
+}
+
+type UsePhase_FROM_TIME_Culture @relation(name: "FROM_TIME") {
+	from: UsePhase
+	to: Culture
+}
+
+type UsePhase_PART_OF_Culture @relation(name: "PART_OF") {
+	from: UsePhase
+	to: Culture
+}
+
+type UsePhase_IS_UsePhaseFunction @relation(name: "IS") {
+	from: UsePhase
+	to: UsePhaseFunction
+}
+
+type UsePhase_FROM_TIME_ArchaeologicalPeriod @relation(name: "FROM_TIME") {
+	from: UsePhase
+	to: ArchaeologicalPeriod
+}
+
+type UsePhase_PART_OF_ArchaeologicalPeriod @relation(name: "PART_OF") {
+	from: UsePhase
+	to: ArchaeologicalPeriod
+}
+
+type UsePhase_IN_Locality @relation(name: "IN") {
+	from: UsePhase
+	to: Locality
+}
+
+type UsePhase_FROM_TIME_Age @relation(name: "FROM_TIME") {
+	from: UsePhase
+	to: Age
+}
+
+type UsePhase_FROM_TIME_Period @relation(name: "FROM_TIME") {
+	from: UsePhase
+	to: Period
+}
+
+type UsePhase_FROM_TIME_Subperiod @relation(name: "FROM_TIME") {
+	from: UsePhase
+	to: Subperiod
+}
+
+type UsePhase_FROM_TIME_Phase @relation(name: "FROM_TIME") {
+	from: UsePhase
+	to: Phase
+}
+
+type UsePhase_FROM_TIME_Stage @relation(name: "FROM_TIME") {
+	from: UsePhase
+	to: Stage
+}
+
+type UsePhase_PART_OF_Age @relation(name: "PART_OF") {
+	from: UsePhase
+	to: Age
+}
+
+type UsePhase_PART_OF_Period @relation(name: "PART_OF") {
+	from: UsePhase
+	to: Period
+}
+
+type UsePhase_PART_OF_Subperiod @relation(name: "PART_OF") {
+	from: UsePhase
+	to: Subperiod
+}
+
+type UsePhase_PART_OF_Phase @relation(name: "PART_OF") {
+	from: UsePhase
+	to: Phase
+}
+
+type UsePhase_PART_OF_Stage @relation(name: "PART_OF") {
+	from: UsePhase
+	to: Stage
+}
+
+type ArchaeologicalSite_IN_Region @relation(name: "IN") {
+	from: ArchaeologicalSite
+	to: Region
+}
+
+type ArchaeologicalSite_IN_Place @relation(name: "IN") {
+	from: ArchaeologicalSite
+	to: Place
+}
+
+type ArchaeologicalSite_IN_Culture @relation(name: "IN") {
+	from: ArchaeologicalSite
+	to: Culture
+}
+
+type ArchaeologicalSite_IN_PoliticalRegion @relation(name: "IN") {
+	from: ArchaeologicalSite
+	to: PoliticalRegion
+}
+
+type ArchaeologicalSite_IN_CulturalRegion @relation(name: "IN") {
+	from: ArchaeologicalSite
+	to: CulturalRegion
+}
+
+type ArchaeologicalSite_IN_GeographicalRegion @relation(name: "IN") {
+	from: ArchaeologicalSite
+	to: GeographicalRegion
+}
+
+type ArchaeologicalSite_IN_Locality @relation(name: "IN") {
+	from: ArchaeologicalSite
+	to: Locality
+}
+
+type Place_IN_Region @relation(name: "IN") {
+	from: Place
+	to: Region
+}
+
+type Place_IN_Culture @relation(name: "IN") {
+	from: Place
+	to: Culture
+}
+
+type Place_IN_PoliticalRegion @relation(name: "IN") {
+	from: Place
+	to: PoliticalRegion
+}
+
+type Place_IN_CulturalRegion @relation(name: "IN") {
+	from: Place
+	to: CulturalRegion
+}
+
+type Place_IN_GeographicalRegion @relation(name: "IN") {
+	from: Place
+	to: GeographicalRegion
+}
+
+type Dating_FROM_TIME_Culture @relation(name: "FROM_TIME") {
+	from: Dating
+	to: Culture
+}
+
+type Dating_IS_DatingType @relation(name: "IS") {
+	from: Dating
+	to: DatingType
+}
+
+type Remains_FROM_TIME_Dating @relation(name: "FROM_TIME") {
+	from: Remains
+	to: Dating
+}
+
+type Remains_IS_PhysicalDevelopmentStage @relation(name: "IS") {
+	from: Remains
+	to: PhysicalDevelopmentStage
+}
+
+type Remains_IS_GENETICALLY_Sex @relation(name: "IS_GENETICALLY") {
+	from: Remains
+	to: Sex
+}
+
+type Remains_IS_ANTHROPOLOGICALLY_Sex @relation(name: "IS_ANTHROPOLOGICALLY") {
+	from: Remains
+	to: Sex
+}
+
+type Remains_IS_Sex @relation(name: "IS") {
+	from: Remains
+	to: Sex
+}
+
+type Remains_FROM_TIME_UsePhase @relation(name: "FROM_TIME") {
+	from: Remains
+	to: UsePhase
+}
+
+type Remains_PART_OF_Population @relation(name: "PART_OF") {
+	from: Remains
+	to: Population
+}
+
+type Remains_PART_OF_PresentPopulation @relation(name: "PART_OF") {
+	from: Remains
+	to: PresentPopulation
+}
+
+type Remains_PART_OF_PastPopulation @relation(name: "PART_OF") {
+	from: Remains
+	to: PastPopulation
+}
+
+type Remains_IN_ArchaeologicalSite @relation(name: "IN") {
+	from: Remains
+	to: ArchaeologicalSite
+}
+
+type Remains_IN_Place @relation(name: "IN") {
+	from: Remains
+	to: Place
+}
+
+type Remains_HAS_HaplogroupY @relation(name: "HAS") {
+	from: Remains
+	to: HaplogroupY
+}
+
+type Remains_HAS_HaplogroupMt @relation(name: "HAS") {
+	from: Remains
+	to: HaplogroupMt
+}
+
+type Remains_IS_GENETICALLY_Female @relation(name: "IS_GENETICALLY") {
+	from: Remains
+	to: Female
+}
+
+type Remains_IS_GENETICALLY_Male @relation(name: "IS_GENETICALLY") {
+	from: Remains
+	to: Male
+}
+
+type Remains_IS_ANTHROPOLOGICALLY_Female @relation(name: "IS_ANTHROPOLOGICALLY") {
+	from: Remains
+	to: Female
+}
+
+type Remains_IS_ANTHROPOLOGICALLY_Male @relation(name: "IS_ANTHROPOLOGICALLY") {
+	from: Remains
+	to: Male
+}
+
+type Remains_IS_Female @relation(name: "IS") {
+	from: Remains
+	to: Female
+}
+
+type Remains_IS_Male @relation(name: "IS") {
+	from: Remains
+	to: Male
+}
+
+type Remains_IN_Locality @relation(name: "IN") {
+	from: Remains
+	to: Locality
+}
+
+type Sample_OF_Remains @relation(name: "OF") {
+	from: Sample
+	to: Remains
+}
+
+type Sample_OF_Person @relation(name: "OF") {
+	from: Sample
+	to: Person
+}
+
+type Sample_PUBLISHED_IN_Source @relation(name: "PUBLISHED_IN") {
+	from: Sample
+	to: Source
+}
+
+type Sample_OF_SampleOrigin @relation(name: "OF") {
+	from: Sample
+	to: SampleOrigin
+}
+
+type Sample_HAS_Result @relation(name: "HAS") {
+	from: Sample
+	to: Result
+}
+
+type Sample_HAS_PCA @relation(name: "HAS") {
+	from: Sample
+	to: PCA
+}
+
+type Sample_HAS_UMAP @relation(name: "HAS") {
+	from: Sample
+	to: UMAP
+}
+
+type Sample_HAS_Admixture @relation(name: "HAS") {
+	from: Sample
+	to: Admixture
+}
+
+type Sample_OF_Replicant @relation(name: "OF") {
+	from: Sample
+	to: Replicant
+}
+
+type Sample_OF_RemainsAADR @relation(name: "OF") {
+	from: Sample
+	to: RemainsAADR
+}
+
+type Sample_OF_PersonAADR @relation(name: "OF") {
+	from: Sample
+	to: PersonAADR
+}
+
+type Sample_OF_PersonEMPOP @relation(name: "OF") {
+	from: Sample
+	to: PersonEMPOP
+}
+
+type Sample_HAS_PCA_World @relation(name: "HAS") {
+	from: Sample
+	to: PCA_World
+}
+
+type Sample_HAS_PCA_Eurasia @relation(name: "HAS") {
+	from: Sample
+	to: PCA_Eurasia
+}
+
+type Sample_HAS_PCA_EAS @relation(name: "HAS") {
+	from: Sample
+	to: PCA_EAS
+}
+
+type Sample_HAS_PCA_Africa @relation(name: "HAS") {
+	from: Sample
+	to: PCA_Africa
+}
+
+type Sample_HAS_UMAP_World @relation(name: "HAS") {
+	from: Sample
+	to: UMAP_World
+}
+
+type Sample_HAS_UMAP_Eurasia @relation(name: "HAS") {
+	from: Sample
+	to: UMAP_Eurasia
+}
+
+type Sample_HAS_UMAP_EAS @relation(name: "HAS") {
+	from: Sample
+	to: UMAP_EAS
+}
+
+type Sample_HAS_UMAP_Africa @relation(name: "HAS") {
+	from: Sample
+	to: UMAP_Africa
+}
+
+type Sample_HAS_Admixture_k2 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k2
+}
+
+type Sample_HAS_Admixture_k3 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k3
+}
+
+type Sample_HAS_Admixture_k4 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k4
+}
+
+type Sample_HAS_Admixture_k6 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k6
+}
+
+type Sample_HAS_Admixture_k7 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k7
+}
+
+type Sample_HAS_Admixture_k8 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k8
+}
+
+type Sample_HAS_Admixture_k9 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k9
+}
+
+type Sample_HAS_Admixture_k10 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k10
+}
+
+type Sample_HAS_Admixture_k11 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k11
+}
+
+type Sample_HAS_Admixture_k12 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k12
+}
+
+type Sample_HAS_Admixture_k13 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k13
+}
+
+type Sample_HAS_Admixture_k14 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k14
+}
+
+type Sample_HAS_Admixture_k16 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k16
+}
+
+type Sample_HAS_Admixture_k17 @relation(name: "HAS") {
+	from: Sample
+	to: Admixture_k17
+}
+
+type Source_IS_SourceType @relation(name: "IS") {
+	from: Source
+	to: SourceType
+}
+
+type Author_OF_Source @relation(name: "OF") {
+	from: Author
+	to: Source
+}
+
+type Person_IS_Sex @relation(name: "IS") {
+	from: Person
+	to: Sex
+}
+
+type Person_IN_Place @relation(name: "IN") {
+	from: Person
+	to: Place
+}
+
+type Person_PART_OF_Population @relation(name: "PART_OF") {
+	from: Person
+	to: Population
+}
+
+type Person_PART_OF_PresentPopulation @relation(name: "PART_OF") {
+	from: Person
+	to: PresentPopulation
+}
+
+type Person_PART_OF_PastPopulation @relation(name: "PART_OF") {
+	from: Person
+	to: PastPopulation
+}
+
+type Person_HAS_HaplogroupY @relation(name: "HAS") {
+	from: Person
+	to: HaplogroupY
+}
+
+type Person_HAS_HaplogroupMt @relation(name: "HAS") {
+	from: Person
+	to: HaplogroupMt
+}
+
+type Person_IS_Female @relation(name: "IS") {
+	from: Person
+	to: Female
+}
+
+type Person_IS_Male @relation(name: "IS") {
+	from: Person
+	to: Male
+}
+
+type Person_IN_Locality @relation(name: "IN") {
+	from: Person
+	to: Locality
+}
+
+type Polygon_PART_OF_Region @relation(name: "PART_OF") {
+	from: Polygon
+	to: Region
+}
+
+type Polygon_PART_OF_PoliticalRegion @relation(name: "PART_OF") {
+	from: Polygon
+	to: PoliticalRegion
+}
+
+type Polygon_PART_OF_CulturalRegion @relation(name: "PART_OF") {
+	from: Polygon
+	to: CulturalRegion
+}
+
+type Polygon_PART_OF_GeographicalRegion @relation(name: "PART_OF") {
+	from: Polygon
+	to: GeographicalRegion
+}
+
+type PolygonHole_PART_OF_Polygon @relation(name: "PART_OF") {
+	from: PolygonHole
+	to: Polygon
+}
+
+type Division_PART_OF_Division @relation(name: "PART_OF") {
+	from: Division
+	to: Division
+}
+
+type Division_PART_OF_PoliticalDivision @relation(name: "PART_OF") {
+	from: Division
+	to: PoliticalDivision
+}
+
+type Division_PART_OF_CulturalDivision @relation(name: "PART_OF") {
+	from: Division
+	to: CulturalDivision
+}
+
+type Division_PART_OF_GeographicalDivision @relation(name: "PART_OF") {
+	from: Division
+	to: GeographicalDivision
+}
+
+type Region_PART_OF_Region @relation(name: "PART_OF") {
+	from: Region
+	to: Region
+}
+
+type Region_IS_Division @relation(name: "IS") {
+	from: Region
+	to: Division
+}
+
+type Region_PART_OF_PoliticalRegion @relation(name: "PART_OF") {
+	from: Region
+	to: PoliticalRegion
+}
+
+type Region_PART_OF_CulturalRegion @relation(name: "PART_OF") {
+	from: Region
+	to: CulturalRegion
+}
+
+type Region_PART_OF_GeographicalRegion @relation(name: "PART_OF") {
+	from: Region
+	to: GeographicalRegion
+}
+
+type Region_IS_PoliticalDivision @relation(name: "IS") {
+	from: Region
+	to: PoliticalDivision
+}
+
+type Region_IS_CulturalDivision @relation(name: "IS") {
+	from: Region
+	to: CulturalDivision
+}
+
+type Region_IS_GeographicalDivision @relation(name: "IS") {
+	from: Region
+	to: GeographicalDivision
+}
+
+type Result_IS_ResultType @relation(name: "IS") {
+	from: Result
+	to: ResultType
+}
+
+type Result_IS_AdmixtureResult @relation(name: "IS") {
+	from: Result
+	to: AdmixtureResult
+}
+
+type Result_IS_PCAResult @relation(name: "IS") {
+	from: Result
+	to: PCAResult
+}
+
+type Result_IS_UMAPResult @relation(name: "IS") {
+	from: Result
+	to: UMAPResult
+}
+
+type Admixture_IS_ResultType @relation(name: "IS") {
+	from: Admixture
+	to: ResultType
+}
+
+type Admixture_IS_AdmixtureResult @relation(name: "IS") {
+	from: Admixture
+	to: AdmixtureResult
+}
+
+type Admixture_IS_PCAResult @relation(name: "IS") {
+	from: Admixture
+	to: PCAResult
+}
+
+type Admixture_IS_UMAPResult @relation(name: "IS") {
+	from: Admixture
+	to: UMAPResult
+}
+
+type PCA_IS_ResultType @relation(name: "IS") {
+	from: PCA
+	to: ResultType
+}
+
+type PCA_IS_AdmixtureResult @relation(name: "IS") {
+	from: PCA
+	to: AdmixtureResult
+}
+
+type PCA_IS_PCAResult @relation(name: "IS") {
+	from: PCA
+	to: PCAResult
+}
+
+type PCA_IS_UMAPResult @relation(name: "IS") {
+	from: PCA
+	to: UMAPResult
+}
+
+type UMAP_IS_ResultType @relation(name: "IS") {
+	from: UMAP
+	to: ResultType
+}
+
+type UMAP_IS_AdmixtureResult @relation(name: "IS") {
+	from: UMAP
+	to: AdmixtureResult
+}
+
+type UMAP_IS_PCAResult @relation(name: "IS") {
+	from: UMAP
+	to: PCAResult
+}
+
+type UMAP_IS_UMAPResult @relation(name: "IS") {
+	from: UMAP
+	to: UMAPResult
+}
+
+type SampleOrigin_PART_OF_SampleOrigin @relation(name: "PART_OF") {
+	from: SampleOrigin
+	to: SampleOrigin
+}
+
+interface interface_Culture {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	id: String
+}
+
+interface interface_Translatable {
+	default_lang: String!
+	id: String
+}
+
+interface interface_Sex {
+	lang_en__name: String!
+	lang_pl__name: String!
+	id: String
+}
+
+interface interface_PhysicalDevelopmentStage {
+	lang_en__name: String!
+	lang_pl__name: String!
+	ageFrom: Int
+	ageTo: Int
+	id: String
+}
+
+interface interface_Tree {
+	treeIndex: String
+	depth: Int
+	id: String
+}
+
+interface interface_ArchaeologicalPeriod {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	id: String
+}
+
+interface interface_Haplogroup {
+	name: String!
+	synonym: String
+	id: String
+}
+
+interface interface_TimePeriod {
+	dateFrom: Date
+	dateTo: Date
+	length: Int
+	id: String
+}
+
+interface interface_UsePhase {
+	lang_en__description: String
+	lang_pl__description: String
+	id: String
+}
+
+interface interface_UsePhaseFunction {
+	lang_en__name: String!
+	lang_pl__name: String!
+	id: String
+}
+
+interface interface_Place {
+	coordinates: Point
+	lang_en__name: String
+	lang_pl__name: String
+	is_archaeological_site: Boolean!
+	id: String
+}
+
+interface interface_ArchaeologicalSite {
+	lang_en__description: String
+	lang_pl__description: String
+	id: String
+}
+
+interface interface_DatingType {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	id: String
+}
+
+interface interface_Dating {
+	lang_en__description: String
+	lang_pl__description: String
+	id: String
+}
+
+interface interface_Remains {
+	id: String!
+	database_id: String!
+	skeletal_code: String
+}
+
+interface interface_Sample {
+	id: String!
+	URL_repository: String
+}
+
+interface interface_SourceType {
+	lang_en__name: String!
+	lang_pl__name: String
+	id: String
+}
+
+interface interface_Source {
+	id: String!
+	name: String
+	publisher: String
+	date: Date
+	volume_and_issue: String
+	pages: String
+	hyperlink: String
+}
+
+interface interface_Author {
+	name: String!
+	id: String
+}
+
+interface interface_Person {
+	id: String!
+	database_id: String!
+	age: Int
+}
+
+interface interface_Polygon {
+	points: [Point!]
+	id: String
+}
+
+interface interface_Division {
+	id: String!
+	lang_en__name: String!
+	lang_pl__name: String!
+}
+
+interface interface_Region {
+	lang_en__name: String!
+	lang_pl__name: String!
+	code: String
+	bbox: [Point!]
+	centroid: Point!
+	id: String
+}
+
+interface interface_Population {
+	name: String!
+	country_annotation: String
+	region_annotation: String
+	is_present: Boolean
+	id: String
+}
+
+interface interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String
+}
+
+interface interface_ResultType {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	id: String
+}
+
+interface interface_SampleOrigin {
+	lang_en__name: String!
+	lang_pl__name: String!
+	id: String
+}
+
+type Culture implements interface_Culture & interface_Translatable {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	id: String!
+	${translatable_name}
+	${translatable_description}
+	this_from_time_timeperiod: [Culture_FROM_TIME_TimePeriod]
+	usephase_part_of_this: [UsePhase_PART_OF_Culture]
+	usephase_from_time_this: [UsePhase_FROM_TIME_Culture]
+	archaeologicalsite_in_this: [ArchaeologicalSite_IN_Culture]
+	place_in_this: [Place_IN_Culture]
+	dating_from_time_this: [Dating_FROM_TIME_Culture]
+}
+
+type Sex implements interface_Sex & interface_Translatable {
+	lang_en__name: String!
+	lang_pl__name: String!
+	default_lang: String!
+	id: String!
+	${translatable_name}
+	remains_is_this: [Remains_IS_Sex]
+	remains_is_anthropologically_this: [Remains_IS_ANTHROPOLOGICALLY_Sex]
+	remains_is_genetically_this: [Remains_IS_GENETICALLY_Sex]
+	person_is_this: [Person_IS_Sex]
+}
+
+type PhysicalDevelopmentStage implements interface_PhysicalDevelopmentStage & interface_Translatable & interface_Tree {
+	lang_en__name: String!
+	lang_pl__name: String!
+	ageFrom: Int
+	ageTo: Int
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	id: String!
+	${translatable_name}
+	${parent_name}
+	this_part_of_physicaldevelopmentstage: [PhysicalDevelopmentStage_PART_OF_PhysicalDevelopmentStage]
+	physicaldevelopmentstage_part_of_this: [PhysicalDevelopmentStage_PART_OF_PhysicalDevelopmentStage]
+	remains_is_this: [Remains_IS_PhysicalDevelopmentStage]
+}
+
+type ArchaeologicalPeriod implements interface_ArchaeologicalPeriod & interface_Translatable & interface_Tree {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	id: String!
+	${translatable_name}
+	${translatable_description}
+	${parent_name}
+	this_part_of_stage: [ArchaeologicalPeriod_PART_OF_Stage]
+	this_part_of_period: [ArchaeologicalPeriod_PART_OF_Period]
+	this_part_of_subperiod: [ArchaeologicalPeriod_PART_OF_Subperiod]
+	this_part_of_age: [ArchaeologicalPeriod_PART_OF_Age]
+	this_part_of_archaeologicalperiod: [ArchaeologicalPeriod_PART_OF_ArchaeologicalPeriod]
+	this_part_of_phase: [ArchaeologicalPeriod_PART_OF_Phase]
+	archaeologicalperiod_part_of_this: [ArchaeologicalPeriod_PART_OF_ArchaeologicalPeriod]
+	usephase_part_of_this: [UsePhase_PART_OF_ArchaeologicalPeriod]
+	usephase_from_time_this: [UsePhase_FROM_TIME_ArchaeologicalPeriod]
+}
+
+type Age_PART_OF_ArchaeologicalPeriod @relation(name: "PART_OF") {
+	from: Age
+	to: ArchaeologicalPeriod
+}
+
+type Period_PART_OF_ArchaeologicalPeriod @relation(name: "PART_OF") {
+	from: Period
+	to: ArchaeologicalPeriod
+}
+
+type Subperiod_PART_OF_ArchaeologicalPeriod @relation(name: "PART_OF") {
+	from: Subperiod
+	to: ArchaeologicalPeriod
+}
+
+type Phase_PART_OF_ArchaeologicalPeriod @relation(name: "PART_OF") {
+	from: Phase
+	to: ArchaeologicalPeriod
+}
+
+type Stage_PART_OF_ArchaeologicalPeriod @relation(name: "PART_OF") {
+	from: Stage
+	to: ArchaeologicalPeriod
+}
+
+type HaplogroupY implements interface_Haplogroup & interface_Tree {
+	name: String!
+	synonym: String
+	treeIndex: String
+	depth: Int
+	id: String!
+	${parent_name}
+	this_part_of_haplogroupy: [HaplogroupY_PART_OF_HaplogroupY]
+	haplogroupy_part_of_this: [HaplogroupY_PART_OF_HaplogroupY]
+	remains_has_this: [Remains_HAS_HaplogroupY]
+	person_has_this: [Person_HAS_HaplogroupY]
+}
+
+type HaplogroupMt implements interface_Haplogroup & interface_Tree {
+	name: String!
+	synonym: String
+	treeIndex: String
+	depth: Int
+	id: String!
+	${parent_name}
+	this_part_of_haplogroupmt: [HaplogroupMt_PART_OF_HaplogroupMt]
+	haplogroupmt_part_of_this: [HaplogroupMt_PART_OF_HaplogroupMt]
+	remains_has_this: [Remains_HAS_HaplogroupMt]
+	person_has_this: [Person_HAS_HaplogroupMt]
+}
+
+type TimePeriod implements interface_TimePeriod {
+	dateFrom: Date
+	dateTo: Date
+	length: Int
+	id: String!
+	culture_from_time_this: [Culture_FROM_TIME_TimePeriod]
+}
+
+type UsePhase implements interface_TimePeriod & interface_UsePhase & interface_Translatable {
+	dateFrom: Date
+	dateTo: Date
+	length: Int
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	id: String!
+	${translatable_description}
+	this_is_usephasefunction: [UsePhase_IS_UsePhaseFunction]
+	this_part_of_period: [UsePhase_PART_OF_Period]
+	this_in_place: [UsePhase_IN_Place]
+	this_part_of_culture: [UsePhase_PART_OF_Culture]
+	this_from_time_stage: [UsePhase_FROM_TIME_Stage]
+	this_part_of_archaeologicalperiod: [UsePhase_PART_OF_ArchaeologicalPeriod]
+	this_part_of_stage: [UsePhase_PART_OF_Stage]
+	this_in_archaeologicalsite: [UsePhase_IN_ArchaeologicalSite]
+	this_from_time_phase: [UsePhase_FROM_TIME_Phase]
+	this_part_of_age: [UsePhase_PART_OF_Age]
+	this_from_time_age: [UsePhase_FROM_TIME_Age]
+	this_in_locality: [UsePhase_IN_Locality]
+	this_from_time_archaeologicalperiod: [UsePhase_FROM_TIME_ArchaeologicalPeriod]
+	this_part_of_phase: [UsePhase_PART_OF_Phase]
+	this_from_time_culture: [UsePhase_FROM_TIME_Culture]
+	this_part_of_subperiod: [UsePhase_PART_OF_Subperiod]
+	this_from_time_subperiod: [UsePhase_FROM_TIME_Subperiod]
+	this_from_time_period: [UsePhase_FROM_TIME_Period]
+	remains_from_time_this: [Remains_FROM_TIME_UsePhase]
+	${cypher_UsePhase}
+}
+
+type UsePhaseFunction implements interface_UsePhaseFunction & interface_Translatable {
+	lang_en__name: String!
+	lang_pl__name: String!
+	default_lang: String!
+	id: String!
+	${translatable_name}
+	usephase_is_this: [UsePhase_IS_UsePhaseFunction]
+}
+
+type ArchaeologicalSite implements interface_Place & interface_ArchaeologicalSite & interface_Translatable {
+	coordinates: Point
+	lang_en__name: String
+	lang_pl__name: String
+	is_archaeological_site: Boolean!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	id: String!
+	${translatable_name}
+	${translatable_description}
+	this_in_locality: [ArchaeologicalSite_IN_Locality]
+	this_in_geographicalregion: [ArchaeologicalSite_IN_GeographicalRegion]
+	this_in_politicalregion: [ArchaeologicalSite_IN_PoliticalRegion]
+	this_in_region: [ArchaeologicalSite_IN_Region]
+	this_in_place: [ArchaeologicalSite_IN_Place]
+	this_in_culturalregion: [ArchaeologicalSite_IN_CulturalRegion]
+	this_in_culture: [ArchaeologicalSite_IN_Culture]
+	usephase_in_this: [UsePhase_IN_ArchaeologicalSite]
+	remains_in_this: [Remains_IN_ArchaeologicalSite]
+	${cypher_ArchaeologicalSite}
+}
+
+type Place implements interface_Place & interface_Translatable {
+	coordinates: Point
+	lang_en__name: String
+	lang_pl__name: String
+	is_archaeological_site: Boolean!
+	default_lang: String!
+	id: String!
+	${translatable_name}
+	this_in_region: [Place_IN_Region]
+	this_in_culturalregion: [Place_IN_CulturalRegion]
+	this_in_geographicalregion: [Place_IN_GeographicalRegion]
+	this_in_culture: [Place_IN_Culture]
+	this_in_politicalregion: [Place_IN_PoliticalRegion]
+	usephase_in_this: [UsePhase_IN_Place]
+	archaeologicalsite_in_this: [ArchaeologicalSite_IN_Place]
+	remains_in_this: [Remains_IN_Place]
+	person_in_this: [Person_IN_Place]
+}
+
+type Locality_IN_Region @relation(name: "IN") {
+	from: Locality
+	to: Region
+}
+
+type Locality_IN_Culture @relation(name: "IN") {
+	from: Locality
+	to: Culture
+}
+
+type DatingType implements interface_DatingType & interface_Translatable {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	id: String!
+	${translatable_name}
+	${translatable_description}
+	dating_is_this: [Dating_IS_DatingType]
+}
+
+type Dating implements interface_TimePeriod & interface_Dating & interface_Translatable {
+	dateFrom: Date
+	dateTo: Date
+	length: Int
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	id: String!
+	${translatable_description}
+	this_from_time_culture: [Dating_FROM_TIME_Culture]
+	this_is_datingtype: [Dating_IS_DatingType]
+	remains_from_time_this: [Remains_FROM_TIME_Dating]
+}
+
+type Remains implements interface_Remains {
+	id: String!
+	database_id: String!
+	skeletal_code: String
+	this_from_time_dating: [Remains_FROM_TIME_Dating]
+	this_is_anthropologically_male: [Remains_IS_ANTHROPOLOGICALLY_Male]
+	this_is_genetically_female: [Remains_IS_GENETICALLY_Female]
+	this_has_haplogroupmt: [Remains_HAS_HaplogroupMt]
+	this_in_place: [Remains_IN_Place]
+	this_in_locality: [Remains_IN_Locality]
+	this_is_sex: [Remains_IS_Sex]
+	this_has_haplogroupy: [Remains_HAS_HaplogroupY]
+	this_is_male: [Remains_IS_Male]
+	this_is_genetically_male: [Remains_IS_GENETICALLY_Male]
+	this_part_of_presentpopulation: [Remains_PART_OF_PresentPopulation]
+	this_is_anthropologically_female: [Remains_IS_ANTHROPOLOGICALLY_Female]
+	this_is_female: [Remains_IS_Female]
+	this_is_anthropologically_sex: [Remains_IS_ANTHROPOLOGICALLY_Sex]
+	this_from_time_usephase: [Remains_FROM_TIME_UsePhase]
+	this_is_physicaldevelopmentstage: [Remains_IS_PhysicalDevelopmentStage]
+	this_part_of_pastpopulation: [Remains_PART_OF_PastPopulation]
+	this_is_genetically_sex: [Remains_IS_GENETICALLY_Sex]
+	this_part_of_population: [Remains_PART_OF_Population]
+	this_in_archaeologicalsite: [Remains_IN_ArchaeologicalSite]
+	sample_of_this: [Sample_OF_Remains]
+	${cypher_Remains}
+}
+
+type Replicant_FROM_TIME_Dating @relation(name: "FROM_TIME") {
+	from: Replicant
+	to: Dating
+}
+
+type Replicant_IS_PhysicalDevelopmentStage @relation(name: "IS") {
+	from: Replicant
+	to: PhysicalDevelopmentStage
+}
+
+type Replicant_IS_GENETICALLY_Sex @relation(name: "IS_GENETICALLY") {
+	from: Replicant
+	to: Sex
+}
+
+type Replicant_IS_ANTHROPOLOGICALLY_Sex @relation(name: "IS_ANTHROPOLOGICALLY") {
+	from: Replicant
+	to: Sex
+}
+
+type Replicant_IS_Sex @relation(name: "IS") {
+	from: Replicant
+	to: Sex
+}
+
+type Replicant_FROM_TIME_UsePhase @relation(name: "FROM_TIME") {
+	from: Replicant
+	to: UsePhase
+}
+
+type Replicant_PART_OF_Population @relation(name: "PART_OF") {
+	from: Replicant
+	to: Population
+}
+
+type Replicant_PART_OF_PresentPopulation @relation(name: "PART_OF") {
+	from: Replicant
+	to: PresentPopulation
+}
+
+type Replicant_PART_OF_PastPopulation @relation(name: "PART_OF") {
+	from: Replicant
+	to: PastPopulation
+}
+
+type Replicant_IN_ArchaeologicalSite @relation(name: "IN") {
+	from: Replicant
+	to: ArchaeologicalSite
+}
+
+type Replicant_IN_Place @relation(name: "IN") {
+	from: Replicant
+	to: Place
+}
+
+type Replicant_HAS_HaplogroupY @relation(name: "HAS") {
+	from: Replicant
+	to: HaplogroupY
+}
+
+type Replicant_HAS_HaplogroupMt @relation(name: "HAS") {
+	from: Replicant
+	to: HaplogroupMt
+}
+
+type RemainsAADR_FROM_TIME_Dating @relation(name: "FROM_TIME") {
+	from: RemainsAADR
+	to: Dating
+}
+
+type RemainsAADR_IS_PhysicalDevelopmentStage @relation(name: "IS") {
+	from: RemainsAADR
+	to: PhysicalDevelopmentStage
+}
+
+type RemainsAADR_IS_GENETICALLY_Sex @relation(name: "IS_GENETICALLY") {
+	from: RemainsAADR
+	to: Sex
+}
+
+type RemainsAADR_IS_ANTHROPOLOGICALLY_Sex @relation(name: "IS_ANTHROPOLOGICALLY") {
+	from: RemainsAADR
+	to: Sex
+}
+
+type RemainsAADR_IS_Sex @relation(name: "IS") {
+	from: RemainsAADR
+	to: Sex
+}
+
+type RemainsAADR_FROM_TIME_UsePhase @relation(name: "FROM_TIME") {
+	from: RemainsAADR
+	to: UsePhase
+}
+
+type RemainsAADR_PART_OF_Population @relation(name: "PART_OF") {
+	from: RemainsAADR
+	to: Population
+}
+
+type RemainsAADR_PART_OF_PresentPopulation @relation(name: "PART_OF") {
+	from: RemainsAADR
+	to: PresentPopulation
+}
+
+type RemainsAADR_PART_OF_PastPopulation @relation(name: "PART_OF") {
+	from: RemainsAADR
+	to: PastPopulation
+}
+
+type RemainsAADR_IN_ArchaeologicalSite @relation(name: "IN") {
+	from: RemainsAADR
+	to: ArchaeologicalSite
+}
+
+type RemainsAADR_IN_Place @relation(name: "IN") {
+	from: RemainsAADR
+	to: Place
+}
+
+type RemainsAADR_HAS_HaplogroupY @relation(name: "HAS") {
+	from: RemainsAADR
+	to: HaplogroupY
+}
+
+type RemainsAADR_HAS_HaplogroupMt @relation(name: "HAS") {
+	from: RemainsAADR
+	to: HaplogroupMt
+}
+
+type Sample implements interface_Sample {
+	id: String!
+	URL_repository: String
+	this_has_umap_eurasia: [Sample_HAS_UMAP_Eurasia]
+	this_has_admixture_k17: [Sample_HAS_Admixture_k17]
+	this_has_admixture_k11: [Sample_HAS_Admixture_k11]
+	this_of_personaadr: [Sample_OF_PersonAADR]
+	this_has_umap_eas: [Sample_HAS_UMAP_EAS]
+	this_has_admixture_k8: [Sample_HAS_Admixture_k8]
+	this_of_remains: [Sample_OF_Remains]
+	this_has_admixture: [Sample_HAS_Admixture]
+	this_has_result: [Sample_HAS_Result]
+	this_has_admixture_k6: [Sample_HAS_Admixture_k6]
+	this_has_pca_world: [Sample_HAS_PCA_World]
+	this_has_admixture_k4: [Sample_HAS_Admixture_k4]
+	this_has_admixture_k16: [Sample_HAS_Admixture_k16]
+	this_of_remainsaadr: [Sample_OF_RemainsAADR]
+	this_has_admixture_k3: [Sample_HAS_Admixture_k3]
+	this_has_umap_africa: [Sample_HAS_UMAP_Africa]
+	this_has_admixture_k2: [Sample_HAS_Admixture_k2]
+	this_has_admixture_k12: [Sample_HAS_Admixture_k12]
+	this_has_pca_africa: [Sample_HAS_PCA_Africa]
+	this_has_admixture_k10: [Sample_HAS_Admixture_k10]
+	this_published_in_source: [Sample_PUBLISHED_IN_Source]
+	this_has_umap: [Sample_HAS_UMAP]
+	this_has_admixture_k7: [Sample_HAS_Admixture_k7]
+	this_of_personempop: [Sample_OF_PersonEMPOP]
+	this_has_pca_eurasia: [Sample_HAS_PCA_Eurasia]
+	this_of_sampleorigin: [Sample_OF_SampleOrigin]
+	this_has_admixture_k13: [Sample_HAS_Admixture_k13]
+	this_has_pca_eas: [Sample_HAS_PCA_EAS]
+	this_has_umap_world: [Sample_HAS_UMAP_World]
+	this_of_replicant: [Sample_OF_Replicant]
+	this_has_admixture_k9: [Sample_HAS_Admixture_k9]
+	this_of_person: [Sample_OF_Person]
+	this_has_admixture_k14: [Sample_HAS_Admixture_k14]
+	this_has_pca: [Sample_HAS_PCA]
+}
+
+type SourceType implements interface_SourceType & interface_Translatable {
+	lang_en__name: String!
+	lang_pl__name: String
+	default_lang: String!
+	id: String!
+	${translatable_name}
+	source_is_this: [Source_IS_SourceType]
+}
+
+type Source implements interface_Source {
+	id: String!
+	name: String
+	publisher: String
+	date: Date
+	volume_and_issue: String
+	pages: String
+	hyperlink: String
+	this_is_sourcetype: [Source_IS_SourceType]
+	sample_published_in_this: [Sample_PUBLISHED_IN_Source]
+	author_of_this: [Author_OF_Source]
+}
+
+type Author implements interface_Author {
+	name: String!
+	id: String!
+	this_of_source: [Author_OF_Source]
+}
+
+type Person implements interface_Person {
+	id: String!
+	database_id: String!
+	age: Int
+	this_part_of_presentpopulation: [Person_PART_OF_PresentPopulation]
+	this_part_of_pastpopulation: [Person_PART_OF_PastPopulation]
+	this_is_male: [Person_IS_Male]
+	this_in_place: [Person_IN_Place]
+	this_has_haplogroupy: [Person_HAS_HaplogroupY]
+	this_is_female: [Person_IS_Female]
+	this_part_of_population: [Person_PART_OF_Population]
+	this_is_sex: [Person_IS_Sex]
+	this_has_haplogroupmt: [Person_HAS_HaplogroupMt]
+	this_in_locality: [Person_IN_Locality]
+	sample_of_this: [Sample_OF_Person]
+	${cypher_Person}
+}
+
+type PersonAADR_IS_Sex @relation(name: "IS") {
+	from: PersonAADR
+	to: Sex
+}
+
+type PersonAADR_IN_Place @relation(name: "IN") {
+	from: PersonAADR
+	to: Place
+}
+
+type PersonAADR_PART_OF_Population @relation(name: "PART_OF") {
+	from: PersonAADR
+	to: Population
+}
+
+type PersonAADR_PART_OF_PresentPopulation @relation(name: "PART_OF") {
+	from: PersonAADR
+	to: PresentPopulation
+}
+
+type PersonAADR_PART_OF_PastPopulation @relation(name: "PART_OF") {
+	from: PersonAADR
+	to: PastPopulation
+}
+
+type PersonAADR_HAS_HaplogroupY @relation(name: "HAS") {
+	from: PersonAADR
+	to: HaplogroupY
+}
+
+type PersonAADR_HAS_HaplogroupMt @relation(name: "HAS") {
+	from: PersonAADR
+	to: HaplogroupMt
+}
+
+type PersonEMPOP_IS_Sex @relation(name: "IS") {
+	from: PersonEMPOP
+	to: Sex
+}
+
+type PersonEMPOP_IN_Place @relation(name: "IN") {
+	from: PersonEMPOP
+	to: Place
+}
+
+type PersonEMPOP_PART_OF_Population @relation(name: "PART_OF") {
+	from: PersonEMPOP
+	to: Population
+}
+
+type PersonEMPOP_PART_OF_PresentPopulation @relation(name: "PART_OF") {
+	from: PersonEMPOP
+	to: PresentPopulation
+}
+
+type PersonEMPOP_PART_OF_PastPopulation @relation(name: "PART_OF") {
+	from: PersonEMPOP
+	to: PastPopulation
+}
+
+type PersonEMPOP_HAS_HaplogroupY @relation(name: "HAS") {
+	from: PersonEMPOP
+	to: HaplogroupY
+}
+
+type PersonEMPOP_HAS_HaplogroupMt @relation(name: "HAS") {
+	from: PersonEMPOP
+	to: HaplogroupMt
+}
+
+type Polygon implements interface_Polygon {
+	points: [Point!]
+	id: String!
+	this_part_of_region: [Polygon_PART_OF_Region]
+	this_part_of_geographicalregion: [Polygon_PART_OF_GeographicalRegion]
+	this_part_of_politicalregion: [Polygon_PART_OF_PoliticalRegion]
+	this_part_of_culturalregion: [Polygon_PART_OF_CulturalRegion]
+	polygonhole_part_of_this: [PolygonHole_PART_OF_Polygon]
+	${cypher_Polygon}
+}
+
+type PolygonHole implements interface_Polygon {
+	points: [Point!]
+	id: String!
+	this_part_of_polygon: [PolygonHole_PART_OF_Polygon]
+	${cypher_PolygonHole}
+}
+
+type Division implements interface_Division & interface_Translatable & interface_Tree {
+	id: String!
+	lang_en__name: String!
+	lang_pl__name: String!
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	${translatable_name}
+	${parent_name}
+	this_part_of_culturaldivision: [Division_PART_OF_CulturalDivision]
+	this_part_of_politicaldivision: [Division_PART_OF_PoliticalDivision]
+	this_part_of_geographicaldivision: [Division_PART_OF_GeographicalDivision]
+	this_part_of_division: [Division_PART_OF_Division]
+	division_part_of_this: [Division_PART_OF_Division]
+	region_is_this: [Region_IS_Division]
+}
+
+type PoliticalDivision_PART_OF_Division @relation(name: "PART_OF") {
+	from: PoliticalDivision
+	to: Division
+}
+
+type CulturalDivision_PART_OF_Division @relation(name: "PART_OF") {
+	from: CulturalDivision
+	to: Division
+}
+
+type GeographicalDivision_PART_OF_Division @relation(name: "PART_OF") {
+	from: GeographicalDivision
+	to: Division
+}
+
+type Region implements interface_Region & interface_Translatable & interface_Tree {
+	lang_en__name: String!
+	lang_pl__name: String!
+	code: String
+	bbox: [Point!]
+	centroid: Point!
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	id: String!
+	${translatable_name}
+	${parent_name}
+	this_is_division: [Region_IS_Division]
+	this_part_of_culturalregion: [Region_PART_OF_CulturalRegion]
+	this_part_of_politicalregion: [Region_PART_OF_PoliticalRegion]
+	this_part_of_region: [Region_PART_OF_Region]
+	this_is_politicaldivision: [Region_IS_PoliticalDivision]
+	this_is_geographicaldivision: [Region_IS_GeographicalDivision]
+	this_is_culturaldivision: [Region_IS_CulturalDivision]
+	this_part_of_geographicalregion: [Region_PART_OF_GeographicalRegion]
+	archaeologicalsite_in_this: [ArchaeologicalSite_IN_Region]
+	place_in_this: [Place_IN_Region]
+	polygon_part_of_this: [Polygon_PART_OF_Region]
+	region_part_of_this: [Region_PART_OF_Region]
+	locality_in_this: [Locality_IN_Region]
+	${cypher_Region}
+}
+
+type PoliticalRegion_PART_OF_Region @relation(name: "PART_OF") {
+	from: PoliticalRegion
+	to: Region
+}
+
+type PoliticalRegion_IS_Division @relation(name: "IS") {
+	from: PoliticalRegion
+	to: Division
+}
+
+type CulturalRegion_PART_OF_Region @relation(name: "PART_OF") {
+	from: CulturalRegion
+	to: Region
+}
+
+type CulturalRegion_IS_Division @relation(name: "IS") {
+	from: CulturalRegion
+	to: Division
+}
+
+type GeographicalRegion_PART_OF_Region @relation(name: "PART_OF") {
+	from: GeographicalRegion
+	to: Region
+}
+
+type GeographicalRegion_IS_Division @relation(name: "IS") {
+	from: GeographicalRegion
+	to: Division
+}
+
+type Population implements interface_Population {
+	name: String!
+	country_annotation: String
+	region_annotation: String
+	is_present: Boolean
+	id: String!
+	remains_part_of_this: [Remains_PART_OF_Population]
+	person_part_of_this: [Person_PART_OF_Population]
+	replicant_part_of_this: [Replicant_PART_OF_Population]
+	remainsaadr_part_of_this: [RemainsAADR_PART_OF_Population]
+	personaadr_part_of_this: [PersonAADR_PART_OF_Population]
+	personempop_part_of_this: [PersonEMPOP_PART_OF_Population]
+}
+
+type PresentPopulation implements interface_Population {
+	name: String!
+	country_annotation: String
+	region_annotation: String
+	is_present: Boolean
+	id: String!
+	remains_part_of_this: [Remains_PART_OF_PresentPopulation]
+	person_part_of_this: [Person_PART_OF_PresentPopulation]
+	replicant_part_of_this: [Replicant_PART_OF_PresentPopulation]
+	remainsaadr_part_of_this: [RemainsAADR_PART_OF_PresentPopulation]
+	personaadr_part_of_this: [PersonAADR_PART_OF_PresentPopulation]
+	personempop_part_of_this: [PersonEMPOP_PART_OF_PresentPopulation]
+}
+
+type PastPopulation implements interface_Population {
+	name: String!
+	country_annotation: String
+	region_annotation: String
+	is_present: Boolean
+	id: String!
+	remains_part_of_this: [Remains_PART_OF_PastPopulation]
+	person_part_of_this: [Person_PART_OF_PastPopulation]
+	replicant_part_of_this: [Replicant_PART_OF_PastPopulation]
+	remainsaadr_part_of_this: [RemainsAADR_PART_OF_PastPopulation]
+	personaadr_part_of_this: [PersonAADR_PART_OF_PastPopulation]
+	personempop_part_of_this: [PersonEMPOP_PART_OF_PastPopulation]
+}
+
+type Result implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_is_pcaresult: [Result_IS_PCAResult]
+	this_is_umapresult: [Result_IS_UMAPResult]
+	this_is_admixtureresult: [Result_IS_AdmixtureResult]
+	this_is_resulttype: [Result_IS_ResultType]
+	sample_has_this: [Sample_HAS_Result]
+	${cypher_Result}
+}
+
+type ResultType implements interface_ResultType & interface_Translatable {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	id: String!
+	${translatable_description}
+	${translatable_name}
+	result_is_this: [Result_IS_ResultType]
+	admixture_is_this: [Admixture_IS_ResultType]
+	pca_is_this: [PCA_IS_ResultType]
+	umap_is_this: [UMAP_IS_ResultType]
+}
+
+type Admixture implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_is_admixtureresult: [Admixture_IS_AdmixtureResult]
+	this_is_umapresult: [Admixture_IS_UMAPResult]
+	this_is_resulttype: [Admixture_IS_ResultType]
+	this_is_pcaresult: [Admixture_IS_PCAResult]
+	sample_has_this: [Sample_HAS_Admixture]
+}
+
+type Admixture_k2_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k2
+	to: ResultType
+}
+
+type Admixture_k3_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k3
+	to: ResultType
+}
+
+type Admixture_k4_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k4
+	to: ResultType
+}
+
+type Admixture_k6_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k6
+	to: ResultType
+}
+
+type Admixture_k7_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k7
+	to: ResultType
+}
+
+type Admixture_k8_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k8
+	to: ResultType
+}
+
+type Admixture_k9_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k9
+	to: ResultType
+}
+
+type Admixture_k10_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k10
+	to: ResultType
+}
+
+type Admixture_k11_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k11
+	to: ResultType
+}
+
+type Admixture_k12_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k12
+	to: ResultType
+}
+
+type Admixture_k13_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k13
+	to: ResultType
+}
+
+type Admixture_k14_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k14
+	to: ResultType
+}
+
+type Admixture_k16_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k16
+	to: ResultType
+}
+
+type Admixture_k17_IS_ResultType @relation(name: "IS") {
+	from: Admixture_k17
+	to: ResultType
+}
+
+type PCA implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_is_admixtureresult: [PCA_IS_AdmixtureResult]
+	this_is_umapresult: [PCA_IS_UMAPResult]
+	this_is_resulttype: [PCA_IS_ResultType]
+	this_is_pcaresult: [PCA_IS_PCAResult]
+	sample_has_this: [Sample_HAS_PCA]
+	${cypher_PCA}
+}
+
+type PCA_World_IS_ResultType @relation(name: "IS") {
+	from: PCA_World
+	to: ResultType
+}
+
+type PCA_Eurasia_IS_ResultType @relation(name: "IS") {
+	from: PCA_Eurasia
+	to: ResultType
+}
+
+type PCA_EAS_IS_ResultType @relation(name: "IS") {
+	from: PCA_EAS
+	to: ResultType
+}
+
+type PCA_Africa_IS_ResultType @relation(name: "IS") {
+	from: PCA_Africa
+	to: ResultType
+}
+
+type UMAP implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_is_pcaresult: [UMAP_IS_PCAResult]
+	this_is_umapresult: [UMAP_IS_UMAPResult]
+	this_is_admixtureresult: [UMAP_IS_AdmixtureResult]
+	this_is_resulttype: [UMAP_IS_ResultType]
+	sample_has_this: [Sample_HAS_UMAP]
+	${cypher_UMAP}
+}
+
+type UMAP_World_IS_ResultType @relation(name: "IS") {
+	from: UMAP_World
+	to: ResultType
+}
+
+type UMAP_Eurasia_IS_ResultType @relation(name: "IS") {
+	from: UMAP_Eurasia
+	to: ResultType
+}
+
+type UMAP_EAS_IS_ResultType @relation(name: "IS") {
+	from: UMAP_EAS
+	to: ResultType
+}
+
+type UMAP_Africa_IS_ResultType @relation(name: "IS") {
+	from: UMAP_Africa
+	to: ResultType
+}
+
+type SampleOrigin implements interface_SampleOrigin & interface_Translatable {
+	lang_en__name: String!
+	lang_pl__name: String!
+	default_lang: String!
+	id: String!
+	${translatable_name}
+	this_part_of_sampleorigin: [SampleOrigin_PART_OF_SampleOrigin]
+	sample_of_this: [Sample_OF_SampleOrigin]
+	sampleorigin_part_of_this: [SampleOrigin_PART_OF_SampleOrigin]
+}
+
+type Female implements interface_Sex & interface_Translatable {
+	lang_en__name: String!
+	lang_pl__name: String!
+	default_lang: String!
+	id: String!
+	${translatable_name}
+	remains_is_genetically_this: [Remains_IS_GENETICALLY_Female]
+	remains_is_anthropologically_this: [Remains_IS_ANTHROPOLOGICALLY_Female]
+	remains_is_this: [Remains_IS_Female]
+	person_is_this: [Person_IS_Female]
+}
+
+type Male implements interface_Sex & interface_Translatable {
+	lang_en__name: String!
+	lang_pl__name: String!
+	default_lang: String!
+	id: String!
+	${translatable_name}
+	remains_is_anthropologically_this: [Remains_IS_ANTHROPOLOGICALLY_Male]
+	remains_is_this: [Remains_IS_Male]
+	remains_is_genetically_this: [Remains_IS_GENETICALLY_Male]
+	person_is_this: [Person_IS_Male]
+}
+
+type Age implements interface_ArchaeologicalPeriod & interface_Translatable & interface_Tree {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	id: String!
+	${translatable_name}
+	${translatable_description}
+	${parent_name}
+	this_part_of_archaeologicalperiod: [Age_PART_OF_ArchaeologicalPeriod]
+	archaeologicalperiod_part_of_this: [ArchaeologicalPeriod_PART_OF_Age]
+	usephase_part_of_this: [UsePhase_PART_OF_Age]
+	usephase_from_time_this: [UsePhase_FROM_TIME_Age]
+}
+
+type Period implements interface_ArchaeologicalPeriod & interface_Translatable & interface_Tree {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	id: String!
+	${translatable_name}
+	${translatable_description}
+	${parent_name}
+	this_part_of_archaeologicalperiod: [Period_PART_OF_ArchaeologicalPeriod]
+	archaeologicalperiod_part_of_this: [ArchaeologicalPeriod_PART_OF_Period]
+	usephase_part_of_this: [UsePhase_PART_OF_Period]
+	usephase_from_time_this: [UsePhase_FROM_TIME_Period]
+}
+
+type Subperiod implements interface_ArchaeologicalPeriod & interface_Translatable & interface_Tree {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	id: String!
+	${translatable_name}
+	${translatable_description}
+	${parent_name}
+	this_part_of_archaeologicalperiod: [Subperiod_PART_OF_ArchaeologicalPeriod]
+	archaeologicalperiod_part_of_this: [ArchaeologicalPeriod_PART_OF_Subperiod]
+	usephase_part_of_this: [UsePhase_PART_OF_Subperiod]
+	usephase_from_time_this: [UsePhase_FROM_TIME_Subperiod]
+}
+
+type Phase implements interface_ArchaeologicalPeriod & interface_Translatable & interface_Tree {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	id: String!
+	${translatable_name}
+	${translatable_description}
+	${parent_name}
+	this_part_of_archaeologicalperiod: [Phase_PART_OF_ArchaeologicalPeriod]
+	archaeologicalperiod_part_of_this: [ArchaeologicalPeriod_PART_OF_Phase]
+	usephase_from_time_this: [UsePhase_FROM_TIME_Phase]
+	usephase_part_of_this: [UsePhase_PART_OF_Phase]
+}
+
+type Stage implements interface_ArchaeologicalPeriod & interface_Translatable & interface_Tree {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	id: String!
+	${translatable_name}
+	${translatable_description}
+	${parent_name}
+	this_part_of_archaeologicalperiod: [Stage_PART_OF_ArchaeologicalPeriod]
+	archaeologicalperiod_part_of_this: [ArchaeologicalPeriod_PART_OF_Stage]
+	usephase_from_time_this: [UsePhase_FROM_TIME_Stage]
+	usephase_part_of_this: [UsePhase_PART_OF_Stage]
+}
+
+type Locality implements interface_Place & interface_Translatable {
+	coordinates: Point
+	lang_en__name: String
+	lang_pl__name: String
+	is_archaeological_site: Boolean!
+	default_lang: String!
+	id: String!
+	${translatable_name}
+	this_in_region: [Locality_IN_Region]
+	this_in_culture: [Locality_IN_Culture]
+	usephase_in_this: [UsePhase_IN_Locality]
+	archaeologicalsite_in_this: [ArchaeologicalSite_IN_Locality]
+	remains_in_this: [Remains_IN_Locality]
+	person_in_this: [Person_IN_Locality]
+}
+
+type Replicant implements interface_Remains {
+	id: String!
+	database_id: String!
+	skeletal_code: String
+	this_is_genetically_sex: [Replicant_IS_GENETICALLY_Sex]
+	this_from_time_dating: [Replicant_FROM_TIME_Dating]
+	this_is_sex: [Replicant_IS_Sex]
+	this_is_anthropologically_sex: [Replicant_IS_ANTHROPOLOGICALLY_Sex]
+	this_in_place: [Replicant_IN_Place]
+	this_part_of_presentpopulation: [Replicant_PART_OF_PresentPopulation]
+	this_has_haplogroupmt: [Replicant_HAS_HaplogroupMt]
+	this_in_archaeologicalsite: [Replicant_IN_ArchaeologicalSite]
+	this_has_haplogroupy: [Replicant_HAS_HaplogroupY]
+	this_part_of_pastpopulation: [Replicant_PART_OF_PastPopulation]
+	this_from_time_usephase: [Replicant_FROM_TIME_UsePhase]
+	this_is_physicaldevelopmentstage: [Replicant_IS_PhysicalDevelopmentStage]
+	this_part_of_population: [Replicant_PART_OF_Population]
+	sample_of_this: [Sample_OF_Replicant]
+}
+
+type RemainsAADR implements interface_Remains {
+	id: String!
+	database_id: String!
+	skeletal_code: String
+	this_part_of_pastpopulation: [RemainsAADR_PART_OF_PastPopulation]
+	this_has_haplogroupmt: [RemainsAADR_HAS_HaplogroupMt]
+	this_in_archaeologicalsite: [RemainsAADR_IN_ArchaeologicalSite]
+	this_is_sex: [RemainsAADR_IS_Sex]
+	this_is_physicaldevelopmentstage: [RemainsAADR_IS_PhysicalDevelopmentStage]
+	this_part_of_presentpopulation: [RemainsAADR_PART_OF_PresentPopulation]
+	this_in_place: [RemainsAADR_IN_Place]
+	this_has_haplogroupy: [RemainsAADR_HAS_HaplogroupY]
+	this_is_anthropologically_sex: [RemainsAADR_IS_ANTHROPOLOGICALLY_Sex]
+	this_is_genetically_sex: [RemainsAADR_IS_GENETICALLY_Sex]
+	this_from_time_dating: [RemainsAADR_FROM_TIME_Dating]
+	this_from_time_usephase: [RemainsAADR_FROM_TIME_UsePhase]
+	this_part_of_population: [RemainsAADR_PART_OF_Population]
+	${cypher_Remains}
+	sample_of_this: [Sample_OF_RemainsAADR]
+}
+
+type PersonAADR implements interface_Person {
+	id: String!
+	database_id: String!
+	age: Int
+	this_in_place: [PersonAADR_IN_Place]
+	this_has_haplogroupy: [PersonAADR_HAS_HaplogroupY]
+	this_has_haplogroupmt: [PersonAADR_HAS_HaplogroupMt]
+	this_part_of_population: [PersonAADR_PART_OF_Population]
+	this_is_sex: [PersonAADR_IS_Sex]
+	this_part_of_presentpopulation: [PersonAADR_PART_OF_PresentPopulation]
+	this_part_of_pastpopulation: [PersonAADR_PART_OF_PastPopulation]
+	${cypher_Person}
+	sample_of_this: [Sample_OF_PersonAADR]
+}
+
+type PersonEMPOP implements interface_Person {
+	id: String!
+	database_id: String!
+	age: Int
+	this_has_haplogroupy: [PersonEMPOP_HAS_HaplogroupY]
+	this_in_place: [PersonEMPOP_IN_Place]
+	this_is_sex: [PersonEMPOP_IS_Sex]
+	this_part_of_pastpopulation: [PersonEMPOP_PART_OF_PastPopulation]
+	this_part_of_presentpopulation: [PersonEMPOP_PART_OF_PresentPopulation]
+	this_has_haplogroupmt: [PersonEMPOP_HAS_HaplogroupMt]
+	this_part_of_population: [PersonEMPOP_PART_OF_Population]
+	${cypher_Person}
+	sample_of_this: [Sample_OF_PersonEMPOP]
+}
+
+type PoliticalDivision implements interface_Division & interface_Translatable & interface_Tree {
+	id: String!
+	lang_en__name: String!
+	lang_pl__name: String!
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	${translatable_name}
+	${parent_name}
+	this_part_of_division: [PoliticalDivision_PART_OF_Division]
+	division_part_of_this: [Division_PART_OF_PoliticalDivision]
+	region_is_this: [Region_IS_PoliticalDivision]
+}
+
+type CulturalDivision implements interface_Division & interface_Translatable & interface_Tree {
+	id: String!
+	lang_en__name: String!
+	lang_pl__name: String!
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	${translatable_name}
+	${parent_name}
+	this_part_of_division: [CulturalDivision_PART_OF_Division]
+	division_part_of_this: [Division_PART_OF_CulturalDivision]
+	region_is_this: [Region_IS_CulturalDivision]
+}
+
+type GeographicalDivision implements interface_Division & interface_Translatable & interface_Tree {
+	id: String!
+	lang_en__name: String!
+	lang_pl__name: String!
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	${translatable_name}
+	${parent_name}
+	this_part_of_division: [GeographicalDivision_PART_OF_Division]
+	division_part_of_this: [Division_PART_OF_GeographicalDivision]
+	region_is_this: [Region_IS_GeographicalDivision]
+}
+
+type PoliticalRegion implements interface_Region & interface_Translatable & interface_Tree {
+	lang_en__name: String!
+	lang_pl__name: String!
+	code: String
+	bbox: [Point!]
+	centroid: Point!
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	id: String!
+	${translatable_name}
+	${parent_name}
+	this_part_of_region: [PoliticalRegion_PART_OF_Region]
+	this_is_division: [PoliticalRegion_IS_Division]
+	${cypher_Region}
+	archaeologicalsite_in_this: [ArchaeologicalSite_IN_PoliticalRegion]
+	place_in_this: [Place_IN_PoliticalRegion]
+	polygon_part_of_this: [Polygon_PART_OF_PoliticalRegion]
+	region_part_of_this: [Region_PART_OF_PoliticalRegion]
+}
+
+type CulturalRegion implements interface_Region & interface_Translatable & interface_Tree {
+	lang_en__name: String!
+	lang_pl__name: String!
+	code: String
+	bbox: [Point!]
+	centroid: Point!
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	id: String!
+	${translatable_name}
+	${parent_name}
+	this_part_of_region: [CulturalRegion_PART_OF_Region]
+	this_is_division: [CulturalRegion_IS_Division]
+	archaeologicalsite_in_this: [ArchaeologicalSite_IN_CulturalRegion]
+	place_in_this: [Place_IN_CulturalRegion]
+	polygon_part_of_this: [Polygon_PART_OF_CulturalRegion]
+	region_part_of_this: [Region_PART_OF_CulturalRegion]
+}
+
+type GeographicalRegion implements interface_Region & interface_Translatable & interface_Tree {
+	lang_en__name: String!
+	lang_pl__name: String!
+	code: String
+	bbox: [Point!]
+	centroid: Point!
+	default_lang: String!
+	treeIndex: String
+	depth: Int
+	id: String!
+	${translatable_name}
+	${parent_name}
+	this_part_of_region: [GeographicalRegion_PART_OF_Region]
+	this_is_division: [GeographicalRegion_IS_Division]
+	${cypher_Region}
+	archaeologicalsite_in_this: [ArchaeologicalSite_IN_GeographicalRegion]
+	place_in_this: [Place_IN_GeographicalRegion]
+	polygon_part_of_this: [Polygon_PART_OF_GeographicalRegion]
+	region_part_of_this: [Region_PART_OF_GeographicalRegion]
+}
+
+type AdmixtureResult implements interface_ResultType & interface_Translatable {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	id: String!
+	${translatable_description}
+	${translatable_name}
+	result_is_this: [Result_IS_AdmixtureResult]
+	admixture_is_this: [Admixture_IS_AdmixtureResult]
+	pca_is_this: [PCA_IS_AdmixtureResult]
+	umap_is_this: [UMAP_IS_AdmixtureResult]
+}
+
+type PCAResult implements interface_ResultType & interface_Translatable {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	id: String!
+	${translatable_description}
+	${translatable_name}
+	result_is_this: [Result_IS_PCAResult]
+	admixture_is_this: [Admixture_IS_PCAResult]
+	pca_is_this: [PCA_IS_PCAResult]
+	umap_is_this: [UMAP_IS_PCAResult]
+}
+
+type UMAPResult implements interface_ResultType & interface_Translatable {
+	lang_en__name: String!
+	lang_pl__name: String!
+	lang_en__description: String
+	lang_pl__description: String
+	default_lang: String!
+	id: String!
+	${translatable_description}
+	${translatable_name}
+	result_is_this: [Result_IS_UMAPResult]
+	admixture_is_this: [Admixture_IS_UMAPResult]
+	pca_is_this: [PCA_IS_UMAPResult]
+	umap_is_this: [UMAP_IS_UMAPResult]
+}
+
+type Admixture_k2 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k2_is_resulttype: [Admixture_k2_IS_ResultType]
+}
+
+type Admixture_k3 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k3_is_resulttype: [Admixture_k3_IS_ResultType]
+}
+
+type Admixture_k4 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k4_is_resulttype: [Admixture_k4_IS_ResultType]
+}
+
+type Admixture_k6 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k6_is_resulttype: [Admixture_k6_IS_ResultType]
+}
+
+type Admixture_k7 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k7_is_resulttype: [Admixture_k7_IS_ResultType]
+}
+
+type Admixture_k8 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k8_is_resulttype: [Admixture_k8_IS_ResultType]
+}
+
+type Admixture_k9 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k9_is_resulttype: [Admixture_k9_IS_ResultType]
+}
+
+type Admixture_k10 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k10_is_resulttype: [Admixture_k10_IS_ResultType]
+}
+
+type Admixture_k11 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k11_is_resulttype: [Admixture_k11_IS_ResultType]
+}
+
+type Admixture_k12 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k12_is_resulttype: [Admixture_k12_IS_ResultType]
+}
+
+type Admixture_k13 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k13_is_resulttype: [Admixture_k13_IS_ResultType]
+}
+
+type Admixture_k14 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k14_is_resulttype: [Admixture_k14_IS_ResultType]
+}
+
+type Admixture_k16 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k16_is_resulttype: [Admixture_k16_IS_ResultType]
+}
+
+type Admixture_k17 implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_k17_is_resulttype: [Admixture_k17_IS_ResultType]
+}
+
+type PCA_World implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_world_is_resulttype: [PCA_World_IS_ResultType]
+}
+
+type PCA_Eurasia implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_eurasia_is_resulttype: [PCA_Eurasia_IS_ResultType]
+}
+
+type PCA_EAS implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_eas_is_resulttype: [PCA_EAS_IS_ResultType]
+}
+
+type PCA_Africa implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_africa_is_resulttype: [PCA_Africa_IS_ResultType]
+}
+
+type UMAP_World implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_world_is_resulttype: [UMAP_World_IS_ResultType]
+}
+
+type UMAP_Eurasia implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_eurasia_is_resulttype: [UMAP_Eurasia_IS_ResultType]
+}
+
+type UMAP_EAS implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_eas_is_resulttype: [UMAP_EAS_IS_ResultType]
+}
+
+type UMAP_Africa implements interface_Result {
+	vector: [Float!]
+	type: String!
+	c1: Float
+	c2: Float
+	c3: Float
+	c4: Float
+	c5: Float
+	c6: Float
+	c7: Float
+	c8: Float
+	c9: Float
+	c10: Float
+	c11: Float
+	c12: Float
+	c13: Float
+	c14: Float
+	c15: Float
+	c16: Float
+	c17: Float
+	id: String!
+	this_africa_is_resulttype: [UMAP_Africa_IS_ResultType]
+}
+
+${fullTextQueries}

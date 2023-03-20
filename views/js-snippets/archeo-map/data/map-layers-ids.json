@@ -1,0 +1,50 @@
+{
+	"basemap-light-water": [
+		"water",
+		"waterway"
+	],
+	"basemap-light-boundaries": [
+		"admin-1-boundary-bg",
+		"admin-0-boundary-bg",
+		"admin-1-boundary",
+		"admin-0-boundary",
+		"admin-0-boundary-disputed"
+	],
+	"basemap-light-labels": [
+		"water_name",
+		"water_name-lang",
+		"label_airport",
+		"label_airport-lang",
+		"label_road",
+		"label_road-lang",
+		"label_place_other",
+		"label_place_other-lang",
+		"label_place_city",
+		"label_place_city-lang",
+		"label_country_other",
+		"label_country_other-lang",
+		"label_country",
+		"label_country-lang",
+		"point_place_city"
+	],
+	"Lands_BU": [
+		"waterway",
+		"water",
+		"admin-1-boundary-bg",
+		"admin-0-boundary-bg",
+		"admin-1-boundary",
+		"admin-0-boundary",
+		"admin-0-boundary-disputed",
+		"waterway-label",
+		"natural-line-label",
+		"natural-point-label",
+		"water-line-label",
+		"water-point-label",
+		"poi-label",
+		"settlement-subdivision-label",
+		"settlement-minor-label",
+		"settlement-major-label",
+		"state-label",
+		"country-label"
+	]
+}

@@ -1,0 +1,6 @@
+mixin icon-text-list(texts, iconName)
+    ul.icon-text-list&attributes(attributes)
+        each text, key in texts
+            li 
+                i.material-icons= iconName
+                p= text

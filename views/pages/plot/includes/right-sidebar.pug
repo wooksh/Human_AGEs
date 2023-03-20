@@ -1,0 +1,32 @@
+include /mixins-pug/toggle-arrow/index.pug
+include /mixins-pug/textbox/index.pug
+include /mixins-pug/spectrum-color-input/index.pug
+include /mixins-pug/simple-radiobuttons/index.pug
+include /mixins-pug/tooltip/index.pug
+
+include ./presets/popTypes.pug
+include ./presets/resultTypes.pug
+
+
+#right-sidebar.sidebar-wrapper.right.active
+	nav.sidebar
+		#attribute-section.section 
+			- var targetId = 'attribute-selection';
+			+accordion-header(targetId, 'Attribute')(class="section-header collapsed")
+			.collapse(id=targetId)
+				.palette-primary-color-lightest-bg.section-content
+					.subsection
+						h4.d-block.my-2 Choose result type
+						hr
+						+dropdown("select-pca", resultsDict)(data-style='btn')
+					.subsection
+						h4.d-block.my-2 Choose data type
+						hr
+						+dropdown("select-dataset", popDict)(data-style='btn')
+
+	.sidebar-trigger(title="Toggle plot management panel")
+		.label 
+			span 
+				i.material-icons.mr-3 show_chart
+				| plot management
+		+toggle-arrow("right")(class="sidebar-arrow active")

@@ -1,0 +1,193 @@
+@import 'mixins-sass/multi-browser-support.scss';
+
+/*---------------------------------------------------*/
+/*** CONTENT ***/
+/*---------------------------------------------------*/
+
+#content {
+    padding: 0;
+}
+
+/*---------------------------------------------------*/
+/*** JUMBOTRON ***/
+/*---------------------------------------------------*/
+
+
+.jumbotron {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    color: #222;
+    padding: 0;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+    overflow: hidden;
+
+    .jumbotron-background-image {
+        position: absolute;
+        /* Tymczasowo ! */
+        //filter: grayscale(100%) contrast(10%);
+        //-webkit-filter: grayscale(100%) opacity(20%);
+
+        & > img {
+            width: 100vw;
+        }
+    }
+
+    & > .container-fluid {
+        padding-top: 1rem;
+    }
+
+    & .left-side, & .right-side {
+        padding: 2rem;
+    }
+
+    & .row {
+        margin-bottom: 50px;
+    }
+
+    & .row:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*---------------------------------------------------*/
+/*** CAROUSEL ***/
+/*---------------------------------------------------*/
+
+#carouselNews .carousel-item {
+    max-height: 200px;
+    background-color: #333;
+}
+
+/*---------------------------------------------------*/
+/*** BOOK ***/
+/*---------------------------------------------------*/
+
+/* Variables */
+$book-width: 600px;
+$book-height: 400px;
+$page-width: $book-width / 2;
+$page-height: $book-height;
+$margin-transition-delay: 1s;
+
+#book-wrapper {
+    margin: 0 auto;
+}
+
+#flipbook{
+    width: $book-width;
+    height: $book-height;
+
+    @include transition(margin $margin-transition-delay);
+
+    & .cover {
+        background-color: #aaa;
+    }
+
+    & .page-custom{
+        width: $page-width;
+        height: $page-height;
+
+        background-color: rgb(228, 228, 228) !important; 
+
+        @include box-shadow(0 0 20px rgba(0,0,0,0.2));
+    }
+
+    & .page-content-wrapper {
+        padding: 1rem;
+
+        &.center {
+            text-align: center;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+            vertical-align: middle;
+        }
+    }
+
+
+
+    //https://via.placeholder.com/150x150
+}
+
+.flipbook-viewport{
+	overflow:hidden;
+	width:100%;
+    height:100%;
+    
+    & #book-wrapper{
+        position:absolute;
+        left:calc(50% - #{$page-width});
+        margin:auto;
+    }
+
+    & .page img{
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin:0;
+    }
+
+    & .shadow{
+        -webkit-transition: -webkit-box-shadow 0.5s;
+        -moz-transition: -moz-box-shadow 0.5s;
+        -o-transition: -webkit-box-shadow 0.5s;
+        -ms-transition: -ms-box-shadow 0.5s;
+        transition: box-shadow 0.5s;
+
+        @include transition(box-shadow $margin-transition-delay);
+        @include box-shadow(0 0 20px rgba(0,0,0,0.2));
+    }
+}
+
+/*---------------------------------------------------*/
+/*** DISCIPLINES ***/
+/*---------------------------------------------------*/
+$padding-val: $book-height / 4;
+
+#disciplines-wrapper {
+    padding: $padding-val;
+    height: $book-height + $padding-val * 2;
+    @include transition(background-color 1s);
+    background-color: rgb(245, 231, 219);
+}
+
+.studies-historical {
+    background-color: rgb(240, 209, 168) !important;
+}
+
+.studies-archeological {
+    background-color: rgb(240, 176, 168) !important;
+}
+
+.studies-antropological {
+    background-color: rgb(221, 240, 168) !important;
+}
+
+.studies-genetical {
+    background-color: rgb(168, 240, 212) !important;
+}
+
+.studies-genomical {
+    background-color: rgb(226, 168, 240) !important;
+}
+
+/*---------------------------------------------------*/
+/*** APPLICATIONS ***/
+/*---------------------------------------------------*/
+
+#applications-wrapper {
+    padding: 2rem;
+
+    & ul {
+        margin: 0;
+
+        & li {
+            margin-bottom: 50px;
+        }
+    }
+}

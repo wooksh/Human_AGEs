@@ -1,0 +1,862 @@
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ 1204:
+/***/ ((__unused_webpack_module, __unused_webpack___webpack_exports__, __webpack_require__) => {
+
+"use strict";
+
+;// CONCATENATED MODULE: ./views/pages/entity/remains/css/style.scss
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const style = ({"palette_primary_color":"#13446f","pallette_primary_color_light":"#26537a","pallette_primary_color_lightest":"#c5d1dc","pallette_primary_color_dark":"#113d64","pallette_primary_color_darkest":"#0d304e","pallette_secondary_color":"#ffad42","pallette_secondary_color_darker":"#d4861f","palette_tertiary_color_light":"#afafaf","palette_tertiary_color_lightest":"#ddd","palette_tertiary_color_lighter":"#cecece","palette_tertiary_color":"#474747","palette_tertiary_color_dark":"#2c2c2c","text_color_light":"#e6e6e6","text_color_dark":"#222","text_color_dark_faded":"#646464","background_color_light":"#eee","background_color_lightest":"#f7f7f7","present_time_color_array_string":"119,0,255,1","text_color_light_faded":"#d2d2d2"});
+// EXTERNAL MODULE: ./node_modules/ol/ol.css
+var ol = __webpack_require__(3618);
+;// CONCATENATED MODULE: ./views/pages/entity/remains/js/map.js
+//import ArcheoMap from 'JsSnippets/archeo-map/index';
+function initializePreviewMap(remainsObject) {
+  if (remainsObject.coordinates != null) {
+    var coordinates = [remainsObject.coordinates.longitude, remainsObject.coordinates.latitude];
+    var projectedCoordinates = ArcheoMap.getCoordinatesProjectedToMap(coordinates, ArcheoSession.get().map.dataProjection, ArcheoSession.get().map.mapProjection);
+    let pointLayer = ArcheoMap.setupLayer({
+      sourceConfig: 'points' //styleConfig: new VectorSource()
+
+    });
+    var mapConfig = {
+      dataProjection: ArcheoSession.get().map.dataProjection,
+      mapProjection: ArcheoSession.get().map.mapProjection,
+      mapInitialCenter: projectedCoordinates,
+      controlsNames: ['defaults'],
+      mapInitialZoom: 6,
+      mapDOMObjectId: 'map',
+      layers: [pointLayer]
+    };
+    map = ArcheoMap.initializeMap(mapConfig);
+    var layerTypeClass = pointLayer.get('typeClass');
+    var pointFeatures = ArcheoMap.getFeatures([remainsObject], layerTypeClass, 'Remains');
+    ArcheoMap.setFeatures(pointFeatures, pointLayer.getSource());
+  } else {
+    $('#map').css('background-color', 'gray');
+  }
+} // getCoordinatesProjectedToMap
+
+
+
+;// CONCATENATED MODULE: ./views/mixins-pug/toggle-arrow/style.scss
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const toggle_arrow_style = ({"palette_primary_color":"#13446f","pallette_primary_color_light":"#26537a","pallette_primary_color_lightest":"#c5d1dc","pallette_primary_color_dark":"#113d64","pallette_primary_color_darkest":"#0d304e","pallette_secondary_color":"#ffad42","pallette_secondary_color_darker":"#d4861f","palette_tertiary_color_light":"#afafaf","palette_tertiary_color_lightest":"#ddd","palette_tertiary_color_lighter":"#cecece","palette_tertiary_color":"#474747","palette_tertiary_color_dark":"#2c2c2c","text_color_light":"#e6e6e6","text_color_dark":"#222","text_color_dark_faded":"#646464","background_color_light":"#eee","background_color_lightest":"#f7f7f7","present_time_color_array_string":"119,0,255,1","text_color_light_faded":"#d2d2d2"});
+;// CONCATENATED MODULE: ./views/mixins-pug/accordion-header/style.scss
+// extracted by mini-css-extract-plugin
+/* harmony default export */ const accordion_header_style = ({"palette_primary_color":"#13446f","pallette_primary_color_light":"#26537a","pallette_primary_color_lightest":"#c5d1dc","pallette_primary_color_dark":"#113d64","pallette_primary_color_darkest":"#0d304e","pallette_secondary_color":"#ffad42","pallette_secondary_color_darker":"#d4861f","palette_tertiary_color_light":"#afafaf","palette_tertiary_color_lightest":"#ddd","palette_tertiary_color_lighter":"#cecece","palette_tertiary_color":"#474747","palette_tertiary_color_dark":"#2c2c2c","text_color_light":"#e6e6e6","text_color_dark":"#222","text_color_dark_faded":"#646464","background_color_light":"#eee","background_color_lightest":"#f7f7f7","present_time_color_array_string":"119,0,255,1","text_color_light_faded":"#d2d2d2"});
+// EXTERNAL MODULE: ./views/pages/entity/remains/index.pug
+var remains = __webpack_require__(4778);
+;// CONCATENATED MODULE: ./views/pages/entity/remains/app.js
+// Styles //
+
+ // Scripts //
+
+ // Register pug-Mixins //
+
+
+
+
+/* Link .pug for assets injetion */
+
+
+/* 'remainsData' is variable from router */
+
+$(document).ready(function () {
+  /* Initial parameters */
+  console.log('DATA remainsObject');
+  console.log(remainsObject);
+  /* Setup initial session cache content */
+  // TODO ...
+
+  /* Call initialization functions */
+
+  initializePreviewMap(remainsObject); //initializeTimeline("gradient", [updateTimeRangeInputs]);
+
+  /* Setup events */
+  //createCopyTimelineSwitchEvents();
+});
+
+/***/ }),
+
+/***/ 802:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Farcheo_cache.0a2d445c106ef5902522.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 1087:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Farcheo_events.f8888f44eceec80e0b26.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 9072:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Clink defer rel=\"stylesheet\" href=\"\u002Fcss\u002Farcheo_map.fbb750fd312778403036.css\"\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 3678:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Farcheo_session.b7e5517589ebabb3e4a3.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 6603:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Farcheo_utilities.d286652910d0b1fd3485.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 2686:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Fentity_remains.5e5cdf506ed29b10b335.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 8328:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Clink defer rel=\"stylesheet\" href=\"\u002Fcss\u002Fentity_remains.094df79d13ffd80fb7b7.css\"\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 4161:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Clink defer rel=\"stylesheet\" href=\"\u002Fcss\u002Fmodules.2b77951e6bc2cada6847.css\"\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 4697:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Frequests.2ea6882bae2edfb6aa0f.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 8635:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Ftemplate_basic.ad4b8179f13090d24076.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 7520:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Clink defer rel=\"stylesheet\" href=\"\u002Fcss\u002Ftemplate_basic.0a69542d24ff35536e13.css\"\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 4778:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;
+    var locals_for_with = (locals || {});
+    
+    (function (JSON, Math, accordTitle, archeoInfoDic, classes, expanded, generalInfoDic, geneticInfoDic, lang, metadata, originInfo, page, pageName, pubmedLink, remains, remainsData, sample, targetId) {
+      pug_mixins["information-table"] = pug_interp = function(rows){
+var block = (this && this.block), attributes = (this && this.attributes) || {};
+pug_html = pug_html + "\u003Ctable" + (pug.attrs(pug.merge([{"class": "table"},attributes]), true)) + "\u003E";
+// iterate rows
+;(function(){
+  var $$obj = rows;
+  if ('number' == typeof $$obj.length) {
+      for (var title = 0, $$l = $$obj.length; title < $$l; title++) {
+        var value = $$obj[title];
+pug_html = pug_html + "\u003Ctbody\u003E\u003Ctr\u003E\u003Ctd style=\"background-color: #d8d8d8;\"\u003E" + (pug.escape(null == (pug_interp = title) ? "" : pug_interp)) + "\u003C\u002Ftd\u003E\u003Ctd\u003E" + (pug.escape(null == (pug_interp = value) ? "" : pug_interp)) + "\u003C\u002Ftd\u003E\u003C\u002Ftr\u003E\u003C\u002Ftbody\u003E";
+      }
+  } else {
+    var $$l = 0;
+    for (var title in $$obj) {
+      $$l++;
+      var value = $$obj[title];
+pug_html = pug_html + "\u003Ctbody\u003E\u003Ctr\u003E\u003Ctd style=\"background-color: #d8d8d8;\"\u003E" + (pug.escape(null == (pug_interp = title) ? "" : pug_interp)) + "\u003C\u002Ftd\u003E\u003Ctd\u003E" + (pug.escape(null == (pug_interp = value) ? "" : pug_interp)) + "\u003C\u002Ftd\u003E\u003C\u002Ftr\u003E\u003C\u002Ftbody\u003E";
+    }
+  }
+}).call(this);
+
+pug_html = pug_html + "\u003C\u002Ftable\u003E";
+};
+pug_html = pug_html + "\u003C!DOCTYPE html\u003E\u003Chtml" + (pug.attr("lang", lang, true, true)) + "\u003E\u003Chead\u003E\u003Cmeta charset=\"utf-8\"\u003E\u003Cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003E\u003Cmeta http-equiv=\"X-UA-Compatible\" content=\"text\u002Fhtml; charset=utf-8\"\u003E\u003Cmeta name=\"robots\" content=\"noindex\"\u003E\u003Clink rel=\"shortcut icon\" href=\"#\"\u003E\u003Clink href=\"https:\u002F\u002Ffonts.googleapis.com\u002Ficon?family=Material+Icons\" rel=\"stylesheet\"\u003E\u003Clink rel=\"stylesheet\" href=\"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap@4.5.3\u002Fdist\u002Fcss\u002Fbootstrap.min.css\" integrity=\"sha384-TX8t27EcRE3e\u002FihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2\" crossorigin=\"anonymous\"\u003E\u003Clink rel=\"stylesheet\" href=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fmalihu-custom-scrollbar-plugin\u002F3.1.5\u002Fjquery.mCustomScrollbar.min.css\" integrity=\"sha256-JHGEmB629pipTkMag9aMaw32I8zle24p3FpsEeI6oZU=\" crossorigin=\"anonymous\"\u003E\u003Clink rel=\"stylesheet\" href=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjqueryui\u002F1.12.1\u002Fjquery-ui.min.css\" integrity=\"sha256-rByPlHULObEjJ6XQxW\u002FflG2r+22R5dKiAoef+aXWfik=\" crossorigin=\"anonymous\"\u003E\u003Clink rel=\"stylesheet\" href=\"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap-select@1.13.17\u002Fdist\u002Fcss\u002Fbootstrap-select.min.css\" integrity=\"sha256-VMPhaMmJn7coDSbzwqB0jflvb+CDnoAlfStC5RogOQo=\" crossorigin=\"anonymous\"\u003E" + (null == (pug_interp = __webpack_require__(7520).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(4161).call(this, locals)) ? "" : pug_interp) + "\u003Cscript\u003Ewindow.metadata = JSON.parse( " + (null == (pug_interp = JSON.stringify(metadata).replace(/<\//g, '<\\/')) ? "" : pug_interp) + " );\nwindow.name = \"" + (null == (pug_interp = pageName) ? "" : pug_interp) + "\";\nwindow.lang = \"" + (null == (pug_interp = lang) ? "" : pug_interp) + "\";\n\u002F\u002F-window.PlotlyConfig = {MathJaxConfig: 'local'};\n\n\n\u003C\u002Fscript\u003E" + (null == (pug_interp = __webpack_require__(8328).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(9072).call(this, locals)) ? "" : pug_interp) + "\u003Cscript\u003E\u002F\u002F- \".Remains[0]\", because we except only one node of given id to be outputed\nwindow.remainsObject = JSON.parse( " + (null == (pug_interp = JSON.stringify(remainsData).replace(/<\//g, '<\\/')) ? "" : pug_interp) + " ).Remains[0];\n\u002F\u002F-var metadata = JSON.parse( " + (null == (pug_interp = JSON.stringify(metadata).replace(/<\//g, '<\\/')) ? "" : pug_interp) + " );\n\n\n\u003C\u002Fscript\u003E\u003Ctitle\u003EHAGes - Human Archeogenomics\u003C\u002Ftitle\u003E\u003C\u002Fhead\u003E\u003Cbody\u003E";
+var classes = ['navbar', 'navbar-expand-md', 'navbar-dark', 'bg-dark', 'fixed-top']
+pug_mixins["nav-item"] = pug_interp = function(ref, name){
+var block = (this && this.block), attributes = (this && this.attributes) || {};
+if (ref === page) {
+pug_html = pug_html + "\u003Cli" + (pug.attrs(pug.merge([{"class": "nav-item active"},attributes]), true)) + "\u003E\u003Ca" + (" class=\"nav-link\""+pug.attr("href", "/" + ref, true, true)) + "\u003E" + (pug.escape(null == (pug_interp = name) ? "" : pug_interp)) + "\u003Cspan class=\"sr-only\"\u003E(current)\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E";
+}
+else {
+pug_html = pug_html + "\u003Cli" + (pug.attrs(pug.merge([{"class": "nav-item"},attributes]), true)) + "\u003E\u003Ca" + (" class=\"nav-link\""+pug.attr("href", "/" + ref, true, true)) + "\u003E" + (pug.escape(null == (pug_interp = name) ? "" : pug_interp)) + "\u003C\u002Fa\u003E\u003C\u002Fli\u003E";
+}
+};
+pug_html = pug_html + "\u003Cnav" + (pug.attr("class", pug.classes([classes], [true]), false, true)) + "\u003E\u003Ca" + (" class=\"navbar-brand\""+pug.attr("href", `/${lang}/home`, true, true)) + "\u003EHAGes - Explore Human Archeogenomics\u003C\u002Fa\u003E\u003Cbutton class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"\u003E\u003Cspan class=\"navbar-toggler-icon\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fbutton\u003E\u003Cdiv class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\"\u003E\u003Cul class=\"navbar-nav mr-auto\"\u003E";
+pug_mixins["nav-item"].call({
+attributes: {"class": "mx-2"}
+}, `${lang}/home`, "Main page");
+pug_mixins["nav-item"](`${lang}/map`, "Interactive map");
+pug_mixins["nav-item"](`${lang}/genomicdata`, "Genomic data");
+pug_mixins["nav-item"].call({
+attributes: {"class": "mx-2"}
+}, `${lang}/contact`, "Contact");
+pug_html = pug_html + "\u003C\u002Ful\u003E\u003C\u002Fdiv\u003E\u003C\u002Fnav\u003E\u003Cdiv id=\"site-wrapper\"\u003E\u003Cmain role=\"main\"\u003E";
+pug_mixins["toggle-arrow"] = pug_interp = function(direction, thickness = 0.1, length = 0.75, positionFix = 1.05){
+var block = (this && this.block), attributes = (this && this.attributes) || {};
+var top = (Math.sqrt(2) * (thickness - length) / 2.0) * positionFix; 
+var styleTop = `top: ${top/2}em; width: ${length}em; height: ${thickness}em`;
+var styleBottom = `top: ${-top/2}em; width: ${length}em; height: ${thickness}em`;
+pug_html = pug_html + "\u003Cspan" + (pug.attrs(pug.merge([{"class": pug.classes(["toggle-arrow",direction], [false,true])},attributes]), true)) + "\u003E\u003Cspan" + (" class=\"tip\""+pug.attr("style", pug.style(styleTop), true, true)) + "\u003E\u003C\u002Fspan\u003E\u003Cspan" + (" class=\"tip\""+pug.attr("style", pug.style(styleBottom), true, true)) + "\u003E\u003C\u002Fspan\u003E\u003C\u002Fspan\u003E";
+};
+pug_mixins["icon-checkbox"] = pug_interp = function(id, checkboxClass, label = '', isToggled = true){
+var block = (this && this.block), attributes = (this && this.attributes) || {};
+pug_html = pug_html + "\u003Cdiv" + (pug.attrs(pug.merge([{"class": "icon-checkbox-wrapper"},attributes]), true)) + "\u003E";
+if (isToggled) {
+pug_html = pug_html + "\u003Cbutton" + (pug.attr("class", pug.classes(["form-check-input","btn","icon-checkbox","active",checkboxClass], [false,false,false,false,true]), false, true)+pug.attr("id", id, true, true)+" data-toggle=\"button\" aria-pressed=\"true\" autocomplete=\"off\"") + "\u003E\u003Ci class=\"material-icons\"\u003E\u003C\u002Fi\u003E\u003C\u002Fbutton\u003E\u003Clabel" + (" class=\"form-check-label\""+pug.attr("for", id, true, true)) + "\u003E" + (null == (pug_interp = label) ? "" : pug_interp) + "\u003C\u002Flabel\u003E";
+}
+else {
+pug_html = pug_html + "\u003Cbutton" + (pug.attr("class", pug.classes(["form-check-input","btn","icon-checkbox",checkboxClass], [false,false,false,true]), false, true)+pug.attr("id", id, true, true)+" data-toggle=\"button\" aria-pressed=\"false\" autocomplete=\"off\"") + "\u003E\u003Ci class=\"material-icons\"\u003E\u003C\u002Fi\u003E\u003C\u002Fbutton\u003E\u003Clabel" + (" class=\"form-check-label\""+pug.attr("for", id, true, true)) + "\u003E" + (null == (pug_interp = label) ? "" : pug_interp) + "\u003C\u002Flabel\u003E";
+}
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
+};
+pug_mixins["accordion-header"] = pug_interp = function(targetId, title, isCollapsed = false){
+var block = (this && this.block), attributes = (this && this.attributes) || {};
+pug_html = pug_html + "\u003Cdiv" + (pug.attrs(pug.merge([{"class": "accordion-header collapsable","role": "button","data-toggle": "collapse","data-target": pug.escape("#"+targetId),"aria-expanded": pug.escape(expanded)},attributes]), true)) + "\u003E\u003Ch4 class=\"header-text\"\u003E" + (pug.escape(null == (pug_interp = title) ? "" : pug_interp)) + "\u003C\u002Fh4\u003E";
+var direction = isCollapsed ? 'top' : 'bottom';
+pug_mixins["toggle-arrow"].call({
+attributes: {"class": "accordion-arrow"}
+}, direction, 0.2, 0.75);
+pug_html = pug_html + "\u003C\u002Fdiv\u003E";
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+var remains = JSON.parse(remainsData).Remains[0];
+var generalInfoDic = {
+	'Remains ID': remains.id || '-',
+	'Skeletal code': remains.skeletal_code || '-',
+	'Sex': remains.sex && remains.sex.name ? remains.sex.name : '-'
+};
+
+var geneticInfoDic = {
+	'Haplogroup Y': remains.haplogroup_y && remains.haplogroup_y.name ? remains.haplogroup_y.name : '-',
+	'Haplogroup Mt': remains.haplogroup_mt && remains.haplogroup_mt.name ? remains.haplogroup_mt.name : '-',
+	'Genetical sex': remains.genetical_sex && remains.genetical_sex.name ? remains.genetical_sex.name : '-'
+};
+
+
+var archeoInfoDic = {
+	'Year from': remains.dating && remains.dating.year_start ? remains.dating.year_start : '-',
+	'Year to': remains.dating && remains.dating.year_end ? remains.dating.year_end : '-',
+	'Dating method': remains.dating && remains.dating.method ? remains.dating.method : '-'
+
+	//'Age': remains.age && remains.age.from && remains.age.to ? remains.age.from + ' - ' + remains.age.to : '-',
+	//'Developmental stage': 'developmental_stages' in remains && remains.developmental_stages ? remains.developmental_stages.names.join(', ') : '-',
+	//'Anthropological sex': 'anthropological_sex' in remains && remains.anthropological_sex ? remains.anthropological_sex.name : '-'
+};
+
+var datingInfoDic = {
+
+};
+
+pug_html = pug_html + "\u003Cdiv id=\"header-wrapper\"\u003E\u003Cdiv class=\"map\" id=\"map\"\u003E\u003C\u002Fdiv\u003E\u003Cdiv id=\"header-suplementary-information\"\u003E\u003Cdiv class=\"light-parameter-box d-block\"\u003Efrom archaeological site\u003C\u002Fdiv\u003E\u003Cdiv class=\"darken-parameter-box\"\u003E" + (pug.escape(null == (pug_interp = remains.site.name) ? "" : pug_interp)) + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv id=\"header-main-information\"\u003E\u003Cdiv class=\"light-parameter-box d-inline\"\u003ERemains\u003C\u002Fdiv\u003E\u003Cp class=\"darken-parameter-box\"\u003EID | " + (pug.escape(null == (pug_interp = remains.id) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv id=\"content-wrapper\"\u003E\u003Cdiv id=\"content\"\u003E\u003Cdiv class=\"row\"\u003E\u003Cdiv class=\"col-12\"\u003E\u003Cdiv class=\"row\"\u003E\u003Cdiv class=\"col-4\"\u003E\u003Cdiv class=\"row\"\u003E\u003Cdiv class=\"content\"\u003E\u003Ch2 class=\"section-title\"\u003EGeneral information\u003C\u002Fh2\u003E\u003Cdiv class=\"section-content\"\u003E";
+pug_mixins["information-table"](generalInfoDic);
+pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"col-4\"\u003E\u003Cdiv class=\"row\"\u003E\u003Cdiv class=\"content\"\u003E\u003Ch2 class=\"section-title\"\u003EArcheological information \u003C\u002Fh2\u003E\u003Cdiv class=\"section-content\"\u003E";
+pug_mixins["information-table"](archeoInfoDic);
+pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"col-4\"\u003E\u003Cdiv class=\"row\"\u003E\u003Cdiv class=\"content\"\u003E\u003Ch2 class=\"section-title\"\u003EGenetic information\u003C\u002Fh2\u003E\u003Cdiv class=\"section-content\"\u003E";
+pug_mixins["information-table"](geneticInfoDic);
+pug_html = pug_html + "\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"row mt-5\"\u003E\u003Cdiv class=\"col-12\"\u003E\u003Cdiv class=\"container\"\u003E";
+var sample = remains.full_sample;
+var targetId = 'accordion-' + sample.sample_db_id
+var originInfo = sample.sample_origin ? ' of ' + sample.sample_origin : ''
+var accordTitle = 'Sample ' + sample.sample_id + originInfo;
+pug_mixins["accordion-header"].call({
+attributes: {"class": "section-header","style": "background-color: #ddd"}
+}, targetId, accordTitle);
+pug_html = pug_html + "\u003Cdiv" + (" class=\"show collapse\""+pug.attr("id", targetId, true, true)) + "\u003E\u003Cdiv class=\"subsection\"\u003E\u003Ch6 class=\"subsection-header\"\u003ESource\u003C\u002Fh6\u003E\u003Cdiv class=\"p-3\"\u003E\u003Cp\u003E" + (pug.escape(null == (pug_interp = sample.pub_original_title) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp\u003E" + (pug.escape(null == (pug_interp = sample.pub_authors) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp\u003E" + (pug.escape(null == (pug_interp = sample.pub_publisher) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003Cp\u003EDOI: " + (pug.escape(null == (pug_interp = sample.pub_doi) ? "" : pug_interp)) + "\u003C\u002Fp\u003E";
+var pubmedLink = "https://pubmed.ncbi.nlm.nih.gov/" + sample.pmid;
+pug_html = pug_html + "\u003Ca" + (pug.attr("href", pubmedLink, true, true)) + "\u003EPubMed\u003C\u002Fa\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fmain\u003E\u003C\u002Fdiv\u003E" + (null == (pug_interp = __webpack_require__(539).call(this, locals)) ? "" : pug_interp) + "\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjquery\u002F3.3.1\u002Fjquery.min.js\" integrity=\"sha256-FgpCb\u002FKJQlLNfOu91ta32o\u002FNMZxltwRo8QtmkMRdAu8=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjquery-easing\u002F1.4.1\u002Fjquery.easing.min.js\" integrity=\"sha256-H3cjtrm\u002FztDeuhCN9I4yh4iN2Ybx\u002Fy1RM7rMmAesA0k=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjquery-mousewheel\u002F3.1.13\u002Fjquery.mousewheel.min.js\" integrity=\"sha256-jnOjDTXIPqall8M0MyTSt98JetJuZ7Yu+1Jm7hLTF7U=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fmalihu-custom-scrollbar-plugin\u002F3.1.5\u002Fjquery.mCustomScrollbar.min.js\" integrity=\"sha256-AKEjDiK2rz+d8TSPLNVNydvgJvOkG5veMAnc79FkiuE=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fpopper.js\u002F1.14.7\u002Fumd\u002Fpopper.min.js\" integrity=\"sha256-ZvOgfh+ptkpoa2Y4HkRY28ir89u\u002F+VRyDE7sB7hEEcI=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Ftwitter-bootstrap\u002F4.5.0\u002Fjs\u002Fbootstrap.bundle.min.js\" integrity=\"sha256-Xt8pc4G0CdcRvI0nZ2lRpZ4VHng0EoUDMlGcBSQ9HiQ=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fjson5@2.1.3\u002Fdist\u002Findex.min.js\" integrity=\"sha256-b6dyH0K\u002FnE4K1\u002Fd36PNAa96t19du7JXpzpcS9K3o4Sg=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjqueryui\u002F1.12.1\u002Fjquery-ui.min.js\" integrity=\"sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap-select@1.13.17\u002Fdist\u002Fjs\u002Fbootstrap-select.min.js\" integrity=\"sha256-QOE02Glo1C1gHzP96JOaxyIMt4XSFv\u002FexZaYLY4dwO0=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E";
+if (lang === 'pl') {
+pug_html = pug_html + "\u003Cscript defer src=\"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap-select@1.13.17\u002Fjs\u002Fi18n\u002Fdefaults-pl_PL.js\" integrity=\"sha256-aWaZCaqYgueDr4CzKzw7FlKCuaoJEwOOM9LJ79aSmlk=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E";
+}
+pug_html = pug_html + (null == (pug_interp = __webpack_require__(4697).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(6603).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(3678).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(802).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(1087).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(8635).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(2686).call(this, locals)) ? "" : pug_interp) + "\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
+    }.call(this, "JSON" in locals_for_with ?
+        locals_for_with.JSON :
+        typeof JSON !== 'undefined' ? JSON : undefined, "Math" in locals_for_with ?
+        locals_for_with.Math :
+        typeof Math !== 'undefined' ? Math : undefined, "accordTitle" in locals_for_with ?
+        locals_for_with.accordTitle :
+        typeof accordTitle !== 'undefined' ? accordTitle : undefined, "archeoInfoDic" in locals_for_with ?
+        locals_for_with.archeoInfoDic :
+        typeof archeoInfoDic !== 'undefined' ? archeoInfoDic : undefined, "classes" in locals_for_with ?
+        locals_for_with.classes :
+        typeof classes !== 'undefined' ? classes : undefined, "expanded" in locals_for_with ?
+        locals_for_with.expanded :
+        typeof expanded !== 'undefined' ? expanded : undefined, "generalInfoDic" in locals_for_with ?
+        locals_for_with.generalInfoDic :
+        typeof generalInfoDic !== 'undefined' ? generalInfoDic : undefined, "geneticInfoDic" in locals_for_with ?
+        locals_for_with.geneticInfoDic :
+        typeof geneticInfoDic !== 'undefined' ? geneticInfoDic : undefined, "lang" in locals_for_with ?
+        locals_for_with.lang :
+        typeof lang !== 'undefined' ? lang : undefined, "metadata" in locals_for_with ?
+        locals_for_with.metadata :
+        typeof metadata !== 'undefined' ? metadata : undefined, "originInfo" in locals_for_with ?
+        locals_for_with.originInfo :
+        typeof originInfo !== 'undefined' ? originInfo : undefined, "page" in locals_for_with ?
+        locals_for_with.page :
+        typeof page !== 'undefined' ? page : undefined, "pageName" in locals_for_with ?
+        locals_for_with.pageName :
+        typeof pageName !== 'undefined' ? pageName : undefined, "pubmedLink" in locals_for_with ?
+        locals_for_with.pubmedLink :
+        typeof pubmedLink !== 'undefined' ? pubmedLink : undefined, "remains" in locals_for_with ?
+        locals_for_with.remains :
+        typeof remains !== 'undefined' ? remains : undefined, "remainsData" in locals_for_with ?
+        locals_for_with.remainsData :
+        typeof remainsData !== 'undefined' ? remainsData : undefined, "sample" in locals_for_with ?
+        locals_for_with.sample :
+        typeof sample !== 'undefined' ? sample : undefined, "targetId" in locals_for_with ?
+        locals_for_with.targetId :
+        typeof targetId !== 'undefined' ? targetId : undefined));
+    ;;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 539:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;
+    var locals_for_with = (locals || {});
+    
+    (function (Date) {
+      pug_html = pug_html + "\u003Cfooter\u003E\u003Cp\u003EInstitute of Bioorganic Chemistry Polish Academy of Sciences, " + (pug.escape(null == (pug_interp = new Date().getFullYear()) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003C\u002Ffooter\u003E";
+    }.call(this, "Date" in locals_for_with ?
+        locals_for_with.Date :
+        typeof Date !== 'undefined' ? Date : undefined));
+    ;;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 7055:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var pug_has_own_property = Object.prototype.hasOwnProperty;
+
+/**
+ * Merge two attribute objects giving precedence
+ * to values in object `b`. Classes are special-cased
+ * allowing for arrays and merging/joining appropriately
+ * resulting in a string.
+ *
+ * @param {Object} a
+ * @param {Object} b
+ * @return {Object} a
+ * @api private
+ */
+
+exports.merge = pug_merge;
+function pug_merge(a, b) {
+  if (arguments.length === 1) {
+    var attrs = a[0];
+    for (var i = 1; i < a.length; i++) {
+      attrs = pug_merge(attrs, a[i]);
+    }
+    return attrs;
+  }
+
+  for (var key in b) {
+    if (key === 'class') {
+      var valA = a[key] || [];
+      a[key] = (Array.isArray(valA) ? valA : [valA]).concat(b[key] || []);
+    } else if (key === 'style') {
+      var valA = pug_style(a[key]);
+      valA = valA && valA[valA.length - 1] !== ';' ? valA + ';' : valA;
+      var valB = pug_style(b[key]);
+      valB = valB && valB[valB.length - 1] !== ';' ? valB + ';' : valB;
+      a[key] = valA + valB;
+    } else {
+      a[key] = b[key];
+    }
+  }
+
+  return a;
+}
+
+/**
+ * Process array, object, or string as a string of classes delimited by a space.
+ *
+ * If `val` is an array, all members of it and its subarrays are counted as
+ * classes. If `escaping` is an array, then whether or not the item in `val` is
+ * escaped depends on the corresponding item in `escaping`. If `escaping` is
+ * not an array, no escaping is done.
+ *
+ * If `val` is an object, all the keys whose value is truthy are counted as
+ * classes. No escaping is done.
+ *
+ * If `val` is a string, it is counted as a class. No escaping is done.
+ *
+ * @param {(Array.<string>|Object.<string, boolean>|string)} val
+ * @param {?Array.<string>} escaping
+ * @return {String}
+ */
+exports.classes = pug_classes;
+function pug_classes_array(val, escaping) {
+  var classString = '',
+    className,
+    padding = '',
+    escapeEnabled = Array.isArray(escaping);
+  for (var i = 0; i < val.length; i++) {
+    className = pug_classes(val[i]);
+    if (!className) continue;
+    escapeEnabled && escaping[i] && (className = pug_escape(className));
+    classString = classString + padding + className;
+    padding = ' ';
+  }
+  return classString;
+}
+function pug_classes_object(val) {
+  var classString = '',
+    padding = '';
+  for (var key in val) {
+    if (key && val[key] && pug_has_own_property.call(val, key)) {
+      classString = classString + padding + key;
+      padding = ' ';
+    }
+  }
+  return classString;
+}
+function pug_classes(val, escaping) {
+  if (Array.isArray(val)) {
+    return pug_classes_array(val, escaping);
+  } else if (val && typeof val === 'object') {
+    return pug_classes_object(val);
+  } else {
+    return val || '';
+  }
+}
+
+/**
+ * Convert object or string to a string of CSS styles delimited by a semicolon.
+ *
+ * @param {(Object.<string, string>|string)} val
+ * @return {String}
+ */
+
+exports.style = pug_style;
+function pug_style(val) {
+  if (!val) return '';
+  if (typeof val === 'object') {
+    var out = '';
+    for (var style in val) {
+      /* istanbul ignore else */
+      if (pug_has_own_property.call(val, style)) {
+        out = out + style + ':' + val[style] + ';';
+      }
+    }
+    return out;
+  } else {
+    return val + '';
+  }
+}
+
+/**
+ * Render the given attribute.
+ *
+ * @param {String} key
+ * @param {String} val
+ * @param {Boolean} escaped
+ * @param {Boolean} terse
+ * @return {String}
+ */
+exports.attr = pug_attr;
+function pug_attr(key, val, escaped, terse) {
+  if (
+    val === false ||
+    val == null ||
+    (!val && (key === 'class' || key === 'style'))
+  ) {
+    return '';
+  }
+  if (val === true) {
+    return ' ' + (terse ? key : key + '="' + key + '"');
+  }
+  var type = typeof val;
+  if (
+    (type === 'object' || type === 'function') &&
+    typeof val.toJSON === 'function'
+  ) {
+    val = val.toJSON();
+  }
+  if (typeof val !== 'string') {
+    val = JSON.stringify(val);
+    if (!escaped && val.indexOf('"') !== -1) {
+      return ' ' + key + "='" + val.replace(/'/g, '&#39;') + "'";
+    }
+  }
+  if (escaped) val = pug_escape(val);
+  return ' ' + key + '="' + val + '"';
+}
+
+/**
+ * Render the given attributes object.
+ *
+ * @param {Object} obj
+ * @param {Object} terse whether to use HTML5 terse boolean attributes
+ * @return {String}
+ */
+exports.attrs = pug_attrs;
+function pug_attrs(obj, terse) {
+  var attrs = '';
+
+  for (var key in obj) {
+    if (pug_has_own_property.call(obj, key)) {
+      var val = obj[key];
+
+      if ('class' === key) {
+        val = pug_classes(val);
+        attrs = pug_attr(key, val, false, terse) + attrs;
+        continue;
+      }
+      if ('style' === key) {
+        val = pug_style(val);
+      }
+      attrs += pug_attr(key, val, false, terse);
+    }
+  }
+
+  return attrs;
+}
+
+/**
+ * Escape the given string of `html`.
+ *
+ * @param {String} html
+ * @return {String}
+ * @api private
+ */
+
+var pug_match_html = /["&<>]/;
+exports.escape = pug_escape;
+function pug_escape(_html) {
+  var html = '' + _html;
+  var regexResult = pug_match_html.exec(html);
+  if (!regexResult) return _html;
+
+  var result = '';
+  var i, lastIndex, escape;
+  for (i = regexResult.index, lastIndex = 0; i < html.length; i++) {
+    switch (html.charCodeAt(i)) {
+      case 34:
+        escape = '&quot;';
+        break;
+      case 38:
+        escape = '&amp;';
+        break;
+      case 60:
+        escape = '&lt;';
+        break;
+      case 62:
+        escape = '&gt;';
+        break;
+      default:
+        continue;
+    }
+    if (lastIndex !== i) result += html.substring(lastIndex, i);
+    lastIndex = i + 1;
+    result += escape;
+  }
+  if (lastIndex !== i) return result + html.substring(lastIndex, i);
+  else return result;
+}
+
+/**
+ * Re-throw the given `err` in context to the
+ * the pug in `filename` at the given `lineno`.
+ *
+ * @param {Error} err
+ * @param {String} filename
+ * @param {String} lineno
+ * @param {String} str original source
+ * @api private
+ */
+
+exports.rethrow = pug_rethrow;
+function pug_rethrow(err, filename, lineno, str) {
+  if (!(err instanceof Error)) throw err;
+  if ((typeof window != 'undefined' || !filename) && !str) {
+    err.message += ' on line ' + lineno;
+    throw err;
+  }
+  var context, lines, start, end;
+  try {
+    str = str || __webpack_require__(7835).readFileSync(filename, {encoding: 'utf8'});
+    context = 3;
+    lines = str.split('\n');
+    start = Math.max(lineno - context, 0);
+    end = Math.min(lines.length, lineno + context);
+  } catch (ex) {
+    err.message +=
+      ' - could not read from ' + filename + ' (' + ex.message + ')';
+    pug_rethrow(err, null, lineno);
+    return;
+  }
+
+  // Error context
+  context = lines
+    .slice(start, end)
+    .map(function(line, i) {
+      var curr = i + start + 1;
+      return (curr == lineno ? '  > ' : '    ') + curr + '| ' + line;
+    })
+    .join('\n');
+
+  // Alter exception message
+  err.path = filename;
+  try {
+    err.message =
+      (filename || 'Pug') +
+      ':' +
+      lineno +
+      '\n' +
+      context +
+      '\n\n' +
+      err.message;
+  } catch (e) {}
+  throw err;
+}
+
+
+/***/ }),
+
+/***/ 7835:
+/***/ (() => {
+
+/* (ignored) */
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					result = fn();
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/runtimeId */
+/******/ 	(() => {
+/******/ 		__webpack_require__.j = 516;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			516: 0,
+/******/ 			54: 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			for(moduleId in moreModules) {
+/******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 				}
+/******/ 			}
+/******/ 			if(runtime) runtime(__webpack_require__);
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 			}
+/******/ 			__webpack_require__.O();
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = window["webpackChunkpiast"] = window["webpackChunkpiast"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, [22,994,687,962,669,399,131,498,810,229,169,419,300,481,566,446,439,203,221,54], () => (__webpack_require__(1204)))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;

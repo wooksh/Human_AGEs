@@ -1,0 +1,5167 @@
+{
+ "_meta": {
+  "name": "sdf",
+  "description": "This is a blank session for a clear start..",
+  "lang": "en",
+  "creationDate": "Mon Dec 19 2022 15:46:46 GMT+0100 (Central European Standard Time)",
+  "editDate": "Mon Dec 19 2022 15:46:51 GMT+0100 (Central European Standard Time)",
+  "author": "HumanAGEs Team",
+  "dataKeys": [
+   "datasets",
+   "layers",
+   "strategies",
+   "filters",
+   "legend",
+   "features",
+   "map"
+  ],
+  "hash": "ad23..,ew4xc334"
+ },
+ "layers": {
+  "_order": [
+   "layer_1"
+  ],
+  "_counter": 5,
+  "layer_1": {
+   "layerId": "layer_1",
+   "type": "piechart",
+   "datasetId": "RemainsAADR_18",
+   "attributeId": "admixture_k7",
+   "attributeName": "Admixture K=7",
+   "attributeType": "admixture",
+   "style": {
+    "positionOffsetRatio": 3,
+    "positionOffsetRelativeToggle": true,
+    "displayLabelProperty": true,
+    "cardinalityByValue": false,
+    "cardinalityBySize": true,
+    "cardinalityByColor": true,
+    "size": [
+     16,
+     37
+    ],
+    "fontSizeRatio": 1.12,
+    "weightGrowth": "linear",
+    "weightGrowthFactor": 1,
+    "weightScalingFactor": 1.00001,
+    "standardisationMethod": "max",
+    "valueDisplay": "count",
+    "blur": 29,
+    "radius": 24,
+    "drawingAlpha": 1,
+    "blendingMode": "normal",
+    "layerNameToggle": false,
+    "color": "rgb(224, 102, 102)",
+    "gradient": [
+     "#fff7f7",
+     "#d36464",
+     "#990b0b"
+    ],
+    "colorToggle": false,
+    "pointerToggle": true,
+    "angle": null,
+    "componentValues": {
+     "special": {
+      "MISSING": false,
+      "OTHER": false
+     },
+     "data": "selectAll"
+    },
+    "piechartLabelsAppearance": "hover",
+    "piechartLabelsShowPercent": false,
+    "piechartLabelsShowCountData": true,
+    "piechartLabelsSizeRatio": 0.93,
+    "piechartLabelsOffsetRatio": 0.51,
+    "otherRatio": 0,
+    "otherCount": 0,
+    "bodyToggle": true,
+    "showFullStop": false,
+    "padding": 0.6,
+    "seed": 0.25,
+    "outlineSizeRatio": 1,
+    "backgroundSizeRatio": 1,
+    "strategy": "archimedean"
+   },
+   "settings": {
+    "zIndex": 9999999,
+    "opacity": 1,
+    "visible": true,
+    "title": "Samples with admixtures",
+    "radius": 24,
+    "blur": 29
+   }
+  }
+ },
+ "datasets": {
+  "_order": [
+   "RemainsAADR_18"
+  ],
+  "_counter": 18,
+  "RemainsAADR_1": {
+   "name": "Samples with admixture results",
+   "objectId": "RemainsAADR",
+   "databaseName": "AADR_v44.3",
+   "entityName": "remains",
+   "query": "{\n \"database\": \"AADR_v44.3\",\n \"objects\": \"remains\",\n \"filters\": {\n  \"AND\": [\n   {\n    \"entity\": \"result_admixture\",\n    \"property\": \"relationship\",\n    \"operator\": \"exists\",\n    \"value\": \"true\"\n   }\n  ]\n },\n \"lang\": \"en\"\n}",
+   "samplingRatio": 1,
+   "dating": [
+    -16257,
+    2000
+   ],
+   "size": 4641,
+   "isPresent": false
+  },
+  "RemainsAADR_18": {
+   "name": "Samples with extreme components values",
+   "objectId": "RemainsAADR",
+   "databaseName": "AADR_v44.3",
+   "entityName": "remains",
+   "query": "{\n \"database\": \"AADR_v44.3\",\n \"objects\": \"remains\",\n \"filters\": {\n  \"OR\": [\n   {\n    \"entity\": \"result_admixture_k7\",\n    \"property\": \"c1\",\n    \"operator\": \"greater\",\n    \"value\": 0.8\n   },\n   {\n    \"entity\": \"result_admixture_k7\",\n    \"property\": \"c2\",\n    \"operator\": \"greater\",\n    \"value\": 0.8\n   },\n   {\n    \"entity\": \"result_admixture_k7\",\n    \"property\": \"c3\",\n    \"operator\": \"greater\",\n    \"value\": 0.8\n   },\n   {\n    \"entity\": \"result_admixture_k7\",\n    \"property\": \"c4\",\n    \"operator\": \"greater\",\n    \"value\": 0.8\n   },\n   {\n    \"entity\": \"result_admixture_k7\",\n    \"property\": \"c5\",\n    \"operator\": \"greater\",\n    \"value\": 0.8\n   },\n   {\n    \"entity\": \"result_admixture_k7\",\n    \"property\": \"c6\",\n    \"operator\": \"greater\",\n    \"value\": 0.6\n   },\n   {\n    \"entity\": \"result_admixture_k7\",\n    \"property\": \"c7\",\n    \"operator\": \"greater\",\n    \"value\": 0.8\n   }\n  ]\n },\n \"lang\": \"en\"\n}",
+   "samplingRatio": 1,
+   "dating": [
+    -15001,
+    2000
+   ],
+   "size": 914,
+   "isPresent": false
+  }
+ },
+ "clustering": {
+  "features": {
+   "range": 60,
+   "distance": 0,
+   "useCentroids": true,
+   "showRegions": false,
+   "labelPosition": "none",
+   "method": {
+    "distance": "relative",
+    "region": null
+   },
+   "clusterAtCentroid": true
+  },
+  "attributes": {}
+ },
+ "filters": {
+  "timeline": {
+   "isActive": true,
+   "yearFrom": -41000,
+   "yearTo": 2000,
+   "minYear": -41000,
+   "maxYear": 2000,
+   "showPresent": true,
+   "eventOnFinish": false,
+   "doFilterRegions": true,
+   "showPropability": true
+  },
+  "attributes": {
+   "isActive": true,
+   "available": [],
+   "configs": {},
+   "attributeId": "haplogroup_y",
+   "attributeType": "tree",
+   "attributeSearchUseRegex": false,
+   "groupSearchUseRegex": false
+  },
+  "regions": {
+   "isActive": true
+  }
+ },
+ "legend": {
+  "attributes": {
+   "OTHER": {
+    "color": "rgba(126,126,126,1.0)",
+    "name": "OTHER",
+    "filtered": false,
+    "group": null
+   },
+   "MISSING": {
+    "color": "rgba(0,0,0,1.0)",
+    "name": "MISSING",
+    "filtered": true,
+    "group": null
+   },
+   "haplogroup_y": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    },
+    "O2a1b1a2a1a3": {
+     "name": "O2a1b1a2a1a3",
+     "filtered": false,
+     "color": "rgb(128, 247, 194)",
+     "group": null
+    },
+    "S": {
+     "name": "S",
+     "filtered": false,
+     "color": "rgb(142, 185, 38)",
+     "group": null
+    },
+    "O2a": {
+     "name": "O2a",
+     "filtered": false,
+     "color": "rgb(177, 217, 35)",
+     "group": null
+    },
+    "T1a": {
+     "name": "T1a",
+     "filtered": false,
+     "color": "rgb(212, 232, 29)",
+     "group": null
+    },
+    "E1b1b1b2a1a": {
+     "name": "E1b1b1b2a1a",
+     "filtered": false,
+     "color": "rgb(241, 166, 235)",
+     "group": null
+    },
+    "R2": {
+     "name": "R2",
+     "filtered": false,
+     "color": "rgb(146, 212, 222)",
+     "group": null
+    },
+    "J2a1a4b": {
+     "name": "J2a1a4b",
+     "filtered": false,
+     "color": "rgb(35, 180, 162)",
+     "group": null
+    },
+    "R1a1a1": {
+     "name": "R1a1a1",
+     "filtered": false,
+     "color": "rgb(157, 244, 144)",
+     "group": null
+    },
+    "E1b1b": {
+     "name": "E1b1b",
+     "filtered": false,
+     "color": "rgb(240, 137, 106)",
+     "group": null
+    },
+    "E1b1b1a1": {
+     "name": "E1b1b1a1",
+     "filtered": false,
+     "color": "rgb(223, 135, 209)",
+     "group": null
+    },
+    "T": {
+     "name": "T",
+     "filtered": false,
+     "color": "rgb(188, 34, 182)",
+     "group": null
+    },
+    "E1b1b1a": {
+     "name": "E1b1b1a",
+     "filtered": false,
+     "color": "rgb(178, 44, 181)",
+     "group": null
+    },
+    "J2b": {
+     "name": "J2b",
+     "filtered": false,
+     "color": "rgb(98, 210, 226)",
+     "group": null
+    },
+    "R1a1a1a": {
+     "name": "R1a1a1a",
+     "filtered": false,
+     "color": "rgb(124, 225, 231)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1": {
+     "name": "R1b1a1b1a1a2b1",
+     "filtered": false,
+     "color": "rgb(18, 193, 58)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1c2b1a2": {
+     "name": "R1b1a1b1a1a2b1c2b1a2",
+     "filtered": false,
+     "color": "rgb(163, 212, 88)",
+     "group": null
+    },
+    "R1b1a1b": {
+     "name": "R1b1a1b",
+     "filtered": false,
+     "color": "rgb(56, 224, 204)",
+     "group": null
+    },
+    "R1b1a1b1a1a": {
+     "name": "R1b1a1b1a1a",
+     "filtered": false,
+     "color": "rgb(243, 154, 68)",
+     "group": null
+    },
+    "R1b1a1b1b3": {
+     "name": "R1b1a1b1b3",
+     "filtered": false,
+     "color": "rgb(128, 227, 101)",
+     "group": null
+    },
+    "Q1b": {
+     "name": "Q1b",
+     "filtered": false,
+     "color": "rgb(124, 192, 25)",
+     "group": null
+    },
+    "R1a1a1b2a2a3": {
+     "name": "R1a1a1b2a2a3",
+     "filtered": false,
+     "color": "rgb(238, 103, 60)",
+     "group": null
+    },
+    "J2b2a": {
+     "name": "J2b2a",
+     "filtered": false,
+     "color": "rgb(192, 57, 15)",
+     "group": null
+    },
+    "C2a1": {
+     "name": "C2a1",
+     "filtered": false,
+     "color": "rgb(219, 79, 157)",
+     "group": null
+    },
+    "R1a1a1b2a2": {
+     "name": "R1a1a1b2a2",
+     "filtered": false,
+     "color": "rgb(248, 34, 234)",
+     "group": null
+    },
+    "R1a1a1b2a2a": {
+     "name": "R1a1a1b2a2a",
+     "filtered": false,
+     "color": "rgb(226, 169, 70)",
+     "group": null
+    },
+    "R2a2a": {
+     "name": "R2a2a",
+     "filtered": false,
+     "color": "rgb(33, 192, 204)",
+     "group": null
+    },
+    "G2a2a": {
+     "name": "G2a2a",
+     "filtered": false,
+     "color": "rgb(164, 145, 220)",
+     "group": null
+    },
+    "J2a2": {
+     "name": "J2a2",
+     "filtered": false,
+     "color": "rgb(225, 125, 247)",
+     "group": null
+    },
+    "Q": {
+     "name": "Q",
+     "filtered": false,
+     "color": "rgb(246, 133, 68)",
+     "group": null
+    },
+    "I2a1a1b": {
+     "name": "I2a1a1b",
+     "filtered": false,
+     "color": "rgb(186, 85, 219)",
+     "group": null
+    },
+    "I2a1a1b1b": {
+     "name": "I2a1a1b1b",
+     "filtered": false,
+     "color": "rgb(240, 126, 158)",
+     "group": null
+    },
+    "I2a1b1b": {
+     "name": "I2a1b1b",
+     "filtered": false,
+     "color": "rgb(116, 133, 212)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1": {
+     "name": "R1b1a1b1a1a2c1",
+     "filtered": false,
+     "color": "rgb(167, 207, 229)",
+     "group": null
+    },
+    "I2a1a2a1a2a": {
+     "name": "I2a1a2a1a2a",
+     "filtered": false,
+     "color": "rgb(84, 221, 176)",
+     "group": null
+    },
+    "R1b1a1b1a1a2": {
+     "name": "R1b1a1b1a1a2",
+     "filtered": false,
+     "color": "rgb(201, 193, 78)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a4b3a": {
+     "name": "R1b1a1b1a1a2c1a4b3a",
+     "filtered": false,
+     "color": "rgb(206, 176, 38)",
+     "group": null
+    },
+    "Q1b1b": {
+     "name": "Q1b1b",
+     "filtered": false,
+     "color": "rgb(222, 139, 158)",
+     "group": null
+    },
+    "I2a1a2": {
+     "name": "I2a1a2",
+     "filtered": false,
+     "color": "rgb(99, 49, 181)",
+     "group": null
+    },
+    "G2a2a1a3": {
+     "name": "G2a2a1a3",
+     "filtered": false,
+     "color": "rgb(223, 212, 157)",
+     "group": null
+    },
+    "I2a1a1a1a1b": {
+     "name": "I2a1a1a1a1b",
+     "filtered": false,
+     "color": "rgb(218, 66, 78)",
+     "group": null
+    },
+    "J2b2b2": {
+     "name": "J2b2b2",
+     "filtered": false,
+     "color": "rgb(63, 111, 229)",
+     "group": null
+    },
+    "R1b1a1b1a1": {
+     "name": "R1b1a1b1a1",
+     "filtered": false,
+     "color": "rgb(108, 243, 204)",
+     "group": null
+    },
+    "G2a2b2b": {
+     "name": "G2a2b2b",
+     "filtered": false,
+     "color": "rgb(146, 35, 207)",
+     "group": null
+    },
+    "G": {
+     "name": "G",
+     "filtered": false,
+     "color": "rgb(230, 178, 101)",
+     "group": null
+    },
+    "G2a2a2": {
+     "name": "G2a2a2",
+     "filtered": false,
+     "color": "rgb(206, 24, 183)",
+     "group": null
+    },
+    "C1a2b1b": {
+     "name": "C1a2b1b",
+     "filtered": false,
+     "color": "rgb(95, 219, 155)",
+     "group": null
+    },
+    "CT": {
+     "name": "CT",
+     "filtered": false,
+     "color": "rgb(149, 127, 217)",
+     "group": null
+    },
+    "Q1b1a": {
+     "name": "Q1b1a",
+     "filtered": false,
+     "color": "rgb(147, 188, 236)",
+     "group": null
+    },
+    "P1": {
+     "name": "P1",
+     "filtered": false,
+     "color": "rgb(174, 215, 67)",
+     "group": null
+    },
+    "BT": {
+     "name": "BT",
+     "filtered": false,
+     "color": "rgb(213, 75, 50)",
+     "group": null
+    },
+    "Q1b1a1a1e1a": {
+     "name": "Q1b1a1a1e1a",
+     "filtered": false,
+     "color": "rgb(219, 128, 230)",
+     "group": null
+    },
+    "Q1b1a1a": {
+     "name": "Q1b1a1a",
+     "filtered": false,
+     "color": "rgb(26, 124, 202)",
+     "group": null
+    },
+    "G2a": {
+     "name": "G2a",
+     "filtered": false,
+     "color": "rgb(220, 143, 189)",
+     "group": null
+    },
+    "G2a2a1a2b": {
+     "name": "G2a2a1a2b",
+     "filtered": false,
+     "color": "rgb(242, 243, 109)",
+     "group": null
+    },
+    "O2a2b1": {
+     "name": "O2a2b1",
+     "filtered": false,
+     "color": "rgb(116, 234, 210)",
+     "group": null
+    },
+    "O2a2b1a1a1a4a1": {
+     "name": "O2a2b1a1a1a4a1",
+     "filtered": false,
+     "color": "rgb(226, 238, 157)",
+     "group": null
+    },
+    "IJ": {
+     "name": "IJ",
+     "filtered": false,
+     "color": "rgb(92, 194, 14)",
+     "group": null
+    },
+    "R1b1a1b1b": {
+     "name": "R1b1a1b1b",
+     "filtered": false,
+     "color": "rgb(200, 81, 173)",
+     "group": null
+    },
+    "G2b": {
+     "name": "G2b",
+     "filtered": false,
+     "color": "rgb(227, 148, 145)",
+     "group": null
+    },
+    "I": {
+     "name": "I",
+     "filtered": false,
+     "color": "rgb(40, 237, 46)",
+     "group": null
+    },
+    "C1a": {
+     "name": "C1a",
+     "filtered": false,
+     "color": "rgb(173, 241, 166)",
+     "group": null
+    },
+    "C": {
+     "name": "C",
+     "filtered": false,
+     "color": "rgb(207, 22, 90)",
+     "group": null
+    },
+    "I2": {
+     "name": "I2",
+     "filtered": false,
+     "color": "rgb(66, 174, 48)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5b1a1a": {
+     "name": "R1b1a1b1a1a2c1a5b1a1a",
+     "filtered": false,
+     "color": "rgb(185, 218, 101)",
+     "group": null
+    },
+    "I2a1b1": {
+     "name": "I2a1b1",
+     "filtered": false,
+     "color": "rgb(171, 234, 184)",
+     "group": null
+    },
+    "R1": {
+     "name": "R1",
+     "filtered": false,
+     "color": "rgb(144, 235, 185)",
+     "group": null
+    },
+    "J2a1a": {
+     "name": "J2a1a",
+     "filtered": false,
+     "color": "rgb(229, 185, 37)",
+     "group": null
+    },
+    "G2a2b2a": {
+     "name": "G2a2b2a",
+     "filtered": false,
+     "color": "rgb(54, 241, 99)",
+     "group": null
+    },
+    "R1b": {
+     "name": "R1b",
+     "filtered": false,
+     "color": "rgb(176, 224, 129)",
+     "group": null
+    },
+    "G2a2b": {
+     "name": "G2a2b",
+     "filtered": false,
+     "color": "rgb(228, 195, 175)",
+     "group": null
+    },
+    "I2a1b1a2a2a": {
+     "name": "I2a1b1a2a2a",
+     "filtered": false,
+     "color": "rgb(45, 173, 139)",
+     "group": null
+    },
+    "G2a2b2b2": {
+     "name": "G2a2b2b2",
+     "filtered": false,
+     "color": "rgb(192, 17, 63)",
+     "group": null
+    },
+    "J2a1a1a2b2a1a": {
+     "name": "J2a1a1a2b2a1a",
+     "filtered": false,
+     "color": "rgb(227, 164, 174)",
+     "group": null
+    },
+    "J1a2a1a2": {
+     "name": "J1a2a1a2",
+     "filtered": false,
+     "color": "rgb(248, 120, 163)",
+     "group": null
+    },
+    "J1a2a1a2d2b": {
+     "name": "J1a2a1a2d2b",
+     "filtered": false,
+     "color": "rgb(25, 241, 108)",
+     "group": null
+    },
+    "T1a1a1b2b2b1a1a2": {
+     "name": "T1a1a1b2b2b1a1a2",
+     "filtered": false,
+     "color": "rgb(244, 157, 160)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c": {
+     "name": "R1b1a1b1a1a2c",
+     "filtered": false,
+     "color": "rgb(28, 202, 84)",
+     "group": null
+    },
+    "G2a2b2a1a1c1": {
+     "name": "G2a2b2a1a1c1",
+     "filtered": false,
+     "color": "rgb(238, 185, 63)",
+     "group": null
+    },
+    "I2a1b1a2b1": {
+     "name": "I2a1b1a2b1",
+     "filtered": false,
+     "color": "rgb(155, 246, 80)",
+     "group": null
+    },
+    "R1a": {
+     "name": "R1a",
+     "filtered": false,
+     "color": "rgb(122, 198, 211)",
+     "group": null
+    },
+    "R1b1a2": {
+     "name": "R1b1a2",
+     "filtered": false,
+     "color": "rgb(195, 66, 198)",
+     "group": null
+    },
+    "R1b1a1": {
+     "name": "R1b1a1",
+     "filtered": false,
+     "color": "rgb(103, 225, 96)",
+     "group": null
+    },
+    "I2a1b": {
+     "name": "I2a1b",
+     "filtered": false,
+     "color": "rgb(131, 227, 190)",
+     "group": null
+    },
+    "C1a2": {
+     "name": "C1a2",
+     "filtered": false,
+     "color": "rgb(223, 107, 35)",
+     "group": null
+    },
+    "A0": {
+     "name": "A0",
+     "filtered": false,
+     "color": "rgb(197, 155, 226)",
+     "group": null
+    },
+    "I2a1b1a2": {
+     "name": "I2a1b1a2",
+     "filtered": false,
+     "color": "rgb(215, 175, 53)",
+     "group": null
+    },
+    "R1a1a1b1a3a4a": {
+     "name": "R1a1a1b1a3a4a",
+     "filtered": false,
+     "color": "rgb(6, 146, 219)",
+     "group": null
+    },
+    "R1a1a": {
+     "name": "R1a1a",
+     "filtered": false,
+     "color": "rgb(197, 81, 229)",
+     "group": null
+    },
+    "J1": {
+     "name": "J1",
+     "filtered": false,
+     "color": "rgb(13, 232, 70)",
+     "group": null
+    },
+    "Q1b1a2": {
+     "name": "Q1b1a2",
+     "filtered": false,
+     "color": "rgb(203, 17, 39)",
+     "group": null
+    },
+    "G2a2a1": {
+     "name": "G2a2a1",
+     "filtered": false,
+     "color": "rgb(190, 158, 249)",
+     "group": null
+    },
+    "H2c1a": {
+     "name": "H2c1a",
+     "filtered": false,
+     "color": "rgb(66, 235, 21)",
+     "group": null
+    },
+    "H": {
+     "name": "H",
+     "filtered": false,
+     "color": "rgb(199, 84, 211)",
+     "group": null
+    },
+    "F": {
+     "name": "F",
+     "filtered": false,
+     "color": "rgb(98, 213, 165)",
+     "group": null
+    },
+    "I2a1b2a1": {
+     "name": "I2a1b2a1",
+     "filtered": false,
+     "color": "rgb(87, 206, 220)",
+     "group": null
+    },
+    "Q1b1": {
+     "name": "Q1b1",
+     "filtered": false,
+     "color": "rgb(238, 150, 235)",
+     "group": null
+    },
+    "R1b1a1a1": {
+     "name": "R1b1a1a1",
+     "filtered": false,
+     "color": "rgb(251, 135, 203)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d5": {
+     "name": "R1a1a1b2a2a1d5",
+     "filtered": false,
+     "color": "rgb(141, 12, 206)",
+     "group": null
+    },
+    "Q1b1a1a1h1a": {
+     "name": "Q1b1a1a1h1a",
+     "filtered": false,
+     "color": "rgb(129, 50, 160)",
+     "group": null
+    },
+    "T1a1a": {
+     "name": "T1a1a",
+     "filtered": false,
+     "color": "rgb(95, 221, 26)",
+     "group": null
+    },
+    "T1a1": {
+     "name": "T1a1",
+     "filtered": false,
+     "color": "rgb(231, 79, 185)",
+     "group": null
+    },
+    "T1a1a1": {
+     "name": "T1a1a1",
+     "filtered": false,
+     "color": "rgb(50, 58, 183)",
+     "group": null
+    },
+    "G2a2a1a2": {
+     "name": "G2a2a1a2",
+     "filtered": false,
+     "color": "rgb(26, 197, 10)",
+     "group": null
+    },
+    "G2a2b2a3": {
+     "name": "G2a2b2a3",
+     "filtered": false,
+     "color": "rgb(247, 183, 107)",
+     "group": null
+    },
+    "J2a1": {
+     "name": "J2a1",
+     "filtered": false,
+     "color": "rgb(72, 202, 156)",
+     "group": null
+    },
+    "G2a2b2a1a1c": {
+     "name": "G2a2b2a1a1c",
+     "filtered": false,
+     "color": "rgb(243, 123, 76)",
+     "group": null
+    },
+    "L1a1": {
+     "name": "L1a1",
+     "filtered": false,
+     "color": "rgb(90, 59, 249)",
+     "group": null
+    },
+    "R1b1a2a": {
+     "name": "R1b1a2a",
+     "filtered": false,
+     "color": "rgb(222, 215, 134)",
+     "group": null
+    },
+    "G2a2a1a": {
+     "name": "G2a2a1a",
+     "filtered": false,
+     "color": "rgb(112, 245, 123)",
+     "group": null
+    },
+    "J2a1a1a2b2a3b1a1b": {
+     "name": "J2a1a1a2b2a3b1a1b",
+     "filtered": false,
+     "color": "rgb(57, 188, 206)",
+     "group": null
+    },
+    "G2a2b2b1": {
+     "name": "G2a2b2b1",
+     "filtered": false,
+     "color": "rgb(180, 221, 149)",
+     "group": null
+    },
+    "J2b1": {
+     "name": "J2b1",
+     "filtered": false,
+     "color": "rgb(121, 175, 216)",
+     "group": null
+    },
+    "G1a1a1b": {
+     "name": "G1a1a1b",
+     "filtered": false,
+     "color": "rgb(98, 237, 33)",
+     "group": null
+    },
+    "C2a1a": {
+     "name": "C2a1a",
+     "filtered": false,
+     "color": "rgb(44, 126, 166)",
+     "group": null
+    },
+    "N1a2": {
+     "name": "N1a2",
+     "filtered": false,
+     "color": "rgb(243, 142, 97)",
+     "group": null
+    },
+    "R": {
+     "name": "R",
+     "filtered": false,
+     "color": "rgb(194, 62, 121)",
+     "group": null
+    },
+    "Q1a1b": {
+     "name": "Q1a1b",
+     "filtered": false,
+     "color": "rgb(203, 148, 220)",
+     "group": null
+    },
+    "I2a1b1a2b1a2e1": {
+     "name": "I2a1b1a2b1a2e1",
+     "filtered": false,
+     "color": "rgb(164, 224, 80)",
+     "group": null
+    },
+    "C1b": {
+     "name": "C1b",
+     "filtered": false,
+     "color": "rgb(84, 243, 121)",
+     "group": null
+    },
+    "NO": {
+     "name": "NO",
+     "filtered": false,
+     "color": "rgb(205, 56, 198)",
+     "group": null
+    },
+    "C1b2a1": {
+     "name": "C1b2a1",
+     "filtered": false,
+     "color": "rgb(52, 165, 167)",
+     "group": null
+    },
+    "I2a1a1": {
+     "name": "I2a1a1",
+     "filtered": false,
+     "color": "rgb(86, 162, 248)",
+     "group": null
+    },
+    "I1a10": {
+     "name": "I1a10",
+     "filtered": false,
+     "color": "rgb(185, 243, 123)",
+     "group": null
+    },
+    "I1": {
+     "name": "I1",
+     "filtered": false,
+     "color": "rgb(215, 90, 73)",
+     "group": null
+    },
+    "I2a1b1a1b1": {
+     "name": "I2a1b1a1b1",
+     "filtered": false,
+     "color": "rgb(193, 229, 121)",
+     "group": null
+    },
+    "S1a1b1d": {
+     "name": "S1a1b1d",
+     "filtered": false,
+     "color": "rgb(161, 118, 235)",
+     "group": null
+    },
+    "J2b2a1": {
+     "name": "J2b2a1",
+     "filtered": false,
+     "color": "rgb(209, 247, 133)",
+     "group": null
+    },
+    "E": {
+     "name": "E",
+     "filtered": false,
+     "color": "rgb(180, 54, 73)",
+     "group": null
+    },
+    "E1b1b1b2a1a1a": {
+     "name": "E1b1b1b2a1a1a",
+     "filtered": false,
+     "color": "rgb(237, 102, 83)",
+     "group": null
+    },
+    "R1a1a1b2a2b1a": {
+     "name": "R1a1a1b2a2b1a",
+     "filtered": false,
+     "color": "rgb(43, 55, 193)",
+     "group": null
+    },
+    "R1b1a1b2a2b1": {
+     "name": "R1b1a1b2a2b1",
+     "filtered": false,
+     "color": "rgb(187, 125, 226)",
+     "group": null
+    },
+    "I2a1b1a1b1b1": {
+     "name": "I2a1b1a1b1b1",
+     "filtered": false,
+     "color": "rgb(83, 70, 222)",
+     "group": null
+    },
+    "I2a1a1a1a2": {
+     "name": "I2a1a1a1a2",
+     "filtered": false,
+     "color": "rgb(58, 180, 92)",
+     "group": null
+    },
+    "I2a1a1a1": {
+     "name": "I2a1a1a1",
+     "filtered": false,
+     "color": "rgb(208, 11, 98)",
+     "group": null
+    },
+    "Q1a2a": {
+     "name": "Q1a2a",
+     "filtered": false,
+     "color": "rgb(219, 234, 165)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d9c": {
+     "name": "R1a1a1b2a2a1d9c",
+     "filtered": false,
+     "color": "rgb(235, 75, 65)",
+     "group": null
+    },
+    "J2a2a1a1a": {
+     "name": "J2a2a1a1a",
+     "filtered": false,
+     "color": "rgb(89, 239, 172)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1d": {
+     "name": "R1b1a1b1a1a2c1a1d",
+     "filtered": false,
+     "color": "rgb(144, 204, 232)",
+     "group": null
+    },
+    "R1b1a1b1a": {
+     "name": "R1b1a1b1a",
+     "filtered": false,
+     "color": "rgb(191, 46, 149)",
+     "group": null
+    },
+    "I2a1b1a2a2a2": {
+     "name": "I2a1b1a2a2a2",
+     "filtered": false,
+     "color": "rgb(216, 162, 38)",
+     "group": null
+    },
+    "R1a1a1b1a3a2a": {
+     "name": "R1a1a1b1a3a2a",
+     "filtered": false,
+     "color": "rgb(127, 155, 223)",
+     "group": null
+    },
+    "N": {
+     "name": "N",
+     "filtered": false,
+     "color": "rgb(136, 204, 59)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a2a3": {
+     "name": "R1b1a1b1a1a2c1a2a3",
+     "filtered": false,
+     "color": "rgb(107, 208, 225)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a7": {
+     "name": "R1b1a1b1a1a2a7",
+     "filtered": false,
+     "color": "rgb(186, 237, 54)",
+     "group": null
+    },
+    "Q1a2a1": {
+     "name": "Q1a2a1",
+     "filtered": false,
+     "color": "rgb(81, 244, 135)",
+     "group": null
+    },
+    "J2a2a1a": {
+     "name": "J2a2a1a",
+     "filtered": false,
+     "color": "rgb(202, 233, 135)",
+     "group": null
+    },
+    "T1a1a1b2": {
+     "name": "T1a1a1b2",
+     "filtered": false,
+     "color": "rgb(217, 10, 161)",
+     "group": null
+    },
+    "I2a1a1a1a1": {
+     "name": "I2a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(252, 167, 149)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d": {
+     "name": "R1a1a1b2a2a1d",
+     "filtered": false,
+     "color": "rgb(229, 120, 215)",
+     "group": null
+    },
+    "R1a1a1b1a2c": {
+     "name": "R1a1a1b1a2c",
+     "filtered": false,
+     "color": "rgb(245, 117, 153)",
+     "group": null
+    },
+    "R1b1a1b1": {
+     "name": "R1b1a1b1",
+     "filtered": false,
+     "color": "rgb(119, 165, 242)",
+     "group": null
+    },
+    "Q1b1a2a": {
+     "name": "Q1b1a2a",
+     "filtered": false,
+     "color": "rgb(85, 235, 198)",
+     "group": null
+    },
+    "I2a1b1a2b": {
+     "name": "I2a1b1a2b",
+     "filtered": false,
+     "color": "rgb(34, 178, 84)",
+     "group": null
+    },
+    "E1b1a2b2": {
+     "name": "E1b1a2b2",
+     "filtered": false,
+     "color": "rgb(112, 85, 204)",
+     "group": null
+    },
+    "G2a2b2a1": {
+     "name": "G2a2b2a1",
+     "filtered": false,
+     "color": "rgb(133, 235, 132)",
+     "group": null
+    },
+    "G2a2a2b": {
+     "name": "G2a2a2b",
+     "filtered": false,
+     "color": "rgb(235, 118, 241)",
+     "group": null
+    },
+    "A1b1": {
+     "name": "A1b1",
+     "filtered": false,
+     "color": "rgb(242, 162, 214)",
+     "group": null
+    },
+    "A1b1b2a": {
+     "name": "A1b1b2a",
+     "filtered": false,
+     "color": "rgb(74, 49, 235)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5": {
+     "name": "R1b1a1b1a1a2c1a5",
+     "filtered": false,
+     "color": "rgb(204, 88, 112)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5c": {
+     "name": "R1b1a1b1a1a2c1a5c",
+     "filtered": false,
+     "color": "rgb(221, 18, 35)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c1a2": {
+     "name": "R1b1a1b1a1a1c1a2",
+     "filtered": false,
+     "color": "rgb(153, 183, 249)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1i": {
+     "name": "R1b1a1b1a1a2c1a1i",
+     "filtered": false,
+     "color": "rgb(247, 153, 209)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1b1": {
+     "name": "R1b1a1b1a1a2c1b1",
+     "filtered": false,
+     "color": "rgb(144, 236, 171)",
+     "group": null
+    },
+    "R1b1a1b1a1a2e1": {
+     "name": "R1b1a1b1a1a2e1",
+     "filtered": false,
+     "color": "rgb(180, 176, 50)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c1a1": {
+     "name": "R1b1a1b1a1a1c1a1",
+     "filtered": false,
+     "color": "rgb(226, 74, 141)",
+     "group": null
+    },
+    "Q1b1a3a1": {
+     "name": "Q1b1a3a1",
+     "filtered": false,
+     "color": "rgb(184, 105, 49)",
+     "group": null
+    },
+    "E1b1b1b2b2a1": {
+     "name": "E1b1b1b2b2a1",
+     "filtered": false,
+     "color": "rgb(88, 83, 224)",
+     "group": null
+    },
+    "Q1b1a1a1i1a": {
+     "name": "Q1b1a1a1i1a",
+     "filtered": false,
+     "color": "rgb(52, 216, 64)",
+     "group": null
+    },
+    "R1a1a1b1a2b3a": {
+     "name": "R1a1a1b1a2b3a",
+     "filtered": false,
+     "color": "rgb(243, 126, 115)",
+     "group": null
+    },
+    "J2a1a1b1": {
+     "name": "J2a1a1b1",
+     "filtered": false,
+     "color": "rgb(162, 178, 234)",
+     "group": null
+    },
+    "R2a2b1b2b": {
+     "name": "R2a2b1b2b",
+     "filtered": false,
+     "color": "rgb(27, 182, 135)",
+     "group": null
+    },
+    "H1a1a4b": {
+     "name": "H1a1a4b",
+     "filtered": false,
+     "color": "rgb(89, 185, 219)",
+     "group": null
+    },
+    "G2a2b2a1a1c1a1a2": {
+     "name": "G2a2b2a1a1c1a1a2",
+     "filtered": false,
+     "color": "rgb(227, 230, 135)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1a": {
+     "name": "R1b1a1b1a1a2a1a",
+     "filtered": false,
+     "color": "rgb(202, 241, 102)",
+     "group": null
+    },
+    "E1b1b1a1b1": {
+     "name": "E1b1b1a1b1",
+     "filtered": false,
+     "color": "rgb(237, 151, 129)",
+     "group": null
+    },
+    "G2a2b2b1a1a": {
+     "name": "G2a2b2b1a1a",
+     "filtered": false,
+     "color": "rgb(130, 166, 241)",
+     "group": null
+    },
+    "R1b1a": {
+     "name": "R1b1a",
+     "filtered": false,
+     "color": "rgb(88, 206, 232)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a": {
+     "name": "R1b1a1b1a1a2a",
+     "filtered": false,
+     "color": "rgb(232, 157, 184)",
+     "group": null
+    },
+    "I2a1b2": {
+     "name": "I2a1b2",
+     "filtered": false,
+     "color": "rgb(199, 72, 130)",
+     "group": null
+    },
+    "I2a1b1a1a1": {
+     "name": "I2a1b1a1a1",
+     "filtered": false,
+     "color": "rgb(201, 76, 163)",
+     "group": null
+    },
+    "I2a1b1a1a1b": {
+     "name": "I2a1b1a1a1b",
+     "filtered": false,
+     "color": "rgb(198, 45, 187)",
+     "group": null
+    },
+    "Q1b2a1a": {
+     "name": "Q1b2a1a",
+     "filtered": false,
+     "color": "rgb(231, 157, 16)",
+     "group": null
+    },
+    "R1a1a1b2a2a3b": {
+     "name": "R1a1a1b2a2a3b",
+     "filtered": false,
+     "color": "rgb(231, 177, 28)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1a1a1": {
+     "name": "R1b1a1b1a1a2a1a1a1",
+     "filtered": false,
+     "color": "rgb(239, 23, 38)",
+     "group": null
+    },
+    "O2a2b2a2b": {
+     "name": "O2a2b2a2b",
+     "filtered": false,
+     "color": "rgb(236, 124, 27)",
+     "group": null
+    },
+    "R1b1b1": {
+     "name": "R1b1b1",
+     "filtered": false,
+     "color": "rgb(233, 156, 161)",
+     "group": null
+    },
+    "R1a1a1b2a2a1": {
+     "name": "R1a1a1b2a2a1",
+     "filtered": false,
+     "color": "rgb(33, 194, 12)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2": {
+     "name": "J1a2a1a2d2b2b2",
+     "filtered": false,
+     "color": "rgb(203, 159, 228)",
+     "group": null
+    },
+    "E1b1b1b2a1a1a1a1f": {
+     "name": "E1b1b1b2a1a1a1a1f",
+     "filtered": false,
+     "color": "rgb(234, 142, 249)",
+     "group": null
+    },
+    "J2a1a1a2b2a2b3a": {
+     "name": "J2a1a1a2b2a2b3a",
+     "filtered": false,
+     "color": "rgb(176, 232, 226)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c": {
+     "name": "R1b1a1b1a1a1c",
+     "filtered": false,
+     "color": "rgb(243, 159, 176)",
+     "group": null
+    },
+    "C1a2a": {
+     "name": "C1a2a",
+     "filtered": false,
+     "color": "rgb(68, 198, 6)",
+     "group": null
+    },
+    "J2": {
+     "name": "J2",
+     "filtered": false,
+     "color": "rgb(192, 99, 227)",
+     "group": null
+    },
+    "L1a2a": {
+     "name": "L1a2a",
+     "filtered": false,
+     "color": "rgb(204, 6, 144)",
+     "group": null
+    },
+    "J1a2a1b1a": {
+     "name": "J1a2a1b1a",
+     "filtered": false,
+     "color": "rgb(209, 22, 171)",
+     "group": null
+    },
+    "G2a2b2a1a": {
+     "name": "G2a2b2a1a",
+     "filtered": false,
+     "color": "rgb(146, 205, 18)",
+     "group": null
+    },
+    "T1a3b2": {
+     "name": "T1a3b2",
+     "filtered": false,
+     "color": "rgb(213, 194, 81)",
+     "group": null
+    },
+    "I2a1b1a1a2": {
+     "name": "I2a1b1a1a2",
+     "filtered": false,
+     "color": "rgb(169, 227, 194)",
+     "group": null
+    },
+    "G2a2b2a3b": {
+     "name": "G2a2b2a3b",
+     "filtered": false,
+     "color": "rgb(54, 215, 81)",
+     "group": null
+    },
+    "L": {
+     "name": "L",
+     "filtered": false,
+     "color": "rgb(150, 67, 237)",
+     "group": null
+    },
+    "K2b": {
+     "name": "K2b",
+     "filtered": false,
+     "color": "rgb(177, 56, 111)",
+     "group": null
+    },
+    "J2b2a1a1a1b": {
+     "name": "J2b2a1a1a1b",
+     "filtered": false,
+     "color": "rgb(225, 126, 10)",
+     "group": null
+    },
+    "M": {
+     "name": "M",
+     "filtered": false,
+     "color": "rgb(56, 198, 189)",
+     "group": null
+    },
+    "Q1b2b1b2a": {
+     "name": "Q1b2b1b2a",
+     "filtered": false,
+     "color": "rgb(241, 86, 129)",
+     "group": null
+    },
+    "G2a2a1a2a1a": {
+     "name": "G2a2a1a2a1a",
+     "filtered": false,
+     "color": "rgb(228, 126, 100)",
+     "group": null
+    },
+    "I2a1b1a": {
+     "name": "I2a1b1a",
+     "filtered": false,
+     "color": "rgb(185, 47, 208)",
+     "group": null
+    },
+    "J2a1a2b2": {
+     "name": "J2a1a2b2",
+     "filtered": false,
+     "color": "rgb(244, 214, 135)",
+     "group": null
+    },
+    "I2a1a1b1": {
+     "name": "I2a1a1b1",
+     "filtered": false,
+     "color": "rgb(213, 108, 155)",
+     "group": null
+    },
+    "I2a2a": {
+     "name": "I2a2a",
+     "filtered": false,
+     "color": "rgb(229, 79, 51)",
+     "group": null
+    },
+    "I2a1a1a1a1b1b": {
+     "name": "I2a1a1a1a1b1b",
+     "filtered": false,
+     "color": "rgb(135, 207, 67)",
+     "group": null
+    },
+    "I2a1b1b1a1": {
+     "name": "I2a1b1b1a1",
+     "filtered": false,
+     "color": "rgb(133, 240, 197)",
+     "group": null
+    },
+    "O1a": {
+     "name": "O1a",
+     "filtered": false,
+     "color": "rgb(94, 108, 247)",
+     "group": null
+    },
+    "G2a2b2b1a1b": {
+     "name": "G2a2b2b1a1b",
+     "filtered": false,
+     "color": "rgb(171, 234, 213)",
+     "group": null
+    },
+    "O1a2": {
+     "name": "O1a2",
+     "filtered": false,
+     "color": "rgb(230, 158, 189)",
+     "group": null
+    },
+    "J2a1a1b1a1a": {
+     "name": "J2a1a1b1a1a",
+     "filtered": false,
+     "color": "rgb(227, 12, 238)",
+     "group": null
+    },
+    "L1a": {
+     "name": "L1a",
+     "filtered": false,
+     "color": "rgb(129, 247, 125)",
+     "group": null
+    },
+    "R1b1a1b1a1a2d1": {
+     "name": "R1b1a1b1a1a2d1",
+     "filtered": false,
+     "color": "rgb(102, 87, 223)",
+     "group": null
+    },
+    "C2a1a1b1b1": {
+     "name": "C2a1a1b1b1",
+     "filtered": false,
+     "color": "rgb(228, 131, 82)",
+     "group": null
+    },
+    "Q1b1a3a1a": {
+     "name": "Q1b1a3a1a",
+     "filtered": false,
+     "color": "rgb(148, 180, 223)",
+     "group": null
+    },
+    "J2b2b1": {
+     "name": "J2b2b1",
+     "filtered": false,
+     "color": "rgb(46, 74, 170)",
+     "group": null
+    },
+    "H1a1a": {
+     "name": "H1a1a",
+     "filtered": false,
+     "color": "rgb(215, 66, 22)",
+     "group": null
+    },
+    "C1b1a1a1": {
+     "name": "C1b1a1a1",
+     "filtered": false,
+     "color": "rgb(196, 230, 159)",
+     "group": null
+    },
+    "O1a1a1a1": {
+     "name": "O1a1a1a1",
+     "filtered": false,
+     "color": "rgb(105, 206, 57)",
+     "group": null
+    },
+    "Q1a1": {
+     "name": "Q1a1",
+     "filtered": false,
+     "color": "rgb(72, 74, 240)",
+     "group": null
+    },
+    "Q1a1a": {
+     "name": "Q1a1a",
+     "filtered": false,
+     "color": "rgb(195, 63, 112)",
+     "group": null
+    },
+    "Q1b1a3": {
+     "name": "Q1b1a3",
+     "filtered": false,
+     "color": "rgb(240, 48, 236)",
+     "group": null
+    },
+    "Q1b1a3a": {
+     "name": "Q1b1a3a",
+     "filtered": false,
+     "color": "rgb(191, 112, 210)",
+     "group": null
+    },
+    "O2a2b2b": {
+     "name": "O2a2b2b",
+     "filtered": false,
+     "color": "rgb(166, 233, 145)",
+     "group": null
+    },
+    "J1a2b2": {
+     "name": "J1a2b2",
+     "filtered": false,
+     "color": "rgb(212, 219, 24)",
+     "group": null
+    },
+    "O2a2a1a2": {
+     "name": "O2a2a1a2",
+     "filtered": false,
+     "color": "rgb(58, 10, 217)",
+     "group": null
+    },
+    "H1a1b1": {
+     "name": "H1a1b1",
+     "filtered": false,
+     "color": "rgb(45, 27, 219)",
+     "group": null
+    },
+    "J": {
+     "name": "J",
+     "filtered": false,
+     "color": "rgb(141, 249, 145)",
+     "group": null
+    },
+    "J1a2b1": {
+     "name": "J1a2b1",
+     "filtered": false,
+     "color": "rgb(85, 208, 51)",
+     "group": null
+    },
+    "HIJK": {
+     "name": "HIJK",
+     "filtered": false,
+     "color": "rgb(248, 172, 77)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2c4d": {
+     "name": "J1a2a1a2d2b2b2c4d",
+     "filtered": false,
+     "color": "rgb(219, 108, 131)",
+     "group": null
+    },
+    "I2a1a2b1a1a1a1c": {
+     "name": "I2a1a2b1a1a1a1c",
+     "filtered": false,
+     "color": "rgb(168, 223, 238)",
+     "group": null
+    },
+    "A1b": {
+     "name": "A1b",
+     "filtered": false,
+     "color": "rgb(196, 22, 102)",
+     "group": null
+    },
+    "E1b1b1b1a1": {
+     "name": "E1b1b1b1a1",
+     "filtered": false,
+     "color": "rgb(58, 156, 243)",
+     "group": null
+    },
+    "J2b2a2b": {
+     "name": "J2b2a2b",
+     "filtered": false,
+     "color": "rgb(209, 90, 200)",
+     "group": null
+    },
+    "O1b1a1a1": {
+     "name": "O1b1a1a1",
+     "filtered": false,
+     "color": "rgb(226, 229, 34)",
+     "group": null
+    },
+    "R1a1a1b2a1a1a1f": {
+     "name": "R1a1a1b2a1a1a1f",
+     "filtered": false,
+     "color": "rgb(74, 198, 101)",
+     "group": null
+    },
+    "E1b1b1b2a1": {
+     "name": "E1b1b1b2a1",
+     "filtered": false,
+     "color": "rgb(114, 95, 217)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d6": {
+     "name": "R1a1a1b2a2a1d6",
+     "filtered": false,
+     "color": "rgb(158, 195, 236)",
+     "group": null
+    },
+    "C2a1a1": {
+     "name": "C2a1a1",
+     "filtered": false,
+     "color": "rgb(84, 165, 216)",
+     "group": null
+    },
+    "GHIJK": {
+     "name": "GHIJK",
+     "filtered": false,
+     "color": "rgb(134, 249, 239)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1b1a1": {
+     "name": "R1b1a1b1a1a2a1b1a1",
+     "filtered": false,
+     "color": "rgb(181, 151, 48)",
+     "group": null
+    },
+    "O2a2b": {
+     "name": "O2a2b",
+     "filtered": false,
+     "color": "rgb(136, 247, 152)",
+     "group": null
+    },
+    "O1a1a1a": {
+     "name": "O1a1a1a",
+     "filtered": false,
+     "color": "rgb(21, 84, 198)",
+     "group": null
+    },
+    "R1b1a1a": {
+     "name": "R1b1a1a",
+     "filtered": false,
+     "color": "rgb(95, 130, 220)",
+     "group": null
+    },
+    "R1a1a1b1a2b": {
+     "name": "R1a1a1b1a2b",
+     "filtered": false,
+     "color": "rgb(224, 161, 132)",
+     "group": null
+    },
+    "I2a1a1b1a": {
+     "name": "I2a1a1b1a",
+     "filtered": false,
+     "color": "rgb(179, 227, 113)",
+     "group": null
+    },
+    "R1a1a1b1a2b4": {
+     "name": "R1a1a1b1a2b4",
+     "filtered": false,
+     "color": "rgb(103, 138, 208)",
+     "group": null
+    },
+    "E1b": {
+     "name": "E1b",
+     "filtered": false,
+     "color": "rgb(228, 236, 160)",
+     "group": null
+    },
+    "J1a2a1a2d2b2a2": {
+     "name": "J1a2a1a2d2b2a2",
+     "filtered": false,
+     "color": "rgb(233, 53, 231)",
+     "group": null
+    },
+    "G2a2a1a2a1": {
+     "name": "G2a2a1a2a1",
+     "filtered": false,
+     "color": "rgb(127, 57, 203)",
+     "group": null
+    },
+    "J2a2a1a1a2a": {
+     "name": "J2a2a1a1a2a",
+     "filtered": false,
+     "color": "rgb(28, 55, 216)",
+     "group": null
+    },
+    "R2a2b1b2a1a": {
+     "name": "R2a2b1b2a1a",
+     "filtered": false,
+     "color": "rgb(69, 192, 62)",
+     "group": null
+    },
+    "O": {
+     "name": "O",
+     "filtered": false,
+     "color": "rgb(43, 239, 219)",
+     "group": null
+    },
+    "O1a1a1a1a1a": {
+     "name": "O1a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(207, 100, 141)",
+     "group": null
+    },
+    "Q1a2a2b": {
+     "name": "Q1a2a2b",
+     "filtered": false,
+     "color": "rgb(10, 217, 220)",
+     "group": null
+    },
+    "IJK": {
+     "name": "IJK",
+     "filtered": false,
+     "color": "rgb(213, 240, 136)",
+     "group": null
+    },
+    "A1b1b2b": {
+     "name": "A1b1b2b",
+     "filtered": false,
+     "color": "rgb(78, 216, 120)",
+     "group": null
+    },
+    "E1b1a1a1a1a3": {
+     "name": "E1b1a1a1a1a3",
+     "filtered": false,
+     "color": "rgb(57, 216, 148)",
+     "group": null
+    },
+    "E1b1b1a1b2": {
+     "name": "E1b1b1a1b2",
+     "filtered": false,
+     "color": "rgb(138, 209, 108)",
+     "group": null
+    },
+    "E1b1b1b2b2a1a": {
+     "name": "E1b1b1b2b2a1a",
+     "filtered": false,
+     "color": "rgb(204, 149, 238)",
+     "group": null
+    },
+    "E1b1b1a1a1b1a": {
+     "name": "E1b1b1a1a1b1a",
+     "filtered": false,
+     "color": "rgb(88, 220, 133)",
+     "group": null
+    },
+    "E2a": {
+     "name": "E2a",
+     "filtered": false,
+     "color": "rgb(59, 142, 179)",
+     "group": null
+    },
+    "I2a1b2a": {
+     "name": "I2a1b2a",
+     "filtered": false,
+     "color": "rgb(51, 198, 113)",
+     "group": null
+    },
+    "N1a1a1a1a4a": {
+     "name": "N1a1a1a1a4a",
+     "filtered": false,
+     "color": "rgb(12, 233, 168)",
+     "group": null
+    },
+    "J2a1a1a2b2": {
+     "name": "J2a1a1a2b2",
+     "filtered": false,
+     "color": "rgb(75, 156, 52)",
+     "group": null
+    },
+    "J1a2a1a1": {
+     "name": "J1a2a1a1",
+     "filtered": false,
+     "color": "rgb(92, 161, 242)",
+     "group": null
+    },
+    "L1a2a1b": {
+     "name": "L1a2a1b",
+     "filtered": false,
+     "color": "rgb(194, 244, 103)",
+     "group": null
+    },
+    "R2a2b1b2b2a2": {
+     "name": "R2a2b1b2b2a2",
+     "filtered": false,
+     "color": "rgb(124, 206, 98)",
+     "group": null
+    },
+    "G2a2a1a1": {
+     "name": "G2a2a1a1",
+     "filtered": false,
+     "color": "rgb(151, 22, 197)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b1b4b": {
+     "name": "R1b1a1b1a1a1c2b1b4b",
+     "filtered": false,
+     "color": "rgb(244, 223, 154)",
+     "group": null
+    },
+    "Q2b2a": {
+     "name": "Q2b2a",
+     "filtered": false,
+     "color": "rgb(16, 140, 216)",
+     "group": null
+    },
+    "R1a1a1b2a2a1c3a1": {
+     "name": "R1a1a1b2a2a1c3a1",
+     "filtered": false,
+     "color": "rgb(229, 162, 186)",
+     "group": null
+    },
+    "R1a1a1b2a2b2b1": {
+     "name": "R1a1a1b2a2b2b1",
+     "filtered": false,
+     "color": "rgb(213, 80, 112)",
+     "group": null
+    },
+    "R1a1a1b2a2b2b": {
+     "name": "R1a1a1b2a2b2b",
+     "filtered": false,
+     "color": "rgb(35, 181, 181)",
+     "group": null
+    },
+    "Q1b1b1": {
+     "name": "Q1b1b1",
+     "filtered": false,
+     "color": "rgb(233, 233, 163)",
+     "group": null
+    },
+    "N1a1a1a1a": {
+     "name": "N1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(111, 223, 191)",
+     "group": null
+    },
+    "G2a2b2a1a1a1b3": {
+     "name": "G2a2b2a1a1a1b3",
+     "filtered": false,
+     "color": "rgb(193, 123, 243)",
+     "group": null
+    },
+    "G2a2b2b1a1a2": {
+     "name": "G2a2b2b1a1a2",
+     "filtered": false,
+     "color": "rgb(67, 140, 241)",
+     "group": null
+    },
+    "O1b1a1b1a1b1": {
+     "name": "O1b1a1b1a1b1",
+     "filtered": false,
+     "color": "rgb(230, 156, 239)",
+     "group": null
+    },
+    "R1a1a1b2a2b1d1": {
+     "name": "R1a1a1b2a2b1d1",
+     "filtered": false,
+     "color": "rgb(178, 183, 21)",
+     "group": null
+    },
+    "C2a1a3a": {
+     "name": "C2a1a3a",
+     "filtered": false,
+     "color": "rgb(224, 128, 249)",
+     "group": null
+    },
+    "R1a1a1b1a2a1a1a1": {
+     "name": "R1a1a1b1a2a1a1a1",
+     "filtered": false,
+     "color": "rgb(228, 147, 206)",
+     "group": null
+    },
+    "I2a1b1a2a1a1": {
+     "name": "I2a1b1a2a1a1",
+     "filtered": false,
+     "color": "rgb(190, 201, 69)",
+     "group": null
+    },
+    "I2a2b": {
+     "name": "I2a2b",
+     "filtered": false,
+     "color": "rgb(149, 245, 181)",
+     "group": null
+    },
+    "R1b2b": {
+     "name": "R1b2b",
+     "filtered": false,
+     "color": "rgb(11, 197, 177)",
+     "group": null
+    },
+    "O2a1b1a1a1a1b1a1a1": {
+     "name": "O2a1b1a1a1a1b1a1a1",
+     "filtered": false,
+     "color": "rgb(250, 63, 177)",
+     "group": null
+    },
+    "L2": {
+     "name": "L2",
+     "filtered": false,
+     "color": "rgb(101, 248, 109)",
+     "group": null
+    },
+    "R1a1a1b2a2a3b1": {
+     "name": "R1a1a1b2a2a3b1",
+     "filtered": false,
+     "color": "rgb(78, 133, 242)",
+     "group": null
+    },
+    "Q1a2a1a": {
+     "name": "Q1a2a1a",
+     "filtered": false,
+     "color": "rgb(207, 141, 83)",
+     "group": null
+    },
+    "R1b2b2": {
+     "name": "R1b2b2",
+     "filtered": false,
+     "color": "rgb(13, 198, 26)",
+     "group": null
+    },
+    "R1b1a1a1a": {
+     "name": "R1b1a1a1a",
+     "filtered": false,
+     "color": "rgb(82, 232, 162)",
+     "group": null
+    },
+    "R1a1a2": {
+     "name": "R1a1a2",
+     "filtered": false,
+     "color": "rgb(239, 143, 130)",
+     "group": null
+    },
+    "R1b1a1a1b": {
+     "name": "R1b1a1a1b",
+     "filtered": false,
+     "color": "rgb(224, 166, 152)",
+     "group": null
+    },
+    "N1a1a1a1a3a2": {
+     "name": "N1a1a1a1a3a2",
+     "filtered": false,
+     "color": "rgb(138, 245, 122)",
+     "group": null
+    },
+    "J2a1a1b": {
+     "name": "J2a1a1b",
+     "filtered": false,
+     "color": "rgb(96, 233, 163)",
+     "group": null
+    },
+    "J2a1a1a2b2a2b2": {
+     "name": "J2a1a1a2b2a2b2",
+     "filtered": false,
+     "color": "rgb(135, 195, 49)",
+     "group": null
+    },
+    "J2a1a1a2b2a2b2b": {
+     "name": "J2a1a1a2b2a2b2b",
+     "filtered": false,
+     "color": "rgb(195, 228, 115)",
+     "group": null
+    },
+    "G2a2b1": {
+     "name": "G2a2b1",
+     "filtered": false,
+     "color": "rgb(173, 62, 47)",
+     "group": null
+    },
+    "J2a1a1a2a": {
+     "name": "J2a1a1a2a",
+     "filtered": false,
+     "color": "rgb(122, 226, 202)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c1a": {
+     "name": "R1b1a1b1a1a1c1a",
+     "filtered": false,
+     "color": "rgb(214, 7, 195)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b": {
+     "name": "R1b1a1b1a1a1c2b",
+     "filtered": false,
+     "color": "rgb(50, 188, 29)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c1a2b2": {
+     "name": "R1b1a1b1a1a1c1a2b2",
+     "filtered": false,
+     "color": "rgb(216, 155, 78)",
+     "group": null
+    },
+    "G2a2b2a1a1b": {
+     "name": "G2a2b2a1a1b",
+     "filtered": false,
+     "color": "rgb(155, 191, 229)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a1a2": {
+     "name": "G2a2b2a1a1b1a1a1a2",
+     "filtered": false,
+     "color": "rgb(67, 235, 202)",
+     "group": null
+    },
+    "R1b2a": {
+     "name": "R1b2a",
+     "filtered": false,
+     "color": "rgb(218, 158, 91)",
+     "group": null
+    },
+    "J2a2a1a1a2": {
+     "name": "J2a2a1a1a2",
+     "filtered": false,
+     "color": "rgb(198, 174, 229)",
+     "group": null
+    },
+    "J2a1a1a2b2a3b": {
+     "name": "J2a1a1a2b2a3b",
+     "filtered": false,
+     "color": "rgb(232, 125, 225)",
+     "group": null
+    },
+    "Q1a": {
+     "name": "Q1a",
+     "filtered": false,
+     "color": "rgb(142, 222, 229)",
+     "group": null
+    },
+    "J2a1a1b2a1b1b2": {
+     "name": "J2a1a1b2a1b1b2",
+     "filtered": false,
+     "color": "rgb(173, 38, 175)",
+     "group": null
+    },
+    "Q1b2b1b": {
+     "name": "Q1b2b1b",
+     "filtered": false,
+     "color": "rgb(93, 182, 43)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b2b": {
+     "name": "R1b1a1b1a1a2b2b",
+     "filtered": false,
+     "color": "rgb(197, 155, 227)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a7a": {
+     "name": "N1a1a1a1a1a1a7a",
+     "filtered": false,
+     "color": "rgb(212, 32, 177)",
+     "group": null
+    },
+    "I1a1b1a4a1": {
+     "name": "I1a1b1a4a1",
+     "filtered": false,
+     "color": "rgb(38, 166, 106)",
+     "group": null
+    },
+    "N1a1a1a1a1a1": {
+     "name": "N1a1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(63, 209, 174)",
+     "group": null
+    },
+    "I1a1a1": {
+     "name": "I1a1a1",
+     "filtered": false,
+     "color": "rgb(214, 188, 95)",
+     "group": null
+    },
+    "I2a1b1a1a1b1a": {
+     "name": "I2a1b1a1a1b1a",
+     "filtered": false,
+     "color": "rgb(246, 234, 132)",
+     "group": null
+    },
+    "R1a1a1b2f": {
+     "name": "R1a1a1b2f",
+     "filtered": false,
+     "color": "rgb(220, 139, 244)",
+     "group": null
+    },
+    "I1a1b1b": {
+     "name": "I1a1b1b",
+     "filtered": false,
+     "color": "rgb(238, 7, 65)",
+     "group": null
+    },
+    "J2b2a2b2": {
+     "name": "J2b2a2b2",
+     "filtered": false,
+     "color": "rgb(101, 226, 30)",
+     "group": null
+    },
+    "N1a1a1": {
+     "name": "N1a1a1",
+     "filtered": false,
+     "color": "rgb(65, 246, 28)",
+     "group": null
+    },
+    "I2a1b1a2a2a1": {
+     "name": "I2a1b1a2a2a1",
+     "filtered": false,
+     "color": "rgb(52, 78, 175)",
+     "group": null
+    },
+    "H1a1a4": {
+     "name": "H1a1a4",
+     "filtered": false,
+     "color": "rgb(223, 125, 162)",
+     "group": null
+    },
+    "J2a1a1a2b1b": {
+     "name": "J2a1a1a2b1b",
+     "filtered": false,
+     "color": "rgb(104, 188, 40)",
+     "group": null
+    },
+    "J2a1a1a2b1b4": {
+     "name": "J2a1a1a2b1b4",
+     "filtered": false,
+     "color": "rgb(226, 53, 140)",
+     "group": null
+    },
+    "Q1b1a2b": {
+     "name": "Q1b1a2b",
+     "filtered": false,
+     "color": "rgb(18, 102, 221)",
+     "group": null
+    },
+    "T1a2b1": {
+     "name": "T1a2b1",
+     "filtered": false,
+     "color": "rgb(100, 128, 236)",
+     "group": null
+    },
+    "I1a3a1": {
+     "name": "I1a3a1",
+     "filtered": false,
+     "color": "rgb(98, 132, 236)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2a": {
+     "name": "R1b1a1b1a1a1c2a",
+     "filtered": false,
+     "color": "rgb(105, 217, 100)",
+     "group": null
+    },
+    "R1b1a1b1a1a2f": {
+     "name": "R1b1a1b1a1a2f",
+     "filtered": false,
+     "color": "rgb(230, 212, 161)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2a1c": {
+     "name": "R1b1a1b1a1a1c2a1c",
+     "filtered": false,
+     "color": "rgb(80, 217, 160)",
+     "group": null
+    },
+    "I2a1b1a2b1a2a2": {
+     "name": "I2a1b1a2b1a2a2",
+     "filtered": false,
+     "color": "rgb(238, 159, 13)",
+     "group": null
+    },
+    "E1b1b1a1b2a4b": {
+     "name": "E1b1b1a1b2a4b",
+     "filtered": false,
+     "color": "rgb(84, 213, 218)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b2b1a1a": {
+     "name": "R1b1a1b1a1a1c2b2b1a1a",
+     "filtered": false,
+     "color": "rgb(213, 32, 244)",
+     "group": null
+    },
+    "R1a1a1b1a3a1b3e5": {
+     "name": "R1a1a1b1a3a1b3e5",
+     "filtered": false,
+     "color": "rgb(177, 249, 38)",
+     "group": null
+    },
+    "I2a1b1a2b1a2b1": {
+     "name": "I2a1b1a2b1a2b1",
+     "filtered": false,
+     "color": "rgb(159, 143, 228)",
+     "group": null
+    },
+    "I2a1b1a1b1a1a": {
+     "name": "I2a1b1a1b1a1a",
+     "filtered": false,
+     "color": "rgb(239, 102, 246)",
+     "group": null
+    },
+    "I1a1b1a1a1": {
+     "name": "I1a1b1a1a1",
+     "filtered": false,
+     "color": "rgb(93, 79, 236)",
+     "group": null
+    },
+    "D": {
+     "name": "D",
+     "filtered": false,
+     "color": "rgb(84, 205, 118)",
+     "group": null
+    },
+    "N1b": {
+     "name": "N1b",
+     "filtered": false,
+     "color": "rgb(89, 236, 147)",
+     "group": null
+    },
+    "N1b2": {
+     "name": "N1b2",
+     "filtered": false,
+     "color": "rgb(142, 213, 75)",
+     "group": null
+    },
+    "O2a2b1a2a1a": {
+     "name": "O2a2b1a2a1a",
+     "filtered": false,
+     "color": "rgb(92, 200, 53)",
+     "group": null
+    },
+    "R1a1a1b2h": {
+     "name": "R1a1a1b2h",
+     "filtered": false,
+     "color": "rgb(188, 125, 246)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d1": {
+     "name": "R1a1a1b2a2a1d1",
+     "filtered": false,
+     "color": "rgb(199, 60, 227)",
+     "group": null
+    },
+    "I2a1b1a2a1b": {
+     "name": "I2a1b1a2a1b",
+     "filtered": false,
+     "color": "rgb(232, 165, 105)",
+     "group": null
+    },
+    "R1a1a1b2a2a3a1": {
+     "name": "R1a1a1b2a2a3a1",
+     "filtered": false,
+     "color": "rgb(126, 103, 243)",
+     "group": null
+    },
+    "E1b1a1a1": {
+     "name": "E1b1a1a1",
+     "filtered": false,
+     "color": "rgb(33, 67, 214)",
+     "group": null
+    },
+    "G2a2b2a1a1": {
+     "name": "G2a2b2a1a1",
+     "filtered": false,
+     "color": "rgb(72, 212, 15)",
+     "group": null
+    },
+    "P": {
+     "name": "P",
+     "filtered": false,
+     "color": "rgb(110, 121, 229)",
+     "group": null
+    },
+    "DE": {
+     "name": "DE",
+     "filtered": false,
+     "color": "rgb(59, 218, 91)",
+     "group": null
+    },
+    "B2b1a1": {
+     "name": "B2b1a1",
+     "filtered": false,
+     "color": "rgb(18, 223, 151)",
+     "group": null
+    },
+    "E1b1b1b2b2": {
+     "name": "E1b1b1b2b2",
+     "filtered": false,
+     "color": "rgb(41, 158, 240)",
+     "group": null
+    },
+    "B2b1": {
+     "name": "B2b1",
+     "filtered": false,
+     "color": "rgb(237, 85, 201)",
+     "group": null
+    },
+    "D1a2a1c1": {
+     "name": "D1a2a1c1",
+     "filtered": false,
+     "color": "rgb(152, 233, 141)",
+     "group": null
+    },
+    "Q1b1a2a1": {
+     "name": "Q1b1a2a1",
+     "filtered": false,
+     "color": "rgb(222, 247, 82)",
+     "group": null
+    },
+    "C2a": {
+     "name": "C2a",
+     "filtered": false,
+     "color": "rgb(220, 39, 200)",
+     "group": null
+    },
+    "I2a1b1a1b2": {
+     "name": "I2a1b1a1b2",
+     "filtered": false,
+     "color": "rgb(200, 11, 242)",
+     "group": null
+    },
+    "B2b": {
+     "name": "B2b",
+     "filtered": false,
+     "color": "rgb(46, 141, 196)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1a": {
+     "name": "R1b1a1b1a1a2c1a1a",
+     "filtered": false,
+     "color": "rgb(140, 217, 220)",
+     "group": null
+    },
+    "R1a1a1b1a3a2b": {
+     "name": "R1a1a1b1a3a2b",
+     "filtered": false,
+     "color": "rgb(126, 208, 73)",
+     "group": null
+    },
+    "I1a1b1a4a2f1a1a7": {
+     "name": "I1a1b1a4a2f1a1a7",
+     "filtered": false,
+     "color": "rgb(226, 60, 200)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1h": {
+     "name": "R1b1a1b1a1a2c1a1h",
+     "filtered": false,
+     "color": "rgb(153, 247, 109)",
+     "group": null
+    },
+    "I1a2a1a1a": {
+     "name": "I1a2a1a1a",
+     "filtered": false,
+     "color": "rgb(35, 111, 190)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5b1a1": {
+     "name": "R1b1a1b1a1a2c1a5b1a1",
+     "filtered": false,
+     "color": "rgb(42, 112, 163)",
+     "group": null
+    },
+    "I1a1b1a4a2": {
+     "name": "I1a1b1a4a2",
+     "filtered": false,
+     "color": "rgb(239, 110, 87)",
+     "group": null
+    },
+    "R1b1a1b1a1a2d1a1": {
+     "name": "R1b1a1b1a1a2d1a1",
+     "filtered": false,
+     "color": "rgb(157, 235, 65)",
+     "group": null
+    },
+    "R1a1a1b1a3a1a10": {
+     "name": "R1a1a1b1a3a1a10",
+     "filtered": false,
+     "color": "rgb(32, 171, 176)",
+     "group": null
+    },
+    "R1a1a1b1a3a1b": {
+     "name": "R1a1a1b1a3a1b",
+     "filtered": false,
+     "color": "rgb(185, 38, 60)",
+     "group": null
+    },
+    "T1a1a1b2b2b1a1a1": {
+     "name": "T1a1a1b2b2b1a1a1",
+     "filtered": false,
+     "color": "rgb(41, 35, 218)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1b3": {
+     "name": "R1b1a1b1a1a2a1b3",
+     "filtered": false,
+     "color": "rgb(99, 247, 180)",
+     "group": null
+    },
+    "T1a2": {
+     "name": "T1a2",
+     "filtered": false,
+     "color": "rgb(31, 83, 244)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a": {
+     "name": "N1a1a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(5, 203, 67)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a1b2": {
+     "name": "N1a1a1a1a1a1a1b2",
+     "filtered": false,
+     "color": "rgb(82, 240, 115)",
+     "group": null
+    },
+    "K": {
+     "name": "K",
+     "filtered": false,
+     "color": "rgb(93, 199, 71)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a1b": {
+     "name": "N1a1a1a1a1a1a1b",
+     "filtered": false,
+     "color": "rgb(124, 229, 155)",
+     "group": null
+    },
+    "R1a1a1a1d2": {
+     "name": "R1a1a1a1d2",
+     "filtered": false,
+     "color": "rgb(66, 39, 178)",
+     "group": null
+    },
+    "R1a1a1b2c": {
+     "name": "R1a1a1b2c",
+     "filtered": false,
+     "color": "rgb(240, 163, 239)",
+     "group": null
+    },
+    "I2a1a2b1": {
+     "name": "I2a1a2b1",
+     "filtered": false,
+     "color": "rgb(47, 73, 212)",
+     "group": null
+    },
+    "I2a1b1a1a": {
+     "name": "I2a1b1a1a",
+     "filtered": false,
+     "color": "rgb(246, 174, 48)",
+     "group": null
+    },
+    "G2b2": {
+     "name": "G2b2",
+     "filtered": false,
+     "color": "rgb(165, 236, 144)",
+     "group": null
+    },
+    "J2a1a1a2b2a3b1a": {
+     "name": "J2a1a1a2b2a3b1a",
+     "filtered": false,
+     "color": "rgb(176, 52, 54)",
+     "group": null
+    },
+    "Q1b2a1a1": {
+     "name": "Q1b2a1a1",
+     "filtered": false,
+     "color": "rgb(42, 199, 148)",
+     "group": null
+    },
+    "Q1b2b1b2b": {
+     "name": "Q1b2b1b2b",
+     "filtered": false,
+     "color": "rgb(245, 126, 91)",
+     "group": null
+    },
+    "N1a1a1a1a4a1": {
+     "name": "N1a1a1a1a4a1",
+     "filtered": false,
+     "color": "rgb(219, 141, 230)",
+     "group": null
+    },
+    "Q1b1a1a1e2": {
+     "name": "Q1b1a1a1e2",
+     "filtered": false,
+     "color": "rgb(183, 235, 170)",
+     "group": null
+    },
+    "Q1a2a2b1": {
+     "name": "Q1a2a2b1",
+     "filtered": false,
+     "color": "rgb(161, 218, 34)",
+     "group": null
+    },
+    "R1a1a1b2a2a1c3a": {
+     "name": "R1a1a1b2a2a1c3a",
+     "filtered": false,
+     "color": "rgb(26, 229, 98)",
+     "group": null
+    },
+    "R1a1a1a2": {
+     "name": "R1a1a1a2",
+     "filtered": false,
+     "color": "rgb(166, 212, 69)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1c": {
+     "name": "R1b1a1b1a1a2b1c",
+     "filtered": false,
+     "color": "rgb(239, 209, 121)",
+     "group": null
+    },
+    "G2a2b1a1a1b": {
+     "name": "G2a2b1a1a1b",
+     "filtered": false,
+     "color": "rgb(231, 88, 221)",
+     "group": null
+    },
+    "CF": {
+     "name": "CF",
+     "filtered": false,
+     "color": "rgb(118, 72, 201)",
+     "group": null
+    },
+    "I2a1a1a1a1a1": {
+     "name": "I2a1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(78, 175, 224)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2c4a": {
+     "name": "J1a2a1a2d2b2b2c4a",
+     "filtered": false,
+     "color": "rgb(49, 157, 78)",
+     "group": null
+    },
+    "E1b1b1a1b1a10a2b": {
+     "name": "E1b1b1a1b1a10a2b",
+     "filtered": false,
+     "color": "rgb(248, 226, 84)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a2a1b1a": {
+     "name": "G2a2b2a1a1b1a1a2a1b1a",
+     "filtered": false,
+     "color": "rgb(55, 144, 196)",
+     "group": null
+    },
+    "E1b1b1a1a1c1b1b": {
+     "name": "E1b1b1a1a1c1b1b",
+     "filtered": false,
+     "color": "rgb(185, 51, 37)",
+     "group": null
+    },
+    "J2a1a1a2b2a1a1c2": {
+     "name": "J2a1a1a2b2a1a1c2",
+     "filtered": false,
+     "color": "rgb(94, 213, 188)",
+     "group": null
+    },
+    "J2b2a1a1a1a1a1a": {
+     "name": "J2b2a1a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(102, 173, 242)",
+     "group": null
+    },
+    "H2c1a1a": {
+     "name": "H2c1a1a",
+     "filtered": false,
+     "color": "rgb(219, 132, 154)",
+     "group": null
+    },
+    "J2a1a1b2a1b1b2c": {
+     "name": "J2a1a1b2a1b1b2c",
+     "filtered": false,
+     "color": "rgb(94, 216, 138)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a2a1a1b": {
+     "name": "G2a2b2a1a1b1a1a2a1a1b",
+     "filtered": false,
+     "color": "rgb(100, 227, 8)",
+     "group": null
+    },
+    "C1a2a1": {
+     "name": "C1a2a1",
+     "filtered": false,
+     "color": "rgb(146, 141, 232)",
+     "group": null
+    },
+    "I1a1b1a1e2": {
+     "name": "I1a1b1a1e2",
+     "filtered": false,
+     "color": "rgb(249, 232, 127)",
+     "group": null
+    },
+    "J1a2a1a2c1a": {
+     "name": "J1a2a1a2c1a",
+     "filtered": false,
+     "color": "rgb(67, 198, 126)",
+     "group": null
+    },
+    "G2a2b1a1a1": {
+     "name": "G2a2b1a1a1",
+     "filtered": false,
+     "color": "rgb(202, 18, 204)",
+     "group": null
+    },
+    "G2a2b2a1a1c1a1a2b1": {
+     "name": "G2a2b2a1a1c1a1a2b1",
+     "filtered": false,
+     "color": "rgb(173, 110, 234)",
+     "group": null
+    },
+    "J2a1a1b2a1b1b3a2b": {
+     "name": "J2a1a1b2a1b1b3a2b",
+     "filtered": false,
+     "color": "rgb(237, 168, 220)",
+     "group": null
+    },
+    "T1a1a1b2b1a": {
+     "name": "T1a1a1b2b1a",
+     "filtered": false,
+     "color": "rgb(242, 199, 10)",
+     "group": null
+    },
+    "G2a2b2a1a1a1a": {
+     "name": "G2a2b2a1a1a1a",
+     "filtered": false,
+     "color": "rgb(199, 52, 121)",
+     "group": null
+    },
+    "J2a1a1a2b2a1b1b": {
+     "name": "J2a1a1a2b2a1b1b",
+     "filtered": false,
+     "color": "rgb(182, 85, 234)",
+     "group": null
+    },
+    "J2a1a1a2b2a3b1a1a2": {
+     "name": "J2a1a1a2b2a3b1a1a2",
+     "filtered": false,
+     "color": "rgb(129, 243, 65)",
+     "group": null
+    },
+    "G2a2b2b1a1": {
+     "name": "G2a2b2b1a1",
+     "filtered": false,
+     "color": "rgb(187, 32, 174)",
+     "group": null
+    },
+    "R1b1a1b1a1a2e": {
+     "name": "R1b1a1b1a1a2e",
+     "filtered": false,
+     "color": "rgb(216, 204, 48)",
+     "group": null
+    },
+    "J2b2a1a1a1b3": {
+     "name": "J2b2a1a1a1b3",
+     "filtered": false,
+     "color": "rgb(80, 95, 238)",
+     "group": null
+    },
+    "G2a2b1b1a1b": {
+     "name": "G2a2b1b1a1b",
+     "filtered": false,
+     "color": "rgb(84, 218, 245)",
+     "group": null
+    },
+    "G2a2b2b1a1b1a2a": {
+     "name": "G2a2b2b1a1b1a2a",
+     "filtered": false,
+     "color": "rgb(221, 70, 179)",
+     "group": null
+    },
+    "G2a2a1a2a1b1": {
+     "name": "G2a2a1a2a1b1",
+     "filtered": false,
+     "color": "rgb(199, 236, 164)",
+     "group": null
+    },
+    "E1b1b1b1b": {
+     "name": "E1b1b1b1b",
+     "filtered": false,
+     "color": "rgb(244, 247, 70)",
+     "group": null
+    },
+    "J2b2a1a1a1a1a2a": {
+     "name": "J2b2a1a1a1a1a2a",
+     "filtered": false,
+     "color": "rgb(119, 220, 144)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a2a1": {
+     "name": "G2a2b2a1a1b1a1a2a1",
+     "filtered": false,
+     "color": "rgb(221, 118, 234)",
+     "group": null
+    },
+    "E1b1b1a1a1c1b2": {
+     "name": "E1b1b1a1a1c1b2",
+     "filtered": false,
+     "color": "rgb(215, 43, 51)",
+     "group": null
+    },
+    "I2a1a2a1a1a": {
+     "name": "I2a1a2a1a1a",
+     "filtered": false,
+     "color": "rgb(215, 203, 131)",
+     "group": null
+    },
+    "J2a1a1b1a": {
+     "name": "J2a1a1b1a",
+     "filtered": false,
+     "color": "rgb(172, 130, 242)",
+     "group": null
+    },
+    "J2a1a1a2b2a1b1": {
+     "name": "J2a1a1a2b2a1b1",
+     "filtered": false,
+     "color": "rgb(143, 15, 198)",
+     "group": null
+    },
+    "J2a1a1b2a1b1": {
+     "name": "J2a1a1b2a1b1",
+     "filtered": false,
+     "color": "rgb(221, 235, 152)",
+     "group": null
+    },
+    "G2a2a1a2b1b": {
+     "name": "G2a2a1a2b1b",
+     "filtered": false,
+     "color": "rgb(248, 85, 211)",
+     "group": null
+    },
+    "J2a1a2b": {
+     "name": "J2a1a2b",
+     "filtered": false,
+     "color": "rgb(31, 33, 206)",
+     "group": null
+    },
+    "B2": {
+     "name": "B2",
+     "filtered": false,
+     "color": "rgb(217, 230, 177)",
+     "group": null
+    },
+    "B": {
+     "name": "B",
+     "filtered": false,
+     "color": "rgb(144, 241, 172)",
+     "group": null
+    },
+    "D1a2a": {
+     "name": "D1a2a",
+     "filtered": false,
+     "color": "rgb(106, 247, 218)",
+     "group": null
+    },
+    "I2a1a1a1a1a1a1e": {
+     "name": "I2a1a1a1a1a1a1e",
+     "filtered": false,
+     "color": "rgb(231, 146, 181)",
+     "group": null
+    },
+    "J2b2a1a2": {
+     "name": "J2b2a1a2",
+     "filtered": false,
+     "color": "rgb(174, 210, 64)",
+     "group": null
+    },
+    "J2b2a1b": {
+     "name": "J2b2a1b",
+     "filtered": false,
+     "color": "rgb(137, 248, 152)",
+     "group": null
+    },
+    "D1a1a1a1a1": {
+     "name": "D1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(234, 75, 74)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1a1": {
+     "name": "R1b1a1b1a1a2b1a1",
+     "filtered": false,
+     "color": "rgb(216, 56, 83)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2c3": {
+     "name": "J1a2a1a2d2b2b2c3",
+     "filtered": false,
+     "color": "rgb(129, 49, 166)",
+     "group": null
+    },
+    "G2a2b1a": {
+     "name": "G2a2b1a",
+     "filtered": false,
+     "color": "rgb(180, 33, 58)",
+     "group": null
+    },
+    "G2a2b1a2": {
+     "name": "G2a2b1a2",
+     "filtered": false,
+     "color": "rgb(191, 156, 26)",
+     "group": null
+    },
+    "J2a1a1a2": {
+     "name": "J2a1a1a2",
+     "filtered": false,
+     "color": "rgb(210, 128, 17)",
+     "group": null
+    },
+    "H2c": {
+     "name": "H2c",
+     "filtered": false,
+     "color": "rgb(54, 189, 217)",
+     "group": null
+    },
+    "G2a2b2": {
+     "name": "G2a2b2",
+     "filtered": false,
+     "color": "rgb(213, 61, 72)",
+     "group": null
+    },
+    "G2a2b1a2a": {
+     "name": "G2a2b1a2a",
+     "filtered": false,
+     "color": "rgb(250, 72, 177)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2c4b2a": {
+     "name": "J1a2a1a2d2b2b2c4b2a",
+     "filtered": false,
+     "color": "rgb(225, 109, 116)",
+     "group": null
+    },
+    "H3b1": {
+     "name": "H3b1",
+     "filtered": false,
+     "color": "rgb(241, 163, 210)",
+     "group": null
+    },
+    "I2a2a1b1": {
+     "name": "I2a2a1b1",
+     "filtered": false,
+     "color": "rgb(245, 133, 34)",
+     "group": null
+    },
+    "E1b1a1a1a2a1a3b1a": {
+     "name": "E1b1a1a1a2a1a3b1a",
+     "filtered": false,
+     "color": "rgb(119, 228, 203)",
+     "group": null
+    },
+    "R1b1b2a2a": {
+     "name": "R1b1b2a2a",
+     "filtered": false,
+     "color": "rgb(220, 216, 120)",
+     "group": null
+    },
+    "E1b1a1a1a1c1a1": {
+     "name": "E1b1a1a1a1c1a1",
+     "filtered": false,
+     "color": "rgb(139, 178, 226)",
+     "group": null
+    },
+    "E1b1a1a1a1c1a1a3a1d1": {
+     "name": "E1b1a1a1a1c1a1a3a1d1",
+     "filtered": false,
+     "color": "rgb(11, 236, 22)",
+     "group": null
+    },
+    "O1b1a1a1a": {
+     "name": "O1b1a1a1a",
+     "filtered": false,
+     "color": "rgb(52, 107, 213)",
+     "group": null
+    },
+    "K2": {
+     "name": "K2",
+     "filtered": false,
+     "color": "rgb(223, 40, 49)",
+     "group": null
+    },
+    "O1a1a1a1a1a1": {
+     "name": "O1a1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(160, 222, 143)",
+     "group": null
+    },
+    "G1a": {
+     "name": "G1a",
+     "filtered": false,
+     "color": "rgb(220, 134, 70)",
+     "group": null
+    },
+    "I1a2a1a1c2": {
+     "name": "I1a2a1a1c2",
+     "filtered": false,
+     "color": "rgb(206, 238, 169)",
+     "group": null
+    },
+    "I1a1b1a1d3b": {
+     "name": "I1a1b1a1d3b",
+     "filtered": false,
+     "color": "rgb(226, 138, 101)",
+     "group": null
+    },
+    "R1a1a1b1a3a1": {
+     "name": "R1a1a1b1a3a1",
+     "filtered": false,
+     "color": "rgb(185, 151, 44)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1c1a1a2": {
+     "name": "R1b1a1b1a1a2b1c1a1a2",
+     "filtered": false,
+     "color": "rgb(92, 185, 208)",
+     "group": null
+    },
+    "R1a1a1b1a1a1c1i": {
+     "name": "R1a1a1b1a1a1c1i",
+     "filtered": false,
+     "color": "rgb(185, 50, 49)",
+     "group": null
+    },
+    "I1a2a1a1d1a1a": {
+     "name": "I1a2a1a1d1a1a",
+     "filtered": false,
+     "color": "rgb(167, 229, 218)",
+     "group": null
+    },
+    "I2a1b1a2b1a2b": {
+     "name": "I2a1b1a2b1a2b",
+     "filtered": false,
+     "color": "rgb(229, 165, 195)",
+     "group": null
+    },
+    "R1a1a1b1a2a2": {
+     "name": "R1a1a1b1a2a2",
+     "filtered": false,
+     "color": "rgb(123, 230, 71)",
+     "group": null
+    },
+    "R1a1a1b1a1a1c1": {
+     "name": "R1a1a1b1a1a1c1",
+     "filtered": false,
+     "color": "rgb(79, 208, 62)",
+     "group": null
+    },
+    "I1a1b1a3a": {
+     "name": "I1a1b1a3a",
+     "filtered": false,
+     "color": "rgb(224, 140, 83)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1b1a1a": {
+     "name": "R1b1a1b1a1a2a1b1a1a",
+     "filtered": false,
+     "color": "rgb(136, 243, 193)",
+     "group": null
+    },
+    "I1a1b1a1": {
+     "name": "I1a1b1a1",
+     "filtered": false,
+     "color": "rgb(58, 212, 42)",
+     "group": null
+    },
+    "I2a1a1a1a2b": {
+     "name": "I2a1a1a1a2b",
+     "filtered": false,
+     "color": "rgb(157, 28, 197)",
+     "group": null
+    },
+    "R1a1a1b1a3a1b3e4": {
+     "name": "R1a1a1b1a3a1b3e4",
+     "filtered": false,
+     "color": "rgb(228, 239, 164)",
+     "group": null
+    },
+    "I1a1a4a1a1b": {
+     "name": "I1a1a4a1a1b",
+     "filtered": false,
+     "color": "rgb(175, 129, 51)",
+     "group": null
+    },
+    "I1a5": {
+     "name": "I1a5",
+     "filtered": false,
+     "color": "rgb(87, 212, 171)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a3a2": {
+     "name": "R1b1a1b1a1a2c1a3a2",
+     "filtered": false,
+     "color": "rgb(116, 213, 199)",
+     "group": null
+    },
+    "R1a1a1b1a3a1a3b2": {
+     "name": "R1a1a1b1a3a1a3b2",
+     "filtered": false,
+     "color": "rgb(57, 217, 190)",
+     "group": null
+    },
+    "R1a1a1b1a1a": {
+     "name": "R1a1a1b1a1a",
+     "filtered": false,
+     "color": "rgb(44, 221, 136)",
+     "group": null
+    },
+    "I1a1b1b1a2": {
+     "name": "I1a1b1b1a2",
+     "filtered": false,
+     "color": "rgb(77, 206, 98)",
+     "group": null
+    },
+    "I1a1b1a4a": {
+     "name": "I1a1b1a4a",
+     "filtered": false,
+     "color": "rgb(222, 217, 55)",
+     "group": null
+    },
+    "N1a1a1a1a1": {
+     "name": "N1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(215, 209, 104)",
+     "group": null
+    },
+    "I2a1a1b1a1": {
+     "name": "I2a1a1b1a1",
+     "filtered": false,
+     "color": "rgb(112, 153, 230)",
+     "group": null
+    },
+    "R1a1a1b1a3a1a7": {
+     "name": "R1a1a1b1a3a1a7",
+     "filtered": false,
+     "color": "rgb(50, 218, 236)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1f1a1": {
+     "name": "R1b1a1b1a1a2c1a1f1a1",
+     "filtered": false,
+     "color": "rgb(132, 236, 142)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5c1a": {
+     "name": "R1b1a1b1a1a2c1a5c1a",
+     "filtered": false,
+     "color": "rgb(37, 34, 211)",
+     "group": null
+    },
+    "Q1b2b1": {
+     "name": "Q1b2b1",
+     "filtered": false,
+     "color": "rgb(196, 44, 81)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a2": {
+     "name": "R1b1a1b1a1a2c1a2",
+     "filtered": false,
+     "color": "rgb(213, 116, 147)",
+     "group": null
+    },
+    "R1a1a1b1a2b3a3a": {
+     "name": "R1a1a1b1a2b3a3a",
+     "filtered": false,
+     "color": "rgb(225, 53, 102)",
+     "group": null
+    },
+    "I1c1c1": {
+     "name": "I1c1c1",
+     "filtered": false,
+     "color": "rgb(101, 243, 71)",
+     "group": null
+    },
+    "I1a1b1g3b1": {
+     "name": "I1a1b1g3b1",
+     "filtered": false,
+     "color": "rgb(208, 103, 243)",
+     "group": null
+    },
+    "I1a1b1a1c2a": {
+     "name": "I1a1b1a1c2a",
+     "filtered": false,
+     "color": "rgb(58, 201, 78)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b1b3b": {
+     "name": "R1b1a1b1a1a1c2b1b3b",
+     "filtered": false,
+     "color": "rgb(233, 77, 247)",
+     "group": null
+    },
+    "I1a1b1a4a2e1a": {
+     "name": "I1a1b1a4a2e1a",
+     "filtered": false,
+     "color": "rgb(19, 209, 148)",
+     "group": null
+    },
+    "I1a1b1": {
+     "name": "I1a1b1",
+     "filtered": false,
+     "color": "rgb(226, 128, 96)",
+     "group": null
+    },
+    "I1a2a1a1d1b": {
+     "name": "I1a2a1a1d1b",
+     "filtered": false,
+     "color": "rgb(194, 115, 246)",
+     "group": null
+    },
+    "R1b1a1b1a1a1b1a1": {
+     "name": "R1b1a1b1a1a1b1a1",
+     "filtered": false,
+     "color": "rgb(81, 217, 23)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2a1d1": {
+     "name": "R1b1a1b1a1a1c2a1d1",
+     "filtered": false,
+     "color": "rgb(213, 126, 158)",
+     "group": null
+    },
+    "I1a1b1a1e2d": {
+     "name": "I1a1b1a1e2d",
+     "filtered": false,
+     "color": "rgb(44, 181, 211)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b1b4c": {
+     "name": "R1b1a1b1a1a1c2b1b4c",
+     "filtered": false,
+     "color": "rgb(226, 43, 61)",
+     "group": null
+    },
+    "I1a2a1": {
+     "name": "I1a2a1",
+     "filtered": false,
+     "color": "rgb(211, 131, 237)",
+     "group": null
+    },
+    "I1a2a1a1a4a": {
+     "name": "I1a2a1a1a4a",
+     "filtered": false,
+     "color": "rgb(156, 242, 182)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b1a1": {
+     "name": "R1b1a1b1a1a1c2b1a1",
+     "filtered": false,
+     "color": "rgb(221, 99, 181)",
+     "group": null
+    },
+    "I2a1b1a2b1a2a1a": {
+     "name": "I2a1b1a2b1a2a1a",
+     "filtered": false,
+     "color": "rgb(60, 133, 195)",
+     "group": null
+    },
+    "J2b2a1a1a1a1a": {
+     "name": "J2b2a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(134, 146, 244)",
+     "group": null
+    },
+    "I2a1b1a2b1a2": {
+     "name": "I2a1b1a2b1a2",
+     "filtered": false,
+     "color": "rgb(99, 98, 220)",
+     "group": null
+    },
+    "I1a1b1g3b": {
+     "name": "I1a1b1g3b",
+     "filtered": false,
+     "color": "rgb(21, 71, 215)",
+     "group": null
+    },
+    "I1a2a1a1a5a1a": {
+     "name": "I1a2a1a1a5a1a",
+     "filtered": false,
+     "color": "rgb(67, 14, 246)",
+     "group": null
+    },
+    "E1b1a1a1a2a1a3a1e": {
+     "name": "E1b1a1a1a2a1a3a1e",
+     "filtered": false,
+     "color": "rgb(139, 218, 74)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1f": {
+     "name": "R1b1a1b1a1a2c1a1f",
+     "filtered": false,
+     "color": "rgb(233, 50, 195)",
+     "group": null
+    },
+    "N1a1a1a1a1a2": {
+     "name": "N1a1a1a1a1a2",
+     "filtered": false,
+     "color": "rgb(208, 91, 19)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1c1b": {
+     "name": "R1b1a1b1a1a2b1c1b",
+     "filtered": false,
+     "color": "rgb(135, 74, 227)",
+     "group": null
+    },
+    "I2a1b1a2a1a1a1": {
+     "name": "I2a1b1a2a1a1a1",
+     "filtered": false,
+     "color": "rgb(218, 145, 114)",
+     "group": null
+    },
+    "I1a2a1a1d": {
+     "name": "I1a2a1a1d",
+     "filtered": false,
+     "color": "rgb(112, 218, 31)",
+     "group": null
+    },
+    "I1a2a2": {
+     "name": "I1a2a2",
+     "filtered": false,
+     "color": "rgb(31, 173, 173)",
+     "group": null
+    },
+    "I1a2a2a4b": {
+     "name": "I1a2a2a4b",
+     "filtered": false,
+     "color": "rgb(212, 55, 238)",
+     "group": null
+    },
+    "E1b1b1b2a1a4": {
+     "name": "E1b1b1b2a1a4",
+     "filtered": false,
+     "color": "rgb(227, 130, 60)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a2a1a1": {
+     "name": "G2a2b2a1a1b1a1a2a1a1",
+     "filtered": false,
+     "color": "rgb(251, 237, 120)",
+     "group": null
+    },
+    "R1a1a1b1a2a1a": {
+     "name": "R1a1a1b1a2a1a",
+     "filtered": false,
+     "color": "rgb(111, 236, 169)",
+     "group": null
+    },
+    "I1a10b1b": {
+     "name": "I1a10b1b",
+     "filtered": false,
+     "color": "rgb(36, 140, 183)",
+     "group": null
+    },
+    "I1a2a1a1d1a1a1a1": {
+     "name": "I1a2a1a1d1a1a1a1",
+     "filtered": false,
+     "color": "rgb(86, 232, 104)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a7a3a": {
+     "name": "N1a1a1a1a1a1a7a3a",
+     "filtered": false,
+     "color": "rgb(228, 84, 86)",
+     "group": null
+    },
+    "R1a1a1b1a3a1a": {
+     "name": "R1a1a1b1a3a1a",
+     "filtered": false,
+     "color": "rgb(151, 205, 251)",
+     "group": null
+    },
+    "I1a2a1a1d1": {
+     "name": "I1a2a1a1d1",
+     "filtered": false,
+     "color": "rgb(220, 220, 14)",
+     "group": null
+    },
+    "I1a1b1a4": {
+     "name": "I1a1b1a4",
+     "filtered": false,
+     "color": "rgb(44, 242, 142)",
+     "group": null
+    },
+    "I1a7": {
+     "name": "I1a7",
+     "filtered": false,
+     "color": "rgb(104, 244, 159)",
+     "group": null
+    },
+    "I1a1b1a1e2b": {
+     "name": "I1a1b1a1e2b",
+     "filtered": false,
+     "color": "rgb(100, 175, 222)",
+     "group": null
+    },
+    "I1a1a1a1a3a": {
+     "name": "I1a1a1a1a3a",
+     "filtered": false,
+     "color": "rgb(242, 149, 182)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a7": {
+     "name": "N1a1a1a1a1a1a7",
+     "filtered": false,
+     "color": "rgb(114, 249, 174)",
+     "group": null
+    },
+    "R1a1a1a1d1": {
+     "name": "R1a1a1a1d1",
+     "filtered": false,
+     "color": "rgb(178, 26, 184)",
+     "group": null
+    },
+    "R1a1a1b1a3a2b2": {
+     "name": "R1a1a1b1a3a2b2",
+     "filtered": false,
+     "color": "rgb(209, 47, 15)",
+     "group": null
+    },
+    "I2a1b1a2b1a2a1a1a1a": {
+     "name": "I2a1b1a2b1a2a1a1a1a",
+     "filtered": false,
+     "color": "rgb(174, 31, 136)",
+     "group": null
+    },
+    "I1a2a2a": {
+     "name": "I1a2a2a",
+     "filtered": false,
+     "color": "rgb(215, 129, 173)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a4d1": {
+     "name": "R1b1a1b1a1a2c1a4d1",
+     "filtered": false,
+     "color": "rgb(227, 58, 123)",
+     "group": null
+    },
+    "L1a1b3a": {
+     "name": "L1a1b3a",
+     "filtered": false,
+     "color": "rgb(37, 91, 176)",
+     "group": null
+    },
+    "I2a1a2b1a1": {
+     "name": "I2a1a2b1a1",
+     "filtered": false,
+     "color": "rgb(219, 139, 143)",
+     "group": null
+    },
+    "R1a1a1b1a1a1c1j1": {
+     "name": "R1a1a1b1a1a1c1j1",
+     "filtered": false,
+     "color": "rgb(105, 205, 24)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1a1a1a1a1a": {
+     "name": "R1b1a1b1a1a2c1a1a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(237, 191, 84)",
+     "group": null
+    },
+    "I1a1b1a4a2a": {
+     "name": "I1a1b1a4a2a",
+     "filtered": false,
+     "color": "rgb(119, 240, 213)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a5b": {
+     "name": "N1a1a1a1a1a1a5b",
+     "filtered": false,
+     "color": "rgb(112, 199, 239)",
+     "group": null
+    },
+    "I1a1b1a1c1": {
+     "name": "I1a1b1a1c1",
+     "filtered": false,
+     "color": "rgb(201, 81, 29)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1a1a1a1b1": {
+     "name": "R1b1a1b1a1a2c1a1a1a1a1b1",
+     "filtered": false,
+     "color": "rgb(233, 158, 137)",
+     "group": null
+    }
+   },
+   "": {
+    "_groups": []
+   },
+   "admixture": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    }
+   },
+   "admixture_k6": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    },
+    "k #1": {
+     "name": "k #1",
+     "filtered": false,
+     "color": "rgb(178, 229, 149)",
+     "group": null,
+     "order": 0
+    },
+    "k #2": {
+     "name": "k #2",
+     "filtered": false,
+     "color": "rgb(45, 152, 243)",
+     "group": null,
+     "order": 1
+    },
+    "k #3": {
+     "name": "k #3",
+     "filtered": false,
+     "color": "rgb(148, 202, 57)",
+     "group": null,
+     "order": 2
+    },
+    "k #4": {
+     "name": "k #4",
+     "filtered": false,
+     "color": "rgb(134, 247, 248)",
+     "group": null,
+     "order": 3
+    },
+    "k #5": {
+     "name": "k #5",
+     "filtered": false,
+     "color": "rgb(116, 205, 88)",
+     "group": null,
+     "order": 4
+    },
+    "k #6": {
+     "name": "k #6",
+     "filtered": false,
+     "color": "rgb(198, 232, 106)",
+     "group": null,
+     "order": 5
+    },
+    "_order": [
+     "k #1",
+     "k #2",
+     "k #3",
+     "k #4",
+     "k #5",
+     "k #6",
+     "MISSING"
+    ]
+   },
+   "admixture_k7": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    },
+    "k #1": {
+     "name": "k #1",
+     "filtered": false,
+     "color": "rgb(224, 102, 102)",
+     "group": null,
+     "order": 0
+    },
+    "k #2": {
+     "name": "k #2",
+     "filtered": false,
+     "color": "rgb(246, 178, 107)",
+     "group": null,
+     "order": 1
+    },
+    "k #3": {
+     "name": "k #3",
+     "filtered": false,
+     "color": "rgb(142, 124, 195)",
+     "group": null,
+     "order": 2
+    },
+    "k #4": {
+     "name": "k #4",
+     "filtered": false,
+     "color": "rgb(147, 196, 125)",
+     "group": null,
+     "order": 3
+    },
+    "k #5": {
+     "name": "k #5",
+     "filtered": false,
+     "color": "rgb(255, 0, 255)",
+     "group": null,
+     "order": 4
+    },
+    "k #6": {
+     "name": "k #6",
+     "filtered": false,
+     "color": "rgb(0, 255, 255)",
+     "group": null,
+     "order": 5
+    },
+    "k #7": {
+     "name": "k #7",
+     "filtered": false,
+     "color": "rgb(111, 168, 220)",
+     "group": null,
+     "order": 6
+    },
+    "_order": [
+     "k #1",
+     "k #2",
+     "k #3",
+     "k #4",
+     "k #5",
+     "k #6",
+     "k #7",
+     "MISSING"
+    ]
+   }
+  },
+  "regions": {
+   "DEFAULT": {
+    "name": "Region",
+    "color": {
+     "background": "rgba(197, 209, 220, 0.3)",
+     "stroke": "rgba(38, 83, 122, 1.0)"
+    }
+   },
+   "countries": {
+    "Madagascar": {
+     "name": "Madagascar",
+     "filtered": false,
+     "group": null
+    },
+    "Nicobar Islands": {
+     "name": "Nicobar Islands",
+     "filtered": false,
+     "group": null
+    },
+    "New Caledonia": {
+     "name": "New Caledonia",
+     "filtered": false,
+     "group": null
+    },
+    "Benin": {
+     "name": "Benin",
+     "filtered": false,
+     "group": null
+    },
+    "Shikoku": {
+     "name": "Shikoku",
+     "filtered": false,
+     "group": null
+    },
+    "Siachen Glacier": {
+     "name": "Siachen Glacier",
+     "filtered": false,
+     "group": null
+    },
+    "Qatar": {
+     "name": "Qatar",
+     "filtered": false,
+     "group": null
+    },
+    "Hokkaidō Prefecture": {
+     "name": "Hokkaidō Prefecture",
+     "filtered": false,
+     "group": null
+    },
+    "Papua New Guinea": {
+     "name": "Papua New Guinea",
+     "filtered": false,
+     "group": null
+    },
+    "Italy": {
+     "name": "Italy",
+     "filtered": false,
+     "group": null
+    },
+    "Ethiopia": {
+     "name": "Ethiopia",
+     "filtered": false,
+     "group": null
+    },
+    "Prince Edward Islands": {
+     "name": "Prince Edward Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Anguilla": {
+     "name": "Anguilla",
+     "filtered": false,
+     "group": null
+    },
+    "Togo": {
+     "name": "Togo",
+     "filtered": false,
+     "group": null
+    },
+    "Corsica": {
+     "name": "Corsica",
+     "filtered": false,
+     "group": null
+    },
+    "Gaza Strip": {
+     "name": "Gaza Strip",
+     "filtered": false,
+     "group": null
+    },
+    "Macquarie Island": {
+     "name": "Macquarie Island",
+     "filtered": false,
+     "group": null
+    },
+    "Belarus": {
+     "name": "Belarus",
+     "filtered": false,
+     "group": null
+    },
+    "Cuba": {
+     "name": "Cuba",
+     "filtered": false,
+     "group": null
+    },
+    "Moldova": {
+     "name": "Moldova",
+     "filtered": false,
+     "group": null
+    },
+    "Saudi Arabia": {
+     "name": "Saudi Arabia",
+     "filtered": false,
+     "group": null
+    },
+    "Republika Srpska": {
+     "name": "Republika Srpska",
+     "filtered": false,
+     "group": null
+    },
+    "Andaman Islands": {
+     "name": "Andaman Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Ivory Coast": {
+     "name": "Ivory Coast",
+     "filtered": false,
+     "group": null
+    },
+    "Hawaii": {
+     "name": "Hawaii",
+     "filtered": false,
+     "group": null
+    },
+    "People's Republic of China": {
+     "name": "People's Republic of China",
+     "filtered": false,
+     "group": null
+    },
+    "Brazil": {
+     "name": "Brazil",
+     "filtered": false,
+     "group": null
+    },
+    "Sicily": {
+     "name": "Sicily",
+     "filtered": false,
+     "group": null
+    },
+    "Tobago": {
+     "name": "Tobago",
+     "filtered": false,
+     "group": null
+    },
+    "Antigua": {
+     "name": "Antigua",
+     "filtered": false,
+     "group": null
+    },
+    "Hungary": {
+     "name": "Hungary",
+     "filtered": false,
+     "group": null
+    },
+    "Cocos": {
+     "name": "Cocos",
+     "filtered": false,
+     "group": null
+    },
+    "Chile": {
+     "name": "Chile",
+     "filtered": false,
+     "group": null
+    },
+    "Guernsey": {
+     "name": "Guernsey",
+     "filtered": false,
+     "group": null
+    },
+    "Zimbabwe": {
+     "name": "Zimbabwe",
+     "filtered": false,
+     "group": null
+    },
+    "Ryukyu Islands": {
+     "name": "Ryukyu Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Vietnam": {
+     "name": "Vietnam",
+     "filtered": false,
+     "group": null
+    },
+    "Romania": {
+     "name": "Romania",
+     "filtered": false,
+     "group": null
+    },
+    "Mayotte": {
+     "name": "Mayotte",
+     "filtered": false,
+     "group": null
+    },
+    "Philippines": {
+     "name": "Philippines",
+     "filtered": false,
+     "group": null
+    },
+    "Kyrgyzstan": {
+     "name": "Kyrgyzstan",
+     "filtered": false,
+     "group": null
+    },
+    "Ghana": {
+     "name": "Ghana",
+     "filtered": false,
+     "group": null
+    },
+    "Saint Helena": {
+     "name": "Saint Helena",
+     "filtered": false,
+     "group": null
+    },
+    "Marshall Islands": {
+     "name": "Marshall Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Comoros": {
+     "name": "Comoros",
+     "filtered": false,
+     "group": null
+    },
+    "Botswana": {
+     "name": "Botswana",
+     "filtered": false,
+     "group": null
+    },
+    "Laos": {
+     "name": "Laos",
+     "filtered": false,
+     "group": null
+    },
+    "Nigeria": {
+     "name": "Nigeria",
+     "filtered": false,
+     "group": null
+    },
+    "Sweden": {
+     "name": "Sweden",
+     "filtered": false,
+     "group": null
+    },
+    "Portugal": {
+     "name": "Portugal",
+     "filtered": false,
+     "group": null
+    },
+    "Japan": {
+     "name": "Japan",
+     "filtered": false,
+     "group": null
+    },
+    "Sardinia": {
+     "name": "Sardinia",
+     "filtered": false,
+     "group": null
+    },
+    "Azerbaijan": {
+     "name": "Azerbaijan",
+     "filtered": false,
+     "group": null
+    },
+    "North Island": {
+     "name": "North Island",
+     "filtered": false,
+     "group": null
+    },
+    "Izu Islands": {
+     "name": "Izu Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Dominican Republic": {
+     "name": "Dominican Republic",
+     "filtered": false,
+     "group": null
+    },
+    "Russia": {
+     "name": "Russia",
+     "filtered": false,
+     "group": null
+    },
+    "Albania": {
+     "name": "Albania",
+     "filtered": false,
+     "group": null
+    },
+    "Zanzibar": {
+     "name": "Zanzibar",
+     "filtered": false,
+     "group": null
+    },
+    "Flemish Brabant": {
+     "name": "Flemish Brabant",
+     "filtered": false,
+     "group": null
+    },
+    "Spain": {
+     "name": "Spain",
+     "filtered": false,
+     "group": null
+    },
+    "Falkland Islands": {
+     "name": "Falkland Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Cyprus": {
+     "name": "Cyprus",
+     "filtered": false,
+     "group": null
+    },
+    "Uzbekistan": {
+     "name": "Uzbekistan",
+     "filtered": false,
+     "group": null
+    },
+    "Vojvodina": {
+     "name": "Vojvodina",
+     "filtered": false,
+     "group": null
+    },
+    "Croatia": {
+     "name": "Croatia",
+     "filtered": false,
+     "group": null
+    },
+    "Balearic Islands": {
+     "name": "Balearic Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Saint Pierre and Miquelon": {
+     "name": "Saint Pierre and Miquelon",
+     "filtered": false,
+     "group": null
+    },
+    "French Southern and Antarctic Lands": {
+     "name": "French Southern and Antarctic Lands",
+     "filtered": false,
+     "group": null
+    },
+    "Morocco": {
+     "name": "Morocco",
+     "filtered": false,
+     "group": null
+    },
+    "Austria": {
+     "name": "Austria",
+     "filtered": false,
+     "group": null
+    },
+    "Uganda": {
+     "name": "Uganda",
+     "filtered": false,
+     "group": null
+    },
+    "Taiwan": {
+     "name": "Taiwan",
+     "filtered": false,
+     "group": null
+    },
+    "Malaysia": {
+     "name": "Malaysia",
+     "filtered": false,
+     "group": null
+    },
+    "Iran": {
+     "name": "Iran",
+     "filtered": false,
+     "group": null
+    },
+    "Myanmar": {
+     "name": "Myanmar",
+     "filtered": false,
+     "group": null
+    },
+    "Niger": {
+     "name": "Niger",
+     "filtered": false,
+     "group": null
+    },
+    "Slovakia": {
+     "name": "Slovakia",
+     "filtered": false,
+     "group": null
+    },
+    "Isle of Man": {
+     "name": "Isle of Man",
+     "filtered": false,
+     "group": null
+    },
+    "São Tomé Island": {
+     "name": "São Tomé Island",
+     "filtered": false,
+     "group": null
+    },
+    "Grenada": {
+     "name": "Grenada",
+     "filtered": false,
+     "group": null
+    },
+    "Panama": {
+     "name": "Panama",
+     "filtered": false,
+     "group": null
+    },
+    "Vatican City": {
+     "name": "Vatican City",
+     "filtered": false,
+     "group": null
+    },
+    "Venezuela": {
+     "name": "Venezuela",
+     "filtered": false,
+     "group": null
+    },
+    "Bornholm": {
+     "name": "Bornholm",
+     "filtered": false,
+     "group": null
+    },
+    "Belize": {
+     "name": "Belize",
+     "filtered": false,
+     "group": null
+    },
+    "Saint Kitts and Nevis": {
+     "name": "Saint Kitts and Nevis",
+     "filtered": false,
+     "group": null
+    },
+    "Gabon": {
+     "name": "Gabon",
+     "filtered": false,
+     "group": null
+    },
+    "Caribbean Netherlands": {
+     "name": "Caribbean Netherlands",
+     "filtered": false,
+     "group": null
+    },
+    "Río Muni": {
+     "name": "Río Muni",
+     "filtered": false,
+     "group": null
+    },
+    "Central African Republic": {
+     "name": "Central African Republic",
+     "filtered": false,
+     "group": null
+    },
+    "Denmark": {
+     "name": "Denmark",
+     "filtered": false,
+     "group": null
+    },
+    "Mali": {
+     "name": "Mali",
+     "filtered": false,
+     "group": null
+    },
+    "Afghanistan": {
+     "name": "Afghanistan",
+     "filtered": false,
+     "group": null
+    },
+    "Ecuador": {
+     "name": "Ecuador",
+     "filtered": false,
+     "group": null
+    },
+    "Guam": {
+     "name": "Guam",
+     "filtered": false,
+     "group": null
+    },
+    "Galápagos Province": {
+     "name": "Galápagos Province",
+     "filtered": false,
+     "group": null
+    },
+    "Oman": {
+     "name": "Oman",
+     "filtered": false,
+     "group": null
+    },
+    "Yemen": {
+     "name": "Yemen",
+     "filtered": false,
+     "group": null
+    },
+    "Jordan": {
+     "name": "Jordan",
+     "filtered": false,
+     "group": null
+    },
+    "Iceland": {
+     "name": "Iceland",
+     "filtered": false,
+     "group": null
+    },
+    "Northern Mariana Islands": {
+     "name": "Northern Mariana Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Rwanda": {
+     "name": "Rwanda",
+     "filtered": false,
+     "group": null
+    },
+    "Ukraine": {
+     "name": "Ukraine",
+     "filtered": false,
+     "group": null
+    },
+    "Vanuatu": {
+     "name": "Vanuatu",
+     "filtered": false,
+     "group": null
+    },
+    "Wales": {
+     "name": "Wales",
+     "filtered": false,
+     "group": null
+    },
+    "Montenegro": {
+     "name": "Montenegro",
+     "filtered": false,
+     "group": null
+    },
+    "Solomon Islands": {
+     "name": "Solomon Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Mongolia": {
+     "name": "Mongolia",
+     "filtered": false,
+     "group": null
+    },
+    "Greenland": {
+     "name": "Greenland",
+     "filtered": false,
+     "group": null
+    },
+    "Niue": {
+     "name": "Niue",
+     "filtered": false,
+     "group": null
+    },
+    "Mozambique": {
+     "name": "Mozambique",
+     "filtered": false,
+     "group": null
+    },
+    "Poland": {
+     "name": "Poland",
+     "filtered": false,
+     "group": null
+    },
+    "Malawi": {
+     "name": "Malawi",
+     "filtered": false,
+     "group": null
+    },
+    "Hong Kong": {
+     "name": "Hong Kong",
+     "filtered": false,
+     "group": null
+    },
+    "Faroe Islands": {
+     "name": "Faroe Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Nicaragua": {
+     "name": "Nicaragua",
+     "filtered": false,
+     "group": null
+    },
+    "Príncipe": {
+     "name": "Príncipe",
+     "filtered": false,
+     "group": null
+    },
+    "Kosovo": {
+     "name": "Kosovo",
+     "filtered": false,
+     "group": null
+    },
+    "Socotra Archipelago": {
+     "name": "Socotra Archipelago",
+     "filtered": false,
+     "group": null
+    },
+    "Paraguay": {
+     "name": "Paraguay",
+     "filtered": false,
+     "group": null
+    },
+    "Turkey": {
+     "name": "Turkey",
+     "filtered": false,
+     "group": null
+    },
+    "eSwatini": {
+     "name": "eSwatini",
+     "filtered": false,
+     "group": null
+    },
+    "Senegal": {
+     "name": "Senegal",
+     "filtered": false,
+     "group": null
+    },
+    "Sint Maarten": {
+     "name": "Sint Maarten",
+     "filtered": false,
+     "group": null
+    },
+    "Bulgaria": {
+     "name": "Bulgaria",
+     "filtered": false,
+     "group": null
+    },
+    "Angola": {
+     "name": "Angola",
+     "filtered": false,
+     "group": null
+    },
+    "Nauru": {
+     "name": "Nauru",
+     "filtered": false,
+     "group": null
+    },
+    "Federated States of Micronesia": {
+     "name": "Federated States of Micronesia",
+     "filtered": false,
+     "group": null
+    },
+    "Mauritania": {
+     "name": "Mauritania",
+     "filtered": false,
+     "group": null
+    },
+    "Jamaica": {
+     "name": "Jamaica",
+     "filtered": false,
+     "group": null
+    },
+    "Costa Rica": {
+     "name": "Costa Rica",
+     "filtered": false,
+     "group": null
+    },
+    "Turkmenistan": {
+     "name": "Turkmenistan",
+     "filtered": false,
+     "group": null
+    },
+    "Madeira": {
+     "name": "Madeira",
+     "filtered": false,
+     "group": null
+    },
+    "Bahrain": {
+     "name": "Bahrain",
+     "filtered": false,
+     "group": null
+    },
+    "Zambia": {
+     "name": "Zambia",
+     "filtered": false,
+     "group": null
+    },
+    "Antarctica": {
+     "name": "Antarctica",
+     "filtered": false,
+     "group": null
+    },
+    "Republic of Macedonia": {
+     "name": "Republic of Macedonia",
+     "filtered": false,
+     "group": null
+    },
+    "Bougainville": {
+     "name": "Bougainville",
+     "filtered": false,
+     "group": null
+    },
+    "Ulleungdo": {
+     "name": "Ulleungdo",
+     "filtered": false,
+     "group": null
+    },
+    "Curaçao": {
+     "name": "Curaçao",
+     "filtered": false,
+     "group": null
+    },
+    "Argentina": {
+     "name": "Argentina",
+     "filtered": false,
+     "group": null
+    },
+    "Trinidad": {
+     "name": "Trinidad",
+     "filtered": false,
+     "group": null
+    },
+    "Indonesia": {
+     "name": "Indonesia",
+     "filtered": false,
+     "group": null
+    },
+    "Turkish Republic of Northern Cyprus": {
+     "name": "Turkish Republic of Northern Cyprus",
+     "filtered": false,
+     "group": null
+    },
+    "Haiti": {
+     "name": "Haiti",
+     "filtered": false,
+     "group": null
+    },
+    "Liechtenstein": {
+     "name": "Liechtenstein",
+     "filtered": false,
+     "group": null
+    },
+    "Dominica": {
+     "name": "Dominica",
+     "filtered": false,
+     "group": null
+    },
+    "Saint Martin": {
+     "name": "Saint Martin",
+     "filtered": false,
+     "group": null
+    },
+    "Ireland": {
+     "name": "Ireland",
+     "filtered": false,
+     "group": null
+    },
+    "Barbados": {
+     "name": "Barbados",
+     "filtered": false,
+     "group": null
+    },
+    "Bonin Islands": {
+     "name": "Bonin Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Eritrea": {
+     "name": "Eritrea",
+     "filtered": false,
+     "group": null
+    },
+    "Pitcairn Islands": {
+     "name": "Pitcairn Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Colombia": {
+     "name": "Colombia",
+     "filtered": false,
+     "group": null
+    },
+    "Israel": {
+     "name": "Israel",
+     "filtered": false,
+     "group": null
+    },
+    "Switzerland": {
+     "name": "Switzerland",
+     "filtered": false,
+     "group": null
+    },
+    "Honduras": {
+     "name": "Honduras",
+     "filtered": false,
+     "group": null
+    },
+    "Alaska": {
+     "name": "Alaska",
+     "filtered": false,
+     "group": null
+    },
+    "Peru": {
+     "name": "Peru",
+     "filtered": false,
+     "group": null
+    },
+    "Kyushu": {
+     "name": "Kyushu",
+     "filtered": false,
+     "group": null
+    },
+    "Western Sahara": {
+     "name": "Western Sahara",
+     "filtered": false,
+     "group": null
+    },
+    "Sierra Leone": {
+     "name": "Sierra Leone",
+     "filtered": false,
+     "group": null
+    },
+    "Guadeloupe": {
+     "name": "Guadeloupe",
+     "filtered": false,
+     "group": null
+    },
+    "Luxembourg": {
+     "name": "Luxembourg",
+     "filtered": false,
+     "group": null
+    },
+    "Bioko": {
+     "name": "Bioko",
+     "filtered": false,
+     "group": null
+    },
+    "Tanzania": {
+     "name": "Tanzania",
+     "filtered": false,
+     "group": null
+    },
+    "Namibia": {
+     "name": "Namibia",
+     "filtered": false,
+     "group": null
+    },
+    "Sudan": {
+     "name": "Sudan",
+     "filtered": false,
+     "group": null
+    },
+    "New Zealand Subantarctic Islands": {
+     "name": "New Zealand Subantarctic Islands",
+     "filtered": false,
+     "group": null
+    },
+    "France": {
+     "name": "France",
+     "filtered": false,
+     "group": null
+    },
+    "Lebanon": {
+     "name": "Lebanon",
+     "filtered": false,
+     "group": null
+    },
+    "Finland": {
+     "name": "Finland",
+     "filtered": false,
+     "group": null
+    },
+    "Kaliningrad Oblast": {
+     "name": "Kaliningrad Oblast",
+     "filtered": false,
+     "group": null
+    },
+    "Hainan": {
+     "name": "Hainan",
+     "filtered": false,
+     "group": null
+    },
+    "Wallis and Futuna": {
+     "name": "Wallis and Futuna",
+     "filtered": false,
+     "group": null
+    },
+    "French Guiana": {
+     "name": "French Guiana",
+     "filtered": false,
+     "group": null
+    },
+    "Maldives": {
+     "name": "Maldives",
+     "filtered": false,
+     "group": null
+    },
+    "Easter Island": {
+     "name": "Easter Island",
+     "filtered": false,
+     "group": null
+    },
+    "Monaco": {
+     "name": "Monaco",
+     "filtered": false,
+     "group": null
+    },
+    "South Sudan": {
+     "name": "South Sudan",
+     "filtered": false,
+     "group": null
+    },
+    "Kuwait": {
+     "name": "Kuwait",
+     "filtered": false,
+     "group": null
+    },
+    "Iraq": {
+     "name": "Iraq",
+     "filtered": false,
+     "group": null
+    },
+    "Egypt": {
+     "name": "Egypt",
+     "filtered": false,
+     "group": null
+    },
+    "Nepal": {
+     "name": "Nepal",
+     "filtered": false,
+     "group": null
+    },
+    "Malta": {
+     "name": "Malta",
+     "filtered": false,
+     "group": null
+    },
+    "United States Virgin Islands": {
+     "name": "United States Virgin Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Aruba": {
+     "name": "Aruba",
+     "filtered": false,
+     "group": null
+    },
+    "West Bank": {
+     "name": "West Bank",
+     "filtered": false,
+     "group": null
+    },
+    "Naval Support Facility Diego Garcia": {
+     "name": "Naval Support Facility Diego Garcia",
+     "filtered": false,
+     "group": null
+    },
+    "North Korea": {
+     "name": "North Korea",
+     "filtered": false,
+     "group": null
+    },
+    "Syria": {
+     "name": "Syria",
+     "filtered": false,
+     "group": null
+    },
+    "Suriname": {
+     "name": "Suriname",
+     "filtered": false,
+     "group": null
+    },
+    "Liberia": {
+     "name": "Liberia",
+     "filtered": false,
+     "group": null
+    },
+    "Pante Makassar Subdistrict": {
+     "name": "Pante Makassar Subdistrict",
+     "filtered": false,
+     "group": null
+    },
+    "Cameroon": {
+     "name": "Cameroon",
+     "filtered": false,
+     "group": null
+    },
+    "South Korea": {
+     "name": "South Korea",
+     "filtered": false,
+     "group": null
+    },
+    "Christmas Island": {
+     "name": "Christmas Island",
+     "filtered": false,
+     "group": null
+    },
+    "Svalbard": {
+     "name": "Svalbard",
+     "filtered": false,
+     "group": null
+    },
+    "Djibouti": {
+     "name": "Djibouti",
+     "filtered": false,
+     "group": null
+    },
+    "Lesotho": {
+     "name": "Lesotho",
+     "filtered": false,
+     "group": null
+    },
+    "Czech Republic": {
+     "name": "Czech Republic",
+     "filtered": false,
+     "group": null
+    },
+    "Pakistan": {
+     "name": "Pakistan",
+     "filtered": false,
+     "group": null
+    },
+    "Singapore": {
+     "name": "Singapore",
+     "filtered": false,
+     "group": null
+    },
+    "Bermuda": {
+     "name": "Bermuda",
+     "filtered": false,
+     "group": null
+    },
+    "French Polynesia": {
+     "name": "French Polynesia",
+     "filtered": false,
+     "group": null
+    },
+    "Palau": {
+     "name": "Palau",
+     "filtered": false,
+     "group": null
+    },
+    "Cape Verde": {
+     "name": "Cape Verde",
+     "filtered": false,
+     "group": null
+    },
+    "Uruguay": {
+     "name": "Uruguay",
+     "filtered": false,
+     "group": null
+    },
+    "Algeria": {
+     "name": "Algeria",
+     "filtered": false,
+     "group": null
+    },
+    "Chad": {
+     "name": "Chad",
+     "filtered": false,
+     "group": null
+    },
+    "Macau": {
+     "name": "Macau",
+     "filtered": false,
+     "group": null
+    },
+    "The Bahamas": {
+     "name": "The Bahamas",
+     "filtered": false,
+     "group": null
+    },
+    "Germany": {
+     "name": "Germany",
+     "filtered": false,
+     "group": null
+    },
+    "United States of America": {
+     "name": "United States of America",
+     "filtered": false,
+     "group": null
+    },
+    "Pantelleria Island": {
+     "name": "Pantelleria Island",
+     "filtered": false,
+     "group": null
+    },
+    "Burundi": {
+     "name": "Burundi",
+     "filtered": false,
+     "group": null
+    },
+    "Norway": {
+     "name": "Norway",
+     "filtered": false,
+     "group": null
+    },
+    "Kazakhstan": {
+     "name": "Kazakhstan",
+     "filtered": false,
+     "group": null
+    },
+    "Mexico": {
+     "name": "Mexico",
+     "filtered": false,
+     "group": null
+    },
+    "Democratic Republic of the Congo": {
+     "name": "Democratic Republic of the Congo",
+     "filtered": false,
+     "group": null
+    },
+    "Tonga": {
+     "name": "Tonga",
+     "filtered": false,
+     "group": null
+    },
+    "American Samoa": {
+     "name": "American Samoa",
+     "filtered": false,
+     "group": null
+    },
+    "Saint Vincent and the Grenadines": {
+     "name": "Saint Vincent and the Grenadines",
+     "filtered": false,
+     "group": null
+    },
+    "Andorra": {
+     "name": "Andorra",
+     "filtered": false,
+     "group": null
+    },
+    "Bangladesh": {
+     "name": "Bangladesh",
+     "filtered": false,
+     "group": null
+    },
+    "Estonia": {
+     "name": "Estonia",
+     "filtered": false,
+     "group": null
+    },
+    "Ascension Island": {
+     "name": "Ascension Island",
+     "filtered": false,
+     "group": null
+    },
+    "South Africa": {
+     "name": "South Africa",
+     "filtered": false,
+     "group": null
+    },
+    "Australia": {
+     "name": "Australia",
+     "filtered": false,
+     "group": null
+    },
+    "Netherlands": {
+     "name": "Netherlands",
+     "filtered": false,
+     "group": null
+    },
+    "Cambodia": {
+     "name": "Cambodia",
+     "filtered": false,
+     "group": null
+    },
+    "Georgia": {
+     "name": "Georgia",
+     "filtered": false,
+     "group": null
+    },
+    "Walloon Brabant": {
+     "name": "Walloon Brabant",
+     "filtered": false,
+     "group": null
+    },
+    "Scotland": {
+     "name": "Scotland",
+     "filtered": false,
+     "group": null
+    },
+    "Libya": {
+     "name": "Libya",
+     "filtered": false,
+     "group": null
+    },
+    "Republic of the Congo": {
+     "name": "Republic of the Congo",
+     "filtered": false,
+     "group": null
+    },
+    "Honshu": {
+     "name": "Honshu",
+     "filtered": false,
+     "group": null
+    },
+    "Barbuda": {
+     "name": "Barbuda",
+     "filtered": false,
+     "group": null
+    },
+    "El Salvador": {
+     "name": "El Salvador",
+     "filtered": false,
+     "group": null
+    },
+    "Somaliland": {
+     "name": "Somaliland",
+     "filtered": false,
+     "group": null
+    },
+    "Canada": {
+     "name": "Canada",
+     "filtered": false,
+     "group": null
+    },
+    "Slovenia": {
+     "name": "Slovenia",
+     "filtered": false,
+     "group": null
+    },
+    "Seychelles": {
+     "name": "Seychelles",
+     "filtered": false,
+     "group": null
+    },
+    "Cayman Islands": {
+     "name": "Cayman Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Chatham Islands": {
+     "name": "Chatham Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Isla Salas y Gómez": {
+     "name": "Isla Salas y Gómez",
+     "filtered": false,
+     "group": null
+    },
+    "Bhutan": {
+     "name": "Bhutan",
+     "filtered": false,
+     "group": null
+    },
+    "Guatemala": {
+     "name": "Guatemala",
+     "filtered": false,
+     "group": null
+    },
+    "South Georgia": {
+     "name": "South Georgia",
+     "filtered": false,
+     "group": null
+    },
+    "United Arab Emirates": {
+     "name": "United Arab Emirates",
+     "filtered": false,
+     "group": null
+    },
+    "Jersey": {
+     "name": "Jersey",
+     "filtered": false,
+     "group": null
+    },
+    "Réunion": {
+     "name": "Réunion",
+     "filtered": false,
+     "group": null
+    },
+    "England": {
+     "name": "England",
+     "filtered": false,
+     "group": null
+    },
+    "British Virgin Islands": {
+     "name": "British Virgin Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Brussels-Capital Region": {
+     "name": "Brussels-Capital Region",
+     "filtered": false,
+     "group": null
+    },
+    "Mauritius": {
+     "name": "Mauritius",
+     "filtered": false,
+     "group": null
+    },
+    "Tajikistan": {
+     "name": "Tajikistan",
+     "filtered": false,
+     "group": null
+    },
+    "Latvia": {
+     "name": "Latvia",
+     "filtered": false,
+     "group": null
+    },
+    "Burkina Faso": {
+     "name": "Burkina Faso",
+     "filtered": false,
+     "group": null
+    },
+    "Somalia": {
+     "name": "Somalia",
+     "filtered": false,
+     "group": null
+    },
+    "Saint-Barthélemy": {
+     "name": "Saint-Barthélemy",
+     "filtered": false,
+     "group": null
+    },
+    "Saint Lucia": {
+     "name": "Saint Lucia",
+     "filtered": false,
+     "group": null
+    },
+    "Puerto Rico": {
+     "name": "Puerto Rico",
+     "filtered": false,
+     "group": null
+    },
+    "Northern Ireland": {
+     "name": "Northern Ireland",
+     "filtered": false,
+     "group": null
+    },
+    "East Timor": {
+     "name": "East Timor",
+     "filtered": false,
+     "group": null
+    },
+    "Azores": {
+     "name": "Azores",
+     "filtered": false,
+     "group": null
+    },
+    "Peter I Island": {
+     "name": "Peter I Island",
+     "filtered": false,
+     "group": null
+    },
+    "Heard Island and McDonald Islands": {
+     "name": "Heard Island and McDonald Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Turks and Caicos Islands": {
+     "name": "Turks and Caicos Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Canary Islands": {
+     "name": "Canary Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Greece": {
+     "name": "Greece",
+     "filtered": false,
+     "group": null
+    },
+    "Serbia": {
+     "name": "Serbia",
+     "filtered": false,
+     "group": null
+    },
+    "Norfolk Island": {
+     "name": "Norfolk Island",
+     "filtered": false,
+     "group": null
+    },
+    "Kiribati": {
+     "name": "Kiribati",
+     "filtered": false,
+     "group": null
+    },
+    "South Sandwich Islands": {
+     "name": "South Sandwich Islands",
+     "filtered": false,
+     "group": null
+    },
+    "San Marino": {
+     "name": "San Marino",
+     "filtered": false,
+     "group": null
+    },
+    "The Gambia": {
+     "name": "The Gambia",
+     "filtered": false,
+     "group": null
+    },
+    "Tokelau": {
+     "name": "Tokelau",
+     "filtered": false,
+     "group": null
+    },
+    "Sri Lanka": {
+     "name": "Sri Lanka",
+     "filtered": false,
+     "group": null
+    },
+    "Jan Mayen": {
+     "name": "Jan Mayen",
+     "filtered": false,
+     "group": null
+    },
+    "Fiji": {
+     "name": "Fiji",
+     "filtered": false,
+     "group": null
+    },
+    "Martinique": {
+     "name": "Martinique",
+     "filtered": false,
+     "group": null
+    },
+    "Guinea": {
+     "name": "Guinea",
+     "filtered": false,
+     "group": null
+    },
+    "Armenia": {
+     "name": "Armenia",
+     "filtered": false,
+     "group": null
+    },
+    "Guinea-Bissau": {
+     "name": "Guinea-Bissau",
+     "filtered": false,
+     "group": null
+    },
+    "Guyana": {
+     "name": "Guyana",
+     "filtered": false,
+     "group": null
+    },
+    "India": {
+     "name": "India",
+     "filtered": false,
+     "group": null
+    },
+    "South Orkney Islands": {
+     "name": "South Orkney Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Åland Islands": {
+     "name": "Åland Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Lithuania": {
+     "name": "Lithuania",
+     "filtered": false,
+     "group": null
+    },
+    "Bolivia": {
+     "name": "Bolivia",
+     "filtered": false,
+     "group": null
+    },
+    "Tasmania": {
+     "name": "Tasmania",
+     "filtered": false,
+     "group": null
+    },
+    "Jeju": {
+     "name": "Jeju",
+     "filtered": false,
+     "group": null
+    },
+    "Samoa": {
+     "name": "Samoa",
+     "filtered": false,
+     "group": null
+    },
+    "Autonomous Republic of Crimea": {
+     "name": "Autonomous Republic of Crimea",
+     "filtered": false,
+     "group": null
+    },
+    "Thailand": {
+     "name": "Thailand",
+     "filtered": false,
+     "group": null
+    },
+    "Cook Islands": {
+     "name": "Cook Islands",
+     "filtered": false,
+     "group": null
+    },
+    "Federation of Bosnia and Herzegovina": {
+     "name": "Federation of Bosnia and Herzegovina",
+     "filtered": false,
+     "group": null
+    },
+    "Montserrat": {
+     "name": "Montserrat",
+     "filtered": false,
+     "group": null
+    },
+    "South Island": {
+     "name": "South Island",
+     "filtered": false,
+     "group": null
+    },
+    "Lakshadweep": {
+     "name": "Lakshadweep",
+     "filtered": false,
+     "group": null
+    },
+    "Tunisia": {
+     "name": "Tunisia",
+     "filtered": false,
+     "group": null
+    },
+    "Kenya": {
+     "name": "Kenya",
+     "filtered": false,
+     "group": null
+    },
+    "Brunei": {
+     "name": "Brunei",
+     "filtered": false,
+     "group": null
+    },
+    "Ashmore and Cartier Islands": {
+     "name": "Ashmore and Cartier Islands",
+     "filtered": false,
+     "group": null
+    }
+   }
+  }
+ },
+ "map": {
+  "position": [
+   -36.803165797643565,
+   46.94484349121669
+  ],
+  "zoom": 3.613410776229241,
+  "dataProjection": "EPSG:4326",
+  "mapProjection": "EPSG:3857",
+  "baseLayers": {},
+  "options": {
+   "basemap": {
+    "name": "Light",
+    "appearance": {
+     "visible_layers": {
+      "basemap-light-water": true,
+      "basemap-light-boundaries": true,
+      "basemap-light-labels": false
+     },
+     "colors": {
+      "map-background": "rgb(255, 255, 255)",
+      "basemap-light-water": "rgb(68, 68, 68)",
+      "basemap-light-boundaries": "rgb(153, 153, 153)",
+      "basemap-light-labels": "rgb(0, 0, 0)"
+     }
+    }
+   },
+   "features": {
+    "visible": {
+     "timeline": false,
+     "controls": true,
+     "legend": true,
+     "scale": true,
+     "title": true
+    },
+    "appearance": {
+     "map-title": "Components concentration for admixture K=7",
+     "map-subtitle": "piecharts & filtering by components values"
+    }
+   }
+  }
+ },
+ "features": {}
+}

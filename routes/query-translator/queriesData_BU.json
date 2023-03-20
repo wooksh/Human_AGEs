@@ -1,0 +1,36 @@
+{
+	"RemainsAADR": {
+		"selectionSet": [
+			"site(lang: $lang)",
+			"sex(lang: $lang)",
+			"coordinates",
+			"id",
+			"dating",
+			"haplogroup_y",
+			"haplogroup_mt"
+		]
+	},
+	"PersonAADR": {
+		"selectionSet": [
+			"place(lang: $lang)",
+			"sex(lang: $lang)",
+			"coordinates",
+			"id",
+			"haplogroup_y",
+			"haplogroup_mt"
+		]
+	},
+	"PersonEMPOP": {
+		"selectionSet": [
+			"place(lang: $lang)",
+			"coordinates",
+			"id",
+			"haplogroup_mt"
+		]
+	},
+	"default": {
+		"variablesDeclarations": {
+			"$lang": "String"
+		}
+	}
+}

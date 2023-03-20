@@ -1,0 +1,14 @@
+@import "mixins-sass/colors";
+@import "mixins-sass/_multi-browser-support";
+
+
+.years-range-spinner {
+    justify-content: space-between;
+    align-items: center;
+
+    & .range-line {
+        border-top: 0.125em solid palette-tertiary-color-with-opacity(.25);
+        margin: 0 1em;
+    }
+}
+

@@ -1,0 +1,365 @@
+@import './mixins-sass/multi-browser-support.scss';
+
+/*---------------------------------------------------*/
+/*** MASONRY ***/
+/*---------------------------------------------------*/
+
+@-webkit-keyframes pop-in {
+	0% { opacity: 0; -webkit-transform: scale(0.5); }
+	100% { opacity: 1; -webkit-transform: scale(1); }
+}
+@-moz-keyframes pop-in {
+	0% { opacity: 0; -moz-transform: scale(0.5); }
+	100% { opacity: 1; -moz-transform: scale(1); }
+}
+@keyframes pop-in {
+	0% { opacity: 0; transform: scale(0.5); }
+	100% { opacity: 1; transform: scale(1); }
+}
+
+#tile-container {
+	position: relative;
+	padding: 10vw 9.5vw 10vw 9.5vw;
+}
+
+#tile-container:after {
+	-moz-box-shadow: inset 0 0 3em #888;  
+	-webkit-box-shadow: inset 0 0 3em #888;   
+	box-shadow: inset 0 0 3em #888;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	content: "";
+	display: block;
+}
+
+
+.grid {
+  position: relative;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer {
+	width: 24%; /* Empty element for item sizing */
+}
+
+.gutter-sizer { 
+	width: 1%; 
+}
+
+.grid-item {
+	float: left;
+	background: #252525 url('/img/noise.png') top left repeat;
+	border: 3px solid #252525;
+	z-index: 4;
+	margin-bottom: 1vw;
+	overflow: hidden;
+	// opacity: 0;
+	
+	transition:
+		border 0.15s linear;
+
+	-webkit-transition:
+		border 0.15s linear;
+		
+	-o-transition:
+		border 0.15s linear;
+		
+	-moz-transition:
+		border 0.15s linear;
+	
+	filter: drop-shadow(0px 0px 2px #111);
+	-webkit-filter: drop-shadow(0px 0px 2px #111);
+
+	&:hover .grid-item--header {
+		background-color: rgba(0, 0, 0, 0.1);
+		bottom: 0px;
+	}
+}
+
+.item-visible {
+	-webkit-animation: pop-in 0.5s;
+	-moz-animation: pop-in 0.5s;
+	-ms-animation: pop-in 0.5s;
+	-o-animation: pop-in 0.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 0.15s;
+}
+
+/* Dorobiĉ wsparcie dla wielu przeglıdarek dla calc! */
+.grid-item--width1 { width: 20vw; }
+.grid-item--width2 { width: 39vw; } /* +1% */
+.grid-item--width3 { width: 60vw; } /* +2% */
+.grid-item--width4 { width: 82vw; } /* +3% */
+
+.grid-item--height1 { height: 20vw; }
+.grid-item--height2 { height: 41vw; } /* +1vw */
+.grid-item--height3 { height: 62vw; } /* +2vw */
+.grid-item--height4 { height: 83vw; } /* +3vw */
+
+.grid-item--pop {
+	z-index: 20;
+}
+
+.grid-item--image {
+	width: 100%;
+	overflow: hidden;
+
+	img {
+		width: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+	}
+}
+
+.popping-out {
+	& .grid-item--image img {
+		@include transition(padding 800ms cubic-bezier(0.215, 0.61, 0.355, 1));
+	}
+}
+
+.grid-item--gigante {
+	& .grid-item--image img {
+		@include transition(padding 800ms cubic-bezier(0.55, 0.055, 0.675, 0.19));
+		width: 50% !important;
+		padding: 20px;
+	}
+}
+
+.grid-item--header {
+	color: #eee;
+	position: absolute;
+	bottom: -35px;
+	left: 0;
+	right: 0;
+	z-index: 20;
+	padding: .5rem;
+
+	& h5, & hr, & h6 {
+		$shadow-color: rgba(17, 17, 17, 0.8);
+		filter: 
+			drop-shadow(1px 1px 2px $shadow-color)
+			drop-shadow(0px 0px 2px $shadow-color);
+		-webkit-filter:
+			drop-shadow(1px 1px 2px $shadow-color)
+			drop-shadow(0px 0px 2px $shadow-color);
+	}
+	
+	& h5, & h6 {
+		margin-bottom: .1rem;
+	}
+
+	& .affiliation {
+		color: #bbb;
+	}
+
+	& hr {
+		margin: .5rem 0 .3rem 0;
+		filter: none;	
+		border-top: 1px solid rgba(238, 238, 238, 0.2);
+	}
+
+	@include transition(background-color 200ms ease, bottom 200ms ease);
+}
+
+.grid-item--content {
+	display: none;
+	color: #eee;
+	width: 40%; 
+	background: #252525 url('/img/noise.png') top left repeat;
+	padding: 50px 20px 20px 20px;
+
+	& .content--header {
+		text-align: left;
+		color: #eee;
+	}
+
+	& .content--text {
+		font-family: 'Droid Sans', sans-serif;
+		text-align: justify;
+		
+	}
+
+	& .position {
+		color: #aaa;
+	}
+
+	& hr {
+		border-top: 1px solid rgba(238, 238, 238, 0.2);
+	}
+}
+
+
+.cancel--button {
+	position: absolute;
+	top: 10px;
+	right: 20px;
+  width: 40px;
+  height: 40px;
+	opacity: 0.6;
+	z-index: 30;
+	display: none;
+	cursor: pointer;
+	
+	transition:
+		opacity 0.5s linear;
+
+	-webkit-transition:
+		opacity 0.5s linear;
+		
+	-o-transition:
+		opacity 0.5s linear;
+		
+	-moz-transition:
+		opacity 0.5s linear;
+}
+.cancel--button:hover {
+  opacity: 1;
+}
+.cancel--button:before, .cancel--button:after {
+  position: absolute;
+  left: 22px;
+  top: -1px;
+  content: ' ';
+  height: 40px;
+  width: 4px;
+  background-color: #eee;
+}
+.cancel--button:before {
+  transform: rotate(45deg);
+}
+.cancel--button:after {
+  transform: rotate(-45deg);
+}
+
+.layer {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	
+	transition: background 0.15s linear;
+}	
+
+.layer:hover {
+	cursor: pointer;
+}
+
+.scrollable {
+	overflow: hidden;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}
+
+
+/*---------------------------------------------------*/
+/*** TILE STYLE ***/
+/*---------------------------------------------------*/
+// wykonawca (realizator), specjalista, analityk, koordynator, szef zespołu, kreator, ewaluator
+
+
+.wykonawca {
+	border: 3px solid #acdeff;
+	&:hover, &.grid-item--pop {
+		border: 3px solid #65c1ff;
+	}
+}
+
+.specjalista {
+	border: 3px solid #ffacac;
+	&:hover, &.grid-item--pop {
+		border: 3px solid #ff6565;
+	}
+}
+
+.analityk {
+	border: 3px solid #dbffac;
+	&:hover, &.grid-item--pop {
+		border: 3px solid #f0ff65;
+	}
+}
+
+.koordynator {
+	border: 3px solid #acbfff;
+	&:hover, &.grid-item--pop {
+		border: 3px solid #659bff;
+	}
+}
+
+.szef {
+	border: 3px solid #e5acff;
+	&:hover, &.grid-item--pop {
+		border: 3px solid #ba65ff;
+	}
+};
+
+.kreator {
+	border: 3px solid #afffac;
+	&:hover, &.grid-item--pop {
+		border: 3px solid #65ff7a;
+	}
+}
+
+.ewaluator {
+	border: 3px solid #ffa6da;
+	&:hover, &.grid-item--pop {
+		border: 3px solid #ff65b2;
+	}
+}
+
+
+/*---------------------------------------------------*/
+/*** TILE INNER TEXT ***/
+/*---------------------------------------------------*/
+
+.contact {
+	.mail-text {
+		margin-bottom: 5px;
+	}
+	
+	& span {
+		color: #aaa;
+	}
+
+	& .fa {
+		margin-right: 10px;
+	}
+}
+
+/*---------------------------------------------------*/
+/*** PROJECT SECTION ***/
+/*---------------------------------------------------*/
+
+// #project-section {
+// 	& .background {
+// 		background-color: rgb(230, 208, 243);
+// 		position: absolute;
+// 		left: 0;
+// 		right: 0;
+// 	}
+// }
+
+/*---------------------------------------------------*/
+/*** ACKNOWLEDGMENTS SECTION ***/
+/*---------------------------------------------------*/
+
+#acknowledgments-section {
+	& p {
+		font-size: 1rem; 
+		color: #aaa;
+	}
+}

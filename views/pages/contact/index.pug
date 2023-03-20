@@ -1,0 +1,88 @@
+extends /templates/basic/index.pug
+
+block append links
+    include /assets/contact-styles.pug
+
+
+block content
+    .container-fluid
+        .jumbotron.jumbotron-fluid(style="min-height: 50rem;")
+            picture.jumbotron-background-image
+                //- Alternatywny obrazek dla różnych media queries -//
+                source(srcset="/img/bg-future.jpg")
+                img.img-fluid(src="/img/bg-future.jpg", alt="966")
+            .row.h-100
+                .col-2
+                .col-8
+                    //-#contact-info-container.p-5.d-flex.mx-auto.row
+                    .center-header-text
+                        .card(style="width: 50%;").mx-auto
+                            .card-body.position-relative
+                                h3 Contact information
+                                p
+                                | The Human Archeogenomics webserver (Human AGEs webserver) was created by the team of Molecular and Systems Biology department at the 
+                                a(href="https://portal.ichb.pl/homepage/") Institute of Bioorganic Chemistry Polish Academy of Sciences
+                                |, Poznań, Poland.
+                                | In case of technical questions and suggestions please contact:
+                                ul
+                                    li Łukasz Ciecierski&nbsp;&nbsp;&nbsp;
+                                        b lciecierski@ibch.poznan.pl
+                                    li Ireneusz Stolarek&nbsp;&nbsp;&nbsp;
+                                        b istolarek@ibch.poznan.pl
+                                    li Marek Figlerowicz&nbsp;&nbsp;&nbsp;
+                                        b marekf@ibch.poznan.pl
+                .col-2
+   
+                            //-h5.card-title Insitute
+
+                            //-
+                                h5.card-title Europejskie Centrum Bioinformatyki i Genomiki
+                                h6.card-subtitle.mb-2.text-muted Instytut Informatyki
+                                h6.card-subtitle.mb-2.text-muted Politechnika Poznańska
+                                p.card-text
+                                    p 
+                                        | Piotrowo 2 (Berdychowo),
+                                        br 
+                                        | Poznań, 50-965,
+                                        br 
+                                        | Polska
+                                    p 
+                                        i.fas.fa-phone.mr-2 
+                                        | (61) 665-2999, (61) 665-2997
+                                    p 
+                                        i.fas.fa-at.mr-2
+                                        | ecbig@put.poznan.pl
+                            //-
+                                .icons-section.px-2
+                                        .icon-wrapper
+                                            i.fab.fa-facebook-f.dot
+                                        .icon-wrapper.ml-3
+                                            i.fab.fa-twitter.dot
+
+                //-
+                    #contact-form-container.col-sm-5.p-5
+                        .row
+                            .col.align-self-center
+                                form
+                                    .form-group
+                                        label(for='exampleFormControlInput1'): h2 Adres email
+                                        input#exampleFormControlInput1.form-control(type='email' placeholder='nazwa@przyklad.com')
+                                    .form-group
+                                        label(for='exampleFormControlSelect1'): h2 Temat
+                                        select#exampleFormControlSelect1.form-control
+                                            option Marketing
+                                            option Współpraca
+                                            option Zgłoszenie błędu
+                                            option Sugestie
+                                    .form-group
+                                        label(for='exampleFormControlTextarea1'): h2 Treść
+                                        textarea#exampleFormControlTextarea1.form-control(rows='6')
+    //-
+        #map-header.container-fluid
+            h3.text-center Mapa dojazdu
+        #map  
+
+
+block append scripts    
+    //-script(async='' defer='' src='https://maps.googleapis.com/maps/api/js?key=AIzaSyAN_zbV8S-azHGI0_jNx9TGBNowKvxyWWA&callback=initMap')
+    include /assets/contact-scripts.pug

@@ -1,0 +1,3743 @@
+{
+ "_meta": {
+  "name": "bubble-chart",
+  "description": "This is a default session of the interactive map application.",
+  "lang": "en",
+  "creationDate": "Mon Jan 02 2023 07:56:48 GMT+0100 (Central European Standard Time)",
+  "editDate": "Mon Jan 02 2023 07:56:48 GMT+0100 (Central European Standard Time)",
+  "author": "HumanAGEs Team",
+  "dataKeys": [
+   "datasets",
+   "layers",
+   "strategies",
+   "filters",
+   "legend",
+   "features",
+   "map"
+  ],
+  "hash": "ad23..,ew4xc334"
+ },
+ "layers": {
+  "_order": [
+   "layer_def",
+   "layer_def_copy_1"
+  ],
+  "_counter": 2,
+  "layer_def": {
+   "layerId": "layer_def",
+   "type": "point",
+   "datasetId": "RemainsAADR_2",
+   "attributeId": "admixture_k7",
+   "attributeName": "Admixture K=7",
+   "attributeType": "admixture",
+   "style": {
+    "positionOffsetRatio": 3,
+    "positionOffsetRelativeToggle": true,
+    "displayLabelProperty": true,
+    "cardinalityByValue": false,
+    "cardinalityBySize": true,
+    "cardinalityByColor": false,
+    "size": [
+     4,
+     26
+    ],
+    "fontSizeRatio": 1.36,
+    "weightGrowth": "linear",
+    "weightGrowthFactor": 2,
+    "weightScalingFactor": 1,
+    "standardisationMethod": "max",
+    "valueDisplay": "count",
+    "blur": 100,
+    "radius": 100,
+    "drawingAlpha": 1,
+    "blendingMode": "overlay",
+    "layerNameToggle": false,
+    "color": "rgb(224, 102, 102)",
+    "gradient": [
+     "#fff7f7",
+     "#d36464",
+     "#990b0b"
+    ],
+    "colorToggle": true,
+    "pointerToggle": true,
+    "angle": null,
+    "componentValues": {
+     "special": {
+      "OTHER": false,
+      "MISSING": false
+     },
+     "data": "selectAll"
+    },
+    "piechartLabelsAppearance": "hover",
+    "piechartLabelsShowPercent": false,
+    "piechartLabelsShowCountData": true,
+    "piechartLabelsSizeRatio": 1,
+    "piechartLabelsOffsetRatio": 1,
+    "otherRatio": 0.02,
+    "otherCount": 0,
+    "bodyToggle": true,
+    "showFullStop": false,
+    "padding": 0.15,
+    "seed": 0.25,
+    "outlineSizeRatio": 1,
+    "backgroundSizeRatio": 1,
+    "strategy": "archimedean"
+   },
+   "settings": {
+    "zIndex": 9999999,
+    "opacity": 1,
+    "visible": true,
+    "title": "k=4",
+    "blur": 100,
+    "radius": 100
+   }
+  },
+  "layer_def_copy_1": {
+   "layerId": "layer_def_copy_1",
+   "type": "point",
+   "datasetId": "RemainsAADR_3",
+   "attributeId": "admixture_k7",
+   "attributeName": "Admixture K=7",
+   "attributeType": "admixture",
+   "style": {
+    "positionOffsetRatio": 3,
+    "positionOffsetRelativeToggle": true,
+    "displayLabelProperty": true,
+    "cardinalityByValue": false,
+    "cardinalityBySize": true,
+    "cardinalityByColor": false,
+    "size": [
+     4,
+     26
+    ],
+    "fontSizeRatio": 1.36,
+    "weightGrowth": "linear",
+    "weightGrowthFactor": 2,
+    "weightScalingFactor": 1,
+    "standardisationMethod": "max",
+    "valueDisplay": "count",
+    "blur": 100,
+    "radius": 100,
+    "drawingAlpha": 1,
+    "blendingMode": "normal",
+    "layerNameToggle": false,
+    "color": "rgb(126, 196, 128)",
+    "gradient": [
+     "#fff7f7",
+     "#d36464",
+     "#990b0b"
+    ],
+    "colorToggle": true,
+    "pointerToggle": true,
+    "angle": null,
+    "componentValues": {
+     "special": {
+      "OTHER": false,
+      "MISSING": false
+     },
+     "data": "selectAll"
+    },
+    "piechartLabelsAppearance": "hover",
+    "piechartLabelsShowPercent": false,
+    "piechartLabelsShowCountData": true,
+    "piechartLabelsSizeRatio": 1,
+    "piechartLabelsOffsetRatio": 1,
+    "otherRatio": 0.02,
+    "otherCount": 0,
+    "bodyToggle": true,
+    "showFullStop": false,
+    "padding": 0.15,
+    "seed": 0.25,
+    "outlineSizeRatio": 1,
+    "backgroundSizeRatio": 1,
+    "strategy": "archimedean"
+   },
+   "settings": {
+    "zIndex": 9999998,
+    "opacity": 1,
+    "visible": true,
+    "title": "k=5",
+    "blur": 100,
+    "radius": 100
+   }
+  }
+ },
+ "datasets": {
+  "_order": [
+   "dataset_def",
+   "RemainsAADR_2",
+   "RemainsAADR_3"
+  ],
+  "_counter": 3,
+  "dataset_def": {
+   "name": "Dataset #1",
+   "objectId": "RemainsAADR",
+   "databaseName": "AADR_v54.1.p1",
+   "entityName": "remains",
+   "query": "{\"database\":\"AADR_v54.1.p1\",\"objects\":\"remains\",\"filters\":{},\"lang\":\"en\"}",
+   "dating": [
+    -39956,
+    2000
+   ],
+   "isPresent": false,
+   "samplingRatio": 1,
+   "size": 4837
+  },
+  "RemainsAADR_2": {
+   "name": "k=4 > 0.5",
+   "objectId": "RemainsAADR",
+   "databaseName": "AADR_v54.1.p1",
+   "entityName": "remains",
+   "query": "{\n \"database\": \"AADR_v54.1.p1\",\n \"objects\": \"remains\",\n \"filters\": {\n  \"AND\": [\n   {\n    \"entity\": \"result_admixture_k7\",\n    \"property\": \"c4\",\n    \"operator\": \"greater_or_equal\",\n    \"value\": 0.5\n   }\n  ]\n },\n \"lang\": \"en\"\n}",
+   "samplingRatio": 1,
+   "dating": [
+    -15001,
+    1950
+   ],
+   "size": 445,
+   "isPresent": false
+  },
+  "RemainsAADR_3": {
+   "name": "k=5 > 0.5",
+   "objectId": "RemainsAADR",
+   "databaseName": "AADR_v54.1.p1",
+   "entityName": "remains",
+   "query": "{\n \"database\": \"AADR_v54.1.p1\",\n \"objects\": \"remains\",\n \"filters\": {\n  \"AND\": [\n   {\n    \"entity\": \"result_admixture_k7\",\n    \"property\": \"c5\",\n    \"operator\": \"greater_or_equal\",\n    \"value\": 0.5\n   }\n  ]\n },\n \"lang\": \"en\"\n}",
+   "samplingRatio": 1,
+   "dating": [
+    -13167,
+    1960
+   ],
+   "size": 1244,
+   "isPresent": false
+  }
+ },
+ "clustering": {
+  "features": {
+   "range": 23,
+   "distance": 0,
+   "useCentroids": true,
+   "showRegions": false,
+   "labelPosition": "cluster",
+   "method": {
+    "distance": "relative",
+    "region": null
+   }
+  },
+  "attributes": {}
+ },
+ "filters": {
+  "timeline": {
+   "isActive": true,
+   "yearFrom": -15495,
+   "yearTo": -2067,
+   "minYear": -36000,
+   "maxYear": 2000,
+   "showPresent": true,
+   "eventOnFinish": false,
+   "doFilterRegions": true,
+   "showPropability": true
+  },
+  "attributes": {
+   "isActive": true,
+   "available": [
+    "admixture_k7"
+   ],
+   "configs": {
+    "admixture_k7": {
+     "id": "admixture_k7",
+     "name": "admixture_k7",
+     "type": "admixture",
+     "treeLevel": [
+      0,
+      100
+     ],
+     "proportions": {
+      "k #1": {
+       "value": 0,
+       "operator": "geq"
+      },
+      "k #2": {
+       "value": 0,
+       "operator": "geq"
+      },
+      "k #3": {
+       "value": 0,
+       "operator": "geq"
+      },
+      "k #4": {
+       "value": 0,
+       "operator": "geq"
+      },
+      "k #5": {
+       "value": 0,
+       "operator": "geq"
+      },
+      "k #6": {
+       "value": 0,
+       "operator": "geq"
+      },
+      "k #7": {
+       "value": 0,
+       "operator": "geq"
+      }
+     }
+    }
+   }
+  },
+  "regions": {
+   "isActive": true
+  }
+ },
+ "legend": {
+  "attributes": {
+   "OTHER": {
+    "color": "rgba(126,126,126,1.0)",
+    "name": "OTHER",
+    "filtered": false,
+    "group": null
+   },
+   "MISSING": {
+    "color": "rgba(0,0,0,1.0)",
+    "name": "MISSING",
+    "filtered": true,
+    "group": null
+   },
+   "haplogroup_y": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    },
+    "O2a1b1a2a1a3": {
+     "name": "O2a1b1a2a1a3",
+     "filtered": false,
+     "color": "rgb(167, 44, 177)",
+     "group": null
+    },
+    "S": {
+     "name": "S",
+     "filtered": false,
+     "color": "rgb(93, 32, 193)",
+     "group": null
+    },
+    "O2a": {
+     "name": "O2a",
+     "filtered": false,
+     "color": "rgb(211, 96, 110)",
+     "group": null
+    },
+    "T1a": {
+     "name": "T1a",
+     "filtered": false,
+     "color": "rgb(85, 176, 231)",
+     "group": null
+    },
+    "E1b1b1b2a1a": {
+     "name": "E1b1b1b2a1a",
+     "filtered": false,
+     "color": "rgb(191, 103, 21)",
+     "group": null
+    },
+    "R2": {
+     "name": "R2",
+     "filtered": false,
+     "color": "rgb(126, 160, 240)",
+     "group": null
+    },
+    "J2a1a4b": {
+     "name": "J2a1a4b",
+     "filtered": false,
+     "color": "rgb(216, 240, 109)",
+     "group": null
+    },
+    "R1a1a1": {
+     "name": "R1a1a1",
+     "filtered": false,
+     "color": "rgb(168, 234, 130)",
+     "group": null
+    },
+    "E1b1b": {
+     "name": "E1b1b",
+     "filtered": false,
+     "color": "rgb(43, 179, 160)",
+     "group": null
+    },
+    "E1b1b1a1": {
+     "name": "E1b1b1a1",
+     "filtered": false,
+     "color": "rgb(159, 46, 95)",
+     "group": null
+    },
+    "T": {
+     "name": "T",
+     "filtered": false,
+     "color": "rgb(168, 102, 249)",
+     "group": null
+    },
+    "E1b1b1a": {
+     "name": "E1b1b1a",
+     "filtered": false,
+     "color": "rgb(186, 47, 18)",
+     "group": null
+    },
+    "J2b": {
+     "name": "J2b",
+     "filtered": false,
+     "color": "rgb(234, 115, 187)",
+     "group": null
+    },
+    "R1a1a1a": {
+     "name": "R1a1a1a",
+     "filtered": false,
+     "color": "rgb(105, 234, 43)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1": {
+     "name": "R1b1a1b1a1a2b1",
+     "filtered": false,
+     "color": "rgb(208, 237, 84)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1c2b1a2": {
+     "name": "R1b1a1b1a1a2b1c2b1a2",
+     "filtered": false,
+     "color": "rgb(233, 166, 165)",
+     "group": null
+    },
+    "R1b1a1b": {
+     "name": "R1b1a1b",
+     "filtered": false,
+     "color": "rgb(151, 234, 52)",
+     "group": null
+    },
+    "R1b1a1b1a1a": {
+     "name": "R1b1a1b1a1a",
+     "filtered": false,
+     "color": "rgb(76, 206, 167)",
+     "group": null
+    },
+    "R1b1a1b1b3": {
+     "name": "R1b1a1b1b3",
+     "filtered": false,
+     "color": "rgb(45, 187, 36)",
+     "group": null
+    },
+    "Q1b": {
+     "name": "Q1b",
+     "filtered": false,
+     "color": "rgb(205, 157, 54)",
+     "group": null
+    },
+    "R1a1a1b2a2a3": {
+     "name": "R1a1a1b2a2a3",
+     "filtered": false,
+     "color": "rgb(172, 235, 216)",
+     "group": null
+    },
+    "J2b2a": {
+     "name": "J2b2a",
+     "filtered": false,
+     "color": "rgb(157, 223, 203)",
+     "group": null
+    },
+    "C2a1": {
+     "name": "C2a1",
+     "filtered": false,
+     "color": "rgb(163, 226, 50)",
+     "group": null
+    },
+    "R1a1a1b2a2": {
+     "name": "R1a1a1b2a2",
+     "filtered": false,
+     "color": "rgb(58, 77, 176)",
+     "group": null
+    },
+    "R1a1a1b2a2a": {
+     "name": "R1a1a1b2a2a",
+     "filtered": false,
+     "color": "rgb(103, 224, 83)",
+     "group": null
+    },
+    "R2a2a": {
+     "name": "R2a2a",
+     "filtered": false,
+     "color": "rgb(235, 174, 159)",
+     "group": null
+    },
+    "G2a2a": {
+     "name": "G2a2a",
+     "filtered": false,
+     "color": "rgb(236, 37, 150)",
+     "group": null
+    },
+    "J2a2": {
+     "name": "J2a2",
+     "filtered": false,
+     "color": "rgb(181, 207, 51)",
+     "group": null
+    },
+    "Q": {
+     "name": "Q",
+     "filtered": false,
+     "color": "rgb(167, 216, 87)",
+     "group": null
+    },
+    "I2a1a1b": {
+     "name": "I2a1a1b",
+     "filtered": false,
+     "color": "rgb(187, 235, 146)",
+     "group": null
+    },
+    "I2a1a1b1b": {
+     "name": "I2a1a1b1b",
+     "filtered": false,
+     "color": "rgb(111, 118, 221)",
+     "group": null
+    },
+    "I2a1b1b": {
+     "name": "I2a1b1b",
+     "filtered": false,
+     "color": "rgb(7, 246, 116)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1": {
+     "name": "R1b1a1b1a1a2c1",
+     "filtered": false,
+     "color": "rgb(153, 142, 223)",
+     "group": null
+    },
+    "I2a1a2a1a2a": {
+     "name": "I2a1a2a1a2a",
+     "filtered": false,
+     "color": "rgb(154, 226, 162)",
+     "group": null
+    },
+    "R1b1a1b1a1a2": {
+     "name": "R1b1a1b1a1a2",
+     "filtered": false,
+     "color": "rgb(224, 152, 213)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a4b3a": {
+     "name": "R1b1a1b1a1a2c1a4b3a",
+     "filtered": false,
+     "color": "rgb(52, 194, 129)",
+     "group": null
+    },
+    "Q1b1b": {
+     "name": "Q1b1b",
+     "filtered": false,
+     "color": "rgb(62, 170, 191)",
+     "group": null
+    },
+    "I2a1a2": {
+     "name": "I2a1a2",
+     "filtered": false,
+     "color": "rgb(222, 50, 158)",
+     "group": null
+    },
+    "G2a2a1a3": {
+     "name": "G2a2a1a3",
+     "filtered": false,
+     "color": "rgb(218, 175, 107)",
+     "group": null
+    },
+    "I2a1a1a1a1b": {
+     "name": "I2a1a1a1a1b",
+     "filtered": false,
+     "color": "rgb(230, 249, 107)",
+     "group": null
+    },
+    "J2b2b2": {
+     "name": "J2b2b2",
+     "filtered": false,
+     "color": "rgb(141, 93, 203)",
+     "group": null
+    },
+    "R1b1a1b1a1": {
+     "name": "R1b1a1b1a1",
+     "filtered": false,
+     "color": "rgb(79, 133, 241)",
+     "group": null
+    },
+    "G2a2b2b": {
+     "name": "G2a2b2b",
+     "filtered": false,
+     "color": "rgb(63, 225, 239)",
+     "group": null
+    },
+    "G": {
+     "name": "G",
+     "filtered": false,
+     "color": "rgb(247, 66, 247)",
+     "group": null
+    },
+    "G2a2a2": {
+     "name": "G2a2a2",
+     "filtered": false,
+     "color": "rgb(206, 189, 75)",
+     "group": null
+    },
+    "C1a2b1b": {
+     "name": "C1a2b1b",
+     "filtered": false,
+     "color": "rgb(215, 186, 45)",
+     "group": null
+    },
+    "CT": {
+     "name": "CT",
+     "filtered": false,
+     "color": "rgb(225, 56, 134)",
+     "group": null
+    },
+    "Q1b1a": {
+     "name": "Q1b1a",
+     "filtered": false,
+     "color": "rgb(235, 169, 210)",
+     "group": null
+    },
+    "P1": {
+     "name": "P1",
+     "filtered": false,
+     "color": "rgb(116, 64, 233)",
+     "group": null
+    },
+    "BT": {
+     "name": "BT",
+     "filtered": false,
+     "color": "rgb(68, 228, 87)",
+     "group": null
+    },
+    "Q1b1a1a1e1a": {
+     "name": "Q1b1a1a1e1a",
+     "filtered": false,
+     "color": "rgb(28, 216, 53)",
+     "group": null
+    },
+    "Q1b1a1a": {
+     "name": "Q1b1a1a",
+     "filtered": false,
+     "color": "rgb(233, 128, 162)",
+     "group": null
+    },
+    "G2a": {
+     "name": "G2a",
+     "filtered": false,
+     "color": "rgb(216, 153, 29)",
+     "group": null
+    },
+    "G2a2a1a2b": {
+     "name": "G2a2a1a2b",
+     "filtered": false,
+     "color": "rgb(167, 113, 38)",
+     "group": null
+    },
+    "O2a2b1": {
+     "name": "O2a2b1",
+     "filtered": false,
+     "color": "rgb(149, 169, 230)",
+     "group": null
+    },
+    "O2a2b1a1a1a4a1": {
+     "name": "O2a2b1a1a1a4a1",
+     "filtered": false,
+     "color": "rgb(195, 89, 70)",
+     "group": null
+    },
+    "IJ": {
+     "name": "IJ",
+     "filtered": false,
+     "color": "rgb(146, 127, 222)",
+     "group": null
+    },
+    "R1b1a1b1b": {
+     "name": "R1b1a1b1b",
+     "filtered": false,
+     "color": "rgb(30, 215, 184)",
+     "group": null
+    },
+    "G2b": {
+     "name": "G2b",
+     "filtered": false,
+     "color": "rgb(135, 117, 240)",
+     "group": null
+    },
+    "I": {
+     "name": "I",
+     "filtered": false,
+     "color": "rgb(200, 239, 99)",
+     "group": null
+    },
+    "C1a": {
+     "name": "C1a",
+     "filtered": false,
+     "color": "rgb(219, 124, 178)",
+     "group": null
+    },
+    "C": {
+     "name": "C",
+     "filtered": false,
+     "color": "rgb(151, 132, 218)",
+     "group": null
+    },
+    "I2": {
+     "name": "I2",
+     "filtered": false,
+     "color": "rgb(77, 209, 130)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5b1a1a": {
+     "name": "R1b1a1b1a1a2c1a5b1a1a",
+     "filtered": false,
+     "color": "rgb(173, 107, 39)",
+     "group": null
+    },
+    "I2a1b1": {
+     "name": "I2a1b1",
+     "filtered": false,
+     "color": "rgb(232, 150, 121)",
+     "group": null
+    },
+    "R1": {
+     "name": "R1",
+     "filtered": false,
+     "color": "rgb(211, 150, 84)",
+     "group": null
+    },
+    "J2a1a": {
+     "name": "J2a1a",
+     "filtered": false,
+     "color": "rgb(245, 171, 143)",
+     "group": null
+    },
+    "G2a2b2a": {
+     "name": "G2a2b2a",
+     "filtered": false,
+     "color": "rgb(21, 87, 241)",
+     "group": null
+    },
+    "R1b": {
+     "name": "R1b",
+     "filtered": false,
+     "color": "rgb(82, 233, 55)",
+     "group": null
+    },
+    "G2a2b": {
+     "name": "G2a2b",
+     "filtered": false,
+     "color": "rgb(239, 166, 189)",
+     "group": null
+    },
+    "I2a1b1a2a2a": {
+     "name": "I2a1b1a2a2a",
+     "filtered": false,
+     "color": "rgb(236, 158, 220)",
+     "group": null
+    },
+    "G2a2b2b2": {
+     "name": "G2a2b2b2",
+     "filtered": false,
+     "color": "rgb(149, 239, 142)",
+     "group": null
+    },
+    "J2a1a1a2b2a1a": {
+     "name": "J2a1a1a2b2a1a",
+     "filtered": false,
+     "color": "rgb(110, 230, 224)",
+     "group": null
+    },
+    "J1a2a1a2": {
+     "name": "J1a2a1a2",
+     "filtered": false,
+     "color": "rgb(65, 227, 32)",
+     "group": null
+    },
+    "J1a2a1a2d2b": {
+     "name": "J1a2a1a2d2b",
+     "filtered": false,
+     "color": "rgb(48, 150, 187)",
+     "group": null
+    },
+    "T1a1a1b2b2b1a1a2": {
+     "name": "T1a1a1b2b2b1a1a2",
+     "filtered": false,
+     "color": "rgb(78, 15, 200)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c": {
+     "name": "R1b1a1b1a1a2c",
+     "filtered": false,
+     "color": "rgb(174, 230, 163)",
+     "group": null
+    },
+    "G2a2b2a1a1c1": {
+     "name": "G2a2b2a1a1c1",
+     "filtered": false,
+     "color": "rgb(144, 212, 67)",
+     "group": null
+    },
+    "I2a1b1a2b1": {
+     "name": "I2a1b1a2b1",
+     "filtered": false,
+     "color": "rgb(137, 218, 176)",
+     "group": null
+    },
+    "R1a": {
+     "name": "R1a",
+     "filtered": false,
+     "color": "rgb(248, 46, 246)",
+     "group": null
+    },
+    "R1b1a2": {
+     "name": "R1b1a2",
+     "filtered": false,
+     "color": "rgb(169, 209, 94)",
+     "group": null
+    },
+    "R1b1a1": {
+     "name": "R1b1a1",
+     "filtered": false,
+     "color": "rgb(212, 121, 185)",
+     "group": null
+    },
+    "I2a1b": {
+     "name": "I2a1b",
+     "filtered": false,
+     "color": "rgb(111, 244, 151)",
+     "group": null
+    },
+    "C1a2": {
+     "name": "C1a2",
+     "filtered": false,
+     "color": "rgb(183, 228, 119)",
+     "group": null
+    },
+    "A0": {
+     "name": "A0",
+     "filtered": false,
+     "color": "rgb(51, 179, 61)",
+     "group": null
+    },
+    "I2a1b1a2": {
+     "name": "I2a1b1a2",
+     "filtered": false,
+     "color": "rgb(151, 243, 17)",
+     "group": null
+    },
+    "R1a1a1b1a3a4a": {
+     "name": "R1a1a1b1a3a4a",
+     "filtered": false,
+     "color": "rgb(218, 119, 140)",
+     "group": null
+    },
+    "R1a1a": {
+     "name": "R1a1a",
+     "filtered": false,
+     "color": "rgb(25, 88, 217)",
+     "group": null
+    },
+    "J1": {
+     "name": "J1",
+     "filtered": false,
+     "color": "rgb(179, 236, 162)",
+     "group": null
+    },
+    "Q1b1a2": {
+     "name": "Q1b1a2",
+     "filtered": false,
+     "color": "rgb(225, 107, 100)",
+     "group": null
+    },
+    "G2a2a1": {
+     "name": "G2a2a1",
+     "filtered": false,
+     "color": "rgb(144, 110, 242)",
+     "group": null
+    },
+    "H2c1a": {
+     "name": "H2c1a",
+     "filtered": false,
+     "color": "rgb(108, 194, 231)",
+     "group": null
+    },
+    "H": {
+     "name": "H",
+     "filtered": false,
+     "color": "rgb(45, 201, 151)",
+     "group": null
+    },
+    "F": {
+     "name": "F",
+     "filtered": false,
+     "color": "rgb(220, 251, 101)",
+     "group": null
+    },
+    "I2a1b2a1": {
+     "name": "I2a1b2a1",
+     "filtered": false,
+     "color": "rgb(150, 117, 247)",
+     "group": null
+    },
+    "Q1b1": {
+     "name": "Q1b1",
+     "filtered": false,
+     "color": "rgb(113, 236, 106)",
+     "group": null
+    },
+    "R1b1a1a1": {
+     "name": "R1b1a1a1",
+     "filtered": false,
+     "color": "rgb(225, 210, 110)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d5": {
+     "name": "R1a1a1b2a2a1d5",
+     "filtered": false,
+     "color": "rgb(176, 44, 102)",
+     "group": null
+    },
+    "Q1b1a1a1h1a": {
+     "name": "Q1b1a1a1h1a",
+     "filtered": false,
+     "color": "rgb(241, 116, 99)",
+     "group": null
+    },
+    "T1a1a": {
+     "name": "T1a1a",
+     "filtered": false,
+     "color": "rgb(130, 144, 245)",
+     "group": null
+    },
+    "T1a1": {
+     "name": "T1a1",
+     "filtered": false,
+     "color": "rgb(223, 111, 162)",
+     "group": null
+    },
+    "T1a1a1": {
+     "name": "T1a1a1",
+     "filtered": false,
+     "color": "rgb(112, 229, 154)",
+     "group": null
+    },
+    "G2a2a1a2": {
+     "name": "G2a2a1a2",
+     "filtered": false,
+     "color": "rgb(80, 243, 244)",
+     "group": null
+    },
+    "G2a2b2a3": {
+     "name": "G2a2b2a3",
+     "filtered": false,
+     "color": "rgb(126, 245, 220)",
+     "group": null
+    },
+    "J2a1": {
+     "name": "J2a1",
+     "filtered": false,
+     "color": "rgb(47, 26, 184)",
+     "group": null
+    },
+    "G2a2b2a1a1c": {
+     "name": "G2a2b2a1a1c",
+     "filtered": false,
+     "color": "rgb(146, 219, 246)",
+     "group": null
+    },
+    "L1a1": {
+     "name": "L1a1",
+     "filtered": false,
+     "color": "rgb(206, 67, 152)",
+     "group": null
+    },
+    "R1b1a2a": {
+     "name": "R1b1a2a",
+     "filtered": false,
+     "color": "rgb(149, 219, 85)",
+     "group": null
+    },
+    "G2a2a1a": {
+     "name": "G2a2a1a",
+     "filtered": false,
+     "color": "rgb(143, 211, 84)",
+     "group": null
+    },
+    "J2a1a1a2b2a3b1a1b": {
+     "name": "J2a1a1a2b2a3b1a1b",
+     "filtered": false,
+     "color": "rgb(245, 89, 40)",
+     "group": null
+    },
+    "G2a2b2b1": {
+     "name": "G2a2b2b1",
+     "filtered": false,
+     "color": "rgb(100, 228, 241)",
+     "group": null
+    },
+    "J2b1": {
+     "name": "J2b1",
+     "filtered": false,
+     "color": "rgb(96, 225, 94)",
+     "group": null
+    },
+    "G1a1a1b": {
+     "name": "G1a1a1b",
+     "filtered": false,
+     "color": "rgb(231, 157, 92)",
+     "group": null
+    },
+    "C2a1a": {
+     "name": "C2a1a",
+     "filtered": false,
+     "color": "rgb(92, 204, 85)",
+     "group": null
+    },
+    "N1a2": {
+     "name": "N1a2",
+     "filtered": false,
+     "color": "rgb(247, 44, 48)",
+     "group": null
+    },
+    "R": {
+     "name": "R",
+     "filtered": false,
+     "color": "rgb(53, 188, 68)",
+     "group": null
+    },
+    "Q1a1b": {
+     "name": "Q1a1b",
+     "filtered": false,
+     "color": "rgb(239, 167, 230)",
+     "group": null
+    },
+    "I2a1b1a2b1a2e1": {
+     "name": "I2a1b1a2b1a2e1",
+     "filtered": false,
+     "color": "rgb(135, 238, 63)",
+     "group": null
+    },
+    "C1b": {
+     "name": "C1b",
+     "filtered": false,
+     "color": "rgb(18, 233, 239)",
+     "group": null
+    },
+    "NO": {
+     "name": "NO",
+     "filtered": false,
+     "color": "rgb(32, 105, 225)",
+     "group": null
+    },
+    "C1b2a1": {
+     "name": "C1b2a1",
+     "filtered": false,
+     "color": "rgb(110, 114, 225)",
+     "group": null
+    },
+    "I2a1a1": {
+     "name": "I2a1a1",
+     "filtered": false,
+     "color": "rgb(237, 194, 37)",
+     "group": null
+    },
+    "I1a10": {
+     "name": "I1a10",
+     "filtered": false,
+     "color": "rgb(81, 208, 41)",
+     "group": null
+    },
+    "I1": {
+     "name": "I1",
+     "filtered": false,
+     "color": "rgb(207, 101, 150)",
+     "group": null
+    },
+    "I2a1b1a1b1": {
+     "name": "I2a1b1a1b1",
+     "filtered": false,
+     "color": "rgb(114, 142, 239)",
+     "group": null
+    },
+    "S1a1b1d": {
+     "name": "S1a1b1d",
+     "filtered": false,
+     "color": "rgb(49, 150, 221)",
+     "group": null
+    },
+    "J2b2a1": {
+     "name": "J2b2a1",
+     "filtered": false,
+     "color": "rgb(191, 172, 48)",
+     "group": null
+    },
+    "E": {
+     "name": "E",
+     "filtered": false,
+     "color": "rgb(217, 145, 233)",
+     "group": null
+    },
+    "E1b1b1b2a1a1a": {
+     "name": "E1b1b1b2a1a1a",
+     "filtered": false,
+     "color": "rgb(72, 49, 169)",
+     "group": null
+    },
+    "R1a1a1b2a2b1a": {
+     "name": "R1a1a1b2a2b1a",
+     "filtered": false,
+     "color": "rgb(123, 241, 96)",
+     "group": null
+    },
+    "R1b1a1b2a2b1": {
+     "name": "R1b1a1b2a2b1",
+     "filtered": false,
+     "color": "rgb(153, 143, 233)",
+     "group": null
+    },
+    "I2a1b1a1b1b1": {
+     "name": "I2a1b1a1b1b1",
+     "filtered": false,
+     "color": "rgb(228, 60, 240)",
+     "group": null
+    },
+    "I2a1a1a1a2": {
+     "name": "I2a1a1a1a2",
+     "filtered": false,
+     "color": "rgb(76, 195, 147)",
+     "group": null
+    },
+    "I2a1a1a1": {
+     "name": "I2a1a1a1",
+     "filtered": false,
+     "color": "rgb(219, 67, 234)",
+     "group": null
+    },
+    "Q1a2a": {
+     "name": "Q1a2a",
+     "filtered": false,
+     "color": "rgb(197, 68, 125)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d9c": {
+     "name": "R1a1a1b2a2a1d9c",
+     "filtered": false,
+     "color": "rgb(91, 207, 80)",
+     "group": null
+    },
+    "J2a2a1a1a": {
+     "name": "J2a2a1a1a",
+     "filtered": false,
+     "color": "rgb(86, 97, 221)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1d": {
+     "name": "R1b1a1b1a1a2c1a1d",
+     "filtered": false,
+     "color": "rgb(204, 7, 45)",
+     "group": null
+    },
+    "R1b1a1b1a": {
+     "name": "R1b1a1b1a",
+     "filtered": false,
+     "color": "rgb(240, 183, 128)",
+     "group": null
+    },
+    "I2a1b1a2a2a2": {
+     "name": "I2a1b1a2a2a2",
+     "filtered": false,
+     "color": "rgb(84, 223, 185)",
+     "group": null
+    },
+    "R1a1a1b1a3a2a": {
+     "name": "R1a1a1b1a3a2a",
+     "filtered": false,
+     "color": "rgb(138, 179, 240)",
+     "group": null
+    },
+    "N": {
+     "name": "N",
+     "filtered": false,
+     "color": "rgb(173, 235, 185)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a2a3": {
+     "name": "R1b1a1b1a1a2c1a2a3",
+     "filtered": false,
+     "color": "rgb(47, 65, 162)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a7": {
+     "name": "R1b1a1b1a1a2a7",
+     "filtered": false,
+     "color": "rgb(101, 236, 210)",
+     "group": null
+    },
+    "Q1a2a1": {
+     "name": "Q1a2a1",
+     "filtered": false,
+     "color": "rgb(232, 47, 230)",
+     "group": null
+    },
+    "J2a2a1a": {
+     "name": "J2a2a1a",
+     "filtered": false,
+     "color": "rgb(229, 116, 107)",
+     "group": null
+    },
+    "T1a1a1b2": {
+     "name": "T1a1a1b2",
+     "filtered": false,
+     "color": "rgb(39, 183, 58)",
+     "group": null
+    },
+    "I2a1a1a1a1": {
+     "name": "I2a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(170, 50, 82)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d": {
+     "name": "R1a1a1b2a2a1d",
+     "filtered": false,
+     "color": "rgb(37, 213, 218)",
+     "group": null
+    },
+    "R1a1a1b1a2c": {
+     "name": "R1a1a1b1a2c",
+     "filtered": false,
+     "color": "rgb(108, 246, 134)",
+     "group": null
+    },
+    "R1b1a1b1": {
+     "name": "R1b1a1b1",
+     "filtered": false,
+     "color": "rgb(208, 190, 82)",
+     "group": null
+    },
+    "Q1b1a2a": {
+     "name": "Q1b1a2a",
+     "filtered": false,
+     "color": "rgb(228, 154, 245)",
+     "group": null
+    },
+    "I2a1b1a2b": {
+     "name": "I2a1b1a2b",
+     "filtered": false,
+     "color": "rgb(239, 23, 244)",
+     "group": null
+    },
+    "E1b1a2b2": {
+     "name": "E1b1a2b2",
+     "filtered": false,
+     "color": "rgb(249, 214, 30)",
+     "group": null
+    },
+    "G2a2b2a1": {
+     "name": "G2a2b2a1",
+     "filtered": false,
+     "color": "rgb(180, 101, 241)",
+     "group": null
+    },
+    "G2a2a2b": {
+     "name": "G2a2a2b",
+     "filtered": false,
+     "color": "rgb(156, 200, 30)",
+     "group": null
+    },
+    "A1b1": {
+     "name": "A1b1",
+     "filtered": false,
+     "color": "rgb(152, 234, 170)",
+     "group": null
+    },
+    "A1b1b2a": {
+     "name": "A1b1b2a",
+     "filtered": false,
+     "color": "rgb(193, 73, 32)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5": {
+     "name": "R1b1a1b1a1a2c1a5",
+     "filtered": false,
+     "color": "rgb(180, 77, 241)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5c": {
+     "name": "R1b1a1b1a1a2c1a5c",
+     "filtered": false,
+     "color": "rgb(233, 245, 94)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c1a2": {
+     "name": "R1b1a1b1a1a1c1a2",
+     "filtered": false,
+     "color": "rgb(205, 202, 65)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1i": {
+     "name": "R1b1a1b1a1a2c1a1i",
+     "filtered": false,
+     "color": "rgb(198, 177, 68)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1b1": {
+     "name": "R1b1a1b1a1a2c1b1",
+     "filtered": false,
+     "color": "rgb(55, 115, 179)",
+     "group": null
+    },
+    "R1b1a1b1a1a2e1": {
+     "name": "R1b1a1b1a1a2e1",
+     "filtered": false,
+     "color": "rgb(246, 117, 218)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c1a1": {
+     "name": "R1b1a1b1a1a1c1a1",
+     "filtered": false,
+     "color": "rgb(225, 113, 48)",
+     "group": null
+    },
+    "Q1b1a3a1": {
+     "name": "Q1b1a3a1",
+     "filtered": false,
+     "color": "rgb(37, 232, 200)",
+     "group": null
+    },
+    "E1b1b1b2b2a1": {
+     "name": "E1b1b1b2b2a1",
+     "filtered": false,
+     "color": "rgb(241, 122, 198)",
+     "group": null
+    },
+    "Q1b1a1a1i1a": {
+     "name": "Q1b1a1a1i1a",
+     "filtered": false,
+     "color": "rgb(239, 97, 180)",
+     "group": null
+    },
+    "R1a1a1b1a2b3a": {
+     "name": "R1a1a1b1a2b3a",
+     "filtered": false,
+     "color": "rgb(183, 241, 65)",
+     "group": null
+    },
+    "J2a1a1b1": {
+     "name": "J2a1a1b1",
+     "filtered": false,
+     "color": "rgb(204, 64, 62)",
+     "group": null
+    },
+    "R2a2b1b2b": {
+     "name": "R2a2b1b2b",
+     "filtered": false,
+     "color": "rgb(217, 249, 132)",
+     "group": null
+    },
+    "H1a1a4b": {
+     "name": "H1a1a4b",
+     "filtered": false,
+     "color": "rgb(177, 57, 133)",
+     "group": null
+    },
+    "G2a2b2a1a1c1a1a2": {
+     "name": "G2a2b2a1a1c1a1a2",
+     "filtered": false,
+     "color": "rgb(177, 221, 14)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1a": {
+     "name": "R1b1a1b1a1a2a1a",
+     "filtered": false,
+     "color": "rgb(224, 93, 60)",
+     "group": null
+    },
+    "E1b1b1a1b1": {
+     "name": "E1b1b1a1b1",
+     "filtered": false,
+     "color": "rgb(145, 150, 224)",
+     "group": null
+    },
+    "G2a2b2b1a1a": {
+     "name": "G2a2b2b1a1a",
+     "filtered": false,
+     "color": "rgb(169, 239, 224)",
+     "group": null
+    },
+    "R1b1a": {
+     "name": "R1b1a",
+     "filtered": false,
+     "color": "rgb(82, 249, 32)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a": {
+     "name": "R1b1a1b1a1a2a",
+     "filtered": false,
+     "color": "rgb(197, 158, 43)",
+     "group": null
+    },
+    "I2a1b2": {
+     "name": "I2a1b2",
+     "filtered": false,
+     "color": "rgb(81, 239, 245)",
+     "group": null
+    },
+    "I2a1b1a1a1": {
+     "name": "I2a1b1a1a1",
+     "filtered": false,
+     "color": "rgb(71, 145, 199)",
+     "group": null
+    },
+    "I2a1b1a1a1b": {
+     "name": "I2a1b1a1a1b",
+     "filtered": false,
+     "color": "rgb(102, 248, 182)",
+     "group": null
+    },
+    "Q1b2a1a": {
+     "name": "Q1b2a1a",
+     "filtered": false,
+     "color": "rgb(225, 193, 125)",
+     "group": null
+    },
+    "R1a1a1b2a2a3b": {
+     "name": "R1a1a1b2a2a3b",
+     "filtered": false,
+     "color": "rgb(16, 212, 219)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1a1a1": {
+     "name": "R1b1a1b1a1a2a1a1a1",
+     "filtered": false,
+     "color": "rgb(193, 26, 157)",
+     "group": null
+    },
+    "O2a2b2a2b": {
+     "name": "O2a2b2a2b",
+     "filtered": false,
+     "color": "rgb(50, 164, 232)",
+     "group": null
+    },
+    "R1b1b1": {
+     "name": "R1b1b1",
+     "filtered": false,
+     "color": "rgb(183, 34, 41)",
+     "group": null
+    },
+    "R1a1a1b2a2a1": {
+     "name": "R1a1a1b2a2a1",
+     "filtered": false,
+     "color": "rgb(121, 139, 225)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2": {
+     "name": "J1a2a1a2d2b2b2",
+     "filtered": false,
+     "color": "rgb(183, 223, 151)",
+     "group": null
+    },
+    "E1b1b1b2a1a1a1a1f": {
+     "name": "E1b1b1b2a1a1a1a1f",
+     "filtered": false,
+     "color": "rgb(169, 230, 181)",
+     "group": null
+    },
+    "J2a1a1a2b2a2b3a": {
+     "name": "J2a1a1a2b2a2b3a",
+     "filtered": false,
+     "color": "rgb(53, 213, 246)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c": {
+     "name": "R1b1a1b1a1a1c",
+     "filtered": false,
+     "color": "rgb(248, 229, 148)",
+     "group": null
+    },
+    "C1a2a": {
+     "name": "C1a2a",
+     "filtered": false,
+     "color": "rgb(58, 226, 237)",
+     "group": null
+    },
+    "J2": {
+     "name": "J2",
+     "filtered": false,
+     "color": "rgb(239, 107, 73)",
+     "group": null
+    },
+    "L1a2a": {
+     "name": "L1a2a",
+     "filtered": false,
+     "color": "rgb(202, 87, 145)",
+     "group": null
+    },
+    "J1a2a1b1a": {
+     "name": "J1a2a1b1a",
+     "filtered": false,
+     "color": "rgb(155, 21, 210)",
+     "group": null
+    },
+    "G2a2b2a1a": {
+     "name": "G2a2b2a1a",
+     "filtered": false,
+     "color": "rgb(219, 247, 151)",
+     "group": null
+    },
+    "T1a3b2": {
+     "name": "T1a3b2",
+     "filtered": false,
+     "color": "rgb(225, 223, 158)",
+     "group": null
+    },
+    "I2a1b1a1a2": {
+     "name": "I2a1b1a1a2",
+     "filtered": false,
+     "color": "rgb(108, 67, 228)",
+     "group": null
+    },
+    "G2a2b2a3b": {
+     "name": "G2a2b2a3b",
+     "filtered": false,
+     "color": "rgb(225, 93, 88)",
+     "group": null
+    },
+    "L": {
+     "name": "L",
+     "filtered": false,
+     "color": "rgb(243, 121, 206)",
+     "group": null
+    },
+    "K2b": {
+     "name": "K2b",
+     "filtered": false,
+     "color": "rgb(159, 162, 236)",
+     "group": null
+    },
+    "J2b2a1a1a1b": {
+     "name": "J2b2a1a1a1b",
+     "filtered": false,
+     "color": "rgb(239, 35, 76)",
+     "group": null
+    },
+    "M": {
+     "name": "M",
+     "filtered": false,
+     "color": "rgb(98, 161, 203)",
+     "group": null
+    },
+    "Q1b2b1b2a": {
+     "name": "Q1b2b1b2a",
+     "filtered": false,
+     "color": "rgb(215, 237, 134)",
+     "group": null
+    },
+    "G2a2a1a2a1a": {
+     "name": "G2a2a1a2a1a",
+     "filtered": false,
+     "color": "rgb(57, 157, 200)",
+     "group": null
+    },
+    "I2a1b1a": {
+     "name": "I2a1b1a",
+     "filtered": false,
+     "color": "rgb(211, 134, 224)",
+     "group": null
+    },
+    "J2a1a2b2": {
+     "name": "J2a1a2b2",
+     "filtered": false,
+     "color": "rgb(50, 179, 181)",
+     "group": null
+    },
+    "I2a1a1b1": {
+     "name": "I2a1a1b1",
+     "filtered": false,
+     "color": "rgb(230, 143, 141)",
+     "group": null
+    },
+    "I2a2a": {
+     "name": "I2a2a",
+     "filtered": false,
+     "color": "rgb(179, 97, 224)",
+     "group": null
+    },
+    "I2a1a1a1a1b1b": {
+     "name": "I2a1a1a1a1b1b",
+     "filtered": false,
+     "color": "rgb(168, 233, 200)",
+     "group": null
+    },
+    "I2a1b1b1a1": {
+     "name": "I2a1b1b1a1",
+     "filtered": false,
+     "color": "rgb(95, 209, 162)",
+     "group": null
+    },
+    "O1a": {
+     "name": "O1a",
+     "filtered": false,
+     "color": "rgb(229, 136, 147)",
+     "group": null
+    },
+    "G2a2b2b1a1b": {
+     "name": "G2a2b2b1a1b",
+     "filtered": false,
+     "color": "rgb(63, 231, 245)",
+     "group": null
+    },
+    "O1a2": {
+     "name": "O1a2",
+     "filtered": false,
+     "color": "rgb(149, 217, 243)",
+     "group": null
+    },
+    "J2a1a1b1a1a": {
+     "name": "J2a1a1b1a1a",
+     "filtered": false,
+     "color": "rgb(209, 240, 12)",
+     "group": null
+    },
+    "L1a": {
+     "name": "L1a",
+     "filtered": false,
+     "color": "rgb(158, 55, 228)",
+     "group": null
+    },
+    "R1b1a1b1a1a2d1": {
+     "name": "R1b1a1b1a1a2d1",
+     "filtered": false,
+     "color": "rgb(84, 236, 140)",
+     "group": null
+    },
+    "C2a1a1b1b1": {
+     "name": "C2a1a1b1b1",
+     "filtered": false,
+     "color": "rgb(153, 32, 216)",
+     "group": null
+    },
+    "Q1b1a3a1a": {
+     "name": "Q1b1a3a1a",
+     "filtered": false,
+     "color": "rgb(154, 97, 231)",
+     "group": null
+    },
+    "J2b2b1": {
+     "name": "J2b2b1",
+     "filtered": false,
+     "color": "rgb(70, 100, 210)",
+     "group": null
+    },
+    "H1a1a": {
+     "name": "H1a1a",
+     "filtered": false,
+     "color": "rgb(160, 130, 228)",
+     "group": null
+    },
+    "C1b1a1a1": {
+     "name": "C1b1a1a1",
+     "filtered": false,
+     "color": "rgb(247, 65, 214)",
+     "group": null
+    },
+    "O1a1a1a1": {
+     "name": "O1a1a1a1",
+     "filtered": false,
+     "color": "rgb(37, 44, 210)",
+     "group": null
+    },
+    "Q1a1": {
+     "name": "Q1a1",
+     "filtered": false,
+     "color": "rgb(186, 14, 235)",
+     "group": null
+    },
+    "Q1a1a": {
+     "name": "Q1a1a",
+     "filtered": false,
+     "color": "rgb(235, 176, 119)",
+     "group": null
+    },
+    "Q1b1a3": {
+     "name": "Q1b1a3",
+     "filtered": false,
+     "color": "rgb(172, 17, 238)",
+     "group": null
+    },
+    "Q1b1a3a": {
+     "name": "Q1b1a3a",
+     "filtered": false,
+     "color": "rgb(110, 222, 64)",
+     "group": null
+    },
+    "O2a2b2b": {
+     "name": "O2a2b2b",
+     "filtered": false,
+     "color": "rgb(54, 204, 43)",
+     "group": null
+    },
+    "J1a2b2": {
+     "name": "J1a2b2",
+     "filtered": false,
+     "color": "rgb(227, 134, 158)",
+     "group": null
+    },
+    "O2a2a1a2": {
+     "name": "O2a2a1a2",
+     "filtered": false,
+     "color": "rgb(231, 133, 136)",
+     "group": null
+    },
+    "H1a1b1": {
+     "name": "H1a1b1",
+     "filtered": false,
+     "color": "rgb(161, 224, 197)",
+     "group": null
+    },
+    "J": {
+     "name": "J",
+     "filtered": false,
+     "color": "rgb(10, 48, 215)",
+     "group": null
+    },
+    "J1a2b1": {
+     "name": "J1a2b1",
+     "filtered": false,
+     "color": "rgb(172, 220, 30)",
+     "group": null
+    },
+    "HIJK": {
+     "name": "HIJK",
+     "filtered": false,
+     "color": "rgb(123, 217, 215)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2c4d": {
+     "name": "J1a2a1a2d2b2b2c4d",
+     "filtered": false,
+     "color": "rgb(50, 184, 118)",
+     "group": null
+    },
+    "I2a1a2b1a1a1a1c": {
+     "name": "I2a1a2b1a1a1a1c",
+     "filtered": false,
+     "color": "rgb(149, 199, 220)",
+     "group": null
+    },
+    "A1b": {
+     "name": "A1b",
+     "filtered": false,
+     "color": "rgb(203, 91, 172)",
+     "group": null
+    },
+    "E1b1b1b1a1": {
+     "name": "E1b1b1b1a1",
+     "filtered": false,
+     "color": "rgb(229, 114, 112)",
+     "group": null
+    },
+    "J2b2a2b": {
+     "name": "J2b2a2b",
+     "filtered": false,
+     "color": "rgb(161, 81, 245)",
+     "group": null
+    },
+    "O1b1a1a1": {
+     "name": "O1b1a1a1",
+     "filtered": false,
+     "color": "rgb(197, 140, 235)",
+     "group": null
+    },
+    "R1a1a1b2a1a1a1f": {
+     "name": "R1a1a1b2a1a1a1f",
+     "filtered": false,
+     "color": "rgb(35, 74, 246)",
+     "group": null
+    },
+    "E1b1b1b2a1": {
+     "name": "E1b1b1b2a1",
+     "filtered": false,
+     "color": "rgb(187, 18, 99)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d6": {
+     "name": "R1a1a1b2a2a1d6",
+     "filtered": false,
+     "color": "rgb(247, 138, 158)",
+     "group": null
+    },
+    "C2a1a1": {
+     "name": "C2a1a1",
+     "filtered": false,
+     "color": "rgb(155, 67, 239)",
+     "group": null
+    },
+    "GHIJK": {
+     "name": "GHIJK",
+     "filtered": false,
+     "color": "rgb(71, 151, 208)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1b1a1": {
+     "name": "R1b1a1b1a1a2a1b1a1",
+     "filtered": false,
+     "color": "rgb(244, 146, 175)",
+     "group": null
+    },
+    "O2a2b": {
+     "name": "O2a2b",
+     "filtered": false,
+     "color": "rgb(158, 224, 214)",
+     "group": null
+    },
+    "O1a1a1a": {
+     "name": "O1a1a1a",
+     "filtered": false,
+     "color": "rgb(250, 96, 110)",
+     "group": null
+    },
+    "R1b1a1a": {
+     "name": "R1b1a1a",
+     "filtered": false,
+     "color": "rgb(189, 216, 91)",
+     "group": null
+    },
+    "R1a1a1b1a2b": {
+     "name": "R1a1a1b1a2b",
+     "filtered": false,
+     "color": "rgb(207, 119, 97)",
+     "group": null
+    },
+    "I2a1a1b1a": {
+     "name": "I2a1a1b1a",
+     "filtered": false,
+     "color": "rgb(185, 36, 53)",
+     "group": null
+    },
+    "R1a1a1b1a2b4": {
+     "name": "R1a1a1b1a2b4",
+     "filtered": false,
+     "color": "rgb(114, 212, 19)",
+     "group": null
+    },
+    "E1b": {
+     "name": "E1b",
+     "filtered": false,
+     "color": "rgb(231, 62, 216)",
+     "group": null
+    },
+    "J1a2a1a2d2b2a2": {
+     "name": "J1a2a1a2d2b2a2",
+     "filtered": false,
+     "color": "rgb(243, 128, 193)",
+     "group": null
+    },
+    "G2a2a1a2a1": {
+     "name": "G2a2a1a2a1",
+     "filtered": false,
+     "color": "rgb(244, 149, 193)",
+     "group": null
+    },
+    "J2a2a1a1a2a": {
+     "name": "J2a2a1a1a2a",
+     "filtered": false,
+     "color": "rgb(75, 224, 88)",
+     "group": null
+    },
+    "R2a2b1b2a1a": {
+     "name": "R2a2b1b2a1a",
+     "filtered": false,
+     "color": "rgb(170, 177, 228)",
+     "group": null
+    },
+    "O": {
+     "name": "O",
+     "filtered": false,
+     "color": "rgb(212, 223, 70)",
+     "group": null
+    },
+    "O1a1a1a1a1a": {
+     "name": "O1a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(225, 223, 133)",
+     "group": null
+    },
+    "Q1a2a2b": {
+     "name": "Q1a2a2b",
+     "filtered": false,
+     "color": "rgb(115, 171, 244)",
+     "group": null
+    },
+    "IJK": {
+     "name": "IJK",
+     "filtered": false,
+     "color": "rgb(236, 129, 230)",
+     "group": null
+    },
+    "A1b1b2b": {
+     "name": "A1b1b2b",
+     "filtered": false,
+     "color": "rgb(108, 233, 104)",
+     "group": null
+    },
+    "E1b1a1a1a1a3": {
+     "name": "E1b1a1a1a1a3",
+     "filtered": false,
+     "color": "rgb(210, 237, 122)",
+     "group": null
+    },
+    "E1b1b1a1b2": {
+     "name": "E1b1b1a1b2",
+     "filtered": false,
+     "color": "rgb(126, 120, 231)",
+     "group": null
+    },
+    "E1b1b1b2b2a1a": {
+     "name": "E1b1b1b2b2a1a",
+     "filtered": false,
+     "color": "rgb(247, 148, 197)",
+     "group": null
+    },
+    "E1b1b1a1a1b1a": {
+     "name": "E1b1b1a1a1b1a",
+     "filtered": false,
+     "color": "rgb(115, 142, 233)",
+     "group": null
+    },
+    "E2a": {
+     "name": "E2a",
+     "filtered": false,
+     "color": "rgb(90, 166, 55)",
+     "group": null
+    },
+    "I2a1b2a": {
+     "name": "I2a1b2a",
+     "filtered": false,
+     "color": "rgb(60, 206, 243)",
+     "group": null
+    },
+    "N1a1a1a1a4a": {
+     "name": "N1a1a1a1a4a",
+     "filtered": false,
+     "color": "rgb(166, 235, 203)",
+     "group": null
+    },
+    "J2a1a1a2b2": {
+     "name": "J2a1a1a2b2",
+     "filtered": false,
+     "color": "rgb(79, 238, 54)",
+     "group": null
+    },
+    "J1a2a1a1": {
+     "name": "J1a2a1a1",
+     "filtered": false,
+     "color": "rgb(16, 110, 224)",
+     "group": null
+    },
+    "L1a2a1b": {
+     "name": "L1a2a1b",
+     "filtered": false,
+     "color": "rgb(230, 174, 209)",
+     "group": null
+    },
+    "R2a2b1b2b2a2": {
+     "name": "R2a2b1b2b2a2",
+     "filtered": false,
+     "color": "rgb(94, 95, 248)",
+     "group": null
+    },
+    "G2a2a1a1": {
+     "name": "G2a2a1a1",
+     "filtered": false,
+     "color": "rgb(209, 12, 202)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b1b4b": {
+     "name": "R1b1a1b1a1a1c2b1b4b",
+     "filtered": false,
+     "color": "rgb(169, 92, 51)",
+     "group": null
+    },
+    "Q2b2a": {
+     "name": "Q2b2a",
+     "filtered": false,
+     "color": "rgb(47, 180, 66)",
+     "group": null
+    },
+    "R1a1a1b2a2a1c3a1": {
+     "name": "R1a1a1b2a2a1c3a1",
+     "filtered": false,
+     "color": "rgb(167, 95, 210)",
+     "group": null
+    },
+    "R1a1a1b2a2b2b1": {
+     "name": "R1a1a1b2a2b2b1",
+     "filtered": false,
+     "color": "rgb(177, 230, 209)",
+     "group": null
+    },
+    "R1a1a1b2a2b2b": {
+     "name": "R1a1a1b2a2b2b",
+     "filtered": false,
+     "color": "rgb(217, 73, 54)",
+     "group": null
+    },
+    "Q1b1b1": {
+     "name": "Q1b1b1",
+     "filtered": false,
+     "color": "rgb(167, 60, 186)",
+     "group": null
+    },
+    "N1a1a1a1a": {
+     "name": "N1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(13, 198, 124)",
+     "group": null
+    },
+    "G2a2b2a1a1a1b3": {
+     "name": "G2a2b2a1a1a1b3",
+     "filtered": false,
+     "color": "rgb(124, 233, 244)",
+     "group": null
+    },
+    "G2a2b2b1a1a2": {
+     "name": "G2a2b2b1a1a2",
+     "filtered": false,
+     "color": "rgb(52, 229, 168)",
+     "group": null
+    },
+    "O1b1a1b1a1b1": {
+     "name": "O1b1a1b1a1b1",
+     "filtered": false,
+     "color": "rgb(27, 131, 222)",
+     "group": null
+    },
+    "R1a1a1b2a2b1d1": {
+     "name": "R1a1a1b2a2b1d1",
+     "filtered": false,
+     "color": "rgb(171, 246, 110)",
+     "group": null
+    },
+    "C2a1a3a": {
+     "name": "C2a1a3a",
+     "filtered": false,
+     "color": "rgb(194, 220, 87)",
+     "group": null
+    },
+    "R1a1a1b1a2a1a1a1": {
+     "name": "R1a1a1b1a2a1a1a1",
+     "filtered": false,
+     "color": "rgb(208, 93, 110)",
+     "group": null
+    },
+    "I2a1b1a2a1a1": {
+     "name": "I2a1b1a2a1a1",
+     "filtered": false,
+     "color": "rgb(104, 32, 235)",
+     "group": null
+    },
+    "I2a2b": {
+     "name": "I2a2b",
+     "filtered": false,
+     "color": "rgb(74, 188, 247)",
+     "group": null
+    },
+    "R1b2b": {
+     "name": "R1b2b",
+     "filtered": false,
+     "color": "rgb(241, 114, 172)",
+     "group": null
+    },
+    "O2a1b1a1a1a1b1a1a1": {
+     "name": "O2a1b1a1a1a1b1a1a1",
+     "filtered": false,
+     "color": "rgb(187, 203, 15)",
+     "group": null
+    },
+    "L2": {
+     "name": "L2",
+     "filtered": false,
+     "color": "rgb(173, 102, 213)",
+     "group": null
+    },
+    "R1a1a1b2a2a3b1": {
+     "name": "R1a1a1b2a2a3b1",
+     "filtered": false,
+     "color": "rgb(243, 198, 134)",
+     "group": null
+    },
+    "Q1a2a1a": {
+     "name": "Q1a2a1a",
+     "filtered": false,
+     "color": "rgb(212, 79, 47)",
+     "group": null
+    },
+    "R1b2b2": {
+     "name": "R1b2b2",
+     "filtered": false,
+     "color": "rgb(249, 125, 93)",
+     "group": null
+    },
+    "R1b1a1a1a": {
+     "name": "R1b1a1a1a",
+     "filtered": false,
+     "color": "rgb(16, 191, 235)",
+     "group": null
+    },
+    "R1a1a2": {
+     "name": "R1a1a2",
+     "filtered": false,
+     "color": "rgb(214, 103, 53)",
+     "group": null
+    },
+    "R1b1a1a1b": {
+     "name": "R1b1a1a1b",
+     "filtered": false,
+     "color": "rgb(173, 244, 98)",
+     "group": null
+    },
+    "N1a1a1a1a3a2": {
+     "name": "N1a1a1a1a3a2",
+     "filtered": false,
+     "color": "rgb(247, 109, 153)",
+     "group": null
+    },
+    "J2a1a1b": {
+     "name": "J2a1a1b",
+     "filtered": false,
+     "color": "rgb(218, 133, 158)",
+     "group": null
+    },
+    "J2a1a1a2b2a2b2": {
+     "name": "J2a1a1a2b2a2b2",
+     "filtered": false,
+     "color": "rgb(62, 187, 18)",
+     "group": null
+    },
+    "J2a1a1a2b2a2b2b": {
+     "name": "J2a1a1a2b2a2b2b",
+     "filtered": false,
+     "color": "rgb(160, 239, 227)",
+     "group": null
+    },
+    "G2a2b1": {
+     "name": "G2a2b1",
+     "filtered": false,
+     "color": "rgb(174, 230, 176)",
+     "group": null
+    },
+    "J2a1a1a2a": {
+     "name": "J2a1a1a2a",
+     "filtered": false,
+     "color": "rgb(242, 199, 140)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c1a": {
+     "name": "R1b1a1b1a1a1c1a",
+     "filtered": false,
+     "color": "rgb(155, 219, 123)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b": {
+     "name": "R1b1a1b1a1a1c2b",
+     "filtered": false,
+     "color": "rgb(141, 220, 210)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c1a2b2": {
+     "name": "R1b1a1b1a1a1c1a2b2",
+     "filtered": false,
+     "color": "rgb(172, 91, 214)",
+     "group": null
+    },
+    "G2a2b2a1a1b": {
+     "name": "G2a2b2a1a1b",
+     "filtered": false,
+     "color": "rgb(156, 214, 123)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a1a2": {
+     "name": "G2a2b2a1a1b1a1a1a2",
+     "filtered": false,
+     "color": "rgb(182, 222, 31)",
+     "group": null
+    },
+    "R1b2a": {
+     "name": "R1b2a",
+     "filtered": false,
+     "color": "rgb(29, 157, 188)",
+     "group": null
+    },
+    "J2a2a1a1a2": {
+     "name": "J2a2a1a1a2",
+     "filtered": false,
+     "color": "rgb(76, 224, 33)",
+     "group": null
+    },
+    "J2a1a1a2b2a3b": {
+     "name": "J2a1a1a2b2a3b",
+     "filtered": false,
+     "color": "rgb(87, 230, 236)",
+     "group": null
+    },
+    "Q1a": {
+     "name": "Q1a",
+     "filtered": false,
+     "color": "rgb(150, 251, 182)",
+     "group": null
+    },
+    "J2a1a1b2a1b1b2": {
+     "name": "J2a1a1b2a1b1b2",
+     "filtered": false,
+     "color": "rgb(163, 61, 43)",
+     "group": null
+    },
+    "Q1b2b1b": {
+     "name": "Q1b2b1b",
+     "filtered": false,
+     "color": "rgb(35, 131, 203)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b2b": {
+     "name": "R1b1a1b1a1a2b2b",
+     "filtered": false,
+     "color": "rgb(131, 251, 155)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a7a": {
+     "name": "N1a1a1a1a1a1a7a",
+     "filtered": false,
+     "color": "rgb(155, 247, 152)",
+     "group": null
+    },
+    "I1a1b1a4a1": {
+     "name": "I1a1b1a4a1",
+     "filtered": false,
+     "color": "rgb(204, 231, 152)",
+     "group": null
+    },
+    "N1a1a1a1a1a1": {
+     "name": "N1a1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(239, 158, 40)",
+     "group": null
+    },
+    "I1a1a1": {
+     "name": "I1a1a1",
+     "filtered": false,
+     "color": "rgb(211, 123, 62)",
+     "group": null
+    },
+    "I2a1b1a1a1b1a": {
+     "name": "I2a1b1a1a1b1a",
+     "filtered": false,
+     "color": "rgb(202, 240, 168)",
+     "group": null
+    },
+    "R1a1a1b2f": {
+     "name": "R1a1a1b2f",
+     "filtered": false,
+     "color": "rgb(170, 225, 234)",
+     "group": null
+    },
+    "I1a1b1b": {
+     "name": "I1a1b1b",
+     "filtered": false,
+     "color": "rgb(151, 199, 238)",
+     "group": null
+    },
+    "J2b2a2b2": {
+     "name": "J2b2a2b2",
+     "filtered": false,
+     "color": "rgb(22, 234, 247)",
+     "group": null
+    },
+    "N1a1a1": {
+     "name": "N1a1a1",
+     "filtered": false,
+     "color": "rgb(169, 233, 176)",
+     "group": null
+    },
+    "I2a1b1a2a2a1": {
+     "name": "I2a1b1a2a2a1",
+     "filtered": false,
+     "color": "rgb(187, 43, 69)",
+     "group": null
+    },
+    "H1a1a4": {
+     "name": "H1a1a4",
+     "filtered": false,
+     "color": "rgb(241, 207, 87)",
+     "group": null
+    },
+    "J2a1a1a2b1b": {
+     "name": "J2a1a1a2b1b",
+     "filtered": false,
+     "color": "rgb(201, 121, 73)",
+     "group": null
+    },
+    "J2a1a1a2b1b4": {
+     "name": "J2a1a1a2b1b4",
+     "filtered": false,
+     "color": "rgb(243, 173, 127)",
+     "group": null
+    },
+    "Q1b1a2b": {
+     "name": "Q1b1a2b",
+     "filtered": false,
+     "color": "rgb(191, 55, 118)",
+     "group": null
+    },
+    "T1a2b1": {
+     "name": "T1a2b1",
+     "filtered": false,
+     "color": "rgb(71, 211, 156)",
+     "group": null
+    },
+    "I1a3a1": {
+     "name": "I1a3a1",
+     "filtered": false,
+     "color": "rgb(208, 34, 78)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2a": {
+     "name": "R1b1a1b1a1a1c2a",
+     "filtered": false,
+     "color": "rgb(17, 242, 152)",
+     "group": null
+    },
+    "R1b1a1b1a1a2f": {
+     "name": "R1b1a1b1a1a2f",
+     "filtered": false,
+     "color": "rgb(138, 246, 182)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2a1c": {
+     "name": "R1b1a1b1a1a1c2a1c",
+     "filtered": false,
+     "color": "rgb(107, 120, 230)",
+     "group": null
+    },
+    "I2a1b1a2b1a2a2": {
+     "name": "I2a1b1a2b1a2a2",
+     "filtered": false,
+     "color": "rgb(239, 199, 140)",
+     "group": null
+    },
+    "E1b1b1a1b2a4b": {
+     "name": "E1b1b1a1b2a4b",
+     "filtered": false,
+     "color": "rgb(244, 126, 238)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b2b1a1a": {
+     "name": "R1b1a1b1a1a1c2b2b1a1a",
+     "filtered": false,
+     "color": "rgb(248, 67, 14)",
+     "group": null
+    },
+    "R1a1a1b1a3a1b3e5": {
+     "name": "R1a1a1b1a3a1b3e5",
+     "filtered": false,
+     "color": "rgb(248, 144, 148)",
+     "group": null
+    },
+    "I2a1b1a2b1a2b1": {
+     "name": "I2a1b1a2b1a2b1",
+     "filtered": false,
+     "color": "rgb(210, 148, 119)",
+     "group": null
+    },
+    "I2a1b1a1b1a1a": {
+     "name": "I2a1b1a1b1a1a",
+     "filtered": false,
+     "color": "rgb(174, 113, 53)",
+     "group": null
+    },
+    "I1a1b1a1a1": {
+     "name": "I1a1b1a1a1",
+     "filtered": false,
+     "color": "rgb(167, 116, 50)",
+     "group": null
+    },
+    "D": {
+     "name": "D",
+     "filtered": false,
+     "color": "rgb(205, 250, 108)",
+     "group": null
+    },
+    "N1b": {
+     "name": "N1b",
+     "filtered": false,
+     "color": "rgb(236, 101, 178)",
+     "group": null
+    },
+    "N1b2": {
+     "name": "N1b2",
+     "filtered": false,
+     "color": "rgb(209, 146, 229)",
+     "group": null
+    },
+    "O2a2b1a2a1a": {
+     "name": "O2a2b1a2a1a",
+     "filtered": false,
+     "color": "rgb(237, 202, 23)",
+     "group": null
+    },
+    "R1a1a1b2h": {
+     "name": "R1a1a1b2h",
+     "filtered": false,
+     "color": "rgb(230, 162, 111)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d1": {
+     "name": "R1a1a1b2a2a1d1",
+     "filtered": false,
+     "color": "rgb(180, 115, 210)",
+     "group": null
+    },
+    "I2a1b1a2a1b": {
+     "name": "I2a1b1a2a1b",
+     "filtered": false,
+     "color": "rgb(106, 228, 68)",
+     "group": null
+    },
+    "R1a1a1b2a2a3a1": {
+     "name": "R1a1a1b2a2a3a1",
+     "filtered": false,
+     "color": "rgb(229, 123, 241)",
+     "group": null
+    },
+    "E1b1a1a1": {
+     "name": "E1b1a1a1",
+     "filtered": false,
+     "color": "rgb(157, 192, 225)",
+     "group": null
+    },
+    "G2a2b2a1a1": {
+     "name": "G2a2b2a1a1",
+     "filtered": false,
+     "color": "rgb(239, 51, 152)",
+     "group": null
+    },
+    "P": {
+     "name": "P",
+     "filtered": false,
+     "color": "rgb(230, 158, 134)",
+     "group": null
+    },
+    "DE": {
+     "name": "DE",
+     "filtered": false,
+     "color": "rgb(227, 240, 78)",
+     "group": null
+    },
+    "B2b1a1": {
+     "name": "B2b1a1",
+     "filtered": false,
+     "color": "rgb(25, 165, 183)",
+     "group": null
+    },
+    "E1b1b1b2b2": {
+     "name": "E1b1b1b2b2",
+     "filtered": false,
+     "color": "rgb(29, 108, 179)",
+     "group": null
+    },
+    "B2b1": {
+     "name": "B2b1",
+     "filtered": false,
+     "color": "rgb(24, 167, 190)",
+     "group": null
+    },
+    "D1a2a1c1": {
+     "name": "D1a2a1c1",
+     "filtered": false,
+     "color": "rgb(228, 217, 71)",
+     "group": null
+    },
+    "Q1b1a2a1": {
+     "name": "Q1b1a2a1",
+     "filtered": false,
+     "color": "rgb(209, 242, 99)",
+     "group": null
+    },
+    "C2a": {
+     "name": "C2a",
+     "filtered": false,
+     "color": "rgb(235, 173, 147)",
+     "group": null
+    },
+    "I2a1b1a1b2": {
+     "name": "I2a1b1a1b2",
+     "filtered": false,
+     "color": "rgb(55, 227, 44)",
+     "group": null
+    },
+    "B2b": {
+     "name": "B2b",
+     "filtered": false,
+     "color": "rgb(185, 105, 239)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1a": {
+     "name": "R1b1a1b1a1a2c1a1a",
+     "filtered": false,
+     "color": "rgb(52, 103, 197)",
+     "group": null
+    },
+    "R1a1a1b1a3a2b": {
+     "name": "R1a1a1b1a3a2b",
+     "filtered": false,
+     "color": "rgb(59, 100, 211)",
+     "group": null
+    },
+    "I1a1b1a4a2f1a1a7": {
+     "name": "I1a1b1a4a2f1a1a7",
+     "filtered": false,
+     "color": "rgb(237, 101, 120)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1h": {
+     "name": "R1b1a1b1a1a2c1a1h",
+     "filtered": false,
+     "color": "rgb(94, 209, 172)",
+     "group": null
+    },
+    "I1a2a1a1a": {
+     "name": "I1a2a1a1a",
+     "filtered": false,
+     "color": "rgb(7, 92, 245)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5b1a1": {
+     "name": "R1b1a1b1a1a2c1a5b1a1",
+     "filtered": false,
+     "color": "rgb(210, 215, 54)",
+     "group": null
+    },
+    "I1a1b1a4a2": {
+     "name": "I1a1b1a4a2",
+     "filtered": false,
+     "color": "rgb(46, 167, 160)",
+     "group": null
+    },
+    "R1b1a1b1a1a2d1a1": {
+     "name": "R1b1a1b1a1a2d1a1",
+     "filtered": false,
+     "color": "rgb(19, 143, 186)",
+     "group": null
+    },
+    "R1a1a1b1a3a1a10": {
+     "name": "R1a1a1b1a3a1a10",
+     "filtered": false,
+     "color": "rgb(222, 121, 171)",
+     "group": null
+    },
+    "R1a1a1b1a3a1b": {
+     "name": "R1a1a1b1a3a1b",
+     "filtered": false,
+     "color": "rgb(138, 158, 217)",
+     "group": null
+    },
+    "T1a1a1b2b2b1a1a1": {
+     "name": "T1a1a1b2b2b1a1a1",
+     "filtered": false,
+     "color": "rgb(191, 29, 167)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1b3": {
+     "name": "R1b1a1b1a1a2a1b3",
+     "filtered": false,
+     "color": "rgb(251, 153, 187)",
+     "group": null
+    },
+    "T1a2": {
+     "name": "T1a2",
+     "filtered": false,
+     "color": "rgb(157, 251, 127)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a": {
+     "name": "N1a1a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(212, 228, 139)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a1b2": {
+     "name": "N1a1a1a1a1a1a1b2",
+     "filtered": false,
+     "color": "rgb(229, 110, 215)",
+     "group": null
+    },
+    "K": {
+     "name": "K",
+     "filtered": false,
+     "color": "rgb(180, 50, 248)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a1b": {
+     "name": "N1a1a1a1a1a1a1b",
+     "filtered": false,
+     "color": "rgb(9, 55, 237)",
+     "group": null
+    },
+    "R1a1a1a1d2": {
+     "name": "R1a1a1a1d2",
+     "filtered": false,
+     "color": "rgb(232, 170, 236)",
+     "group": null
+    },
+    "R1a1a1b2c": {
+     "name": "R1a1a1b2c",
+     "filtered": false,
+     "color": "rgb(177, 44, 95)",
+     "group": null
+    },
+    "I2a1a2b1": {
+     "name": "I2a1a2b1",
+     "filtered": false,
+     "color": "rgb(164, 41, 100)",
+     "group": null
+    },
+    "I2a1b1a1a": {
+     "name": "I2a1b1a1a",
+     "filtered": false,
+     "color": "rgb(117, 175, 216)",
+     "group": null
+    },
+    "G2b2": {
+     "name": "G2b2",
+     "filtered": false,
+     "color": "rgb(223, 42, 188)",
+     "group": null
+    },
+    "J2a1a1a2b2a3b1a": {
+     "name": "J2a1a1a2b2a3b1a",
+     "filtered": false,
+     "color": "rgb(172, 102, 51)",
+     "group": null
+    },
+    "Q1b2a1a1": {
+     "name": "Q1b2a1a1",
+     "filtered": false,
+     "color": "rgb(155, 214, 75)",
+     "group": null
+    },
+    "Q1b2b1b2b": {
+     "name": "Q1b2b1b2b",
+     "filtered": false,
+     "color": "rgb(125, 66, 228)",
+     "group": null
+    },
+    "N1a1a1a1a4a1": {
+     "name": "N1a1a1a1a4a1",
+     "filtered": false,
+     "color": "rgb(144, 190, 62)",
+     "group": null
+    },
+    "Q1b1a1a1e2": {
+     "name": "Q1b1a1a1e2",
+     "filtered": false,
+     "color": "rgb(218, 91, 183)",
+     "group": null
+    },
+    "Q1a2a2b1": {
+     "name": "Q1a2a2b1",
+     "filtered": false,
+     "color": "rgb(98, 224, 127)",
+     "group": null
+    },
+    "R1a1a1b2a2a1c3a": {
+     "name": "R1a1a1b2a2a1c3a",
+     "filtered": false,
+     "color": "rgb(114, 221, 244)",
+     "group": null
+    },
+    "R1a1a1a2": {
+     "name": "R1a1a1a2",
+     "filtered": false,
+     "color": "rgb(195, 52, 41)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1c": {
+     "name": "R1b1a1b1a1a2b1c",
+     "filtered": false,
+     "color": "rgb(14, 241, 149)",
+     "group": null
+    },
+    "G2a2b1a1a1b": {
+     "name": "G2a2b1a1a1b",
+     "filtered": false,
+     "color": "rgb(155, 167, 222)",
+     "group": null
+    },
+    "CF": {
+     "name": "CF",
+     "filtered": false,
+     "color": "rgb(75, 205, 229)",
+     "group": null
+    },
+    "I2a1a1a1a1a1": {
+     "name": "I2a1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(162, 94, 235)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2c4a": {
+     "name": "J1a2a1a2d2b2b2c4a",
+     "filtered": false,
+     "color": "rgb(144, 248, 182)",
+     "group": null
+    },
+    "E1b1b1a1b1a10a2b": {
+     "name": "E1b1b1a1b1a10a2b",
+     "filtered": false,
+     "color": "rgb(94, 132, 247)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a2a1b1a": {
+     "name": "G2a2b2a1a1b1a1a2a1b1a",
+     "filtered": false,
+     "color": "rgb(162, 180, 231)",
+     "group": null
+    },
+    "E1b1b1a1a1c1b1b": {
+     "name": "E1b1b1a1a1c1b1b",
+     "filtered": false,
+     "color": "rgb(190, 171, 41)",
+     "group": null
+    },
+    "J2a1a1a2b2a1a1c2": {
+     "name": "J2a1a1a2b2a1a1c2",
+     "filtered": false,
+     "color": "rgb(184, 215, 72)",
+     "group": null
+    },
+    "J2b2a1a1a1a1a1a": {
+     "name": "J2b2a1a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(190, 165, 228)",
+     "group": null
+    },
+    "H2c1a1a": {
+     "name": "H2c1a1a",
+     "filtered": false,
+     "color": "rgb(70, 215, 181)",
+     "group": null
+    },
+    "J2a1a1b2a1b1b2c": {
+     "name": "J2a1a1b2a1b1b2c",
+     "filtered": false,
+     "color": "rgb(26, 243, 78)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a2a1a1b": {
+     "name": "G2a2b2a1a1b1a1a2a1a1b",
+     "filtered": false,
+     "color": "rgb(232, 203, 146)",
+     "group": null
+    },
+    "C1a2a1": {
+     "name": "C1a2a1",
+     "filtered": false,
+     "color": "rgb(96, 224, 210)",
+     "group": null
+    },
+    "I1a1b1a1e2": {
+     "name": "I1a1b1a1e2",
+     "filtered": false,
+     "color": "rgb(188, 173, 48)",
+     "group": null
+    },
+    "J1a2a1a2c1a": {
+     "name": "J1a2a1a2c1a",
+     "filtered": false,
+     "color": "rgb(89, 247, 154)",
+     "group": null
+    },
+    "G2a2b1a1a1": {
+     "name": "G2a2b1a1a1",
+     "filtered": false,
+     "color": "rgb(215, 76, 69)",
+     "group": null
+    },
+    "G2a2b2a1a1c1a1a2b1": {
+     "name": "G2a2b2a1a1c1a1a2b1",
+     "filtered": false,
+     "color": "rgb(239, 242, 34)",
+     "group": null
+    },
+    "J2a1a1b2a1b1b3a2b": {
+     "name": "J2a1a1b2a1b1b3a2b",
+     "filtered": false,
+     "color": "rgb(58, 135, 235)",
+     "group": null
+    },
+    "T1a1a1b2b1a": {
+     "name": "T1a1a1b2b1a",
+     "filtered": false,
+     "color": "rgb(221, 80, 241)",
+     "group": null
+    },
+    "G2a2b2a1a1a1a": {
+     "name": "G2a2b2a1a1a1a",
+     "filtered": false,
+     "color": "rgb(229, 154, 145)",
+     "group": null
+    },
+    "J2a1a1a2b2a1b1b": {
+     "name": "J2a1a1a2b2a1b1b",
+     "filtered": false,
+     "color": "rgb(136, 112, 243)",
+     "group": null
+    },
+    "J2a1a1a2b2a3b1a1a2": {
+     "name": "J2a1a1a2b2a3b1a1a2",
+     "filtered": false,
+     "color": "rgb(92, 160, 203)",
+     "group": null
+    },
+    "G2a2b2b1a1": {
+     "name": "G2a2b2b1a1",
+     "filtered": false,
+     "color": "rgb(20, 183, 233)",
+     "group": null
+    },
+    "R1b1a1b1a1a2e": {
+     "name": "R1b1a1b1a1a2e",
+     "filtered": false,
+     "color": "rgb(219, 192, 50)",
+     "group": null
+    },
+    "J2b2a1a1a1b3": {
+     "name": "J2b2a1a1a1b3",
+     "filtered": false,
+     "color": "rgb(42, 198, 156)",
+     "group": null
+    },
+    "G2a2b1b1a1b": {
+     "name": "G2a2b1b1a1b",
+     "filtered": false,
+     "color": "rgb(217, 73, 48)",
+     "group": null
+    },
+    "G2a2b2b1a1b1a2a": {
+     "name": "G2a2b2b1a1b1a2a",
+     "filtered": false,
+     "color": "rgb(6, 201, 163)",
+     "group": null
+    },
+    "G2a2a1a2a1b1": {
+     "name": "G2a2a1a2a1b1",
+     "filtered": false,
+     "color": "rgb(165, 92, 242)",
+     "group": null
+    },
+    "E1b1b1b1b": {
+     "name": "E1b1b1b1b",
+     "filtered": false,
+     "color": "rgb(55, 24, 235)",
+     "group": null
+    },
+    "J2b2a1a1a1a1a2a": {
+     "name": "J2b2a1a1a1a1a2a",
+     "filtered": false,
+     "color": "rgb(222, 118, 182)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a2a1": {
+     "name": "G2a2b2a1a1b1a1a2a1",
+     "filtered": false,
+     "color": "rgb(247, 27, 125)",
+     "group": null
+    },
+    "E1b1b1a1a1c1b2": {
+     "name": "E1b1b1a1a1c1b2",
+     "filtered": false,
+     "color": "rgb(167, 39, 66)",
+     "group": null
+    },
+    "I2a1a2a1a1a": {
+     "name": "I2a1a2a1a1a",
+     "filtered": false,
+     "color": "rgb(175, 49, 187)",
+     "group": null
+    },
+    "J2a1a1b1a": {
+     "name": "J2a1a1b1a",
+     "filtered": false,
+     "color": "rgb(66, 146, 203)",
+     "group": null
+    },
+    "J2a1a1a2b2a1b1": {
+     "name": "J2a1a1a2b2a1b1",
+     "filtered": false,
+     "color": "rgb(147, 205, 80)",
+     "group": null
+    },
+    "J2a1a1b2a1b1": {
+     "name": "J2a1a1b2a1b1",
+     "filtered": false,
+     "color": "rgb(108, 79, 232)",
+     "group": null
+    },
+    "G2a2a1a2b1b": {
+     "name": "G2a2a1a2b1b",
+     "filtered": false,
+     "color": "rgb(200, 251, 153)",
+     "group": null
+    },
+    "J2a1a2b": {
+     "name": "J2a1a2b",
+     "filtered": false,
+     "color": "rgb(247, 38, 115)",
+     "group": null
+    },
+    "B2": {
+     "name": "B2",
+     "filtered": false,
+     "color": "rgb(238, 69, 137)",
+     "group": null
+    },
+    "B": {
+     "name": "B",
+     "filtered": false,
+     "color": "rgb(235, 196, 116)",
+     "group": null
+    },
+    "D1a2a": {
+     "name": "D1a2a",
+     "filtered": false,
+     "color": "rgb(185, 161, 240)",
+     "group": null
+    },
+    "I2a1a1a1a1a1a1e": {
+     "name": "I2a1a1a1a1a1a1e",
+     "filtered": false,
+     "color": "rgb(54, 207, 139)",
+     "group": null
+    },
+    "J2b2a1a2": {
+     "name": "J2b2a1a2",
+     "filtered": false,
+     "color": "rgb(160, 199, 42)",
+     "group": null
+    },
+    "J2b2a1b": {
+     "name": "J2b2a1b",
+     "filtered": false,
+     "color": "rgb(209, 103, 14)",
+     "group": null
+    },
+    "D1a1a1a1a1": {
+     "name": "D1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(218, 115, 66)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1a1": {
+     "name": "R1b1a1b1a1a2b1a1",
+     "filtered": false,
+     "color": "rgb(154, 241, 217)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2c3": {
+     "name": "J1a2a1a2d2b2b2c3",
+     "filtered": false,
+     "color": "rgb(205, 163, 237)",
+     "group": null
+    },
+    "G2a2b1a": {
+     "name": "G2a2b1a",
+     "filtered": false,
+     "color": "rgb(244, 102, 149)",
+     "group": null
+    },
+    "G2a2b1a2": {
+     "name": "G2a2b1a2",
+     "filtered": false,
+     "color": "rgb(151, 99, 249)",
+     "group": null
+    },
+    "J2a1a1a2": {
+     "name": "J2a1a1a2",
+     "filtered": false,
+     "color": "rgb(219, 233, 105)",
+     "group": null
+    },
+    "H2c": {
+     "name": "H2c",
+     "filtered": false,
+     "color": "rgb(151, 155, 234)",
+     "group": null
+    },
+    "G2a2b2": {
+     "name": "G2a2b2",
+     "filtered": false,
+     "color": "rgb(62, 216, 242)",
+     "group": null
+    },
+    "G2a2b1a2a": {
+     "name": "G2a2b1a2a",
+     "filtered": false,
+     "color": "rgb(22, 173, 188)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2c4b2a": {
+     "name": "J1a2a1a2d2b2b2c4b2a",
+     "filtered": false,
+     "color": "rgb(88, 226, 154)",
+     "group": null
+    },
+    "H3b1": {
+     "name": "H3b1",
+     "filtered": false,
+     "color": "rgb(218, 37, 83)",
+     "group": null
+    },
+    "I2a2a1b1": {
+     "name": "I2a2a1b1",
+     "filtered": false,
+     "color": "rgb(43, 81, 198)",
+     "group": null
+    },
+    "E1b1a1a1a2a1a3b1a": {
+     "name": "E1b1a1a1a2a1a3b1a",
+     "filtered": false,
+     "color": "rgb(138, 208, 233)",
+     "group": null
+    },
+    "R1b1b2a2a": {
+     "name": "R1b1b2a2a",
+     "filtered": false,
+     "color": "rgb(156, 167, 239)",
+     "group": null
+    },
+    "E1b1a1a1a1c1a1": {
+     "name": "E1b1a1a1a1c1a1",
+     "filtered": false,
+     "color": "rgb(228, 183, 86)",
+     "group": null
+    },
+    "E1b1a1a1a1c1a1a3a1d1": {
+     "name": "E1b1a1a1a1c1a1a3a1d1",
+     "filtered": false,
+     "color": "rgb(196, 16, 28)",
+     "group": null
+    },
+    "O1b1a1a1a": {
+     "name": "O1b1a1a1a",
+     "filtered": false,
+     "color": "rgb(221, 152, 252)",
+     "group": null
+    },
+    "K2": {
+     "name": "K2",
+     "filtered": false,
+     "color": "rgb(70, 204, 131)",
+     "group": null
+    },
+    "O1a1a1a1a1a1": {
+     "name": "O1a1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(217, 13, 215)",
+     "group": null
+    },
+    "G1a": {
+     "name": "G1a",
+     "filtered": false,
+     "color": "rgb(245, 59, 46)",
+     "group": null
+    },
+    "I1a2a1a1c2": {
+     "name": "I1a2a1a1c2",
+     "filtered": false,
+     "color": "rgb(199, 227, 113)",
+     "group": null
+    },
+    "I1a1b1a1d3b": {
+     "name": "I1a1b1a1d3b",
+     "filtered": false,
+     "color": "rgb(113, 183, 213)",
+     "group": null
+    },
+    "R1a1a1b1a3a1": {
+     "name": "R1a1a1b1a3a1",
+     "filtered": false,
+     "color": "rgb(218, 77, 163)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1c1a1a2": {
+     "name": "R1b1a1b1a1a2b1c1a1a2",
+     "filtered": false,
+     "color": "rgb(190, 161, 243)",
+     "group": null
+    },
+    "R1a1a1b1a1a1c1i": {
+     "name": "R1a1a1b1a1a1c1i",
+     "filtered": false,
+     "color": "rgb(250, 153, 127)",
+     "group": null
+    },
+    "I1a2a1a1d1a1a": {
+     "name": "I1a2a1a1d1a1a",
+     "filtered": false,
+     "color": "rgb(47, 229, 126)",
+     "group": null
+    },
+    "I2a1b1a2b1a2b": {
+     "name": "I2a1b1a2b1a2b",
+     "filtered": false,
+     "color": "rgb(37, 172, 127)",
+     "group": null
+    },
+    "R1a1a1b1a2a2": {
+     "name": "R1a1a1b1a2a2",
+     "filtered": false,
+     "color": "rgb(240, 50, 194)",
+     "group": null
+    },
+    "R1a1a1b1a1a1c1": {
+     "name": "R1a1a1b1a1a1c1",
+     "filtered": false,
+     "color": "rgb(184, 246, 154)",
+     "group": null
+    },
+    "I1a1b1a3a": {
+     "name": "I1a1b1a3a",
+     "filtered": false,
+     "color": "rgb(213, 135, 234)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1b1a1a": {
+     "name": "R1b1a1b1a1a2a1b1a1a",
+     "filtered": false,
+     "color": "rgb(176, 215, 85)",
+     "group": null
+    },
+    "I1a1b1a1": {
+     "name": "I1a1b1a1",
+     "filtered": false,
+     "color": "rgb(50, 16, 247)",
+     "group": null
+    },
+    "I2a1a1a1a2b": {
+     "name": "I2a1a1a1a2b",
+     "filtered": false,
+     "color": "rgb(225, 104, 166)",
+     "group": null
+    },
+    "R1a1a1b1a3a1b3e4": {
+     "name": "R1a1a1b1a3a1b3e4",
+     "filtered": false,
+     "color": "rgb(188, 166, 232)",
+     "group": null
+    },
+    "I1a1a4a1a1b": {
+     "name": "I1a1a4a1a1b",
+     "filtered": false,
+     "color": "rgb(228, 220, 103)",
+     "group": null
+    },
+    "I1a5": {
+     "name": "I1a5",
+     "filtered": false,
+     "color": "rgb(206, 43, 76)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a3a2": {
+     "name": "R1b1a1b1a1a2c1a3a2",
+     "filtered": false,
+     "color": "rgb(173, 248, 58)",
+     "group": null
+    },
+    "R1a1a1b1a3a1a3b2": {
+     "name": "R1a1a1b1a3a1a3b2",
+     "filtered": false,
+     "color": "rgb(210, 222, 151)",
+     "group": null
+    },
+    "R1a1a1b1a1a": {
+     "name": "R1a1a1b1a1a",
+     "filtered": false,
+     "color": "rgb(53, 206, 91)",
+     "group": null
+    },
+    "I1a1b1b1a2": {
+     "name": "I1a1b1b1a2",
+     "filtered": false,
+     "color": "rgb(196, 219, 74)",
+     "group": null
+    },
+    "I1a1b1a4a": {
+     "name": "I1a1b1a4a",
+     "filtered": false,
+     "color": "rgb(177, 230, 83)",
+     "group": null
+    },
+    "N1a1a1a1a1": {
+     "name": "N1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(211, 214, 36)",
+     "group": null
+    },
+    "I2a1a1b1a1": {
+     "name": "I2a1a1b1a1",
+     "filtered": false,
+     "color": "rgb(43, 177, 73)",
+     "group": null
+    },
+    "R1a1a1b1a3a1a7": {
+     "name": "R1a1a1b1a3a1a7",
+     "filtered": false,
+     "color": "rgb(53, 177, 115)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1f1a1": {
+     "name": "R1b1a1b1a1a2c1a1f1a1",
+     "filtered": false,
+     "color": "rgb(46, 167, 40)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5c1a": {
+     "name": "R1b1a1b1a1a2c1a5c1a",
+     "filtered": false,
+     "color": "rgb(227, 117, 121)",
+     "group": null
+    },
+    "Q1b2b1": {
+     "name": "Q1b2b1",
+     "filtered": false,
+     "color": "rgb(235, 214, 156)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a2": {
+     "name": "R1b1a1b1a1a2c1a2",
+     "filtered": false,
+     "color": "rgb(31, 76, 194)",
+     "group": null
+    },
+    "R1a1a1b1a2b3a3a": {
+     "name": "R1a1a1b1a2b3a3a",
+     "filtered": false,
+     "color": "rgb(147, 106, 207)",
+     "group": null
+    },
+    "I1c1c1": {
+     "name": "I1c1c1",
+     "filtered": false,
+     "color": "rgb(58, 122, 196)",
+     "group": null
+    },
+    "I1a1b1g3b1": {
+     "name": "I1a1b1g3b1",
+     "filtered": false,
+     "color": "rgb(45, 201, 198)",
+     "group": null
+    },
+    "I1a1b1a1c2a": {
+     "name": "I1a1b1a1c2a",
+     "filtered": false,
+     "color": "rgb(220, 50, 123)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b1b3b": {
+     "name": "R1b1a1b1a1a1c2b1b3b",
+     "filtered": false,
+     "color": "rgb(247, 106, 189)",
+     "group": null
+    },
+    "I1a1b1a4a2e1a": {
+     "name": "I1a1b1a4a2e1a",
+     "filtered": false,
+     "color": "rgb(108, 215, 199)",
+     "group": null
+    },
+    "I1a1b1": {
+     "name": "I1a1b1",
+     "filtered": false,
+     "color": "rgb(221, 132, 229)",
+     "group": null
+    },
+    "I1a2a1a1d1b": {
+     "name": "I1a2a1a1d1b",
+     "filtered": false,
+     "color": "rgb(165, 213, 229)",
+     "group": null
+    },
+    "R1b1a1b1a1a1b1a1": {
+     "name": "R1b1a1b1a1a1b1a1",
+     "filtered": false,
+     "color": "rgb(231, 133, 238)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2a1d1": {
+     "name": "R1b1a1b1a1a1c2a1d1",
+     "filtered": false,
+     "color": "rgb(214, 145, 86)",
+     "group": null
+    },
+    "I1a1b1a1e2d": {
+     "name": "I1a1b1a1e2d",
+     "filtered": false,
+     "color": "rgb(202, 105, 233)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b1b4c": {
+     "name": "R1b1a1b1a1a1c2b1b4c",
+     "filtered": false,
+     "color": "rgb(169, 200, 66)",
+     "group": null
+    },
+    "I1a2a1": {
+     "name": "I1a2a1",
+     "filtered": false,
+     "color": "rgb(193, 147, 52)",
+     "group": null
+    },
+    "I1a2a1a1a4a": {
+     "name": "I1a2a1a1a4a",
+     "filtered": false,
+     "color": "rgb(45, 127, 237)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b1a1": {
+     "name": "R1b1a1b1a1a1c2b1a1",
+     "filtered": false,
+     "color": "rgb(206, 150, 81)",
+     "group": null
+    },
+    "I2a1b1a2b1a2a1a": {
+     "name": "I2a1b1a2b1a2a1a",
+     "filtered": false,
+     "color": "rgb(191, 163, 234)",
+     "group": null
+    },
+    "J2b2a1a1a1a1a": {
+     "name": "J2b2a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(207, 109, 179)",
+     "group": null
+    },
+    "I2a1b1a2b1a2": {
+     "name": "I2a1b1a2b1a2",
+     "filtered": false,
+     "color": "rgb(144, 176, 220)",
+     "group": null
+    },
+    "I1a1b1g3b": {
+     "name": "I1a1b1g3b",
+     "filtered": false,
+     "color": "rgb(20, 219, 152)",
+     "group": null
+    },
+    "I1a2a1a1a5a1a": {
+     "name": "I1a2a1a1a5a1a",
+     "filtered": false,
+     "color": "rgb(196, 9, 241)",
+     "group": null
+    },
+    "E1b1a1a1a2a1a3a1e": {
+     "name": "E1b1a1a1a2a1a3a1e",
+     "filtered": false,
+     "color": "rgb(37, 184, 125)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1f": {
+     "name": "R1b1a1b1a1a2c1a1f",
+     "filtered": false,
+     "color": "rgb(134, 212, 121)",
+     "group": null
+    },
+    "N1a1a1a1a1a2": {
+     "name": "N1a1a1a1a1a2",
+     "filtered": false,
+     "color": "rgb(112, 140, 247)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1c1b": {
+     "name": "R1b1a1b1a1a2b1c1b",
+     "filtered": false,
+     "color": "rgb(29, 93, 211)",
+     "group": null
+    },
+    "I2a1b1a2a1a1a1": {
+     "name": "I2a1b1a2a1a1a1",
+     "filtered": false,
+     "color": "rgb(120, 236, 245)",
+     "group": null
+    },
+    "I1a2a1a1d": {
+     "name": "I1a2a1a1d",
+     "filtered": false,
+     "color": "rgb(212, 130, 247)",
+     "group": null
+    },
+    "I1a2a2": {
+     "name": "I1a2a2",
+     "filtered": false,
+     "color": "rgb(29, 43, 188)",
+     "group": null
+    },
+    "I1a2a2a4b": {
+     "name": "I1a2a2a4b",
+     "filtered": false,
+     "color": "rgb(163, 69, 215)",
+     "group": null
+    },
+    "E1b1b1b2a1a4": {
+     "name": "E1b1b1b2a1a4",
+     "filtered": false,
+     "color": "rgb(112, 75, 218)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a2a1a1": {
+     "name": "G2a2b2a1a1b1a1a2a1a1",
+     "filtered": false,
+     "color": "rgb(117, 224, 200)",
+     "group": null
+    },
+    "R1a1a1b1a2a1a": {
+     "name": "R1a1a1b1a2a1a",
+     "filtered": false,
+     "color": "rgb(205, 225, 150)",
+     "group": null
+    },
+    "I1a10b1b": {
+     "name": "I1a10b1b",
+     "filtered": false,
+     "color": "rgb(190, 86, 55)",
+     "group": null
+    },
+    "I1a2a1a1d1a1a1a1": {
+     "name": "I1a2a1a1d1a1a1a1",
+     "filtered": false,
+     "color": "rgb(74, 143, 242)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a7a3a": {
+     "name": "N1a1a1a1a1a1a7a3a",
+     "filtered": false,
+     "color": "rgb(79, 222, 236)",
+     "group": null
+    },
+    "R1a1a1b1a3a1a": {
+     "name": "R1a1a1b1a3a1a",
+     "filtered": false,
+     "color": "rgb(83, 227, 98)",
+     "group": null
+    },
+    "I1a2a1a1d1": {
+     "name": "I1a2a1a1d1",
+     "filtered": false,
+     "color": "rgb(214, 38, 62)",
+     "group": null
+    },
+    "I1a1b1a4": {
+     "name": "I1a1b1a4",
+     "filtered": false,
+     "color": "rgb(95, 200, 57)",
+     "group": null
+    },
+    "I1a7": {
+     "name": "I1a7",
+     "filtered": false,
+     "color": "rgb(31, 214, 177)",
+     "group": null
+    },
+    "I1a1b1a1e2b": {
+     "name": "I1a1b1a1e2b",
+     "filtered": false,
+     "color": "rgb(127, 63, 205)",
+     "group": null
+    },
+    "I1a1a1a1a3a": {
+     "name": "I1a1a1a1a3a",
+     "filtered": false,
+     "color": "rgb(17, 204, 64)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a7": {
+     "name": "N1a1a1a1a1a1a7",
+     "filtered": false,
+     "color": "rgb(93, 20, 193)",
+     "group": null
+    },
+    "R1a1a1a1d1": {
+     "name": "R1a1a1a1d1",
+     "filtered": false,
+     "color": "rgb(214, 97, 179)",
+     "group": null
+    },
+    "R1a1a1b1a3a2b2": {
+     "name": "R1a1a1b1a3a2b2",
+     "filtered": false,
+     "color": "rgb(225, 74, 131)",
+     "group": null
+    },
+    "I2a1b1a2b1a2a1a1a1a": {
+     "name": "I2a1b1a2b1a2a1a1a1a",
+     "filtered": false,
+     "color": "rgb(56, 181, 238)",
+     "group": null
+    },
+    "I1a2a2a": {
+     "name": "I1a2a2a",
+     "filtered": false,
+     "color": "rgb(84, 160, 49)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a4d1": {
+     "name": "R1b1a1b1a1a2c1a4d1",
+     "filtered": false,
+     "color": "rgb(162, 86, 209)",
+     "group": null
+    },
+    "L1a1b3a": {
+     "name": "L1a1b3a",
+     "filtered": false,
+     "color": "rgb(116, 218, 222)",
+     "group": null
+    },
+    "I2a1a2b1a1": {
+     "name": "I2a1a2b1a1",
+     "filtered": false,
+     "color": "rgb(175, 111, 218)",
+     "group": null
+    },
+    "R1a1a1b1a1a1c1j1": {
+     "name": "R1a1a1b1a1a1c1j1",
+     "filtered": false,
+     "color": "rgb(219, 228, 107)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1a1a1a1a1a": {
+     "name": "R1b1a1b1a1a2c1a1a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(195, 169, 30)",
+     "group": null
+    },
+    "I1a1b1a4a2a": {
+     "name": "I1a1b1a4a2a",
+     "filtered": false,
+     "color": "rgb(102, 149, 234)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a5b": {
+     "name": "N1a1a1a1a1a1a5b",
+     "filtered": false,
+     "color": "rgb(107, 166, 223)",
+     "group": null
+    },
+    "I1a1b1a1c1": {
+     "name": "I1a1b1a1c1",
+     "filtered": false,
+     "color": "rgb(229, 197, 86)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1a1a1a1b1": {
+     "name": "R1b1a1b1a1a2c1a1a1a1a1b1",
+     "filtered": false,
+     "color": "rgb(159, 190, 238)",
+     "group": null
+    }
+   },
+   "admixture": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    }
+   },
+   "admixture_k7": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    },
+    "k #1": {
+     "name": "k #1",
+     "filtered": false,
+     "color": "rgb(223, 224, 108)",
+     "group": null,
+     "order": 0
+    },
+    "k #2": {
+     "name": "k #2",
+     "filtered": false,
+     "color": "rgb(144, 226, 222)",
+     "group": null,
+     "order": 1
+    },
+    "k #3": {
+     "name": "k #3",
+     "filtered": false,
+     "color": "rgb(233, 169, 166)",
+     "group": null,
+     "order": 2
+    },
+    "k #4": {
+     "name": "k #4",
+     "filtered": false,
+     "color": "rgb(105, 246, 31)",
+     "group": null,
+     "order": 3
+    },
+    "k #5": {
+     "name": "k #5",
+     "filtered": false,
+     "color": "rgb(226, 28, 83)",
+     "group": null,
+     "order": 4
+    },
+    "k #6": {
+     "name": "k #6",
+     "filtered": false,
+     "color": "rgb(189, 207, 30)",
+     "group": null,
+     "order": 5
+    },
+    "k #7": {
+     "name": "k #7",
+     "filtered": false,
+     "color": "rgb(88, 131, 222)",
+     "group": null,
+     "order": 6
+    },
+    "_order": [
+     "k #1",
+     "k #2",
+     "k #3",
+     "k #4",
+     "k #5",
+     "k #6",
+     "k #7",
+     "MISSING"
+    ]
+   },
+   "admixture_k2": {
+    "_groups": [],
+    "_order": []
+   },
+   "admixture_k3": {
+    "_groups": [],
+    "_order": []
+   },
+   "admixture_k4": {
+    "_groups": [],
+    "_order": []
+   },
+   "admixture_k6": {
+    "_groups": [],
+    "_order": []
+   },
+   "admixture_k8": {
+    "_groups": [],
+    "_order": []
+   },
+   "admixture_k9": {
+    "_groups": [],
+    "_order": []
+   },
+   "admixture_k10": {
+    "_groups": [],
+    "_order": []
+   },
+   "admixture_k11": {
+    "_groups": [],
+    "_order": []
+   },
+   "admixture_k12": {
+    "_groups": [],
+    "_order": []
+   },
+   "admixture_k13": {
+    "_groups": [],
+    "_order": []
+   },
+   "admixture_k14": {
+    "_groups": [],
+    "_order": []
+   },
+   "admixture_k16": {
+    "_groups": [],
+    "_order": []
+   },
+   "admixture_k17": {
+    "_groups": [],
+    "_order": []
+   }
+  },
+  "regions": {
+   "DEFAULT": {
+    "name": "Region",
+    "color": {
+     "background": "rgba(197, 209, 220, 0.3)",
+     "stroke": "rgba(38, 83, 122, 1.0)"
+    }
+   }
+  }
+ },
+ "map": {
+  "position": [
+   18.316728799700982,
+   47.813441591637456
+  ],
+  "zoom": 4,
+  "dataProjection": "EPSG:4326",
+  "mapProjection": "EPSG:3857",
+  "baseLayers": {},
+  "options": {
+   "basemap": {
+    "name": "Light",
+    "appearance": {
+     "visible_layers": {
+      "basemap-light-water": true,
+      "basemap-light-boundaries": true,
+      "basemap-light-labels": false
+     },
+     "colors": {
+      "map-background": "rgb(0, 0, 0)",
+      "basemap-light-water": "rgb(153, 153, 153)",
+      "basemap-light-boundaries": "rgb(153, 153, 153)",
+      "basemap-light-labels": "rgb(0, 0, 0)"
+     }
+    }
+   },
+   "features": {
+    "visible": {
+     "timeline": false,
+     "controls": false,
+     "legend": false,
+     "scale": false,
+     "title": false
+    },
+    "appearance": {
+     "map-title": "Map title",
+     "map-subtitle": "Map subtitle"
+    }
+   }
+  }
+ },
+ "features": {}
+}

@@ -1,0 +1,5352 @@
+{
+ "_meta": {
+  "name": "www",
+  "description": "This is a default session of the interactive map application.",
+  "lang": "en",
+  "creationDate": "Fri Jan 14 2022 14:00:45 GMT+0100 (Central European Standard Time)",
+  "editDate": "Fri Jan 14 2022 14:00:45 GMT+0100 (Central European Standard Time)",
+  "author": "HumanAGEs Team",
+  "dataKeys": [
+   "datasets",
+   "layers",
+   "strategies",
+   "filters",
+   "legend",
+   "features",
+   "map"
+  ],
+  "hash": "ad23..,ew4xc334"
+ },
+ "layers": {
+  "_order": [
+   "layer_def"
+  ],
+  "_counter": 1,
+  "layer_def": {
+   "layerId": "layer_def",
+   "type": "piechart",
+   "datasetId": "RemainsAADR_3",
+   "attributeId": "admixture_k7",
+   "attributeName": "Admixture K=7",
+   "attributeType": "admixture",
+   "style": {
+    "positionOffsetRatio": 1.9,
+    "positionOffsetRelativeToggle": true,
+    "displayLabelProperty": true,
+    "cardinalityByValue": false,
+    "cardinalityBySize": true,
+    "cardinalityByColor": false,
+    "size": [
+     20,
+     34
+    ],
+    "fontSizeRatio": 1.5,
+    "weightGrowth": "linear",
+    "weightGrowthFactor": 2,
+    "weightScalingFactor": 2,
+    "standardisationMethod": "max",
+    "valueDisplay": "count",
+    "blur": 100,
+    "radius": 100,
+    "drawingAlpha": 1,
+    "blendingMode": "normal",
+    "layerNameToggle": false,
+    "color": "rgb(255, 255, 255)",
+    "gradient": [
+     "#fff7f7",
+     "#d36464",
+     "#990b0b"
+    ],
+    "colorToggle": true,
+    "pointerToggle": true,
+    "angle": 0,
+    "componentValues": {
+     "special": {
+      "MISSING": false,
+      "OTHER": true
+     },
+     "data": "selectAll"
+    },
+    "piechartLabelsAppearance": "always",
+    "piechartLabelsShowPercent": false,
+    "piechartLabelsShowCountData": false,
+    "piechartLabelsSizeRatio": 1.23,
+    "piechartLabelsOffsetRatio": 0.77,
+    "otherRatio": 0,
+    "otherCount": 0,
+    "bodyToggle": true,
+    "showFullStop": false,
+    "padding": 0.15,
+    "seed": 0.25,
+    "outlineSizeRatio": 1,
+    "backgroundSizeRatio": 1,
+    "strategy": "archimedean"
+   },
+   "settings": {
+    "zIndex": 9999999,
+    "opacity": 1,
+    "visible": true,
+    "title": "Layer default",
+    "blur": 100,
+    "radius": 100
+   }
+  }
+ },
+ "datasets": {
+  "_order": [
+   "RemainsAADR_3"
+  ],
+  "_counter": 3,
+  "RemainsAADR_3": {
+   "name": "Samples in Epigravetian",
+   "objectId": "RemainsAADR",
+   "databaseName": "AADR_v54.1.p1",
+   "entityName": "remains",
+   "query": "{\n \"database\": \"AADR_v54.1.p1\",\n \"objects\": \"remains\",\n \"filters\": {\n  \"AND\": [\n   {\n    \"entity\": \"cultural_region\",\n    \"property\": \"name\",\n    \"operator\": \"equal\",\n    \"value\": \"Epigravettian\",\n    \"relation_operator\": \"some\"\n   },\n   {\n    \"entity\": \"cultural_region\",\n    \"property\": \"name\",\n    \"operator\": \"equal\",\n    \"value\": \"Late Epigravettian\",\n    \"relation_operator\": \"some\"\n   }\n  ]\n },\n \"lang\": \"en\"\n}",
+   "samplingRatio": 1,
+   "dating": [
+    -39956,
+    1700
+   ],
+   "size": 489,
+   "isPresent": false
+  }
+ },
+ "clustering": {
+  "features": {
+   "range": 562,
+   "distance": 0,
+   "useCentroids": true,
+   "showRegions": true,
+   "labelPosition": "none",
+   "method": {
+    "distance": "absolute",
+    "region": "cultures"
+   }
+  },
+  "attributes": {}
+ },
+ "filters": {
+  "timeline": {
+   "isActive": true,
+   "yearFrom": -7429,
+   "yearTo": -556,
+   "minYear": -36000,
+   "maxYear": 2000,
+   "showPresent": true,
+   "eventOnFinish": false,
+   "doFilterRegions": false,
+   "showPropability": true
+  },
+  "attributes": {
+   "isActive": true,
+   "available": [],
+   "configs": {}
+  },
+  "regions": {
+   "isActive": true,
+   "regionTypeId": "cultures"
+  }
+ },
+ "legend": {
+  "attributes": {
+   "OTHER": {
+    "color": "rgba(126,126,126,1.0)",
+    "name": "OTHER",
+    "filtered": false,
+    "group": null
+   },
+   "MISSING": {
+    "color": "rgba(0,0,0,1.0)",
+    "name": "MISSING",
+    "filtered": true,
+    "group": null
+   },
+   "haplogroup_y": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    },
+    "O2a1b1a2a1a3": {
+     "name": "O2a1b1a2a1a3",
+     "filtered": false,
+     "color": "rgb(70, 39, 201)",
+     "group": null
+    },
+    "S": {
+     "name": "S",
+     "filtered": false,
+     "color": "rgb(171, 125, 49)",
+     "group": null
+    },
+    "O2a": {
+     "name": "O2a",
+     "filtered": false,
+     "color": "rgb(52, 91, 196)",
+     "group": null
+    },
+    "T1a": {
+     "name": "T1a",
+     "filtered": false,
+     "color": "rgb(108, 189, 44)",
+     "group": null
+    },
+    "E1b1b1b2a1a": {
+     "name": "E1b1b1b2a1a",
+     "filtered": false,
+     "color": "rgb(140, 207, 225)",
+     "group": null
+    },
+    "R2": {
+     "name": "R2",
+     "filtered": false,
+     "color": "rgb(183, 81, 22)",
+     "group": null
+    },
+    "J2a1a4b": {
+     "name": "J2a1a4b",
+     "filtered": false,
+     "color": "rgb(107, 195, 31)",
+     "group": null
+    },
+    "R1a1a1": {
+     "name": "R1a1a1",
+     "filtered": false,
+     "color": "rgb(239, 231, 158)",
+     "group": null
+    },
+    "E1b1b": {
+     "name": "E1b1b",
+     "filtered": false,
+     "color": "rgb(191, 224, 104)",
+     "group": null
+    },
+    "E1b1b1a1": {
+     "name": "E1b1b1a1",
+     "filtered": false,
+     "color": "rgb(196, 218, 114)",
+     "group": null
+    },
+    "T": {
+     "name": "T",
+     "filtered": false,
+     "color": "rgb(212, 107, 216)",
+     "group": null
+    },
+    "E1b1b1a": {
+     "name": "E1b1b1a",
+     "filtered": false,
+     "color": "rgb(177, 7, 219)",
+     "group": null
+    },
+    "J2b": {
+     "name": "J2b",
+     "filtered": false,
+     "color": "rgb(46, 156, 246)",
+     "group": null
+    },
+    "R1a1a1a": {
+     "name": "R1a1a1a",
+     "filtered": false,
+     "color": "rgb(48, 119, 201)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1": {
+     "name": "R1b1a1b1a1a2b1",
+     "filtered": false,
+     "color": "rgb(178, 55, 144)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1c2b1a2": {
+     "name": "R1b1a1b1a1a2b1c2b1a2",
+     "filtered": false,
+     "color": "rgb(221, 171, 144)",
+     "group": null
+    },
+    "R1b1a1b": {
+     "name": "R1b1a1b",
+     "filtered": false,
+     "color": "rgb(51, 89, 161)",
+     "group": null
+    },
+    "R1b1a1b1a1a": {
+     "name": "R1b1a1b1a1a",
+     "filtered": false,
+     "color": "rgb(239, 218, 160)",
+     "group": null
+    },
+    "R1b1a1b1b3": {
+     "name": "R1b1a1b1b3",
+     "filtered": false,
+     "color": "rgb(233, 150, 183)",
+     "group": null
+    },
+    "Q1b": {
+     "name": "Q1b",
+     "filtered": false,
+     "color": "rgb(47, 48, 171)",
+     "group": null
+    },
+    "R1a1a1b2a2a3": {
+     "name": "R1a1a1b2a2a3",
+     "filtered": false,
+     "color": "rgb(52, 152, 228)",
+     "group": null
+    },
+    "J2b2a": {
+     "name": "J2b2a",
+     "filtered": false,
+     "color": "rgb(107, 175, 45)",
+     "group": null
+    },
+    "C2a1": {
+     "name": "C2a1",
+     "filtered": false,
+     "color": "rgb(56, 189, 153)",
+     "group": null
+    },
+    "R1a1a1b2a2": {
+     "name": "R1a1a1b2a2",
+     "filtered": false,
+     "color": "rgb(46, 128, 168)",
+     "group": null
+    },
+    "R1a1a1b2a2a": {
+     "name": "R1a1a1b2a2a",
+     "filtered": false,
+     "color": "rgb(235, 180, 111)",
+     "group": null
+    },
+    "R2a2a": {
+     "name": "R2a2a",
+     "filtered": false,
+     "color": "rgb(154, 109, 240)",
+     "group": null
+    },
+    "G2a2a": {
+     "name": "G2a2a",
+     "filtered": false,
+     "color": "rgb(94, 32, 199)",
+     "group": null
+    },
+    "J2a2": {
+     "name": "J2a2",
+     "filtered": false,
+     "color": "rgb(202, 54, 77)",
+     "group": null
+    },
+    "Q": {
+     "name": "Q",
+     "filtered": false,
+     "color": "rgb(222, 32, 194)",
+     "group": null
+    },
+    "I2a1a1b": {
+     "name": "I2a1a1b",
+     "filtered": false,
+     "color": "rgb(165, 242, 174)",
+     "group": null
+    },
+    "I2a1a1b1b": {
+     "name": "I2a1a1b1b",
+     "filtered": false,
+     "color": "rgb(201, 17, 239)",
+     "group": null
+    },
+    "I2a1b1b": {
+     "name": "I2a1b1b",
+     "filtered": false,
+     "color": "rgb(225, 246, 121)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1": {
+     "name": "R1b1a1b1a1a2c1",
+     "filtered": false,
+     "color": "rgb(175, 229, 209)",
+     "group": null
+    },
+    "I2a1a2a1a2a": {
+     "name": "I2a1a2a1a2a",
+     "filtered": false,
+     "color": "rgb(48, 77, 165)",
+     "group": null
+    },
+    "R1b1a1b1a1a2": {
+     "name": "R1b1a1b1a1a2",
+     "filtered": false,
+     "color": "rgb(147, 80, 205)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a4b3a": {
+     "name": "R1b1a1b1a1a2c1a4b3a",
+     "filtered": false,
+     "color": "rgb(153, 96, 222)",
+     "group": null
+    },
+    "Q1b1b": {
+     "name": "Q1b1b",
+     "filtered": false,
+     "color": "rgb(136, 245, 80)",
+     "group": null
+    },
+    "I2a1a2": {
+     "name": "I2a1a2",
+     "filtered": false,
+     "color": "rgb(192, 236, 150)",
+     "group": null
+    },
+    "G2a2a1a3": {
+     "name": "G2a2a1a3",
+     "filtered": false,
+     "color": "rgb(240, 243, 159)",
+     "group": null
+    },
+    "I2a1a1a1a1b": {
+     "name": "I2a1a1a1a1b",
+     "filtered": false,
+     "color": "rgb(108, 31, 245)",
+     "group": null
+    },
+    "J2b2b2": {
+     "name": "J2b2b2",
+     "filtered": false,
+     "color": "rgb(182, 37, 49)",
+     "group": null
+    },
+    "R1b1a1b1a1": {
+     "name": "R1b1a1b1a1",
+     "filtered": false,
+     "color": "rgb(224, 22, 100)",
+     "group": null
+    },
+    "G2a2b2b": {
+     "name": "G2a2b2b",
+     "filtered": false,
+     "color": "rgb(197, 75, 161)",
+     "group": null
+    },
+    "G": {
+     "name": "G",
+     "filtered": false,
+     "color": "rgb(89, 11, 236)",
+     "group": null
+    },
+    "G2a2a2": {
+     "name": "G2a2a2",
+     "filtered": false,
+     "color": "rgb(250, 214, 73)",
+     "group": null
+    },
+    "C1a2b1b": {
+     "name": "C1a2b1b",
+     "filtered": false,
+     "color": "rgb(98, 236, 228)",
+     "group": null
+    },
+    "CT": {
+     "name": "CT",
+     "filtered": false,
+     "color": "rgb(71, 133, 232)",
+     "group": null
+    },
+    "Q1b1a": {
+     "name": "Q1b1a",
+     "filtered": false,
+     "color": "rgb(78, 226, 85)",
+     "group": null
+    },
+    "P1": {
+     "name": "P1",
+     "filtered": false,
+     "color": "rgb(237, 116, 177)",
+     "group": null
+    },
+    "BT": {
+     "name": "BT",
+     "filtered": false,
+     "color": "rgb(218, 223, 70)",
+     "group": null
+    },
+    "Q1b1a1a1e1a": {
+     "name": "Q1b1a1a1e1a",
+     "filtered": false,
+     "color": "rgb(212, 68, 203)",
+     "group": null
+    },
+    "Q1b1a1a": {
+     "name": "Q1b1a1a",
+     "filtered": false,
+     "color": "rgb(16, 198, 103)",
+     "group": null
+    },
+    "G2a": {
+     "name": "G2a",
+     "filtered": false,
+     "color": "rgb(9, 229, 200)",
+     "group": null
+    },
+    "G2a2a1a2b": {
+     "name": "G2a2a1a2b",
+     "filtered": false,
+     "color": "rgb(229, 99, 46)",
+     "group": null
+    },
+    "O2a2b1": {
+     "name": "O2a2b1",
+     "filtered": false,
+     "color": "rgb(49, 155, 159)",
+     "group": null
+    },
+    "O2a2b1a1a1a4a1": {
+     "name": "O2a2b1a1a1a4a1",
+     "filtered": false,
+     "color": "rgb(153, 245, 196)",
+     "group": null
+    },
+    "IJ": {
+     "name": "IJ",
+     "filtered": false,
+     "color": "rgb(214, 121, 19)",
+     "group": null
+    },
+    "R1b1a1b1b": {
+     "name": "R1b1a1b1b",
+     "filtered": false,
+     "color": "rgb(238, 139, 224)",
+     "group": null
+    },
+    "G2b": {
+     "name": "G2b",
+     "filtered": false,
+     "color": "rgb(147, 88, 200)",
+     "group": null
+    },
+    "I": {
+     "name": "I",
+     "filtered": false,
+     "color": "rgb(228, 211, 170)",
+     "group": null
+    },
+    "C1a": {
+     "name": "C1a",
+     "filtered": false,
+     "color": "rgb(80, 27, 242)",
+     "group": null
+    },
+    "C": {
+     "name": "C",
+     "filtered": false,
+     "color": "rgb(204, 238, 100)",
+     "group": null
+    },
+    "I2": {
+     "name": "I2",
+     "filtered": false,
+     "color": "rgb(64, 218, 124)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5b1a1a": {
+     "name": "R1b1a1b1a1a2c1a5b1a1a",
+     "filtered": false,
+     "color": "rgb(249, 113, 92)",
+     "group": null
+    },
+    "I2a1b1": {
+     "name": "I2a1b1",
+     "filtered": false,
+     "color": "rgb(202, 89, 229)",
+     "group": null
+    },
+    "R1": {
+     "name": "R1",
+     "filtered": false,
+     "color": "rgb(233, 99, 235)",
+     "group": null
+    },
+    "J2a1a": {
+     "name": "J2a1a",
+     "filtered": false,
+     "color": "rgb(113, 128, 242)",
+     "group": null
+    },
+    "G2a2b2a": {
+     "name": "G2a2b2a",
+     "filtered": false,
+     "color": "rgb(241, 128, 210)",
+     "group": null
+    },
+    "R1b": {
+     "name": "R1b",
+     "filtered": false,
+     "color": "rgb(15, 106, 212)",
+     "group": null
+    },
+    "G2a2b": {
+     "name": "G2a2b",
+     "filtered": false,
+     "color": "rgb(158, 248, 138)",
+     "group": null
+    },
+    "I2a1b1a2a2a": {
+     "name": "I2a1b1a2a2a",
+     "filtered": false,
+     "color": "rgb(49, 168, 102)",
+     "group": null
+    },
+    "G2a2b2b2": {
+     "name": "G2a2b2b2",
+     "filtered": false,
+     "color": "rgb(230, 192, 83)",
+     "group": null
+    },
+    "J2a1a1a2b2a1a": {
+     "name": "J2a1a1a2b2a1a",
+     "filtered": false,
+     "color": "rgb(125, 147, 229)",
+     "group": null
+    },
+    "J1a2a1a2": {
+     "name": "J1a2a1a2",
+     "filtered": false,
+     "color": "rgb(137, 156, 241)",
+     "group": null
+    },
+    "J1a2a1a2d2b": {
+     "name": "J1a2a1a2d2b",
+     "filtered": false,
+     "color": "rgb(228, 173, 134)",
+     "group": null
+    },
+    "T1a1a1b2b2b1a1a2": {
+     "name": "T1a1a1b2b2b1a1a2",
+     "filtered": false,
+     "color": "rgb(8, 200, 223)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c": {
+     "name": "R1b1a1b1a1a2c",
+     "filtered": false,
+     "color": "rgb(153, 212, 221)",
+     "group": null
+    },
+    "G2a2b2a1a1c1": {
+     "name": "G2a2b2a1a1c1",
+     "filtered": false,
+     "color": "rgb(27, 180, 198)",
+     "group": null
+    },
+    "I2a1b1a2b1": {
+     "name": "I2a1b1a2b1",
+     "filtered": false,
+     "color": "rgb(140, 242, 195)",
+     "group": null
+    },
+    "R1a": {
+     "name": "R1a",
+     "filtered": false,
+     "color": "rgb(232, 181, 79)",
+     "group": null
+    },
+    "R1b1a2": {
+     "name": "R1b1a2",
+     "filtered": false,
+     "color": "rgb(239, 152, 205)",
+     "group": null
+    },
+    "R1b1a1": {
+     "name": "R1b1a1",
+     "filtered": false,
+     "color": "rgb(40, 222, 234)",
+     "group": null
+    },
+    "I2a1b": {
+     "name": "I2a1b",
+     "filtered": false,
+     "color": "rgb(10, 131, 248)",
+     "group": null
+    },
+    "C1a2": {
+     "name": "C1a2",
+     "filtered": false,
+     "color": "rgb(128, 196, 74)",
+     "group": null
+    },
+    "A0": {
+     "name": "A0",
+     "filtered": false,
+     "color": "rgb(51, 212, 46)",
+     "group": null
+    },
+    "I2a1b1a2": {
+     "name": "I2a1b1a2",
+     "filtered": false,
+     "color": "rgb(58, 26, 219)",
+     "group": null
+    },
+    "R1a1a1b1a3a4a": {
+     "name": "R1a1a1b1a3a4a",
+     "filtered": false,
+     "color": "rgb(243, 101, 156)",
+     "group": null
+    },
+    "R1a1a": {
+     "name": "R1a1a",
+     "filtered": false,
+     "color": "rgb(168, 71, 195)",
+     "group": null
+    },
+    "J1": {
+     "name": "J1",
+     "filtered": false,
+     "color": "rgb(107, 250, 196)",
+     "group": null
+    },
+    "Q1b1a2": {
+     "name": "Q1b1a2",
+     "filtered": false,
+     "color": "rgb(223, 71, 32)",
+     "group": null
+    },
+    "G2a2a1": {
+     "name": "G2a2a1",
+     "filtered": false,
+     "color": "rgb(58, 246, 161)",
+     "group": null
+    },
+    "H2c1a": {
+     "name": "H2c1a",
+     "filtered": false,
+     "color": "rgb(82, 232, 201)",
+     "group": null
+    },
+    "H": {
+     "name": "H",
+     "filtered": false,
+     "color": "rgb(235, 110, 158)",
+     "group": null
+    },
+    "F": {
+     "name": "F",
+     "filtered": false,
+     "color": "rgb(207, 29, 174)",
+     "group": null
+    },
+    "I2a1b2a1": {
+     "name": "I2a1b2a1",
+     "filtered": false,
+     "color": "rgb(170, 34, 55)",
+     "group": null
+    },
+    "Q1b1": {
+     "name": "Q1b1",
+     "filtered": false,
+     "color": "rgb(120, 212, 242)",
+     "group": null
+    },
+    "R1b1a1a1": {
+     "name": "R1b1a1a1",
+     "filtered": false,
+     "color": "rgb(149, 242, 128)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d5": {
+     "name": "R1a1a1b2a2a1d5",
+     "filtered": false,
+     "color": "rgb(213, 159, 106)",
+     "group": null
+    },
+    "Q1b1a1a1h1a": {
+     "name": "Q1b1a1a1h1a",
+     "filtered": false,
+     "color": "rgb(242, 71, 223)",
+     "group": null
+    },
+    "T1a1a": {
+     "name": "T1a1a",
+     "filtered": false,
+     "color": "rgb(163, 142, 236)",
+     "group": null
+    },
+    "T1a1": {
+     "name": "T1a1",
+     "filtered": false,
+     "color": "rgb(115, 220, 215)",
+     "group": null
+    },
+    "T1a1a1": {
+     "name": "T1a1a1",
+     "filtered": false,
+     "color": "rgb(162, 147, 228)",
+     "group": null
+    },
+    "G2a2a1a2": {
+     "name": "G2a2a1a2",
+     "filtered": false,
+     "color": "rgb(143, 250, 202)",
+     "group": null
+    },
+    "G2a2b2a3": {
+     "name": "G2a2b2a3",
+     "filtered": false,
+     "color": "rgb(167, 227, 220)",
+     "group": null
+    },
+    "J2a1": {
+     "name": "J2a1",
+     "filtered": false,
+     "color": "rgb(98, 12, 238)",
+     "group": null
+    },
+    "G2a2b2a1a1c": {
+     "name": "G2a2b2a1a1c",
+     "filtered": false,
+     "color": "rgb(122, 110, 212)",
+     "group": null
+    },
+    "L1a1": {
+     "name": "L1a1",
+     "filtered": false,
+     "color": "rgb(126, 245, 69)",
+     "group": null
+    },
+    "R1b1a2a": {
+     "name": "R1b1a2a",
+     "filtered": false,
+     "color": "rgb(230, 219, 56)",
+     "group": null
+    },
+    "G2a2a1a": {
+     "name": "G2a2a1a",
+     "filtered": false,
+     "color": "rgb(138, 228, 109)",
+     "group": null
+    },
+    "J2a1a1a2b2a3b1a1b": {
+     "name": "J2a1a1a2b2a3b1a1b",
+     "filtered": false,
+     "color": "rgb(100, 210, 183)",
+     "group": null
+    },
+    "G2a2b2b1": {
+     "name": "G2a2b2b1",
+     "filtered": false,
+     "color": "rgb(230, 176, 186)",
+     "group": null
+    },
+    "J2b1": {
+     "name": "J2b1",
+     "filtered": false,
+     "color": "rgb(108, 61, 245)",
+     "group": null
+    },
+    "G1a1a1b": {
+     "name": "G1a1a1b",
+     "filtered": false,
+     "color": "rgb(115, 247, 113)",
+     "group": null
+    },
+    "C2a1a": {
+     "name": "C2a1a",
+     "filtered": false,
+     "color": "rgb(15, 157, 217)",
+     "group": null
+    },
+    "N1a2": {
+     "name": "N1a2",
+     "filtered": false,
+     "color": "rgb(241, 104, 92)",
+     "group": null
+    },
+    "R": {
+     "name": "R",
+     "filtered": false,
+     "color": "rgb(183, 108, 246)",
+     "group": null
+    },
+    "Q1a1b": {
+     "name": "Q1a1b",
+     "filtered": false,
+     "color": "rgb(206, 131, 21)",
+     "group": null
+    },
+    "I2a1b1a2b1a2e1": {
+     "name": "I2a1b1a2b1a2e1",
+     "filtered": false,
+     "color": "rgb(67, 233, 198)",
+     "group": null
+    },
+    "C1b": {
+     "name": "C1b",
+     "filtered": false,
+     "color": "rgb(52, 70, 248)",
+     "group": null
+    },
+    "NO": {
+     "name": "NO",
+     "filtered": false,
+     "color": "rgb(170, 155, 228)",
+     "group": null
+    },
+    "C1b2a1": {
+     "name": "C1b2a1",
+     "filtered": false,
+     "color": "rgb(41, 169, 225)",
+     "group": null
+    },
+    "I2a1a1": {
+     "name": "I2a1a1",
+     "filtered": false,
+     "color": "rgb(183, 60, 172)",
+     "group": null
+    },
+    "I1a10": {
+     "name": "I1a10",
+     "filtered": false,
+     "color": "rgb(174, 137, 244)",
+     "group": null
+    },
+    "I1": {
+     "name": "I1",
+     "filtered": false,
+     "color": "rgb(22, 227, 222)",
+     "group": null
+    },
+    "I2a1b1a1b1": {
+     "name": "I2a1b1a1b1",
+     "filtered": false,
+     "color": "rgb(55, 129, 180)",
+     "group": null
+    },
+    "S1a1b1d": {
+     "name": "S1a1b1d",
+     "filtered": false,
+     "color": "rgb(133, 215, 137)",
+     "group": null
+    },
+    "J2b2a1": {
+     "name": "J2b2a1",
+     "filtered": false,
+     "color": "rgb(46, 95, 242)",
+     "group": null
+    },
+    "E": {
+     "name": "E",
+     "filtered": false,
+     "color": "rgb(119, 149, 211)",
+     "group": null
+    },
+    "E1b1b1b2a1a1a": {
+     "name": "E1b1b1b2a1a1a",
+     "filtered": false,
+     "color": "rgb(156, 165, 41)",
+     "group": null
+    },
+    "R1a1a1b2a2b1a": {
+     "name": "R1a1a1b2a2b1a",
+     "filtered": false,
+     "color": "rgb(200, 21, 37)",
+     "group": null
+    },
+    "R1b1a1b2a2b1": {
+     "name": "R1b1a1b2a2b1",
+     "filtered": false,
+     "color": "rgb(111, 16, 247)",
+     "group": null
+    },
+    "I2a1b1a1b1b1": {
+     "name": "I2a1b1a1b1b1",
+     "filtered": false,
+     "color": "rgb(214, 240, 20)",
+     "group": null
+    },
+    "I2a1a1a1a2": {
+     "name": "I2a1a1a1a2",
+     "filtered": false,
+     "color": "rgb(162, 51, 68)",
+     "group": null
+    },
+    "I2a1a1a1": {
+     "name": "I2a1a1a1",
+     "filtered": false,
+     "color": "rgb(117, 143, 215)",
+     "group": null
+    },
+    "Q1a2a": {
+     "name": "Q1a2a",
+     "filtered": false,
+     "color": "rgb(210, 48, 43)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d9c": {
+     "name": "R1a1a1b2a2a1d9c",
+     "filtered": false,
+     "color": "rgb(109, 198, 9)",
+     "group": null
+    },
+    "J2a2a1a1a": {
+     "name": "J2a2a1a1a",
+     "filtered": false,
+     "color": "rgb(181, 114, 42)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1d": {
+     "name": "R1b1a1b1a1a2c1a1d",
+     "filtered": false,
+     "color": "rgb(70, 218, 7)",
+     "group": null
+    },
+    "R1b1a1b1a": {
+     "name": "R1b1a1b1a",
+     "filtered": false,
+     "color": "rgb(226, 19, 56)",
+     "group": null
+    },
+    "I2a1b1a2a2a2": {
+     "name": "I2a1b1a2a2a2",
+     "filtered": false,
+     "color": "rgb(169, 119, 224)",
+     "group": null
+    },
+    "R1a1a1b1a3a2a": {
+     "name": "R1a1a1b1a3a2a",
+     "filtered": false,
+     "color": "rgb(196, 52, 31)",
+     "group": null
+    },
+    "N": {
+     "name": "N",
+     "filtered": false,
+     "color": "rgb(216, 131, 81)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a2a3": {
+     "name": "R1b1a1b1a1a2c1a2a3",
+     "filtered": false,
+     "color": "rgb(68, 223, 111)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a7": {
+     "name": "R1b1a1b1a1a2a7",
+     "filtered": false,
+     "color": "rgb(18, 224, 247)",
+     "group": null
+    },
+    "Q1a2a1": {
+     "name": "Q1a2a1",
+     "filtered": false,
+     "color": "rgb(182, 252, 132)",
+     "group": null
+    },
+    "J2a2a1a": {
+     "name": "J2a2a1a",
+     "filtered": false,
+     "color": "rgb(153, 55, 199)",
+     "group": null
+    },
+    "T1a1a1b2": {
+     "name": "T1a1a1b2",
+     "filtered": false,
+     "color": "rgb(147, 73, 202)",
+     "group": null
+    },
+    "I2a1a1a1a1": {
+     "name": "I2a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(215, 231, 172)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d": {
+     "name": "R1a1a1b2a2a1d",
+     "filtered": false,
+     "color": "rgb(178, 230, 146)",
+     "group": null
+    },
+    "R1a1a1b1a2c": {
+     "name": "R1a1a1b1a2c",
+     "filtered": false,
+     "color": "rgb(24, 237, 143)",
+     "group": null
+    },
+    "R1b1a1b1": {
+     "name": "R1b1a1b1",
+     "filtered": false,
+     "color": "rgb(227, 44, 155)",
+     "group": null
+    },
+    "Q1b1a2a": {
+     "name": "Q1b1a2a",
+     "filtered": false,
+     "color": "rgb(104, 189, 45)",
+     "group": null
+    },
+    "I2a1b1a2b": {
+     "name": "I2a1b1a2b",
+     "filtered": false,
+     "color": "rgb(103, 236, 229)",
+     "group": null
+    },
+    "E1b1a2b2": {
+     "name": "E1b1a2b2",
+     "filtered": false,
+     "color": "rgb(236, 103, 149)",
+     "group": null
+    },
+    "G2a2b2a1": {
+     "name": "G2a2b2a1",
+     "filtered": false,
+     "color": "rgb(229, 152, 152)",
+     "group": null
+    },
+    "G2a2a2b": {
+     "name": "G2a2a2b",
+     "filtered": false,
+     "color": "rgb(181, 45, 232)",
+     "group": null
+    },
+    "A1b1": {
+     "name": "A1b1",
+     "filtered": false,
+     "color": "rgb(114, 45, 163)",
+     "group": null
+    },
+    "A1b1b2a": {
+     "name": "A1b1b2a",
+     "filtered": false,
+     "color": "rgb(118, 225, 60)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5": {
+     "name": "R1b1a1b1a1a2c1a5",
+     "filtered": false,
+     "color": "rgb(51, 232, 64)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5c": {
+     "name": "R1b1a1b1a1a2c1a5c",
+     "filtered": false,
+     "color": "rgb(235, 118, 193)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c1a2": {
+     "name": "R1b1a1b1a1a1c1a2",
+     "filtered": false,
+     "color": "rgb(239, 76, 230)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1i": {
+     "name": "R1b1a1b1a1a2c1a1i",
+     "filtered": false,
+     "color": "rgb(248, 182, 137)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1b1": {
+     "name": "R1b1a1b1a1a2c1b1",
+     "filtered": false,
+     "color": "rgb(186, 246, 162)",
+     "group": null
+    },
+    "R1b1a1b1a1a2e1": {
+     "name": "R1b1a1b1a1a2e1",
+     "filtered": false,
+     "color": "rgb(249, 120, 160)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c1a1": {
+     "name": "R1b1a1b1a1a1c1a1",
+     "filtered": false,
+     "color": "rgb(41, 193, 199)",
+     "group": null
+    },
+    "Q1b1a3a1": {
+     "name": "Q1b1a3a1",
+     "filtered": false,
+     "color": "rgb(156, 229, 145)",
+     "group": null
+    },
+    "E1b1b1b2b2a1": {
+     "name": "E1b1b1b2b2a1",
+     "filtered": false,
+     "color": "rgb(219, 190, 87)",
+     "group": null
+    },
+    "Q1b1a1a1i1a": {
+     "name": "Q1b1a1a1i1a",
+     "filtered": false,
+     "color": "rgb(45, 181, 181)",
+     "group": null
+    },
+    "R1a1a1b1a2b3a": {
+     "name": "R1a1a1b1a2b3a",
+     "filtered": false,
+     "color": "rgb(158, 177, 226)",
+     "group": null
+    },
+    "J2a1a1b1": {
+     "name": "J2a1a1b1",
+     "filtered": false,
+     "color": "rgb(200, 119, 20)",
+     "group": null
+    },
+    "R2a2b1b2b": {
+     "name": "R2a2b1b2b",
+     "filtered": false,
+     "color": "rgb(169, 66, 49)",
+     "group": null
+    },
+    "H1a1a4b": {
+     "name": "H1a1a4b",
+     "filtered": false,
+     "color": "rgb(124, 232, 80)",
+     "group": null
+    },
+    "G2a2b2a1a1c1a1a2": {
+     "name": "G2a2b2a1a1c1a1a2",
+     "filtered": false,
+     "color": "rgb(144, 49, 172)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1a": {
+     "name": "R1b1a1b1a1a2a1a",
+     "filtered": false,
+     "color": "rgb(205, 12, 125)",
+     "group": null
+    },
+    "E1b1b1a1b1": {
+     "name": "E1b1b1a1b1",
+     "filtered": false,
+     "color": "rgb(192, 223, 153)",
+     "group": null
+    },
+    "G2a2b2b1a1a": {
+     "name": "G2a2b2b1a1a",
+     "filtered": false,
+     "color": "rgb(116, 127, 220)",
+     "group": null
+    },
+    "R1b1a": {
+     "name": "R1b1a",
+     "filtered": false,
+     "color": "rgb(220, 108, 164)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a": {
+     "name": "R1b1a1b1a1a2a",
+     "filtered": false,
+     "color": "rgb(103, 127, 245)",
+     "group": null
+    },
+    "I2a1b2": {
+     "name": "I2a1b2",
+     "filtered": false,
+     "color": "rgb(151, 216, 123)",
+     "group": null
+    },
+    "I2a1b1a1a1": {
+     "name": "I2a1b1a1a1",
+     "filtered": false,
+     "color": "rgb(44, 24, 229)",
+     "group": null
+    },
+    "I2a1b1a1a1b": {
+     "name": "I2a1b1a1a1b",
+     "filtered": false,
+     "color": "rgb(55, 95, 168)",
+     "group": null
+    },
+    "Q1b2a1a": {
+     "name": "Q1b2a1a",
+     "filtered": false,
+     "color": "rgb(40, 200, 104)",
+     "group": null
+    },
+    "R1a1a1b2a2a3b": {
+     "name": "R1a1a1b2a2a3b",
+     "filtered": false,
+     "color": "rgb(175, 88, 224)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1a1a1": {
+     "name": "R1b1a1b1a1a2a1a1a1",
+     "filtered": false,
+     "color": "rgb(17, 194, 75)",
+     "group": null
+    },
+    "O2a2b2a2b": {
+     "name": "O2a2b2a2b",
+     "filtered": false,
+     "color": "rgb(123, 43, 164)",
+     "group": null
+    },
+    "R1b1b1": {
+     "name": "R1b1b1",
+     "filtered": false,
+     "color": "rgb(194, 34, 238)",
+     "group": null
+    },
+    "R1a1a1b2a2a1": {
+     "name": "R1a1a1b2a2a1",
+     "filtered": false,
+     "color": "rgb(240, 92, 71)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2": {
+     "name": "J1a2a1a2d2b2b2",
+     "filtered": false,
+     "color": "rgb(187, 100, 39)",
+     "group": null
+    },
+    "E1b1b1b2a1a1a1a1f": {
+     "name": "E1b1b1b2a1a1a1a1f",
+     "filtered": false,
+     "color": "rgb(233, 178, 52)",
+     "group": null
+    },
+    "J2a1a1a2b2a2b3a": {
+     "name": "J2a1a1a2b2a2b3a",
+     "filtered": false,
+     "color": "rgb(172, 171, 230)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c": {
+     "name": "R1b1a1b1a1a1c",
+     "filtered": false,
+     "color": "rgb(11, 184, 195)",
+     "group": null
+    },
+    "C1a2a": {
+     "name": "C1a2a",
+     "filtered": false,
+     "color": "rgb(215, 236, 149)",
+     "group": null
+    },
+    "J2": {
+     "name": "J2",
+     "filtered": false,
+     "color": "rgb(232, 207, 146)",
+     "group": null
+    },
+    "L1a2a": {
+     "name": "L1a2a",
+     "filtered": false,
+     "color": "rgb(248, 106, 123)",
+     "group": null
+    },
+    "J1a2a1b1a": {
+     "name": "J1a2a1b1a",
+     "filtered": false,
+     "color": "rgb(223, 110, 130)",
+     "group": null
+    },
+    "G2a2b2a1a": {
+     "name": "G2a2b2a1a",
+     "filtered": false,
+     "color": "rgb(51, 241, 25)",
+     "group": null
+    },
+    "T1a3b2": {
+     "name": "T1a3b2",
+     "filtered": false,
+     "color": "rgb(122, 239, 158)",
+     "group": null
+    },
+    "I2a1b1a1a2": {
+     "name": "I2a1b1a1a2",
+     "filtered": false,
+     "color": "rgb(39, 129, 170)",
+     "group": null
+    },
+    "G2a2b2a3b": {
+     "name": "G2a2b2a3b",
+     "filtered": false,
+     "color": "rgb(185, 50, 127)",
+     "group": null
+    },
+    "L": {
+     "name": "L",
+     "filtered": false,
+     "color": "rgb(62, 237, 108)",
+     "group": null
+    },
+    "K2b": {
+     "name": "K2b",
+     "filtered": false,
+     "color": "rgb(112, 208, 62)",
+     "group": null
+    },
+    "J2b2a1a1a1b": {
+     "name": "J2b2a1a1a1b",
+     "filtered": false,
+     "color": "rgb(226, 103, 173)",
+     "group": null
+    },
+    "M": {
+     "name": "M",
+     "filtered": false,
+     "color": "rgb(156, 245, 223)",
+     "group": null
+    },
+    "Q1b2b1b2a": {
+     "name": "Q1b2b1b2a",
+     "filtered": false,
+     "color": "rgb(196, 67, 242)",
+     "group": null
+    },
+    "G2a2a1a2a1a": {
+     "name": "G2a2a1a2a1a",
+     "filtered": false,
+     "color": "rgb(231, 82, 115)",
+     "group": null
+    },
+    "I2a1b1a": {
+     "name": "I2a1b1a",
+     "filtered": false,
+     "color": "rgb(229, 90, 217)",
+     "group": null
+    },
+    "J2a1a2b2": {
+     "name": "J2a1a2b2",
+     "filtered": false,
+     "color": "rgb(212, 205, 34)",
+     "group": null
+    },
+    "I2a1a1b1": {
+     "name": "I2a1a1b1",
+     "filtered": false,
+     "color": "rgb(81, 175, 212)",
+     "group": null
+    },
+    "I2a2a": {
+     "name": "I2a2a",
+     "filtered": false,
+     "color": "rgb(73, 208, 66)",
+     "group": null
+    },
+    "I2a1a1a1a1b1b": {
+     "name": "I2a1a1a1a1b1b",
+     "filtered": false,
+     "color": "rgb(107, 217, 151)",
+     "group": null
+    },
+    "I2a1b1b1a1": {
+     "name": "I2a1b1b1a1",
+     "filtered": false,
+     "color": "rgb(18, 237, 228)",
+     "group": null
+    },
+    "O1a": {
+     "name": "O1a",
+     "filtered": false,
+     "color": "rgb(230, 179, 126)",
+     "group": null
+    },
+    "G2a2b2b1a1b": {
+     "name": "G2a2b2b1a1b",
+     "filtered": false,
+     "color": "rgb(78, 35, 201)",
+     "group": null
+    },
+    "O1a2": {
+     "name": "O1a2",
+     "filtered": false,
+     "color": "rgb(236, 141, 69)",
+     "group": null
+    },
+    "J2a1a1b1a1a": {
+     "name": "J2a1a1b1a1a",
+     "filtered": false,
+     "color": "rgb(166, 165, 53)",
+     "group": null
+    },
+    "L1a": {
+     "name": "L1a",
+     "filtered": false,
+     "color": "rgb(225, 167, 237)",
+     "group": null
+    },
+    "R1b1a1b1a1a2d1": {
+     "name": "R1b1a1b1a1a2d1",
+     "filtered": false,
+     "color": "rgb(71, 212, 201)",
+     "group": null
+    },
+    "C2a1a1b1b1": {
+     "name": "C2a1a1b1b1",
+     "filtered": false,
+     "color": "rgb(224, 120, 198)",
+     "group": null
+    },
+    "Q1b1a3a1a": {
+     "name": "Q1b1a3a1a",
+     "filtered": false,
+     "color": "rgb(115, 232, 123)",
+     "group": null
+    },
+    "J2b2b1": {
+     "name": "J2b2b1",
+     "filtered": false,
+     "color": "rgb(72, 202, 119)",
+     "group": null
+    },
+    "H1a1a": {
+     "name": "H1a1a",
+     "filtered": false,
+     "color": "rgb(102, 250, 191)",
+     "group": null
+    },
+    "C1b1a1a1": {
+     "name": "C1b1a1a1",
+     "filtered": false,
+     "color": "rgb(238, 239, 152)",
+     "group": null
+    },
+    "O1a1a1a1": {
+     "name": "O1a1a1a1",
+     "filtered": false,
+     "color": "rgb(48, 173, 172)",
+     "group": null
+    },
+    "Q1a1": {
+     "name": "Q1a1",
+     "filtered": false,
+     "color": "rgb(206, 170, 235)",
+     "group": null
+    },
+    "Q1a1a": {
+     "name": "Q1a1a",
+     "filtered": false,
+     "color": "rgb(241, 150, 193)",
+     "group": null
+    },
+    "Q1b1a3": {
+     "name": "Q1b1a3",
+     "filtered": false,
+     "color": "rgb(229, 185, 127)",
+     "group": null
+    },
+    "Q1b1a3a": {
+     "name": "Q1b1a3a",
+     "filtered": false,
+     "color": "rgb(131, 117, 248)",
+     "group": null
+    },
+    "O2a2b2b": {
+     "name": "O2a2b2b",
+     "filtered": false,
+     "color": "rgb(166, 113, 231)",
+     "group": null
+    },
+    "J1a2b2": {
+     "name": "J1a2b2",
+     "filtered": false,
+     "color": "rgb(89, 136, 221)",
+     "group": null
+    },
+    "O2a2a1a2": {
+     "name": "O2a2a1a2",
+     "filtered": false,
+     "color": "rgb(177, 223, 118)",
+     "group": null
+    },
+    "H1a1b1": {
+     "name": "H1a1b1",
+     "filtered": false,
+     "color": "rgb(88, 243, 137)",
+     "group": null
+    },
+    "J": {
+     "name": "J",
+     "filtered": false,
+     "color": "rgb(236, 237, 123)",
+     "group": null
+    },
+    "J1a2b1": {
+     "name": "J1a2b1",
+     "filtered": false,
+     "color": "rgb(190, 91, 44)",
+     "group": null
+    },
+    "HIJK": {
+     "name": "HIJK",
+     "filtered": false,
+     "color": "rgb(233, 141, 181)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2c4d": {
+     "name": "J1a2a1a2d2b2b2c4d",
+     "filtered": false,
+     "color": "rgb(242, 76, 127)",
+     "group": null
+    },
+    "I2a1a2b1a1a1a1c": {
+     "name": "I2a1a2b1a1a1a1c",
+     "filtered": false,
+     "color": "rgb(157, 233, 189)",
+     "group": null
+    },
+    "A1b": {
+     "name": "A1b",
+     "filtered": false,
+     "color": "rgb(81, 132, 202)",
+     "group": null
+    },
+    "E1b1b1b1a1": {
+     "name": "E1b1b1b1a1",
+     "filtered": false,
+     "color": "rgb(57, 171, 215)",
+     "group": null
+    },
+    "J2b2a2b": {
+     "name": "J2b2a2b",
+     "filtered": false,
+     "color": "rgb(31, 20, 241)",
+     "group": null
+    },
+    "O1b1a1a1": {
+     "name": "O1b1a1a1",
+     "filtered": false,
+     "color": "rgb(218, 182, 119)",
+     "group": null
+    },
+    "R1a1a1b2a1a1a1f": {
+     "name": "R1a1a1b2a1a1a1f",
+     "filtered": false,
+     "color": "rgb(226, 106, 13)",
+     "group": null
+    },
+    "E1b1b1b2a1": {
+     "name": "E1b1b1b2a1",
+     "filtered": false,
+     "color": "rgb(41, 205, 50)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d6": {
+     "name": "R1a1a1b2a2a1d6",
+     "filtered": false,
+     "color": "rgb(157, 85, 209)",
+     "group": null
+    },
+    "C2a1a1": {
+     "name": "C2a1a1",
+     "filtered": false,
+     "color": "rgb(21, 247, 128)",
+     "group": null
+    },
+    "GHIJK": {
+     "name": "GHIJK",
+     "filtered": false,
+     "color": "rgb(72, 219, 62)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1b1a1": {
+     "name": "R1b1a1b1a1a2a1b1a1",
+     "filtered": false,
+     "color": "rgb(206, 165, 76)",
+     "group": null
+    },
+    "O2a2b": {
+     "name": "O2a2b",
+     "filtered": false,
+     "color": "rgb(237, 33, 68)",
+     "group": null
+    },
+    "O1a1a1a": {
+     "name": "O1a1a1a",
+     "filtered": false,
+     "color": "rgb(118, 135, 220)",
+     "group": null
+    },
+    "R1b1a1a": {
+     "name": "R1b1a1a",
+     "filtered": false,
+     "color": "rgb(251, 136, 250)",
+     "group": null
+    },
+    "R1a1a1b1a2b": {
+     "name": "R1a1a1b1a2b",
+     "filtered": false,
+     "color": "rgb(122, 179, 244)",
+     "group": null
+    },
+    "I2a1a1b1a": {
+     "name": "I2a1a1b1a",
+     "filtered": false,
+     "color": "rgb(10, 164, 214)",
+     "group": null
+    },
+    "R1a1a1b1a2b4": {
+     "name": "R1a1a1b1a2b4",
+     "filtered": false,
+     "color": "rgb(225, 101, 247)",
+     "group": null
+    },
+    "E1b": {
+     "name": "E1b",
+     "filtered": false,
+     "color": "rgb(112, 227, 58)",
+     "group": null
+    },
+    "J1a2a1a2d2b2a2": {
+     "name": "J1a2a1a2d2b2a2",
+     "filtered": false,
+     "color": "rgb(236, 220, 162)",
+     "group": null
+    },
+    "G2a2a1a2a1": {
+     "name": "G2a2a1a2a1",
+     "filtered": false,
+     "color": "rgb(163, 197, 54)",
+     "group": null
+    },
+    "J2a2a1a1a2a": {
+     "name": "J2a2a1a1a2a",
+     "filtered": false,
+     "color": "rgb(124, 234, 133)",
+     "group": null
+    },
+    "R2a2b1b2a1a": {
+     "name": "R2a2b1b2a1a",
+     "filtered": false,
+     "color": "rgb(223, 110, 225)",
+     "group": null
+    },
+    "O": {
+     "name": "O",
+     "filtered": false,
+     "color": "rgb(181, 249, 151)",
+     "group": null
+    },
+    "O1a1a1a1a1a": {
+     "name": "O1a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(228, 76, 141)",
+     "group": null
+    },
+    "Q1a2a2b": {
+     "name": "Q1a2a2b",
+     "filtered": false,
+     "color": "rgb(211, 66, 37)",
+     "group": null
+    },
+    "IJK": {
+     "name": "IJK",
+     "filtered": false,
+     "color": "rgb(47, 58, 239)",
+     "group": null
+    },
+    "A1b1b2b": {
+     "name": "A1b1b2b",
+     "filtered": false,
+     "color": "rgb(235, 142, 188)",
+     "group": null
+    },
+    "E1b1a1a1a1a3": {
+     "name": "E1b1a1a1a1a3",
+     "filtered": false,
+     "color": "rgb(31, 202, 190)",
+     "group": null
+    },
+    "E1b1b1a1b2": {
+     "name": "E1b1b1a1b2",
+     "filtered": false,
+     "color": "rgb(71, 136, 215)",
+     "group": null
+    },
+    "E1b1b1b2b2a1a": {
+     "name": "E1b1b1b2b2a1a",
+     "filtered": false,
+     "color": "rgb(46, 92, 177)",
+     "group": null
+    },
+    "E1b1b1a1a1b1a": {
+     "name": "E1b1b1a1a1b1a",
+     "filtered": false,
+     "color": "rgb(234, 140, 208)",
+     "group": null
+    },
+    "E2a": {
+     "name": "E2a",
+     "filtered": false,
+     "color": "rgb(228, 243, 100)",
+     "group": null
+    },
+    "I2a1b2a": {
+     "name": "I2a1b2a",
+     "filtered": false,
+     "color": "rgb(51, 124, 248)",
+     "group": null
+    },
+    "N1a1a1a1a4a": {
+     "name": "N1a1a1a1a4a",
+     "filtered": false,
+     "color": "rgb(38, 192, 122)",
+     "group": null
+    },
+    "J2a1a1a2b2": {
+     "name": "J2a1a1a2b2",
+     "filtered": false,
+     "color": "rgb(226, 115, 244)",
+     "group": null
+    },
+    "J1a2a1a1": {
+     "name": "J1a2a1a1",
+     "filtered": false,
+     "color": "rgb(228, 181, 144)",
+     "group": null
+    },
+    "L1a2a1b": {
+     "name": "L1a2a1b",
+     "filtered": false,
+     "color": "rgb(76, 72, 198)",
+     "group": null
+    },
+    "R2a2b1b2b2a2": {
+     "name": "R2a2b1b2b2a2",
+     "filtered": false,
+     "color": "rgb(183, 60, 140)",
+     "group": null
+    },
+    "G2a2a1a1": {
+     "name": "G2a2a1a1",
+     "filtered": false,
+     "color": "rgb(120, 188, 229)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b1b4b": {
+     "name": "R1b1a1b1a1a1c2b1b4b",
+     "filtered": false,
+     "color": "rgb(232, 102, 120)",
+     "group": null
+    },
+    "Q2b2a": {
+     "name": "Q2b2a",
+     "filtered": false,
+     "color": "rgb(45, 236, 216)",
+     "group": null
+    },
+    "R1a1a1b2a2a1c3a1": {
+     "name": "R1a1a1b2a2a1c3a1",
+     "filtered": false,
+     "color": "rgb(132, 126, 236)",
+     "group": null
+    },
+    "R1a1a1b2a2b2b1": {
+     "name": "R1a1a1b2a2b2b1",
+     "filtered": false,
+     "color": "rgb(247, 146, 203)",
+     "group": null
+    },
+    "R1a1a1b2a2b2b": {
+     "name": "R1a1a1b2a2b2b",
+     "filtered": false,
+     "color": "rgb(9, 205, 219)",
+     "group": null
+    },
+    "Q1b1b1": {
+     "name": "Q1b1b1",
+     "filtered": false,
+     "color": "rgb(227, 8, 115)",
+     "group": null
+    },
+    "N1a1a1a1a": {
+     "name": "N1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(222, 156, 217)",
+     "group": null
+    },
+    "G2a2b2a1a1a1b3": {
+     "name": "G2a2b2a1a1a1b3",
+     "filtered": false,
+     "color": "rgb(226, 222, 147)",
+     "group": null
+    },
+    "G2a2b2b1a1a2": {
+     "name": "G2a2b2b1a1a2",
+     "filtered": false,
+     "color": "rgb(243, 194, 148)",
+     "group": null
+    },
+    "O1b1a1b1a1b1": {
+     "name": "O1b1a1b1a1b1",
+     "filtered": false,
+     "color": "rgb(34, 220, 12)",
+     "group": null
+    },
+    "R1a1a1b2a2b1d1": {
+     "name": "R1a1a1b2a2b1d1",
+     "filtered": false,
+     "color": "rgb(50, 149, 191)",
+     "group": null
+    },
+    "C2a1a3a": {
+     "name": "C2a1a3a",
+     "filtered": false,
+     "color": "rgb(167, 239, 178)",
+     "group": null
+    },
+    "R1a1a1b1a2a1a1a1": {
+     "name": "R1a1a1b1a2a1a1a1",
+     "filtered": false,
+     "color": "rgb(236, 247, 24)",
+     "group": null
+    },
+    "I2a1b1a2a1a1": {
+     "name": "I2a1b1a2a1a1",
+     "filtered": false,
+     "color": "rgb(131, 223, 147)",
+     "group": null
+    },
+    "I2a2b": {
+     "name": "I2a2b",
+     "filtered": false,
+     "color": "rgb(153, 123, 243)",
+     "group": null
+    },
+    "R1b2b": {
+     "name": "R1b2b",
+     "filtered": false,
+     "color": "rgb(235, 172, 192)",
+     "group": null
+    },
+    "O2a1b1a1a1a1b1a1a1": {
+     "name": "O2a1b1a1a1a1b1a1a1",
+     "filtered": false,
+     "color": "rgb(98, 186, 219)",
+     "group": null
+    },
+    "L2": {
+     "name": "L2",
+     "filtered": false,
+     "color": "rgb(32, 206, 23)",
+     "group": null
+    },
+    "R1a1a1b2a2a3b1": {
+     "name": "R1a1a1b2a2a3b1",
+     "filtered": false,
+     "color": "rgb(163, 251, 134)",
+     "group": null
+    },
+    "Q1a2a1a": {
+     "name": "Q1a2a1a",
+     "filtered": false,
+     "color": "rgb(248, 230, 135)",
+     "group": null
+    },
+    "R1b2b2": {
+     "name": "R1b2b2",
+     "filtered": false,
+     "color": "rgb(166, 180, 236)",
+     "group": null
+    },
+    "R1b1a1a1a": {
+     "name": "R1b1a1a1a",
+     "filtered": false,
+     "color": "rgb(44, 144, 202)",
+     "group": null
+    },
+    "R1a1a2": {
+     "name": "R1a1a2",
+     "filtered": false,
+     "color": "rgb(241, 109, 246)",
+     "group": null
+    },
+    "R1b1a1a1b": {
+     "name": "R1b1a1a1b",
+     "filtered": false,
+     "color": "rgb(148, 217, 248)",
+     "group": null
+    },
+    "N1a1a1a1a3a2": {
+     "name": "N1a1a1a1a3a2",
+     "filtered": false,
+     "color": "rgb(228, 228, 134)",
+     "group": null
+    },
+    "J2a1a1b": {
+     "name": "J2a1a1b",
+     "filtered": false,
+     "color": "rgb(124, 126, 214)",
+     "group": null
+    },
+    "J2a1a1a2b2a2b2": {
+     "name": "J2a1a1a2b2a2b2",
+     "filtered": false,
+     "color": "rgb(63, 188, 110)",
+     "group": null
+    },
+    "J2a1a1a2b2a2b2b": {
+     "name": "J2a1a1a2b2a2b2b",
+     "filtered": false,
+     "color": "rgb(177, 83, 245)",
+     "group": null
+    },
+    "G2a2b1": {
+     "name": "G2a2b1",
+     "filtered": false,
+     "color": "rgb(129, 168, 226)",
+     "group": null
+    },
+    "J2a1a1a2a": {
+     "name": "J2a1a1a2a",
+     "filtered": false,
+     "color": "rgb(225, 212, 10)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c1a": {
+     "name": "R1b1a1b1a1a1c1a",
+     "filtered": false,
+     "color": "rgb(118, 83, 244)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b": {
+     "name": "R1b1a1b1a1a1c2b",
+     "filtered": false,
+     "color": "rgb(250, 145, 97)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c1a2b2": {
+     "name": "R1b1a1b1a1a1c1a2b2",
+     "filtered": false,
+     "color": "rgb(147, 79, 246)",
+     "group": null
+    },
+    "G2a2b2a1a1b": {
+     "name": "G2a2b2a1a1b",
+     "filtered": false,
+     "color": "rgb(198, 229, 98)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a1a2": {
+     "name": "G2a2b2a1a1b1a1a1a2",
+     "filtered": false,
+     "color": "rgb(226, 101, 131)",
+     "group": null
+    },
+    "R1b2a": {
+     "name": "R1b2a",
+     "filtered": false,
+     "color": "rgb(209, 228, 172)",
+     "group": null
+    },
+    "J2a2a1a1a2": {
+     "name": "J2a2a1a1a2",
+     "filtered": false,
+     "color": "rgb(213, 230, 89)",
+     "group": null
+    },
+    "J2a1a1a2b2a3b": {
+     "name": "J2a1a1a2b2a3b",
+     "filtered": false,
+     "color": "rgb(104, 32, 182)",
+     "group": null
+    },
+    "Q1a": {
+     "name": "Q1a",
+     "filtered": false,
+     "color": "rgb(182, 159, 32)",
+     "group": null
+    },
+    "J2a1a1b2a1b1b2": {
+     "name": "J2a1a1b2a1b1b2",
+     "filtered": false,
+     "color": "rgb(192, 138, 232)",
+     "group": null
+    },
+    "Q1b2b1b": {
+     "name": "Q1b2b1b",
+     "filtered": false,
+     "color": "rgb(138, 238, 218)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b2b": {
+     "name": "R1b1a1b1a1a2b2b",
+     "filtered": false,
+     "color": "rgb(73, 125, 214)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a7a": {
+     "name": "N1a1a1a1a1a1a7a",
+     "filtered": false,
+     "color": "rgb(247, 155, 223)",
+     "group": null
+    },
+    "I1a1b1a4a1": {
+     "name": "I1a1b1a4a1",
+     "filtered": false,
+     "color": "rgb(35, 142, 175)",
+     "group": null
+    },
+    "N1a1a1a1a1a1": {
+     "name": "N1a1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(108, 235, 121)",
+     "group": null
+    },
+    "I1a1a1": {
+     "name": "I1a1a1",
+     "filtered": false,
+     "color": "rgb(206, 76, 120)",
+     "group": null
+    },
+    "I2a1b1a1a1b1a": {
+     "name": "I2a1b1a1a1b1a",
+     "filtered": false,
+     "color": "rgb(112, 48, 172)",
+     "group": null
+    },
+    "R1a1a1b2f": {
+     "name": "R1a1a1b2f",
+     "filtered": false,
+     "color": "rgb(163, 224, 165)",
+     "group": null
+    },
+    "I1a1b1b": {
+     "name": "I1a1b1b",
+     "filtered": false,
+     "color": "rgb(196, 190, 40)",
+     "group": null
+    },
+    "J2b2a2b2": {
+     "name": "J2b2a2b2",
+     "filtered": false,
+     "color": "rgb(151, 48, 231)",
+     "group": null
+    },
+    "N1a1a1": {
+     "name": "N1a1a1",
+     "filtered": false,
+     "color": "rgb(252, 154, 204)",
+     "group": null
+    },
+    "I2a1b1a2a2a1": {
+     "name": "I2a1b1a2a2a1",
+     "filtered": false,
+     "color": "rgb(202, 233, 8)",
+     "group": null
+    },
+    "H1a1a4": {
+     "name": "H1a1a4",
+     "filtered": false,
+     "color": "rgb(47, 189, 190)",
+     "group": null
+    },
+    "J2a1a1a2b1b": {
+     "name": "J2a1a1a2b1b",
+     "filtered": false,
+     "color": "rgb(173, 42, 173)",
+     "group": null
+    },
+    "J2a1a1a2b1b4": {
+     "name": "J2a1a1a2b1b4",
+     "filtered": false,
+     "color": "rgb(22, 196, 10)",
+     "group": null
+    },
+    "Q1b1a2b": {
+     "name": "Q1b1a2b",
+     "filtered": false,
+     "color": "rgb(139, 88, 223)",
+     "group": null
+    },
+    "T1a2b1": {
+     "name": "T1a2b1",
+     "filtered": false,
+     "color": "rgb(224, 139, 34)",
+     "group": null
+    },
+    "I1a3a1": {
+     "name": "I1a3a1",
+     "filtered": false,
+     "color": "rgb(148, 181, 251)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2a": {
+     "name": "R1b1a1b1a1a1c2a",
+     "filtered": false,
+     "color": "rgb(113, 177, 55)",
+     "group": null
+    },
+    "R1b1a1b1a1a2f": {
+     "name": "R1b1a1b1a1a2f",
+     "filtered": false,
+     "color": "rgb(134, 156, 224)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2a1c": {
+     "name": "R1b1a1b1a1a1c2a1c",
+     "filtered": false,
+     "color": "rgb(178, 142, 239)",
+     "group": null
+    },
+    "I2a1b1a2b1a2a2": {
+     "name": "I2a1b1a2b1a2a2",
+     "filtered": false,
+     "color": "rgb(155, 101, 210)",
+     "group": null
+    },
+    "E1b1b1a1b2a4b": {
+     "name": "E1b1b1a1b2a4b",
+     "filtered": false,
+     "color": "rgb(231, 136, 203)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b2b1a1a": {
+     "name": "R1b1a1b1a1a1c2b2b1a1a",
+     "filtered": false,
+     "color": "rgb(217, 179, 112)",
+     "group": null
+    },
+    "R1a1a1b1a3a1b3e5": {
+     "name": "R1a1a1b1a3a1b3e5",
+     "filtered": false,
+     "color": "rgb(192, 225, 56)",
+     "group": null
+    },
+    "I2a1b1a2b1a2b1": {
+     "name": "I2a1b1a2b1a2b1",
+     "filtered": false,
+     "color": "rgb(53, 52, 166)",
+     "group": null
+    },
+    "I2a1b1a1b1a1a": {
+     "name": "I2a1b1a1b1a1a",
+     "filtered": false,
+     "color": "rgb(225, 172, 151)",
+     "group": null
+    },
+    "I1a1b1a1a1": {
+     "name": "I1a1b1a1a1",
+     "filtered": false,
+     "color": "rgb(50, 98, 230)",
+     "group": null
+    },
+    "D": {
+     "name": "D",
+     "filtered": false,
+     "color": "rgb(104, 188, 233)",
+     "group": null
+    },
+    "N1b": {
+     "name": "N1b",
+     "filtered": false,
+     "color": "rgb(173, 143, 221)",
+     "group": null
+    },
+    "N1b2": {
+     "name": "N1b2",
+     "filtered": false,
+     "color": "rgb(40, 224, 66)",
+     "group": null
+    },
+    "O2a2b1a2a1a": {
+     "name": "O2a2b1a2a1a",
+     "filtered": false,
+     "color": "rgb(226, 230, 67)",
+     "group": null
+    },
+    "R1a1a1b2h": {
+     "name": "R1a1a1b2h",
+     "filtered": false,
+     "color": "rgb(82, 247, 217)",
+     "group": null
+    },
+    "R1a1a1b2a2a1d1": {
+     "name": "R1a1a1b2a2a1d1",
+     "filtered": false,
+     "color": "rgb(38, 208, 52)",
+     "group": null
+    },
+    "I2a1b1a2a1b": {
+     "name": "I2a1b1a2a1b",
+     "filtered": false,
+     "color": "rgb(239, 233, 164)",
+     "group": null
+    },
+    "R1a1a1b2a2a3a1": {
+     "name": "R1a1a1b2a2a3a1",
+     "filtered": false,
+     "color": "rgb(236, 48, 180)",
+     "group": null
+    },
+    "E1b1a1a1": {
+     "name": "E1b1a1a1",
+     "filtered": false,
+     "color": "rgb(239, 90, 86)",
+     "group": null
+    },
+    "G2a2b2a1a1": {
+     "name": "G2a2b2a1a1",
+     "filtered": false,
+     "color": "rgb(159, 109, 211)",
+     "group": null
+    },
+    "P": {
+     "name": "P",
+     "filtered": false,
+     "color": "rgb(165, 178, 228)",
+     "group": null
+    },
+    "DE": {
+     "name": "DE",
+     "filtered": false,
+     "color": "rgb(224, 211, 29)",
+     "group": null
+    },
+    "B2b1a1": {
+     "name": "B2b1a1",
+     "filtered": false,
+     "color": "rgb(243, 187, 101)",
+     "group": null
+    },
+    "E1b1b1b2b2": {
+     "name": "E1b1b1b2b2",
+     "filtered": false,
+     "color": "rgb(230, 204, 145)",
+     "group": null
+    },
+    "B2b1": {
+     "name": "B2b1",
+     "filtered": false,
+     "color": "rgb(91, 218, 172)",
+     "group": null
+    },
+    "D1a2a1c1": {
+     "name": "D1a2a1c1",
+     "filtered": false,
+     "color": "rgb(233, 112, 164)",
+     "group": null
+    },
+    "Q1b1a2a1": {
+     "name": "Q1b1a2a1",
+     "filtered": false,
+     "color": "rgb(170, 122, 249)",
+     "group": null
+    },
+    "C2a": {
+     "name": "C2a",
+     "filtered": false,
+     "color": "rgb(93, 225, 99)",
+     "group": null
+    },
+    "I2a1b1a1b2": {
+     "name": "I2a1b1a1b2",
+     "filtered": false,
+     "color": "rgb(233, 104, 14)",
+     "group": null
+    },
+    "B2b": {
+     "name": "B2b",
+     "filtered": false,
+     "color": "rgb(238, 191, 75)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1a": {
+     "name": "R1b1a1b1a1a2c1a1a",
+     "filtered": false,
+     "color": "rgb(160, 195, 225)",
+     "group": null
+    },
+    "R1a1a1b1a3a2b": {
+     "name": "R1a1a1b1a3a2b",
+     "filtered": false,
+     "color": "rgb(32, 167, 248)",
+     "group": null
+    },
+    "I1a1b1a4a2f1a1a7": {
+     "name": "I1a1b1a4a2f1a1a7",
+     "filtered": false,
+     "color": "rgb(230, 109, 81)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1h": {
+     "name": "R1b1a1b1a1a2c1a1h",
+     "filtered": false,
+     "color": "rgb(131, 218, 140)",
+     "group": null
+    },
+    "I1a2a1a1a": {
+     "name": "I1a2a1a1a",
+     "filtered": false,
+     "color": "rgb(222, 97, 207)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5b1a1": {
+     "name": "R1b1a1b1a1a2c1a5b1a1",
+     "filtered": false,
+     "color": "rgb(228, 127, 120)",
+     "group": null
+    },
+    "I1a1b1a4a2": {
+     "name": "I1a1b1a4a2",
+     "filtered": false,
+     "color": "rgb(185, 94, 222)",
+     "group": null
+    },
+    "R1b1a1b1a1a2d1a1": {
+     "name": "R1b1a1b1a1a2d1a1",
+     "filtered": false,
+     "color": "rgb(175, 146, 32)",
+     "group": null
+    },
+    "R1a1a1b1a3a1a10": {
+     "name": "R1a1a1b1a3a1a10",
+     "filtered": false,
+     "color": "rgb(250, 155, 96)",
+     "group": null
+    },
+    "R1a1a1b1a3a1b": {
+     "name": "R1a1a1b1a3a1b",
+     "filtered": false,
+     "color": "rgb(227, 76, 159)",
+     "group": null
+    },
+    "T1a1a1b2b2b1a1a1": {
+     "name": "T1a1a1b2b2b1a1a1",
+     "filtered": false,
+     "color": "rgb(201, 120, 224)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1b3": {
+     "name": "R1b1a1b1a1a2a1b3",
+     "filtered": false,
+     "color": "rgb(31, 236, 67)",
+     "group": null
+    },
+    "T1a2": {
+     "name": "T1a2",
+     "filtered": false,
+     "color": "rgb(101, 212, 115)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a": {
+     "name": "N1a1a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(84, 200, 181)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a1b2": {
+     "name": "N1a1a1a1a1a1a1b2",
+     "filtered": false,
+     "color": "rgb(10, 224, 189)",
+     "group": null
+    },
+    "K": {
+     "name": "K",
+     "filtered": false,
+     "color": "rgb(212, 218, 139)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a1b": {
+     "name": "N1a1a1a1a1a1a1b",
+     "filtered": false,
+     "color": "rgb(203, 50, 228)",
+     "group": null
+    },
+    "R1a1a1a1d2": {
+     "name": "R1a1a1a1d2",
+     "filtered": false,
+     "color": "rgb(154, 238, 84)",
+     "group": null
+    },
+    "R1a1a1b2c": {
+     "name": "R1a1a1b2c",
+     "filtered": false,
+     "color": "rgb(208, 245, 124)",
+     "group": null
+    },
+    "I2a1a2b1": {
+     "name": "I2a1a2b1",
+     "filtered": false,
+     "color": "rgb(234, 113, 191)",
+     "group": null
+    },
+    "I2a1b1a1a": {
+     "name": "I2a1b1a1a",
+     "filtered": false,
+     "color": "rgb(219, 103, 172)",
+     "group": null
+    },
+    "G2b2": {
+     "name": "G2b2",
+     "filtered": false,
+     "color": "rgb(199, 228, 80)",
+     "group": null
+    },
+    "J2a1a1a2b2a3b1a": {
+     "name": "J2a1a1a2b2a3b1a",
+     "filtered": false,
+     "color": "rgb(79, 197, 214)",
+     "group": null
+    },
+    "Q1b2a1a1": {
+     "name": "Q1b2a1a1",
+     "filtered": false,
+     "color": "rgb(149, 90, 221)",
+     "group": null
+    },
+    "Q1b2b1b2b": {
+     "name": "Q1b2b1b2b",
+     "filtered": false,
+     "color": "rgb(12, 66, 219)",
+     "group": null
+    },
+    "N1a1a1a1a4a1": {
+     "name": "N1a1a1a1a4a1",
+     "filtered": false,
+     "color": "rgb(44, 93, 175)",
+     "group": null
+    },
+    "Q1b1a1a1e2": {
+     "name": "Q1b1a1a1e2",
+     "filtered": false,
+     "color": "rgb(234, 89, 111)",
+     "group": null
+    },
+    "Q1a2a2b1": {
+     "name": "Q1a2a2b1",
+     "filtered": false,
+     "color": "rgb(30, 230, 78)",
+     "group": null
+    },
+    "R1a1a1b2a2a1c3a": {
+     "name": "R1a1a1b2a2a1c3a",
+     "filtered": false,
+     "color": "rgb(154, 205, 229)",
+     "group": null
+    },
+    "R1a1a1a2": {
+     "name": "R1a1a1a2",
+     "filtered": false,
+     "color": "rgb(239, 207, 70)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1c": {
+     "name": "R1b1a1b1a1a2b1c",
+     "filtered": false,
+     "color": "rgb(204, 237, 163)",
+     "group": null
+    },
+    "G2a2b1a1a1b": {
+     "name": "G2a2b1a1a1b",
+     "filtered": false,
+     "color": "rgb(93, 150, 249)",
+     "group": null
+    },
+    "CF": {
+     "name": "CF",
+     "filtered": false,
+     "color": "rgb(152, 233, 173)",
+     "group": null
+    },
+    "I2a1a1a1a1a1": {
+     "name": "I2a1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(155, 232, 107)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2c4a": {
+     "name": "J1a2a1a2d2b2b2c4a",
+     "filtered": false,
+     "color": "rgb(162, 206, 231)",
+     "group": null
+    },
+    "E1b1b1a1b1a10a2b": {
+     "name": "E1b1b1a1b1a10a2b",
+     "filtered": false,
+     "color": "rgb(242, 105, 140)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a2a1b1a": {
+     "name": "G2a2b2a1a1b1a1a2a1b1a",
+     "filtered": false,
+     "color": "rgb(51, 141, 193)",
+     "group": null
+    },
+    "E1b1b1a1a1c1b1b": {
+     "name": "E1b1b1a1a1c1b1b",
+     "filtered": false,
+     "color": "rgb(24, 91, 190)",
+     "group": null
+    },
+    "J2a1a1a2b2a1a1c2": {
+     "name": "J2a1a1a2b2a1a1c2",
+     "filtered": false,
+     "color": "rgb(246, 203, 114)",
+     "group": null
+    },
+    "J2b2a1a1a1a1a1a": {
+     "name": "J2b2a1a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(25, 243, 210)",
+     "group": null
+    },
+    "H2c1a1a": {
+     "name": "H2c1a1a",
+     "filtered": false,
+     "color": "rgb(212, 109, 208)",
+     "group": null
+    },
+    "J2a1a1b2a1b1b2c": {
+     "name": "J2a1a1b2a1b1b2c",
+     "filtered": false,
+     "color": "rgb(94, 224, 85)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a2a1a1b": {
+     "name": "G2a2b2a1a1b1a1a2a1a1b",
+     "filtered": false,
+     "color": "rgb(139, 223, 175)",
+     "group": null
+    },
+    "C1a2a1": {
+     "name": "C1a2a1",
+     "filtered": false,
+     "color": "rgb(210, 227, 135)",
+     "group": null
+    },
+    "I1a1b1a1e2": {
+     "name": "I1a1b1a1e2",
+     "filtered": false,
+     "color": "rgb(176, 85, 249)",
+     "group": null
+    },
+    "J1a2a1a2c1a": {
+     "name": "J1a2a1a2c1a",
+     "filtered": false,
+     "color": "rgb(6, 111, 220)",
+     "group": null
+    },
+    "G2a2b1a1a1": {
+     "name": "G2a2b1a1a1",
+     "filtered": false,
+     "color": "rgb(181, 11, 200)",
+     "group": null
+    },
+    "G2a2b2a1a1c1a1a2b1": {
+     "name": "G2a2b2a1a1c1a1a2b1",
+     "filtered": false,
+     "color": "rgb(51, 110, 230)",
+     "group": null
+    },
+    "J2a1a1b2a1b1b3a2b": {
+     "name": "J2a1a1b2a1b1b3a2b",
+     "filtered": false,
+     "color": "rgb(82, 82, 235)",
+     "group": null
+    },
+    "T1a1a1b2b1a": {
+     "name": "T1a1a1b2b1a",
+     "filtered": false,
+     "color": "rgb(90, 243, 64)",
+     "group": null
+    },
+    "G2a2b2a1a1a1a": {
+     "name": "G2a2b2a1a1a1a",
+     "filtered": false,
+     "color": "rgb(85, 249, 194)",
+     "group": null
+    },
+    "J2a1a1a2b2a1b1b": {
+     "name": "J2a1a1a2b2a1b1b",
+     "filtered": false,
+     "color": "rgb(225, 114, 108)",
+     "group": null
+    },
+    "J2a1a1a2b2a3b1a1a2": {
+     "name": "J2a1a1a2b2a3b1a1a2",
+     "filtered": false,
+     "color": "rgb(151, 228, 239)",
+     "group": null
+    },
+    "G2a2b2b1a1": {
+     "name": "G2a2b2b1a1",
+     "filtered": false,
+     "color": "rgb(50, 173, 191)",
+     "group": null
+    },
+    "R1b1a1b1a1a2e": {
+     "name": "R1b1a1b1a1a2e",
+     "filtered": false,
+     "color": "rgb(26, 228, 101)",
+     "group": null
+    },
+    "J2b2a1a1a1b3": {
+     "name": "J2b2a1a1a1b3",
+     "filtered": false,
+     "color": "rgb(201, 88, 245)",
+     "group": null
+    },
+    "G2a2b1b1a1b": {
+     "name": "G2a2b1b1a1b",
+     "filtered": false,
+     "color": "rgb(88, 176, 209)",
+     "group": null
+    },
+    "G2a2b2b1a1b1a2a": {
+     "name": "G2a2b2b1a1b1a2a",
+     "filtered": false,
+     "color": "rgb(190, 178, 52)",
+     "group": null
+    },
+    "G2a2a1a2a1b1": {
+     "name": "G2a2a1a2a1b1",
+     "filtered": false,
+     "color": "rgb(56, 165, 245)",
+     "group": null
+    },
+    "E1b1b1b1b": {
+     "name": "E1b1b1b1b",
+     "filtered": false,
+     "color": "rgb(223, 159, 7)",
+     "group": null
+    },
+    "J2b2a1a1a1a1a2a": {
+     "name": "J2b2a1a1a1a1a2a",
+     "filtered": false,
+     "color": "rgb(243, 113, 156)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a2a1": {
+     "name": "G2a2b2a1a1b1a1a2a1",
+     "filtered": false,
+     "color": "rgb(69, 238, 76)",
+     "group": null
+    },
+    "E1b1b1a1a1c1b2": {
+     "name": "E1b1b1a1a1c1b2",
+     "filtered": false,
+     "color": "rgb(161, 95, 244)",
+     "group": null
+    },
+    "I2a1a2a1a1a": {
+     "name": "I2a1a2a1a1a",
+     "filtered": false,
+     "color": "rgb(248, 238, 129)",
+     "group": null
+    },
+    "J2a1a1b1a": {
+     "name": "J2a1a1b1a",
+     "filtered": false,
+     "color": "rgb(14, 206, 37)",
+     "group": null
+    },
+    "J2a1a1a2b2a1b1": {
+     "name": "J2a1a1a2b2a1b1",
+     "filtered": false,
+     "color": "rgb(226, 240, 126)",
+     "group": null
+    },
+    "J2a1a1b2a1b1": {
+     "name": "J2a1a1b2a1b1",
+     "filtered": false,
+     "color": "rgb(90, 56, 246)",
+     "group": null
+    },
+    "G2a2a1a2b1b": {
+     "name": "G2a2a1a2b1b",
+     "filtered": false,
+     "color": "rgb(202, 178, 53)",
+     "group": null
+    },
+    "J2a1a2b": {
+     "name": "J2a1a2b",
+     "filtered": false,
+     "color": "rgb(118, 183, 241)",
+     "group": null
+    },
+    "B2": {
+     "name": "B2",
+     "filtered": false,
+     "color": "rgb(49, 241, 95)",
+     "group": null
+    },
+    "B": {
+     "name": "B",
+     "filtered": false,
+     "color": "rgb(189, 45, 72)",
+     "group": null
+    },
+    "D1a2a": {
+     "name": "D1a2a",
+     "filtered": false,
+     "color": "rgb(126, 35, 229)",
+     "group": null
+    },
+    "I2a1a1a1a1a1a1e": {
+     "name": "I2a1a1a1a1a1a1e",
+     "filtered": false,
+     "color": "rgb(251, 246, 149)",
+     "group": null
+    },
+    "J2b2a1a2": {
+     "name": "J2b2a1a2",
+     "filtered": false,
+     "color": "rgb(74, 211, 145)",
+     "group": null
+    },
+    "J2b2a1b": {
+     "name": "J2b2a1b",
+     "filtered": false,
+     "color": "rgb(151, 246, 171)",
+     "group": null
+    },
+    "D1a1a1a1a1": {
+     "name": "D1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(50, 185, 236)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1a1": {
+     "name": "R1b1a1b1a1a2b1a1",
+     "filtered": false,
+     "color": "rgb(240, 153, 196)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2c3": {
+     "name": "J1a2a1a2d2b2b2c3",
+     "filtered": false,
+     "color": "rgb(170, 236, 142)",
+     "group": null
+    },
+    "G2a2b1a": {
+     "name": "G2a2b1a",
+     "filtered": false,
+     "color": "rgb(187, 120, 220)",
+     "group": null
+    },
+    "G2a2b1a2": {
+     "name": "G2a2b1a2",
+     "filtered": false,
+     "color": "rgb(244, 145, 236)",
+     "group": null
+    },
+    "J2a1a1a2": {
+     "name": "J2a1a1a2",
+     "filtered": false,
+     "color": "rgb(137, 181, 241)",
+     "group": null
+    },
+    "H2c": {
+     "name": "H2c",
+     "filtered": false,
+     "color": "rgb(203, 61, 222)",
+     "group": null
+    },
+    "G2a2b2": {
+     "name": "G2a2b2",
+     "filtered": false,
+     "color": "rgb(33, 229, 223)",
+     "group": null
+    },
+    "G2a2b1a2a": {
+     "name": "G2a2b1a2a",
+     "filtered": false,
+     "color": "rgb(54, 50, 188)",
+     "group": null
+    },
+    "J1a2a1a2d2b2b2c4b2a": {
+     "name": "J1a2a1a2d2b2b2c4b2a",
+     "filtered": false,
+     "color": "rgb(153, 187, 52)",
+     "group": null
+    },
+    "H3b1": {
+     "name": "H3b1",
+     "filtered": false,
+     "color": "rgb(155, 223, 171)",
+     "group": null
+    },
+    "I2a2a1b1": {
+     "name": "I2a2a1b1",
+     "filtered": false,
+     "color": "rgb(91, 211, 139)",
+     "group": null
+    },
+    "E1b1a1a1a2a1a3b1a": {
+     "name": "E1b1a1a1a2a1a3b1a",
+     "filtered": false,
+     "color": "rgb(243, 156, 221)",
+     "group": null
+    },
+    "R1b1b2a2a": {
+     "name": "R1b1b2a2a",
+     "filtered": false,
+     "color": "rgb(241, 152, 126)",
+     "group": null
+    },
+    "E1b1a1a1a1c1a1": {
+     "name": "E1b1a1a1a1c1a1",
+     "filtered": false,
+     "color": "rgb(245, 199, 19)",
+     "group": null
+    },
+    "E1b1a1a1a1c1a1a3a1d1": {
+     "name": "E1b1a1a1a1c1a1a3a1d1",
+     "filtered": false,
+     "color": "rgb(124, 195, 232)",
+     "group": null
+    },
+    "O1b1a1a1a": {
+     "name": "O1b1a1a1a",
+     "filtered": false,
+     "color": "rgb(95, 203, 13)",
+     "group": null
+    },
+    "K2": {
+     "name": "K2",
+     "filtered": false,
+     "color": "rgb(85, 209, 27)",
+     "group": null
+    },
+    "O1a1a1a1a1a1": {
+     "name": "O1a1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(31, 118, 242)",
+     "group": null
+    },
+    "G1a": {
+     "name": "G1a",
+     "filtered": false,
+     "color": "rgb(216, 133, 147)",
+     "group": null
+    },
+    "I1a2a1a1c2": {
+     "name": "I1a2a1a1c2",
+     "filtered": false,
+     "color": "rgb(122, 185, 26)",
+     "group": null
+    },
+    "I1a1b1a1d3b": {
+     "name": "I1a1b1a1d3b",
+     "filtered": false,
+     "color": "rgb(239, 153, 159)",
+     "group": null
+    },
+    "R1a1a1b1a3a1": {
+     "name": "R1a1a1b1a3a1",
+     "filtered": false,
+     "color": "rgb(228, 171, 171)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1c1a1a2": {
+     "name": "R1b1a1b1a1a2b1c1a1a2",
+     "filtered": false,
+     "color": "rgb(120, 91, 243)",
+     "group": null
+    },
+    "R1a1a1b1a1a1c1i": {
+     "name": "R1a1a1b1a1a1c1i",
+     "filtered": false,
+     "color": "rgb(214, 7, 20)",
+     "group": null
+    },
+    "I1a2a1a1d1a1a": {
+     "name": "I1a2a1a1d1a1a",
+     "filtered": false,
+     "color": "rgb(234, 175, 133)",
+     "group": null
+    },
+    "I2a1b1a2b1a2b": {
+     "name": "I2a1b1a2b1a2b",
+     "filtered": false,
+     "color": "rgb(154, 225, 149)",
+     "group": null
+    },
+    "R1a1a1b1a2a2": {
+     "name": "R1a1a1b1a2a2",
+     "filtered": false,
+     "color": "rgb(107, 215, 241)",
+     "group": null
+    },
+    "R1a1a1b1a1a1c1": {
+     "name": "R1a1a1b1a1a1c1",
+     "filtered": false,
+     "color": "rgb(191, 233, 159)",
+     "group": null
+    },
+    "I1a1b1a3a": {
+     "name": "I1a1b1a3a",
+     "filtered": false,
+     "color": "rgb(100, 247, 237)",
+     "group": null
+    },
+    "R1b1a1b1a1a2a1b1a1a": {
+     "name": "R1b1a1b1a1a2a1b1a1a",
+     "filtered": false,
+     "color": "rgb(195, 164, 34)",
+     "group": null
+    },
+    "I1a1b1a1": {
+     "name": "I1a1b1a1",
+     "filtered": false,
+     "color": "rgb(71, 173, 200)",
+     "group": null
+    },
+    "I2a1a1a1a2b": {
+     "name": "I2a1a1a1a2b",
+     "filtered": false,
+     "color": "rgb(142, 38, 183)",
+     "group": null
+    },
+    "R1a1a1b1a3a1b3e4": {
+     "name": "R1a1a1b1a3a1b3e4",
+     "filtered": false,
+     "color": "rgb(56, 241, 227)",
+     "group": null
+    },
+    "I1a1a4a1a1b": {
+     "name": "I1a1a4a1a1b",
+     "filtered": false,
+     "color": "rgb(192, 145, 233)",
+     "group": null
+    },
+    "I1a5": {
+     "name": "I1a5",
+     "filtered": false,
+     "color": "rgb(106, 238, 157)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a3a2": {
+     "name": "R1b1a1b1a1a2c1a3a2",
+     "filtered": false,
+     "color": "rgb(145, 57, 189)",
+     "group": null
+    },
+    "R1a1a1b1a3a1a3b2": {
+     "name": "R1a1a1b1a3a1a3b2",
+     "filtered": false,
+     "color": "rgb(193, 224, 126)",
+     "group": null
+    },
+    "R1a1a1b1a1a": {
+     "name": "R1a1a1b1a1a",
+     "filtered": false,
+     "color": "rgb(170, 50, 205)",
+     "group": null
+    },
+    "I1a1b1b1a2": {
+     "name": "I1a1b1b1a2",
+     "filtered": false,
+     "color": "rgb(232, 140, 75)",
+     "group": null
+    },
+    "I1a1b1a4a": {
+     "name": "I1a1b1a4a",
+     "filtered": false,
+     "color": "rgb(164, 248, 126)",
+     "group": null
+    },
+    "N1a1a1a1a1": {
+     "name": "N1a1a1a1a1",
+     "filtered": false,
+     "color": "rgb(216, 149, 228)",
+     "group": null
+    },
+    "I2a1a1b1a1": {
+     "name": "I2a1a1b1a1",
+     "filtered": false,
+     "color": "rgb(98, 174, 224)",
+     "group": null
+    },
+    "R1a1a1b1a3a1a7": {
+     "name": "R1a1a1b1a3a1a7",
+     "filtered": false,
+     "color": "rgb(223, 89, 153)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1f1a1": {
+     "name": "R1b1a1b1a1a2c1a1f1a1",
+     "filtered": false,
+     "color": "rgb(228, 79, 23)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a5c1a": {
+     "name": "R1b1a1b1a1a2c1a5c1a",
+     "filtered": false,
+     "color": "rgb(108, 208, 137)",
+     "group": null
+    },
+    "Q1b2b1": {
+     "name": "Q1b2b1",
+     "filtered": false,
+     "color": "rgb(32, 76, 245)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a2": {
+     "name": "R1b1a1b1a1a2c1a2",
+     "filtered": false,
+     "color": "rgb(251, 149, 127)",
+     "group": null
+    },
+    "R1a1a1b1a2b3a3a": {
+     "name": "R1a1a1b1a2b3a3a",
+     "filtered": false,
+     "color": "rgb(160, 192, 63)",
+     "group": null
+    },
+    "I1c1c1": {
+     "name": "I1c1c1",
+     "filtered": false,
+     "color": "rgb(209, 90, 27)",
+     "group": null
+    },
+    "I1a1b1g3b1": {
+     "name": "I1a1b1g3b1",
+     "filtered": false,
+     "color": "rgb(237, 114, 157)",
+     "group": null
+    },
+    "I1a1b1a1c2a": {
+     "name": "I1a1b1a1c2a",
+     "filtered": false,
+     "color": "rgb(235, 165, 240)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b1b3b": {
+     "name": "R1b1a1b1a1a1c2b1b3b",
+     "filtered": false,
+     "color": "rgb(68, 228, 242)",
+     "group": null
+    },
+    "I1a1b1a4a2e1a": {
+     "name": "I1a1b1a4a2e1a",
+     "filtered": false,
+     "color": "rgb(26, 179, 137)",
+     "group": null
+    },
+    "I1a1b1": {
+     "name": "I1a1b1",
+     "filtered": false,
+     "color": "rgb(116, 233, 194)",
+     "group": null
+    },
+    "I1a2a1a1d1b": {
+     "name": "I1a2a1a1d1b",
+     "filtered": false,
+     "color": "rgb(233, 189, 175)",
+     "group": null
+    },
+    "R1b1a1b1a1a1b1a1": {
+     "name": "R1b1a1b1a1a1b1a1",
+     "filtered": false,
+     "color": "rgb(168, 221, 149)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2a1d1": {
+     "name": "R1b1a1b1a1a1c2a1d1",
+     "filtered": false,
+     "color": "rgb(234, 144, 207)",
+     "group": null
+    },
+    "I1a1b1a1e2d": {
+     "name": "I1a1b1a1e2d",
+     "filtered": false,
+     "color": "rgb(215, 101, 147)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b1b4c": {
+     "name": "R1b1a1b1a1a1c2b1b4c",
+     "filtered": false,
+     "color": "rgb(87, 231, 168)",
+     "group": null
+    },
+    "I1a2a1": {
+     "name": "I1a2a1",
+     "filtered": false,
+     "color": "rgb(110, 86, 223)",
+     "group": null
+    },
+    "I1a2a1a1a4a": {
+     "name": "I1a2a1a1a4a",
+     "filtered": false,
+     "color": "rgb(209, 146, 114)",
+     "group": null
+    },
+    "R1b1a1b1a1a1c2b1a1": {
+     "name": "R1b1a1b1a1a1c2b1a1",
+     "filtered": false,
+     "color": "rgb(118, 216, 170)",
+     "group": null
+    },
+    "I2a1b1a2b1a2a1a": {
+     "name": "I2a1b1a2b1a2a1a",
+     "filtered": false,
+     "color": "rgb(245, 49, 42)",
+     "group": null
+    },
+    "J2b2a1a1a1a1a": {
+     "name": "J2b2a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(74, 222, 8)",
+     "group": null
+    },
+    "I2a1b1a2b1a2": {
+     "name": "I2a1b1a2b1a2",
+     "filtered": false,
+     "color": "rgb(37, 44, 242)",
+     "group": null
+    },
+    "I1a1b1g3b": {
+     "name": "I1a1b1g3b",
+     "filtered": false,
+     "color": "rgb(207, 66, 188)",
+     "group": null
+    },
+    "I1a2a1a1a5a1a": {
+     "name": "I1a2a1a1a5a1a",
+     "filtered": false,
+     "color": "rgb(208, 70, 237)",
+     "group": null
+    },
+    "E1b1a1a1a2a1a3a1e": {
+     "name": "E1b1a1a1a2a1a3a1e",
+     "filtered": false,
+     "color": "rgb(78, 194, 239)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1f": {
+     "name": "R1b1a1b1a1a2c1a1f",
+     "filtered": false,
+     "color": "rgb(80, 160, 237)",
+     "group": null
+    },
+    "N1a1a1a1a1a2": {
+     "name": "N1a1a1a1a1a2",
+     "filtered": false,
+     "color": "rgb(168, 173, 235)",
+     "group": null
+    },
+    "R1b1a1b1a1a2b1c1b": {
+     "name": "R1b1a1b1a1a2b1c1b",
+     "filtered": false,
+     "color": "rgb(220, 31, 152)",
+     "group": null
+    },
+    "I2a1b1a2a1a1a1": {
+     "name": "I2a1b1a2a1a1a1",
+     "filtered": false,
+     "color": "rgb(83, 248, 208)",
+     "group": null
+    },
+    "I1a2a1a1d": {
+     "name": "I1a2a1a1d",
+     "filtered": false,
+     "color": "rgb(241, 157, 133)",
+     "group": null
+    },
+    "I1a2a2": {
+     "name": "I1a2a2",
+     "filtered": false,
+     "color": "rgb(160, 157, 233)",
+     "group": null
+    },
+    "I1a2a2a4b": {
+     "name": "I1a2a2a4b",
+     "filtered": false,
+     "color": "rgb(239, 150, 125)",
+     "group": null
+    },
+    "E1b1b1b2a1a4": {
+     "name": "E1b1b1b2a1a4",
+     "filtered": false,
+     "color": "rgb(208, 71, 244)",
+     "group": null
+    },
+    "G2a2b2a1a1b1a1a2a1a1": {
+     "name": "G2a2b2a1a1b1a1a2a1a1",
+     "filtered": false,
+     "color": "rgb(81, 74, 237)",
+     "group": null
+    },
+    "R1a1a1b1a2a1a": {
+     "name": "R1a1a1b1a2a1a",
+     "filtered": false,
+     "color": "rgb(217, 87, 217)",
+     "group": null
+    },
+    "I1a10b1b": {
+     "name": "I1a10b1b",
+     "filtered": false,
+     "color": "rgb(24, 214, 189)",
+     "group": null
+    },
+    "I1a2a1a1d1a1a1a1": {
+     "name": "I1a2a1a1d1a1a1a1",
+     "filtered": false,
+     "color": "rgb(199, 210, 41)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a7a3a": {
+     "name": "N1a1a1a1a1a1a7a3a",
+     "filtered": false,
+     "color": "rgb(225, 220, 133)",
+     "group": null
+    },
+    "R1a1a1b1a3a1a": {
+     "name": "R1a1a1b1a3a1a",
+     "filtered": false,
+     "color": "rgb(41, 191, 209)",
+     "group": null
+    },
+    "I1a2a1a1d1": {
+     "name": "I1a2a1a1d1",
+     "filtered": false,
+     "color": "rgb(50, 246, 66)",
+     "group": null
+    },
+    "I1a1b1a4": {
+     "name": "I1a1b1a4",
+     "filtered": false,
+     "color": "rgb(108, 164, 51)",
+     "group": null
+    },
+    "I1a7": {
+     "name": "I1a7",
+     "filtered": false,
+     "color": "rgb(234, 131, 210)",
+     "group": null
+    },
+    "I1a1b1a1e2b": {
+     "name": "I1a1b1a1e2b",
+     "filtered": false,
+     "color": "rgb(189, 45, 118)",
+     "group": null
+    },
+    "I1a1a1a1a3a": {
+     "name": "I1a1a1a1a3a",
+     "filtered": false,
+     "color": "rgb(57, 170, 187)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a7": {
+     "name": "N1a1a1a1a1a1a7",
+     "filtered": false,
+     "color": "rgb(217, 37, 217)",
+     "group": null
+    },
+    "R1a1a1a1d1": {
+     "name": "R1a1a1a1d1",
+     "filtered": false,
+     "color": "rgb(215, 159, 32)",
+     "group": null
+    },
+    "R1a1a1b1a3a2b2": {
+     "name": "R1a1a1b1a3a2b2",
+     "filtered": false,
+     "color": "rgb(158, 210, 224)",
+     "group": null
+    },
+    "I2a1b1a2b1a2a1a1a1a": {
+     "name": "I2a1b1a2b1a2a1a1a1a",
+     "filtered": false,
+     "color": "rgb(155, 230, 159)",
+     "group": null
+    },
+    "I1a2a2a": {
+     "name": "I1a2a2a",
+     "filtered": false,
+     "color": "rgb(241, 105, 207)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a4d1": {
+     "name": "R1b1a1b1a1a2c1a4d1",
+     "filtered": false,
+     "color": "rgb(204, 228, 121)",
+     "group": null
+    },
+    "L1a1b3a": {
+     "name": "L1a1b3a",
+     "filtered": false,
+     "color": "rgb(238, 65, 240)",
+     "group": null
+    },
+    "I2a1a2b1a1": {
+     "name": "I2a1a2b1a1",
+     "filtered": false,
+     "color": "rgb(206, 212, 118)",
+     "group": null
+    },
+    "R1a1a1b1a1a1c1j1": {
+     "name": "R1a1a1b1a1a1c1j1",
+     "filtered": false,
+     "color": "rgb(176, 129, 250)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1a1a1a1a1a": {
+     "name": "R1b1a1b1a1a2c1a1a1a1a1a1a",
+     "filtered": false,
+     "color": "rgb(153, 228, 139)",
+     "group": null
+    },
+    "I1a1b1a4a2a": {
+     "name": "I1a1b1a4a2a",
+     "filtered": false,
+     "color": "rgb(211, 183, 122)",
+     "group": null
+    },
+    "N1a1a1a1a1a1a5b": {
+     "name": "N1a1a1a1a1a1a5b",
+     "filtered": false,
+     "color": "rgb(145, 238, 143)",
+     "group": null
+    },
+    "I1a1b1a1c1": {
+     "name": "I1a1b1a1c1",
+     "filtered": false,
+     "color": "rgb(219, 212, 100)",
+     "group": null
+    },
+    "R1b1a1b1a1a2c1a1a1a1a1b1": {
+     "name": "R1b1a1b1a1a2c1a1a1a1a1b1",
+     "filtered": false,
+     "color": "rgb(85, 193, 217)",
+     "group": null
+    }
+   },
+   "admixture": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    }
+   },
+   "admixture_k7": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    },
+    "k #1": {
+     "name": "k #1",
+     "filtered": false,
+     "color": "rgb(95, 76, 235)",
+     "group": null,
+     "order": 0
+    },
+    "k #2": {
+     "name": "k #2",
+     "filtered": false,
+     "color": "rgb(173, 42, 111)",
+     "group": null,
+     "order": 1
+    },
+    "k #3": {
+     "name": "k #3",
+     "filtered": false,
+     "color": "rgb(209, 242, 150)",
+     "group": null,
+     "order": 2
+    },
+    "k #4": {
+     "name": "k #4",
+     "filtered": false,
+     "color": "rgb(229, 109, 83)",
+     "group": null,
+     "order": 3
+    },
+    "k #5": {
+     "name": "k #5",
+     "filtered": false,
+     "color": "rgb(248, 248, 121)",
+     "group": null,
+     "order": 4
+    },
+    "k #6": {
+     "name": "k #6",
+     "filtered": false,
+     "color": "rgb(45, 133, 174)",
+     "group": null,
+     "order": 5
+    },
+    "k #7": {
+     "name": "k #7",
+     "filtered": false,
+     "color": "rgb(248, 183, 144)",
+     "group": null,
+     "order": 6
+    },
+    "_order": [
+     "k #1",
+     "k #2",
+     "k #3",
+     "k #4",
+     "k #5",
+     "k #6",
+     "k #7",
+     "MISSING"
+    ]
+   },
+   "admixture_k10": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    },
+    "k #1": {
+     "name": "k #1",
+     "filtered": false,
+     "color": "rgb(146, 241, 169)",
+     "group": null,
+     "order": 0
+    },
+    "k #2": {
+     "name": "k #2",
+     "filtered": false,
+     "color": "rgb(197, 116, 215)",
+     "group": null,
+     "order": 1
+    },
+    "k #3": {
+     "name": "k #3",
+     "filtered": false,
+     "color": "rgb(36, 231, 112)",
+     "group": null,
+     "order": 2
+    },
+    "k #4": {
+     "name": "k #4",
+     "filtered": false,
+     "color": "rgb(22, 159, 203)",
+     "group": null,
+     "order": 3
+    },
+    "k #5": {
+     "name": "k #5",
+     "filtered": false,
+     "color": "rgb(231, 184, 175)",
+     "group": null,
+     "order": 4
+    },
+    "k #6": {
+     "name": "k #6",
+     "filtered": false,
+     "color": "rgb(213, 51, 114)",
+     "group": null,
+     "order": 5
+    },
+    "k #7": {
+     "name": "k #7",
+     "filtered": false,
+     "color": "rgb(127, 154, 229)",
+     "group": null,
+     "order": 6
+    },
+    "k #8": {
+     "name": "k #8",
+     "filtered": false,
+     "color": "rgb(144, 43, 178)",
+     "group": null,
+     "order": 7
+    },
+    "k #9": {
+     "name": "k #9",
+     "filtered": false,
+     "color": "rgb(50, 6, 199)",
+     "group": null,
+     "order": 8
+    },
+    "k #10": {
+     "name": "k #10",
+     "filtered": false,
+     "color": "rgb(50, 163, 210)",
+     "group": null,
+     "order": 9
+    },
+    "_order": [
+     "k #1",
+     "k #2",
+     "k #3",
+     "k #4",
+     "k #5",
+     "k #6",
+     "k #7",
+     "k #8",
+     "k #9",
+     "k #10",
+     "MISSING"
+    ]
+   },
+   "admixture_k13": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    },
+    "k #1": {
+     "name": "k #1",
+     "filtered": false,
+     "color": "rgb(230, 198, 158)",
+     "group": null,
+     "order": 0
+    },
+    "k #2": {
+     "name": "k #2",
+     "filtered": false,
+     "color": "rgb(240, 168, 104)",
+     "group": null,
+     "order": 1
+    },
+    "k #3": {
+     "name": "k #3",
+     "filtered": false,
+     "color": "rgb(138, 242, 251)",
+     "group": null,
+     "order": 2
+    },
+    "k #4": {
+     "name": "k #4",
+     "filtered": false,
+     "color": "rgb(144, 230, 150)",
+     "group": null,
+     "order": 3
+    },
+    "k #5": {
+     "name": "k #5",
+     "filtered": false,
+     "color": "rgb(221, 147, 204)",
+     "group": null,
+     "order": 4
+    },
+    "k #6": {
+     "name": "k #6",
+     "filtered": false,
+     "color": "rgb(108, 60, 213)",
+     "group": null,
+     "order": 5
+    },
+    "k #7": {
+     "name": "k #7",
+     "filtered": false,
+     "color": "rgb(171, 53, 100)",
+     "group": null,
+     "order": 6
+    },
+    "k #8": {
+     "name": "k #8",
+     "filtered": false,
+     "color": "rgb(57, 187, 44)",
+     "group": null,
+     "order": 7
+    },
+    "k #9": {
+     "name": "k #9",
+     "filtered": false,
+     "color": "rgb(126, 127, 250)",
+     "group": null,
+     "order": 8
+    },
+    "k #10": {
+     "name": "k #10",
+     "filtered": false,
+     "color": "rgb(224, 137, 127)",
+     "group": null,
+     "order": 9
+    },
+    "k #11": {
+     "name": "k #11",
+     "filtered": false,
+     "color": "rgb(111, 236, 96)",
+     "group": null,
+     "order": 10
+    },
+    "k #12": {
+     "name": "k #12",
+     "filtered": false,
+     "color": "rgb(159, 190, 240)",
+     "group": null,
+     "order": 11
+    },
+    "k #13": {
+     "name": "k #13",
+     "filtered": false,
+     "color": "rgb(141, 237, 207)",
+     "group": null,
+     "order": 12
+    },
+    "_order": [
+     "k #1",
+     "k #2",
+     "k #3",
+     "k #4",
+     "k #5",
+     "k #6",
+     "k #7",
+     "k #8",
+     "k #9",
+     "k #10",
+     "k #11",
+     "k #12",
+     "k #13",
+     "MISSING"
+    ]
+   },
+   "admixture_k6": {
+    "_groups": [],
+    "MISSING": {
+     "filtered": false,
+     "name": "MISSING",
+     "special": true
+    },
+    "OTHER": {
+     "filtered": false,
+     "name": "OTHER",
+     "special": true
+    },
+    "k #1": {
+     "name": "k #1",
+     "filtered": false,
+     "color": "rgb(153, 235, 37)",
+     "group": null,
+     "order": 0
+    },
+    "k #2": {
+     "name": "k #2",
+     "filtered": false,
+     "color": "rgb(196, 160, 241)",
+     "group": null,
+     "order": 1
+    },
+    "k #3": {
+     "name": "k #3",
+     "filtered": false,
+     "color": "rgb(222, 85, 240)",
+     "group": null,
+     "order": 2
+    },
+    "k #4": {
+     "name": "k #4",
+     "filtered": false,
+     "color": "rgb(83, 242, 103)",
+     "group": null,
+     "order": 3
+    },
+    "k #5": {
+     "name": "k #5",
+     "filtered": false,
+     "color": "rgb(216, 40, 129)",
+     "group": null,
+     "order": 4
+    },
+    "k #6": {
+     "name": "k #6",
+     "filtered": false,
+     "color": "rgb(88, 44, 199)",
+     "group": null,
+     "order": 5
+    },
+    "_order": [
+     "k #1",
+     "k #2",
+     "k #3",
+     "k #4",
+     "k #5",
+     "k #6",
+     "MISSING"
+    ]
+   }
+  },
+  "regions": {
+   "DEFAULT": {
+    "name": "Region",
+    "color": {
+     "background": "rgba(197, 209, 220, 0.3)",
+     "stroke": "rgba(38, 83, 122, 1.0)"
+    }
+   },
+   "cultures": {
+    "Aurignacian": {
+     "name": "Aurignacian",
+     "color": {
+      "pattern": "rgb(167, 252, 150)",
+      "background": "rgba(64, 123, 207, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 0,
+      "scale": 1.75,
+      "spacing": 18
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Gravettian": {
+     "name": "Gravettian",
+     "color": {
+      "pattern": "rgb(216, 125, 64)",
+      "background": "rgba(57, 207, 14, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 135,
+      "scale": 1.75,
+      "spacing": 10
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Epigravettian": {
+     "name": "Epigravettian",
+     "color": {
+      "pattern": "rgba(255, 0, 0, 0)",
+      "background": "rgba(255, 0, 0, 0.363)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": -49,
+      "scale": 1.5,
+      "spacing": 16
+     },
+     "filtered": false,
+     "group": null
+    },
+    "Magdalenian": {
+     "name": "Magdalenian",
+     "color": {
+      "pattern": "rgb(143, 24, 195)",
+      "background": "rgba(168, 236, 177, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 90,
+      "scale": 1.25,
+      "spacing": 20
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Early Capsian": {
+     "name": "Early Capsian",
+     "color": {
+      "pattern": "rgb(75, 245, 122)",
+      "background": "rgba(200, 227, 137, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 45,
+      "scale": 1.25,
+      "spacing": 17
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Iberomaurusian": {
+     "name": "Iberomaurusian",
+     "color": {
+      "pattern": "rgb(130, 69, 246)",
+      "background": "rgba(162, 242, 170, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 135,
+      "scale": 1.25,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Natufian": {
+     "name": "Natufian",
+     "color": {
+      "pattern": "rgb(235, 81, 17)",
+      "background": "rgba(31, 29, 201, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 135,
+      "scale": 1.75,
+      "spacing": 17
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Swiderian": {
+     "name": "Swiderian",
+     "color": {
+      "pattern": "rgb(39, 61, 165)",
+      "background": "rgba(221, 233, 66, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 45,
+      "scale": 1.75,
+      "spacing": 13
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Butovo": {
+     "name": "Butovo",
+     "color": {
+      "pattern": "rgb(215, 106, 142)",
+      "background": "rgba(219, 163, 242, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 0,
+      "scale": 1.75,
+      "spacing": 18
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Donets": {
+     "name": "Donets",
+     "color": {
+      "pattern": "rgb(202, 50, 48)",
+      "background": "rgba(97, 22, 191, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 135,
+      "scale": 1.25,
+      "spacing": 11
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Jōmon": {
+     "name": "Jōmon",
+     "color": {
+      "pattern": "rgb(67, 239, 16)",
+      "background": "rgba(245, 42, 95, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 0,
+      "scale": 1.5,
+      "spacing": 14
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Kunda": {
+     "name": "Kunda",
+     "color": {
+      "pattern": "rgb(126, 236, 138)",
+      "background": "rgba(61, 213, 134, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 45,
+      "scale": 1.25,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Late Epigravettian": {
+     "name": "Late Epigravettian",
+     "color": {
+      "pattern": "rgba(126, 198, 240, 0.778)",
+      "background": "rgba(0, 0, 255, 0)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 47,
+      "scale": 1.3,
+      "spacing": 15
+     },
+     "filtered": false,
+     "group": null
+    },
+    "Maglemosian": {
+     "name": "Maglemosian",
+     "color": {
+      "pattern": "rgb(192, 240, 157)",
+      "background": "rgba(114, 214, 190, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 0,
+      "scale": 1.25,
+      "spacing": 18
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Mediterranean Epipaleolithic": {
+     "name": "Mediterranean Epipaleolithic",
+     "color": {
+      "pattern": "rgb(230, 173, 206)",
+      "background": "rgba(230, 169, 209, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 0,
+      "scale": 1.5,
+      "spacing": 13
+     },
+     "filtered": true,
+     "group": null
+    },
+    "North Caspian": {
+     "name": "North Caspian",
+     "color": {
+      "pattern": "rgb(231, 132, 214)",
+      "background": "rgba(177, 30, 124, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 90,
+      "scale": 1.5,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Qadan": {
+     "name": "Qadan",
+     "color": {
+      "pattern": "rgb(136, 246, 221)",
+      "background": "rgba(19, 197, 148, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 0,
+      "scale": 1.5,
+      "spacing": 18
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Tardenoisian": {
+     "name": "Tardenoisian",
+     "color": {
+      "pattern": "rgb(238, 175, 125)",
+      "background": "rgba(41, 115, 222, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 0,
+      "scale": 1.25,
+      "spacing": 14
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Upper Capsian": {
+     "name": "Upper Capsian",
+     "color": {
+      "pattern": "rgb(208, 205, 105)",
+      "background": "rgba(60, 175, 218, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 0,
+      "scale": 1.5,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Cretan Ceramic": {
+     "name": "Cretan Ceramic",
+     "color": {
+      "pattern": "rgb(246, 101, 110)",
+      "background": "rgba(127, 241, 92, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 45,
+      "scale": 1.25,
+      "spacing": 18
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Early Hissar": {
+     "name": "Early Hissar",
+     "color": {
+      "pattern": "rgb(179, 242, 136)",
+      "background": "rgba(84, 59, 239, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 0,
+      "scale": 1.25,
+      "spacing": 20
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Early Kelteminar": {
+     "name": "Early Kelteminar",
+     "color": {
+      "pattern": "rgb(181, 97, 210)",
+      "background": "rgba(139, 248, 126, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 45,
+      "scale": 1.5,
+      "spacing": 19
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Italian Mesolithic": {
+     "name": "Italian Mesolithic",
+     "color": {
+      "pattern": "rgb(124, 217, 75)",
+      "background": "rgba(190, 62, 210, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 90,
+      "scale": 1.75,
+      "spacing": 11
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Janislawice": {
+     "name": "Janislawice",
+     "color": {
+      "pattern": "rgb(168, 115, 46)",
+      "background": "rgba(216, 245, 128, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 135,
+      "scale": 1.25,
+      "spacing": 14
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Kair-shak": {
+     "name": "Kair-shak",
+     "color": {
+      "pattern": "rgb(38, 26, 218)",
+      "background": "rgba(140, 43, 191, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 0,
+      "scale": 1.25,
+      "spacing": 12
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Late Capsian": {
+     "name": "Late Capsian",
+     "color": {
+      "pattern": "rgb(76, 162, 50)",
+      "background": "rgba(110, 179, 239, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 45,
+      "scale": 1.5,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Late Kunda": {
+     "name": "Late Kunda",
+     "color": {
+      "pattern": "rgb(96, 209, 83)",
+      "background": "rgba(84, 199, 18, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 90,
+      "scale": 1.75,
+      "spacing": 10
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Late Maglemosian": {
+     "name": "Late Maglemosian",
+     "color": {
+      "pattern": "rgb(141, 204, 15)",
+      "background": "rgba(15, 57, 198, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 0,
+      "scale": 1.75,
+      "spacing": 14
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Peiligang": {
+     "name": "Peiligang",
+     "color": {
+      "pattern": "rgb(249, 146, 229)",
+      "background": "rgba(221, 177, 83, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 90,
+      "scale": 1.25,
+      "spacing": 14
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Pre-Pottery Neolithic B": {
+     "name": "Pre-Pottery Neolithic B",
+     "color": {
+      "pattern": "rgb(49, 219, 86)",
+      "background": "rgba(25, 188, 88, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 90,
+      "scale": 1.75,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Starčevo": {
+     "name": "Starčevo",
+     "color": {
+      "pattern": "rgb(243, 105, 231)",
+      "background": "rgba(69, 101, 207, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 135,
+      "scale": 1.75,
+      "spacing": 11
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Trialetian": {
+     "name": "Trialetian",
+     "color": {
+      "pattern": "rgb(226, 13, 88)",
+      "background": "rgba(90, 99, 216, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 135,
+      "scale": 1.25,
+      "spacing": 10
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Pengtoushan": {
+     "name": "Pengtoushan",
+     "color": {
+      "pattern": "rgb(237, 102, 31)",
+      "background": "rgba(221, 29, 81, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 135,
+      "scale": 1.75,
+      "spacing": 11
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Capsian Neolithic": {
+     "name": "Capsian Neolithic",
+     "color": {
+      "pattern": "rgb(176, 230, 16)",
+      "background": "rgba(178, 220, 144, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 90,
+      "scale": 1.75,
+      "spacing": 12
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Cardial Pottery": {
+     "name": "Cardial Pottery",
+     "color": {
+      "pattern": "rgb(169, 183, 235)",
+      "background": "rgba(149, 169, 240, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 135,
+      "scale": 1.75,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Comb Ceramic": {
+     "name": "Comb Ceramic",
+     "color": {
+      "pattern": "rgb(118, 239, 178)",
+      "background": "rgba(108, 47, 193, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 135,
+      "scale": 1.25,
+      "spacing": 18
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Dnieper–Donets": {
+     "name": "Dnieper–Donets",
+     "color": {
+      "pattern": "rgb(112, 134, 225)",
+      "background": "rgba(210, 57, 99, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 45,
+      "scale": 1.25,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Ertebølle": {
+     "name": "Ertebølle",
+     "color": {
+      "pattern": "rgb(110, 196, 46)",
+      "background": "rgba(176, 74, 29, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 0,
+      "scale": 1.5,
+      "spacing": 13
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Halaf": {
+     "name": "Halaf",
+     "color": {
+      "pattern": "rgb(226, 24, 180)",
+      "background": "rgba(238, 142, 135, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 135,
+      "scale": 1.75,
+      "spacing": 13
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Impressed ware": {
+     "name": "Impressed ware",
+     "color": {
+      "pattern": "rgb(133, 19, 205)",
+      "background": "rgba(168, 154, 241, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 45,
+      "scale": 1.75,
+      "spacing": 17
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Kelteminar": {
+     "name": "Kelteminar",
+     "color": {
+      "pattern": "rgb(209, 167, 109)",
+      "background": "rgba(171, 247, 88, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 135,
+      "scale": 1.25,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Linear Pottery": {
+     "name": "Linear Pottery",
+     "color": {
+      "pattern": "rgb(192, 78, 13)",
+      "background": "rgba(109, 141, 249, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 90,
+      "scale": 1.25,
+      "spacing": 15
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Mariupol": {
+     "name": "Mariupol",
+     "color": {
+      "pattern": "rgb(26, 182, 185)",
+      "background": "rgba(249, 225, 156, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 135,
+      "scale": 1.75,
+      "spacing": 19
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Megalithic": {
+     "name": "Megalithic",
+     "color": {
+      "pattern": "rgb(251, 165, 101)",
+      "background": "rgba(131, 221, 76, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 90,
+      "scale": 1.5,
+      "spacing": 20
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Samara": {
+     "name": "Samara",
+     "color": {
+      "pattern": "rgb(75, 168, 197)",
+      "background": "rgba(138, 189, 221, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 90,
+      "scale": 1.25,
+      "spacing": 17
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Shulaveri-Shomu": {
+     "name": "Shulaveri-Shomu",
+     "color": {
+      "pattern": "rgb(116, 238, 227)",
+      "background": "rgba(73, 211, 40, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 135,
+      "scale": 1.25,
+      "spacing": 19
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Starčevo-Körös-Criş": {
+     "name": "Starčevo-Körös-Criş",
+     "color": {
+      "pattern": "rgb(158, 85, 203)",
+      "background": "rgba(122, 198, 233, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 90,
+      "scale": 1.5,
+      "spacing": 18
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Ubaid ware": {
+     "name": "Ubaid ware",
+     "color": {
+      "pattern": "rgb(86, 178, 209)",
+      "background": "rgba(147, 249, 201, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 45,
+      "scale": 1.25,
+      "spacing": 13
+     },
+     "filtered": true,
+     "group": null
+    },
+    "West Anatolian Late Neolithic": {
+     "name": "West Anatolian Late Neolithic",
+     "color": {
+      "pattern": "rgb(250, 223, 79)",
+      "background": "rgba(55, 190, 162, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 45,
+      "scale": 1.75,
+      "spacing": 11
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Afanasievo": {
+     "name": "Afanasievo",
+     "color": {
+      "pattern": "rgb(178, 55, 74)",
+      "background": "rgba(182, 61, 54, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 0,
+      "scale": 1.25,
+      "spacing": 17
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Cucuteni": {
+     "name": "Cucuteni",
+     "color": {
+      "pattern": "rgb(19, 31, 236)",
+      "background": "rgba(211, 44, 36, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 135,
+      "scale": 1.75,
+      "spacing": 19
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Maykop": {
+     "name": "Maykop",
+     "color": {
+      "pattern": "rgb(31, 226, 45)",
+      "background": "rgba(155, 135, 217, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 135,
+      "scale": 1.5,
+      "spacing": 19
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Sredny Stog": {
+     "name": "Sredny Stog",
+     "color": {
+      "pattern": "rgb(162, 216, 53)",
+      "background": "rgba(207, 163, 230, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 90,
+      "scale": 1.25,
+      "spacing": 19
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Tiszapolgár": {
+     "name": "Tiszapolgár",
+     "color": {
+      "pattern": "rgb(173, 63, 248)",
+      "background": "rgba(199, 231, 74, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 0,
+      "scale": 1.75,
+      "spacing": 11
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Vinča": {
+     "name": "Vinča",
+     "color": {
+      "pattern": "rgb(55, 183, 55)",
+      "background": "rgba(66, 124, 236, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 90,
+      "scale": 1.25,
+      "spacing": 20
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Baden": {
+     "name": "Baden",
+     "color": {
+      "pattern": "rgb(229, 218, 125)",
+      "background": "rgba(50, 144, 210, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 0,
+      "scale": 1.75,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Globular Amphora": {
+     "name": "Globular Amphora",
+     "color": {
+      "pattern": "rgb(238, 128, 108)",
+      "background": "rgba(220, 231, 168, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 135,
+      "scale": 1.25,
+      "spacing": 17
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Helladic": {
+     "name": "Helladic",
+     "color": {
+      "pattern": "rgb(103, 232, 249)",
+      "background": "rgba(141, 151, 238, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 90,
+      "scale": 1.25,
+      "spacing": 10
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Kura–Araxes": {
+     "name": "Kura–Araxes",
+     "color": {
+      "pattern": "rgb(149, 104, 208)",
+      "background": "rgba(204, 130, 82, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 45,
+      "scale": 1.25,
+      "spacing": 15
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Minoan": {
+     "name": "Minoan",
+     "color": {
+      "pattern": "rgb(234, 236, 143)",
+      "background": "rgba(141, 195, 44, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 45,
+      "scale": 1.25,
+      "spacing": 15
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Pitted Ware": {
+     "name": "Pitted Ware",
+     "color": {
+      "pattern": "rgb(107, 168, 243)",
+      "background": "rgba(131, 71, 213, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 0,
+      "scale": 1.75,
+      "spacing": 18
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Uruk": {
+     "name": "Uruk",
+     "color": {
+      "pattern": "rgb(213, 173, 95)",
+      "background": "rgba(34, 207, 73, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 135,
+      "scale": 1.75,
+      "spacing": 13
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Yamna": {
+     "name": "Yamna",
+     "color": {
+      "pattern": "rgb(102, 206, 12)",
+      "background": "rgba(102, 187, 227, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 135,
+      "scale": 1.25,
+      "spacing": 12
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Abashevo": {
+     "name": "Abashevo",
+     "color": {
+      "pattern": "rgb(120, 67, 230)",
+      "background": "rgba(231, 229, 162, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 45,
+      "scale": 1.5,
+      "spacing": 11
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Battle-axe": {
+     "name": "Battle-axe",
+     "color": {
+      "pattern": "rgb(156, 252, 210)",
+      "background": "rgba(216, 168, 117, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 0,
+      "scale": 1.75,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Bell Beaker": {
+     "name": "Bell Beaker",
+     "color": {
+      "pattern": "rgb(186, 136, 229)",
+      "background": "rgba(90, 194, 240, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 135,
+      "scale": 1.5,
+      "spacing": 12
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Catacomb": {
+     "name": "Catacomb",
+     "color": {
+      "pattern": "rgb(88, 190, 238)",
+      "background": "rgba(74, 220, 229, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 90,
+      "scale": 1.5,
+      "spacing": 13
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Corded Ware": {
+     "name": "Corded Ware",
+     "color": {
+      "pattern": "rgb(212, 120, 244)",
+      "background": "rgba(67, 208, 231, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 135,
+      "scale": 1.75,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Fatyanovo": {
+     "name": "Fatyanovo",
+     "color": {
+      "pattern": "rgb(52, 219, 237)",
+      "background": "rgba(247, 218, 81, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 90,
+      "scale": 1.5,
+      "spacing": 18
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Grooved Ware": {
+     "name": "Grooved Ware",
+     "color": {
+      "pattern": "rgb(223, 66, 203)",
+      "background": "rgba(196, 54, 227, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 0,
+      "scale": 1.5,
+      "spacing": 17
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Indus Valley Civilization": {
+     "name": "Indus Valley Civilization",
+     "color": {
+      "pattern": "rgb(249, 223, 45)",
+      "background": "rgba(234, 157, 62, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 0,
+      "scale": 1.25,
+      "spacing": 15
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Poltavka": {
+     "name": "Poltavka",
+     "color": {
+      "pattern": "rgb(222, 155, 47)",
+      "background": "rgba(113, 248, 60, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 135,
+      "scale": 1.25,
+      "spacing": 17
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Potapovka": {
+     "name": "Potapovka",
+     "color": {
+      "pattern": "rgb(210, 13, 167)",
+      "background": "rgba(240, 144, 231, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 0,
+      "scale": 1.5,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Sintashta": {
+     "name": "Sintashta",
+     "color": {
+      "pattern": "rgb(73, 248, 237)",
+      "background": "rgba(214, 227, 25, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 90,
+      "scale": 1.75,
+      "spacing": 18
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Unetice": {
+     "name": "Unetice",
+     "color": {
+      "pattern": "rgb(113, 215, 248)",
+      "background": "rgba(47, 167, 148, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "woven",
+      "angle": 135,
+      "scale": 1.5,
+      "spacing": 18
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Nordic Bronze Age": {
+     "name": "Nordic Bronze Age",
+     "color": {
+      "pattern": "rgb(22, 196, 227)",
+      "background": "rgba(118, 180, 214, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 45,
+      "scale": 1.75,
+      "spacing": 16
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Trzciniec": {
+     "name": "Trzciniec",
+     "color": {
+      "pattern": "rgb(104, 200, 71)",
+      "background": "rgba(35, 99, 243, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 0,
+      "scale": 1.75,
+      "spacing": 19
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Srubna": {
+     "name": "Srubna",
+     "color": {
+      "pattern": "rgb(238, 31, 141)",
+      "background": "rgba(222, 190, 126, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 90,
+      "scale": 1.25,
+      "spacing": 10
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Tumulus": {
+     "name": "Tumulus",
+     "color": {
+      "pattern": "rgb(200, 104, 230)",
+      "background": "rgba(139, 89, 229, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 135,
+      "scale": 1.5,
+      "spacing": 10
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Urnfield": {
+     "name": "Urnfield",
+     "color": {
+      "pattern": "rgb(151, 173, 240)",
+      "background": "rgba(114, 222, 179, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 0,
+      "scale": 1.25,
+      "spacing": 11
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Lusatian": {
+     "name": "Lusatian",
+     "color": {
+      "pattern": "rgb(165, 194, 17)",
+      "background": "rgba(171, 236, 71, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 135,
+      "scale": 1.75,
+      "spacing": 15
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Elp": {
+     "name": "Elp",
+     "color": {
+      "pattern": "rgb(245, 178, 40)",
+      "background": "rgba(51, 57, 241, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 45,
+      "scale": 1.5,
+      "spacing": 14
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Hallstatt": {
+     "name": "Hallstatt",
+     "color": {
+      "pattern": "rgb(237, 138, 215)",
+      "background": "rgba(217, 12, 16, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 135,
+      "scale": 1.5,
+      "spacing": 19
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Jastorf": {
+     "name": "Jastorf",
+     "color": {
+      "pattern": "rgb(104, 41, 240)",
+      "background": "rgba(118, 59, 216, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 90,
+      "scale": 1.25,
+      "spacing": 17
+     },
+     "filtered": true,
+     "group": null
+    },
+    "La Tène": {
+     "name": "La Tène",
+     "color": {
+      "pattern": "rgb(207, 10, 21)",
+      "background": "rgba(230, 128, 194, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 0,
+      "scale": 1.75,
+      "spacing": 15
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Pomeranian": {
+     "name": "Pomeranian",
+     "color": {
+      "pattern": "rgb(190, 227, 154)",
+      "background": "rgba(158, 160, 247, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 135,
+      "scale": 1.75,
+      "spacing": 18
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Terramare": {
+     "name": "Terramare",
+     "color": {
+      "pattern": "rgb(33, 158, 181)",
+      "background": "rgba(108, 237, 211, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 45,
+      "scale": 1.75,
+      "spacing": 19
+     },
+     "filtered": true,
+     "group": null
+    },
+    "West Baltic Barrow": {
+     "name": "West Baltic Barrow",
+     "color": {
+      "pattern": "rgb(40, 182, 194)",
+      "background": "rgba(218, 223, 137, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 45,
+      "scale": 1.5,
+      "spacing": 13
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Przeworsk": {
+     "name": "Przeworsk",
+     "color": {
+      "pattern": "rgb(192, 52, 183)",
+      "background": "rgba(228, 56, 208, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 90,
+      "scale": 1.75,
+      "spacing": 10
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Chernyakhov": {
+     "name": "Chernyakhov",
+     "color": {
+      "pattern": "rgb(196, 32, 25)",
+      "background": "rgba(192, 121, 234, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 45,
+      "scale": 1.5,
+      "spacing": 17
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Oksywie": {
+     "name": "Oksywie",
+     "color": {
+      "pattern": "rgb(222, 190, 49)",
+      "background": "rgba(160, 189, 18, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 0,
+      "scale": 1.75,
+      "spacing": 11
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Roman Republic": {
+     "name": "Roman Republic",
+     "color": {
+      "pattern": "rgb(156, 24, 183)",
+      "background": "rgba(107, 32, 247, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "coal",
+      "angle": 45,
+      "scale": 1.25,
+      "spacing": 10
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Wielbark": {
+     "name": "Wielbark",
+     "color": {
+      "pattern": "rgb(42, 133, 243)",
+      "background": "rgba(160, 69, 46, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "crosses",
+      "angle": 0,
+      "scale": 1.5,
+      "spacing": 20
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Prague-Korchak": {
+     "name": "Prague-Korchak",
+     "color": {
+      "pattern": "rgb(202, 219, 84)",
+      "background": "rgba(236, 205, 15, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "dot",
+      "angle": 135,
+      "scale": 1.5,
+      "spacing": 12
+     },
+     "filtered": true,
+     "group": null
+    },
+    "Zarubinets": {
+     "name": "Zarubinets",
+     "color": {
+      "pattern": "rgb(165, 187, 234)",
+      "background": "rgba(12, 208, 15, 0.3)",
+      "stroke": null
+     },
+     "pattern": {
+      "type": "hatch",
+      "angle": 135,
+      "scale": 1.25,
+      "spacing": 20
+     },
+     "filtered": true,
+     "group": null
+    }
+   }
+  }
+ },
+ "map": {
+  "position": [
+   19.588652887207676,
+   44.33841407690187
+  ],
+  "zoom": 5.52,
+  "dataProjection": "EPSG:4326",
+  "mapProjection": "EPSG:3857",
+  "baseLayers": {},
+  "options": {
+   "basemap": {
+    "name": "Imagery",
+    "appearance": {
+     "visible_layers": {
+      "basemap-light-water": true,
+      "basemap-light-boundaries": true,
+      "basemap-light-labels": false
+     },
+     "colors": {
+      "map-background": "rgb(255, 255, 255)",
+      "basemap-light-water": "rgb(204, 204, 204)",
+      "basemap-light-boundaries": "rgb(153, 153, 153)",
+      "basemap-light-labels": "rgb(0, 0, 0)"
+     }
+    }
+   },
+   "features": {
+    "visible": {
+     "timeline": true,
+     "controls": true,
+     "legend": true,
+     "scale": true,
+     "title": true
+    },
+    "appearance": {
+     "map-title": "Map title",
+     "map-subtitle": "Map subtitle"
+    }
+   }
+  }
+ },
+ "features": {}
+}

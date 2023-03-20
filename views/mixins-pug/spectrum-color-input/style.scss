@@ -1,0 +1,51 @@
+@import "mixins-sass/colors";
+
+
+button.spectrum-color-input{
+    color: $text-color-lightest;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    outline: 0;
+    border-radius: 0;
+
+    text-shadow: none !important;
+    box-shadow: none !important;
+    border: 0.2em $palette-primary-color-dark solid !important;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    &:hover {
+        color: $text-color-light;
+    }
+
+    & .text-wrapper {
+        margin-left: 1em;
+        margin-right: 1em;
+    }
+
+    & .color {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    & .label, & .material-icons {
+        font-weight: bold;
+        text-shadow: 
+            -1px 0 $text-color-dark-faded, 
+            0 1px $text-color-dark-faded, 
+            1px 0 $text-color-dark-faded,
+            0 -1px $text-color-dark-faded;
+        
+    
+        //text-shadow: 
+        //    0 0 1px $text-color-dark-faded;
+    }
+}
+

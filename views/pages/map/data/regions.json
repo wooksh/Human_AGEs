@@ -1,0 +1,37 @@
+{
+    "region__cultures": {
+        "name": "Archeological cultures",
+        "title": "Cultures",
+        "subtext": "archeological division"
+    },
+    "region__world": {
+        "name": "World",
+        "title": "World",
+        "subtext": "geographical division"
+    },
+    "region__continents": {
+        "name": "Continents",
+        "title": "Continents",
+        "subtext": "geographical division"
+    },
+    "region__wb_regions": {
+        "name": "World Bank Regions",
+        "title": "WB Regions",
+        "subtext": "political division"
+    },
+    "region__un_regions": {
+        "name": "United Nations Regions",
+        "title": "UN Regions",
+        "subtext": "political division"
+    },
+    "region__un_subregions": {
+        "name": "United Nations Subregions",
+        "title": "UN Subregions",
+        "subtext": "political division"
+    },
+    "region__countries": {
+        "name": "Countries",
+        "title": "Countries",
+        "subtext": "political division"
+    }
+}

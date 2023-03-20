@@ -1,0 +1,94 @@
+extends /templates/basic/index.pug
+
+
+block append links
+	link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/css/bootstrap-slider.min.css' integrity='sha256-+xqVrdbLgHjiKF8ULvcwzQ545r7lCVfOqXlNJCB3XOg=' crossorigin='anonymous' referrerpolicy="no-referrer")
+	link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css' integrity='sha256-g7HgoMySZyonuPwHTORf+uGHEeOm7VRI2kfXWXlJnco=' crossorigin='anonymous' referrerpolicy="no-referrer")
+
+	include /assets/map-styles.pug
+	include /assets/plot-styles.pug
+
+
+block left-sidebar
+	include includes/left-sidebar.pug
+
+
+block content
+	include /mixins-pug/timeline/index.pug
+	include /mixins-pug/dropdown/index.pug
+
+	#content-wrapper.pt-4.overflow-hidden.active-left.active-right
+		.mb-4.position-relative
+			//-
+				#loading-session-wrapper
+					.loading-content.overlay.d-flex.align-items-center.justify-content-center(style="z-index: 2; font-size: 1.5rem;")
+						span Loading session...
+						.ml-4.spinner-grow(role='status')
+
+			#content.pt-2
+				.row.my-2.pt-3
+					.col-2
+					.col-8
+						#plot-pca
+					.col-2
+
+				//-#map.map .session-option
+				//-
+					#top-controls-wrapper.viewport-wrapper.container-fluid
+						#top-controls-container.p-1.row
+							#map-controls-panel.map-panel
+								#zoom-slider.map-control
+								#print-control.map-control.d-none
+							.map-panel.pt-3
+								#map-options-menu-wrapper(style="pointer-events: auto;")
+									+custom-button-dropdown('map-options-menu', mapToolbox, text = '', iconName = 'settings', title="Show map settings")(class='palette-tertiary-light no-focus position-relative no-text' style='z-index:10;')
+								#zoom.map-control
+							.map-panel.pt-3.col.text-center
+								#map-title-wrapper.hidden
+									div
+										span#map-title
+									div
+										span#map-subtitle
+
+							#legend-panel.map-panel.pt-3
+								#legend-wrapper.map-control
+									- var targetId = 'legend';
+									+accordion-header(targetId, 'Legend')(id="legend-header" class="")
+									.show.collapse(id=targetId)
+										//- Colorpicker must be before scroll panel -//
+										#legend-layer-color-picker
+										#legend-attribute-color-picker
+
+										#legend-content-wrapper
+											#legend-content
+												#legend-layers.hidden
+													h6.section-header Data layers
+												#legend-regions.mt-2.hidden
+													h6.section-header Regions
+												#legend-attributes
+
+				#bottom-controls-wrapper.viewport-wrapper
+					.p-2.mb-5
+						.map-panel.float-left.w-50
+						.map-panel.float-right.w-50
+							#map-scale.position-relative
+
+					//- +timeline('gradient')
+					#time-controls-wrapper
+						+timeline('timeline', "time-theme", "present-switch")
+						//-(title="Determines interval of the time filter")
+						+timeline('timeline-range', "range-theme")
+						//-(title="Determines min-max range for the time filter")
+
+
+block right-sidebar
+	include includes/right-sidebar.pug
+
+
+block append scripts
+	script(defer type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js' integrity='sha256-Z639rJO57BiZzQDlWsGyF+EJ3Fs3nD4pQPkfimTy3S8=' crossorigin='anonymous' referrerpolicy="no-referrer")
+	script(defer src='https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.33.1/plotly-basic.min.js' integrity='sha256-qPutqhXQitI6ydhltlGqtkrcj2rkNRQde60nRB3BIgg=' crossorigin='anonymous')
+
+	include /assets/archeo_ui-scripts.pug
+	include /assets/archeo_search-scripts.pug
+	include /assets/plot-scripts.pug

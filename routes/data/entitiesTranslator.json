@@ -1,0 +1,29 @@
+{
+    "remains": "Remains",
+	"person": "Person",
+	"sample": "Sample",
+	"use_phase_part_of_period": "ArchaeologicalPeriod",
+	"stage": "PhysicalDevelopmentStage",
+	"dating_culture": "Culture",
+	"use_phase_from_culture": "Culture",
+	"use_phase_part_of_culture": "Culture",
+	"place": "Place",
+	"political_region": "PoliticalRegion",
+	"geographical_region": "GeographicalRegion",
+	"cultural_region": "Culture",
+	"haplogroup_y": "HaplogroupY",
+	"haplogroup_mt": "HaplogroupMt",
+	"archaeological_site": "ArchaeologicalSite",
+	"source": "Source",
+	"source_author": "Author",
+
+	"result_admixture": "Admixture",
+	"result_admixture_type": "AdmixtureResult",
+	"result_pca": "PCA",
+	"result_pca_type": "PCAResult",
+	"result_umap": "UMAP",
+	"result_umap_type": "UMAPResult",
+
+	"past_population": "PastPopulation",
+	"present_population": "PresentPopulation"
+}

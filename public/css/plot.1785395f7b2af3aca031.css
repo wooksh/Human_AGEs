@@ -1,0 +1,6 @@
+.bootstrap-select{background-color:#eee;display:flex;width:100% !important}.bootstrap-select .bs-searchbox{margin-bottom:0.5rem}.bootstrap-select .dropdown-item{font-size:0.9rem;padding:0.4rem 1rem}.bootstrap-select .dropdown-item.active,.bootstrap-select .dropdown-item:active{color:#e6e6e6;background-color:#d4861f}.bootstrap-select .dropdown-item .text>small.text-muted{display:block;font-size:0.8em;padding-left:0}.bootstrap-select .btn{color:#222;border-radius:0}.bootstrap-select>.dropdown-toggle:after{color:#222}.bootstrap-select>.dropdown-toggle:focus{box-shadow:0 0 0 0.2rem rgba(212,134,31,0.25)}
+
+.question{width:100%;position:relative}.header{cursor:pointer;width:100%}.header .input-group-prepend{width:100%}.header .input-group-prepend .input-group-text{width:100%}.answer{padding:2rem;height:300px;background:#fff;border:1px solid #cecece;border-width:0px 1px 1px 1px}#plot-pca{min-height:65vh}
+
+
+

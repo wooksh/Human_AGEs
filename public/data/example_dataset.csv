@@ -1,0 +1,4 @@
+sample_id	place_name	longitude	latitude	dating_from	dating_to	sex	haplogroup_y	haplogroup_mt	sample_origin
+example_A	Udegram	72.31421667	34.74319444	1000	1250	male	R1a1a1	C4a1a3	long bone
+example_B	Radosevice	14.074597	50.410265	-2561	-2306	male	R1a1a1	D4	petrous part of temporal bone
+example_C	Radosevice	14.074597	50.410265	-2464	-2290	male	R1a1a1a	U2'3'4'7'8'9	petrous part of temporal bone

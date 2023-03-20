@@ -1,0 +1,107 @@
+include /mixins-pug/icon-checkbox/index.pug
+
+
+//- Add icons support
+mixin custom-button(text, iconName = null, count = null, addSpinner = false, spinnerText = '')
+	button.btn.custom-button(type="button")&attributes(attributes)
+		if addSpinner === true
+			span.loading-button-wrapper
+				span.label= spinnerText
+				span.spinner-grow(role='status')
+
+		span.button-content
+			span.label= text
+			| &nbsp;
+			if count !== null
+				span.items-count= count
+			if iconName !== null
+				i.material-icons= iconName
+
+
+mixin custom-button-link(link, text, iconName = null, newPage=false)
+	button.btn.custom-button(type="button")&attributes(attributes)
+		if addSpinner === true
+			span.loading-button-wrapper
+				span.label= spinnerText
+				span.spinner-grow(role='status')
+
+		span.button-content
+			if newPage
+				a.label(href=link target="_blank")=text
+			else
+				a.label(href=link)=text
+				
+			if iconName !== null
+				i.material-icons= iconName
+
+
+mixin custom-button-image(link, addSpinner = false, spinnerText = '')
+	button.btn.custom-button(type="button")&attributes(attributes)
+		if addSpinner === true
+			span.loading-button-wrapper
+				span.label= spinnerText
+				span.spinner-grow(role='status')
+
+		span.button-content
+			img(src=link)
+
+
+mixin dropdown-element(elId, val)
+	if val.constructor === Object
+		if val.isHeader 
+			h6.dropdown-header= val.name
+		else if val.isDivider
+			.dropdown-divider
+		else if val.isSubmenu
+			.dropright.dropdown-item
+				.dropdown-toggle(type="button" data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')= val.name
+				.dropdown-menu(id=elId aria-labelledby='dropdown-submenu')
+					each subVal, subKey in val.options
+
+						if subVal.constructor === Object
+							if subVal.isHeader 
+								h6.dropdown-header= subVal.name
+							else if subVal.isDivider
+								.dropdown-divider
+							else if subVal.isToggle
+								.icon-checkbox-wrapper.dropdown-item-toggle
+									button.form-check-input.btn.icon-checkbox(id=subKey data-toggle="button" aria-pressed=toString(subVal.isActive) autocomplete="off" class=`${subVal.class}` title='' toggle-target=subVal["toggle-target"] option-name=subVal["option-name"])
+										i.material-icons
+									label.form-check-label(for=subKey class=subVal.class)= subVal.name
+
+							else
+								button.dropdown-item(id=subKey type='button' class=subVal.class)= subVal.name
+						else
+							button.dropdown-item(id=subKey type='button')= subVal
+		else
+			button.dropdown-item(id=elId type='button' class=val.class)= val.name
+	else
+		button.dropdown-item(id=elId type='button')= val
+
+
+mixin custom-button-dropdown(id, options, text = '', iconName = null, title='')
+	.dropdown(title=title)
+		button.dropdown-toggle.btn.custom-button(id=id, type="button" data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')&attributes(attributes)
+			span.button-content
+				span.label= text
+				//-if text !== ''
+					| &nbsp;
+				if iconName !== null
+					i.material-icons= iconName
+		.dropdown-menu(aria-labelledby=id)
+			each val, key in options
+				+dropdown-element(key, val)
+
+
+mixin custom-button-dropleft(id, options, text = '', iconName = null)
+	.dropleft
+		button.dropdown-toggle.btn.custom-button(id=id, type="button" data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')&attributes(attributes)
+			span.button-content
+				span.label= text
+				//-if text !== ''
+					| &nbsp;
+				if iconName !== null
+					i.material-icons= iconName
+		.dropdown-menu(aria-labelledby=id)
+			each val, key in options
+				button.dropdown-item(id=key type='button')= val		

@@ -1,0 +1,204 @@
+-
+    var tilesData = [{
+        "id": "R1a_R1b_heatmap", "image": "/img/examples/R1a_R1b_heatmap/bg.png", "sessionLink": "R1a_R1b_heatmap", 
+        "title": "R1a & R1b distribution - heatmap",
+        "description": "Here we show an example use-case for heatmap layer type visualization. We have showed a well known distribution of R1a and R1b Y-DNA haplogroups, that divides Europe to the Western and Eastern parts.",
+        "content": {
+            "tags": ["heatmap", "points", "region clustering", "haplogroups"], "steps": [{
+                "image": "/img/examples/R1a_R1b_heatmap/1.jpg", "id": "R1a_R1b_heatmap_1",
+                "text": "1. Load blank session to start from scratch."
+            },{
+                "image": "/img/examples/R1a_R1b_heatmap/2.jpg", "id": "R1a_R1b_heatmap_2",
+                "text": "2. We are going to work on Allen Ancient DNA Resource v54.1.p1 data source, so please select it."
+            },{
+                "image": "/img/examples/R1a_R1b_heatmap/3.jpg", "id": "R1a_R1b_heatmap_3",
+                "text": "3. Fetch a dataset with determined R1a Y-DNA haplogroup and with location in the Europe. To do that, use query builder."
+            },{
+                "image": "/img/examples/R1a_R1b_heatmap/4.jpg", "id": "R1a_R1b_heatmap_4",
+                "text": "4. Do the same for R1b haplogroup. You may want to change names of the datasets for convenience."
+            },{
+                "image": "/img/examples/R1a_R1b_heatmap/5.jpg", "id": "R1a_R1b_heatmap_5",
+                "text": "5. Because the datasets differ in the samples count and we want would like only to compare the spatial distributions, one quick way to solve this is to use sampling option. To even both datasets we have sampled 36.6% of the R1b dataset. Another way would be using \"Data weight\" settings of the map layer."
+            },{
+                "image": "/img/examples/R1a_R1b_heatmap/6.jpg", "id": "R1a_R1b_heatmap_6",
+                "text": "6. Create a new map layer. Set it to use the R1a haplogroup dataset and set it to appear as a heatmap. You may also change the name of the layer correspondingly, as well as play with the appearance settings to make the layer more appealing. We have changed the color and the radius and blur of heatmap.<br>You can investigate all the applied changes and values later on while manually exploring this session's settings."
+            },{
+                "image": "/img/examples/R1a_R1b_heatmap/7.jpg", "id": "R1a_R1b_heatmap_7",
+                "text": "7. Next use the clone button to create another heatmap. For the new layer, change the dataset to R1b one and apply different color for the heatmap. Don't forget to change the layer name."
+            },{
+                "image": "/img/examples/R1a_R1b_heatmap/8.jpg", "id": "R1a_R1b_heatmap_8",
+                "text": "8. To create labels we have cloned both layers and changed their type to points. We have also hid the body of points leaving only samples counts and we position R1b dataset labels layer to the bottom to declutter data."
+            },{
+                "image": "/img/examples/R1a_R1b_heatmap/9.jpg", "id": "R1a_R1b_heatmap_9",
+                "text": "9. In the end, we have changed clustering settings to regional and distance clustering. We have adjusted the clustering distance to properly declutter the samples without big reduction of data location resolution."
+            },
+            {
+                "image": "/img/examples/R1a_R1b_heatmap/10.jpg", "id": "R1a_R1b_heatmap_10",
+                "text": "10. For readability, we have also filtered out all regions except Europe. This leaves us with thick border drawn on the map that clearly indicates, that this is the only region we are focusing on in our visual analysis."
+            }]
+        }
+    },{
+        "id": "period", "image": "/img/examples/Periods/bg.png", "sessionLink": "periods", 
+        "title": "Comparsion of periods",
+        "description": "Here we show that is is possible to visualize changes of spatio-temporal distribution and composition of the samples attributes on a single map view, so without manipulating the timeline position. We have prepared an example presenting comparsion of three arbitrary chosen time periods.",
+        "content": {
+            "tags": ["piecharts", "multiple periods", "region clustering", "haplogroups"], "steps": [{
+                "image": "/img/examples/Periods/1.jpg", "id": "Periods_1",
+                "text": "1. Load blank session to start from scratch."
+            },{
+                "image": "/img/examples/Periods/2.jpg", "id": "Periods_2",
+                "text": "2. We are going to work on Allen Ancient DNA Resource v54.1.p1 data source, so please select it."
+            },{
+                "image": "/img/examples/Periods/3.jpg", "id": "Periods_3",
+                "text": "3. Fetch a dataset of archeogenomic samples dated to originate from 6000&nbsp;BC&nbsp;&#8211;&nbsp;3500&nbsp;BC time period. Do the same for the 3500&nbsp;BC&nbsp;&#8211;&nbsp;0 and 0&nbsp;&#8211;&nbsp;1000&nbsp;AD periods. You may want to change names of the datasets for convenience."
+            },{
+                "image": "/img/examples/Periods/4.jpg", "id": "Periods_4",
+                "text": "4. Create a new map layer and set it to use the 6000&nbsp;BC&nbsp;&#8211;&nbsp;3500&nbsp;BC dataset. Also change the layer type to piecharts, attribute to haplogroup Y and name the layer properly."
+            },{
+                "image": "/img/examples/Periods/5.jpg", "id": "Periods_5",
+                "text": "5. This time, we want the layer to indicate which dataset it presents by using labels, not colors. To achieve that, head on to the layer appearance settings. Then, turn on the \"show layer name\" option and turn off the \"show layer color\"."
+            },{
+                "image": "/img/examples/Periods/6.jpg", "id": "Periods_6",
+                "text": "6. To make comparsion of periods more readable, we have limited the data presentation resolution to the whole regions by using clustering with UN subregions collection and turning off the distance clustering."
+            },{
+                "image": "/img/examples/Periods/7.jpg", "id": "Periods_7",
+                "text": "7. Time to add data of the remaing periods to the map. To quickly do that, you can clone twice the created map layer and change the dataset option of the newly created clones."
+            },{
+                "image": "/img/examples/Periods/8.jpg", "id": "Periods_8",
+                "text": "8. Since the layers' data points share the same position of the region centroid, you can declutter them by setting different rotation angle around their position. For readability, you can remove the cluster pointers for the extreme periods in the layer appearance options."
+            },{
+                "image": "/img/examples/Periods/9.jpg", "id": "Periods_9",
+                "text": "9. Even after taking all these steps, it is hard to analyse the haplogroup data as a whole. We recommend you to always limit the visual analysis to a samller subset of attribute values. Here, for example we have performed automatic clustering of the Y-DNA haplogroups by grouping them to the name of their parent haplogroup positioned at a given tree level. You can also perform manual clustering and further filtering of the haplogroups if you want."
+            }]
+        }
+    },{
+        "id": "admixtures", "image": "/img/examples/admixtures/bg.png", "sessionLink": "admixtures", 
+        "title": "Distribution of admixtures",
+        "description": "Here we wanted to investigate, whether is it possible to correlate given admixture analysis components to any distinct geographical location or human population. To do that, we have visualized spatial distribution of the samples with high genomic affinity to any of the admixture components. We created this example for admixture k=7 analysis.",
+        "content": {
+            "tags": ["piecharts", "distance clustering", "admixture"], "steps": [{
+                "image": "/img/examples/admixtures/1.jpg", "id": "admixtures_1",
+                "text": "1. Load blank session to start from scratch."
+            },{
+                "image": "/img/examples/admixtures/2.jpg", "id": "admixtures_2",
+                "text": "2. We are going to work on Allen Ancient DNA Resource v54.1.p1 data source, so please select it."
+            },{
+                "image": "/img/examples/admixtures/3.jpg", "id": "admixtures_3",
+                "text": "3. To obtain samples with highly homogenic admixture composition we have queried for samples with affinity higher than 80% (with exception for component #6, as there are no such samples) to any of the admixture components. That was done in relation to the results of admixture k=7 analysis. To prepare the query, we have created a list of statements for every component and we joined them with OR operation."
+            },{
+                "image": "/img/examples/admixtures/4.jpg", "id": "admixtures_4",
+                "text": "4. Next we have created a map layer and set it to display the newly created dataset samples in a form of piecharts."
+            },{
+                "image": "/img/examples/admixtures/5.jpg", "id": "admixtures_5",
+                "text": "5. For readability, we have removed the boundary color by using corresponding option in a layer appearance section."
+            },{
+                "image": "/img/examples/admixtures/6.jpg", "id": "admixtures_6",
+                "text": "6. We have also disabled grouping attributes of low frequency to the OTHER special group. Moreover, we have adjusted features size range and data weight options to distinguish clusters with higher samples count by making them bigger."
+            },{
+                "image": "/img/examples/admixtures/7.jpg", "id": "admixtures_7",
+                "text": "7. At the end, we have changed the basemap appearance setting, to make manually picked colors of the admixture components more visible."
+            }]
+        }
+    },{
+        "id": "tags", "image": "/img/examples/tags/bg.png", "sessionLink": "tags", 
+        "title": "Males with Y-DNA and mt-DNA haplogroups determined",
+        "description": "Analysing samples' haplogroups on a map can be difficult, as there are many unique values to present at the same time. To make it easier, you can use tags cloud layer type, which enables to analyse both haplogroup composition of the samples cluster as well as their counts proportions. We have also showed here an example of presenting several attributes of the same samples at once. We have visualized Y-DNA and mt-DNA haplogroups of the males that have had determined both of them.",
+        "content": {
+            "tags": ["tags", "points", "distance clustering", "haplogroups", "multiple attributes"], "steps": [{
+                "image": "/img/examples/tags/1.jpg", "id": "tags_1",
+                "text": "1. Load blank session to start from scratch."
+            },{
+                "image": "/img/examples/tags/2.jpg", "id": "tags_2",
+                "text": "2. We are going to work on Allen Ancient DNA Resource v54.1.p1 data source, so please select it."
+            },{
+                "image": "/img/examples/tags/3.jpg", "id": "tags_3",
+                "text": "3. Create a query for samples which have had determined both Y-DNA and mt-DNA haplogroups."
+            },{
+                "image": "/img/examples/tags/4.jpg", "id": "tags_4",
+                "text": "4. Then create a new map layer and set it's dataset to the one previously fetched from Human AGEs database. Also, set it's layer type to tags and choose haplogroup Y as an attribute to present."
+            },{
+                "image": "/img/examples/tags/5.jpg", "id": "tags_5",
+                "text": "5. You may play a bit with features size, layer appearance and tags appearance settings until you are satisfied with the results. Don't forget to name you layer."
+            },{
+                "image": "/img/examples/tags/6.jpg", "id": "tags_6",
+                "text": "6. Next, clone the layer and change the presented attribute to mt-DNA haplogroup. Also, change the color, layer name and try to reposition both layers, so the tag clouds are close to each other, but they do not overlap much."
+            },{
+                "image": "/img/examples/tags/7.jpg", "id": "tags_7",
+                "text": "7. Because both tag clouds present information on the same samples, the data weight normalization and scaling options won't be necessary, so we disabled it."
+            },{
+                "image": "/img/examples/tags/8.jpg", "id": "tags_8",
+                "text": "8. At the end we have created a third layer to present common information for both tag clouds about samples count. To do that, we have cloned one of the layers, changed it's type to points, we have enabled showing weight as a value and we have adjusted the layer appearance as position, to make it appear simplistic and next to the both tag clouds."
+            },{
+                "image": "/img/examples/tags/9.jpg", "id": "tags_9",
+                "text": "9. Additionally, you can adjust a distance of the clustering, to declutter the map."
+            }]
+        }
+    },{
+        "id": "cultures", "image": "/img/examples/cultures/bg.png", "sessionLink": "cultures", 
+        "title": "Admixture values for samples laying in the range of Epigravettian culture",
+        "description": "Here we show an example of visualization and clustering by archeological cultures. For simplicity, we have limited the visual analysis to Epigravettian culture and we have showed the distribution of samples among it and their genomic admixture composition. You can manipulate the timeline to see how the genomic composition changed in time for the region of Epigravettian culture occurence.",
+        "content": {
+            "tags": ["cultures", "piecharts", "admixture", "distance clustering", "region clustering"], "steps": [{
+                "image": "/img/examples/cultures/1.jpg", "id": "cultures_1",
+                "text": "1. Load blank session to start from scratch."
+            },{
+                "image": "/img/examples/cultures/2.jpg", "id": "cultures_2",
+                "text": "2. We are going to work on Allen Ancient DNA Resource v54.1.p1 data source, so please select it."
+            },{
+                "image": "/img/examples/cultures/3.jpg", "id": "cultures_3",
+                "text": "3. Fetch the samples that are localized in the region of Epigravettian or Late Epigravettian culture occurence."
+            },{
+                "image": "/img/examples/cultures/4.jpg", "id": "cultures_4",
+                "text": "4. Create a new map layer and set it for the loaded dataset, piechart layer type and admixture k=7 attributes."
+            },{
+                "image": "/img/examples/cultures/5.jpg", "id": "cultures_5",
+                "text": "5. Apart from distance clustering, set on clustering by archeological cultures regions."
+            },{
+                "image": "/img/examples/cultures/6.jpg", "id": "cultures_6",
+                "text": "6. Filter out all cultures except for Epigravettian and Late Epigravettian."
+            },{
+                "image": "/img/examples/cultures/7.jpg", "id": "cultures_7",
+                "text": "7. You may now adjust appearance of the culture regions (by clicking their symbols on the map legend) and the map layer to you liking."
+            },{
+                "image": "/img/examples/cultures/8.jpg", "id": "cultures_8",
+                "text": "8. To better visualize physiogeographical context of the culture spatial occurence, we have changed the basemap to Imagery."
+            }]
+        }
+    },{
+        "id": "past_present", "image": "/img/examples/past_present/bg.png", "sessionLink": "past_present", 
+        "description": "Here we show an example of presenting data from multiple data sources at the same time. For this purpose we have used archeogenomic data from Allen Ancient DNA Resource v54.1.p1 data source and contemporary genomic data from the EMPOP mt-DNA v4/R13 data source. You can use the timeline to explore how the regional distribution of the mt-DNA haplogroups changed to meet the state that we see today.",
+        "title": "Comparsion of past and contemporary times data of mt-DNA haplogroup distribution",
+        "content": {
+            "tags": ["piecharts", "region clustering", "multiple periods"], "steps": [{
+                "image": "/img/examples/past_present/1.jpg", "id": "past_present_1",
+                "text": "1. Load blank session to start from scratch."
+            },{
+                "image": "/img/examples/past_present/2.jpg", "id": "past_present_2",
+                "text": "2. First, we are going to fetch data from Allen Ancient DNA Resource v54.1.p1 data source, so please select it."
+            },{
+                "image": "/img/examples/past_present/3.jpg", "id": "past_present_3",
+                "text": "3. Query for a dataset that consists of samples with determined mt-DNA haplogroup."
+            },{
+                "image": "/img/examples/past_present/4.jpg", "id": "past_present_4",
+                "text": "4. Second, switch to the EMPOP mt-DNA v4/R13 data source."
+            },{
+                "image": "/img/examples/past_present/5.jpg", "id": "past_present_5",
+                "text": "5. Fetch whole data source. After a dataset is loaded, sample it down to 25%. It is a big data source, thus without sampling it would take a lot of time to show up on the map. When you are done working on the map and layers appearance, you can switch back sampling to 100%."
+            },{
+                "image": "/img/examples/past_present/6.jpg", "id": "past_present_6",
+                "text": "6. Before we create map layers, please change the clustering options to region clustring by UN subregions and disable distance clustering. This way we can normalize the spatial distributuon of the different data sources clusters, as they will show up at the region centroid."
+            },{
+                "image": "/img/examples/past_present/7.jpg", "id": "past_present_7",
+                "text": "7. Create a new piechart layer and set it for Allen Ancient DNA Resource and mt-DNA haplogroup."
+            },{
+                "image": "/img/examples/past_present/8.jpg", "id": "past_present_8",
+                "text": "8. Do the same for the EMPOP data source. Please be patient, as it may take some time."
+            },{
+                "image": "/img/examples/past_present/9.jpg", "id": "past_present_9",
+                "text": "9. Next, you may want to adjust both layers appearance, to make them distinguishable from each other and to make them appear next to each other."
+            },{
+                 "image": "/img/examples/past_present/10.jpg", "id": "past_present_10",
+                "text": "10. For the last thing, may want to limit the number of visualized haplogroups for easier analysis. We have permormed manual clustering to U, J, Y and X parental haplogroups by grouping together samples that contain any descendant mt-DNA haplogroup."
+            }]
+        }
+    }];

@@ -1,0 +1,25 @@
+extends /templates/basic/index.pug
+
+block append links
+    //-link(href="css/home.css", rel="stylesheet")
+    source(rel="prefetch" as="image" href="/img/bg-future.jpg")
+    include /assets/home-styles.pug
+
+
+block content
+    .container-fluid
+        include ./includes/jumbotron.pug
+    
+    //-
+        #content-wrapper.container-fluid.align-self-center
+            #content 
+                //- include ./includes/book.pug
+                include ./includes/applications.pug
+
+
+block append scripts
+    include /assets/home-scripts.pug
+    //-script(src="js/home.bundle.js")
+
+block append footer
+

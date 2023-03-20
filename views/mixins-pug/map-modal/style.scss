@@ -1,0 +1,210 @@
+@import "mixins-sass/colors";
+
+
+/* Features modal */
+.ui-dialog.ui-resizable {
+    height: 20em;
+    overflow-y: hidden;
+}
+
+
+.table-order-icon {
+    color: $text-color-dark-faded;
+    font-family: 'Material Icons';
+    right: 0.3em;
+    height: 1em;
+    width: 1em;
+}
+
+
+.samples-section .js-plotly-plot {
+    //position: relative;
+    width: 30rem;
+    height: 30rem;
+    display: inline-block;
+
+    position: relative;
+    top: 0;
+
+    outline: 1px solid $palette-tertiary-color-lighter;
+}
+
+.samples-section {
+    & .fixed-table-container {
+        overflow: scroll !important;
+    }
+
+    & .fixed-table-body {
+        width: 100vw;
+        position: relative;
+    }
+}
+
+.bootstrap-table {
+    & .table {
+        width: auto !important;
+        display: inline-block;
+    }
+
+    /* Remove default sorting icons */
+    & .fixed-table-container .table thead th {
+        & .desc, & .asc, & .both {
+            background-image: none;
+        }
+    }
+
+    /* Disable sorting event triggering on whole column header area */
+    & .th-inner.sortable {
+        pointer-events: none;
+        position: relative;
+        height: 100%;
+    }
+
+    & .trigger {
+        cursor: pointer;
+        pointer-events: auto;
+    }
+
+    /* Apply custom sorting icons */
+    & .desc .table-order-icon, & .both .table-order-icon {
+        &:after {
+            position: absolute;
+            content: 'arrow_drop_down';
+            bottom: 20%;
+        }
+    }
+     
+    & .asc .table-order-icon,  & .both .table-order-icon {
+        &:before {
+            position: absolute;
+            content: 'arrow_drop_up';
+            top: 20%;
+        }
+    }
+
+    & .material-icons.trigger::selection {
+        background: none;
+    }
+
+    & .columns {
+        margin: 0 !important;
+    }
+
+    & canvas {
+        margin: 0 auto;
+    }
+}
+
+
+.fixed-table-toolbar {
+    & .dropdown-menu {
+        overflow: visible !important;
+    }
+
+    & li:hover > ul.dropdown-menu {
+        display: block;
+    }
+}
+
+
+.object-container {
+    margin-top: 1em;
+	& .object-content {
+		padding: 1.5em 1em 1em 1em;
+	}
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+
+.map-modal {
+    position: relative;
+    width: 100% !important;
+    background-color: $background-color-light;
+    font-size: 0.8rem;
+    position: relative;
+    overflow-y: scroll;
+
+    &.ui-dialog-content {
+        padding: 0 !important;
+        //overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    /*& .accordion-arrow > .tip {
+        //background-color: $text-color-dark !important;
+    }*/
+
+    & .accordion-header {
+        //background-color: $background-color-lightest !important;
+        
+        & .header-text {
+            font-size: 1.2em;
+        }
+    }
+
+    /*& .section-content {
+        background-color: $background-color-lightest !important;
+        font-size: 1em;
+        min-height: 5em;
+        margin-bottom: 1em;
+    }*/
+}
+
+.map-modal-content {
+    position: relative;
+    height: 100%;
+    display: none;
+    //overflow: hidden;
+
+    &:first-child {
+        display: block;
+    }
+
+    & a {
+        color: $palette-secondary-color-darker !important;
+    }
+}
+
+
+.table-filter-icon {
+    margin-right: 1em;
+    font-size: 1.5em;
+    position: relative;
+    color: $text-color-dark-faded;
+
+
+    &:before {
+        position: absolute;
+        width: 150%;
+        height: 150%;
+        border-radius: 3px;
+        content: '';
+        bottom: -25%;
+        left: -25%;
+        border: 2px $text-color-dark-faded solid;
+    }
+
+    &.active {
+        color: $text-color-light;
+        z-index: 1;
+
+        &:before {
+            background-color: $text-color-dark-faded;
+            z-index: -1;
+        }
+    }
+}
+
+
+#column-toggle-dropdown {
+    .dropdown-item {
+        padding: 0.5em;
+    }
+
+    label {
+        margin: 0;
+    }
+}

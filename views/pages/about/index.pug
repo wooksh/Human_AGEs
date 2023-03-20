@@ -1,0 +1,20 @@
+extends /templates/basic/index.pug
+include includes/tile.pug
+//- include /mixins- /dropdown/dropdown. 
+//-include /mixins-pug/select/select.pug
+
+block append links
+    link(href="css/about.css", rel="stylesheet")
+    include /assets/about-styles.pug
+
+block content
+    #content-wrapper
+        #content
+            include includes/team.pug
+            include includes/project.pug
+            include includes/acknowledgments.pug
+
+block append scripts
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js' integrity='sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=' crossorigin='anonymous')
+    //-script(src="js/about.bundle.js")
+    include /assets/about-scripts.pug

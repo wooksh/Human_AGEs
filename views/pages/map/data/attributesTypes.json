@@ -1,0 +1,75 @@
+{
+    "admixture": {
+        "": {},
+        "admixture_k2": {
+            "name": "Admixture K=2",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k3": {
+            "name": "Admixture K=3",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k4": {
+            "name": "Admixture K=4",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k6": {
+            "name": "Admixture K=6",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k7": {
+            "name": "Admixture K=7",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k8": {
+            "name": "Admixture K=8",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k9": {
+            "name": "Admixture K=9",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k10": {
+            "name": "Admixture K=10",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k11": {
+            "name": "Admixture K=11",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k12": {
+            "name": "Admixture K=12",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k13": {
+            "name": "Admixture K=13",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k14": {
+            "name": "Admixture K=14",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k16": {
+            "name": "Admixture K=16",
+            "type": "admixture",
+            "selected": false
+        },
+        "admixture_k17": {
+            "name": "Admixture K=17",
+            "type": "admixture",
+            "selected": false
+        }
+    }
+}

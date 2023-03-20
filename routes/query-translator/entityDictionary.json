@@ -1,0 +1,9 @@
+{
+    "AADR_v54.1.p1": {
+        "remains": "RemainsAADR",
+        "person": "PersonAADR"
+    },
+    "EMPOP_v4/R13": {
+        "person": "PersonEMPOP"
+    }
+}

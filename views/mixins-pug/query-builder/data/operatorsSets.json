@@ -1,0 +1,14 @@
+{
+	"text": ["equal", "not_equal", "contains", "not_contains", "begins_with", "not_begins_with", "in", "not_in"],
+	"select": ["equal", "not_equal"],
+	"tree": ["equal", "not_equal", "part_of", "not_part_of"],
+	"number_range": [
+	  "between", "inrange", "timepoint__less", "timepoint__less_or_equal", "timepoint__greater", "timepoint__greater_or_equal", "timepoint__equal", "timepoint__not_equal"
+	],
+	"number": [
+		"between", "less", "less_or_equal", "greater", "greater_or_equal", "equal", "not_equal" 
+	],
+	"point": [
+	  "distance__less", "distance__less_or_equal", "distance__greater", "distance__greater_or_equal"
+	]
+}

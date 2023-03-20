@@ -1,0 +1,40 @@
+extends /templates/basic/index.pug
+
+
+block append links
+    //-link(href="css/faq.css", rel="stylesheet")
+    include /assets/faq-styles.pug
+    script. 
+        window.questionId = "!{questionId}";
+
+
+block content
+    include /mixins-pug/textbox/index.pug
+    
+    #content-wrapper
+        #content
+            .row
+                .col
+                .col-md-8
+                    //- LANG
+                    h2.mb-5.text-center Frequently asked questions 
+
+                    .row.my-5.pt-3
+                        .col
+                        .col-10
+                            .input-group.input-group
+                                //-input.text-center.form-control(type='search' placeholder='Search' aria-label='Search' aria-describedby='button-search')
+                                +icon-textbox('search', 'Search for questions...', 'search', 'search', classes="text-center")
+                        .col
+
+                    #faq.mt-5
+                        h2#not-found-prompt.hidden.mt-5 No matching question found...
+                        include includes/questions.pug
+                .col
+    
+
+block append scripts 
+    script(defer src="https://cdnjs.cloudflare.com/ajax/libs/FlexSearch/0.7.2/flexsearch.es5.js" integrity="sha512-wz43ZAB8+0NQD7Yd+QC9afZaVxkC74GLPn0IzewyfExb88Cziu7fD6iUZYyjAMCT3n5mR/80rB73tOJin4UKsw==" crossorigin="anonymous")
+
+    include /assets/archeo_ui-scripts.pug
+    include /assets/faq-scripts.pug

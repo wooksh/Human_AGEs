@@ -1,0 +1,115 @@
+/* @import "mixins-sass/colors"; */
+
+/*---------------------------------------------------*/
+/*** VARIABLES ***/
+/*---------------------------------------------------*/
+
+$palette-primary-color: rgba(19, 68, 111, 1.0); 
+$palette-primary-color-light: rgba(38, 83, 122, 1.0);
+$palette-primary-color-lightest: rgba(197, 209, 220, 1.0); 
+$palette-primary-color-dark: rgba(17, 61, 100, 1.0); 
+$palette-primary-color-darkest: rgba(13, 48, 78, 1.0); 
+
+//$palette-secondary-color: #FFC938; // It's more yellowish
+$palette-secondary-color-light: rgb(255, 212, 155);
+$palette-secondary-color: rgb(255, 173, 66);
+$palette-secondary-color-dark: rgb(233, 151, 43);
+$palette-secondary-color-darker: rgb(212, 134, 31);
+$palette-secondary-color-darkest: rgb(182, 116, 30);
+
+$palette-tertiary-color-lightest: rgb(221, 221, 221);
+$palette-tertiary-color-lighter: rgb(206, 206, 206);
+$palette-tertiary-color-light: rgb(175, 175, 175);
+$palette-tertiary-color: rgb(71, 71, 71);
+$palette-tertiary-color-dark: rgb(44, 44, 44);
+$palette-tertiary-color-darker: rgb(34, 34, 34);
+$palette-tertiary-color-darkest: rgb(20, 20, 20);
+
+$text-color-lightest: rgba(245, 245, 245, 1.0); /* Only special cases like legend */
+$text-color-light: rgba(230, 230, 230, 1.0);
+$text-color-light-faded: rgba(210, 210, 210, 1.0);
+$text-color-dark: rgba(34, 34, 34, 1.0);
+$text-color-dark-faded: rgb(100, 100, 100);
+
+$background-color-light: rgba(238, 238, 238, 1.0);
+$background-color-lightest: rgba(247, 247, 247, 1.0);
+
+/*---- Data colors ----*/
+$present-time-color-array-string: 119,0,255,1.0;
+
+/*---------------------------------------------------*/
+/*** MIXINS ***/
+/*---------------------------------------------------*/
+
+@function palette-secondary-color-with-opacity($opacity-perc: 1.0) {
+    @return rgba(255, 185, 56, $opacity-perc);
+}
+
+@function palette-secondary-color-darker-with-opacity($opacity-perc: 1.0) {
+    @return rgba(212, 134, 31, $opacity-perc);
+}
+
+@function palette-primary-color-with-opacity($opacity-perc: 1.0) {
+    @return rgba(19, 68, 111, $opacity-perc);
+}
+
+@function palette-tertiary-color-dark-with-opacity($opacity-perc: 1.0) {
+    @return rgba(44, 44, 44, $opacity-perc);
+}
+
+@function palette-primary-color-darkest-with-opacity($opacity-perc: 1.0) {
+    @return rgba(13, 48, 78, $opacity-perc);
+}
+
+@function text-color-dark-with-opacity($opacity-perc: 1.0) {
+    @return rgba(34, 34, 34, $opacity-perc);
+}
+
+@function text-color-dark-faded-with-opacity($opacity-perc: 1.0) {
+    @return rgba(119, 119, 119, $opacity-perc);
+}
+
+@function palette-tertiary-color-with-opacity($opacity-perc: 1.0) {
+    @return rgba(71, 71, 71, $opacity-perc);
+}
+
+@function palette-tertiary-color-lighter-with-opacity($opacity-perc: 1.0) {
+    @return rgba(206, 206, 206, $opacity-perc);
+}
+
+@function palette-tertiary-color-light-with-opacity($opacity-perc: 1.0) {
+    @return rgba(175, 175, 175, $opacity-perc);
+}
+
+@function background-color-light-with-opacity($opacity-perc: 1.0) {
+    @return rgba(238, 238, 238, $opacity-perc);
+}
+
+@function background-color-lightest-with-opacity($opacity-perc: 1.0) {
+    @return rgba(247, 247, 247, $opacity-perc);
+}
+
+
+:export {
+    palette_primary_color: $palette-primary-color;
+    palette_primary_color_light: $palette-primary-color-light;
+    palette_primary_color_lightest: $palette-primary-color-lightest;
+    palette_primary_color_dark: $palette-primary-color-dark;
+    palette_primary_color_darkest: $palette-primary-color-darkest;
+    palette_secondary_color: $palette-secondary-color;
+    palette_secondary_color_darker: $palette-secondary-color-darker;
+    palette_tertiary_color_light: $palette-tertiary-color-light;
+    palette_tertiary_color_lightest: $palette-tertiary-color-lightest;
+    palette_tertiary_color_lighter: $palette-tertiary-color-lighter;
+    palette_tertiary_color: $palette-tertiary-color;
+    palette_tertiary_color_dark: $palette-tertiary-color-dark;
+    palette_tertiary_color_darker: $palette-tertiary-color-darker;
+    palette_tertiary_color_darkest: $palette-tertiary-color-darkest;
+    text_color_light: $text-color-light;
+    text_color_dark: $text-color-dark;
+    text_color_dark_faded: $text-color-dark-faded;
+	background_color_light: $background-color-light;
+	background_color_lightest: $background-color-lightest;
+    present_time_color_array_string: $present-time-color-array-string;
+    text_color_light_faded: $text-color-light-faded;
+}

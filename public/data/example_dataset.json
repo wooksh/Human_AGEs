@@ -1,0 +1,41 @@
+[
+ {
+  "sample_id": "example_A",
+  "place_name": "Udegram",
+  "longitude": 72.31421667,
+  "latitude": 34.74319444,
+  "dating_from": 1000,
+  "dating_to": 1250,
+  "sex": "male",
+  "haplogroup_y": "R1a1a1",
+  "population_name": "Pakistan_Medieval_Udegram_Ghaznavid",
+  "haplogroup_mt": "C4a1a3",
+  "sample_origin": "long bone"
+ },
+ {
+  "sample_id": "example_B",
+  "place_name": "Radosevice",
+  "longitude": 14.074597,
+  "latitude": 50.410265,
+  "dating_from": -2561,
+  "dating_to": -2306,
+  "sex": "male",
+  "haplogroup_y": "R1a1a1",
+  "haplogroup_mt": "D4",
+  "population_name": "Czech_CordedWare",
+  "sample_origin": "petrous part of temporal bone"
+ },
+ {
+  "sample_id": "example_C",
+  "place_name": "Radosevice",
+  "longitude": 14.074597,
+  "latitude": 50.410265,
+  "dating_from": -2464,
+  "dating_to": -2290,
+  "sex": "male",
+  "haplogroup_y": "R1a1a1a",
+  "haplogroup_mt": "U2'3'4'7'8'9",
+  "population_name": "Czech_CordedWare",
+  "sample_origin": "petrous part of temporal bone"
+ }
+]

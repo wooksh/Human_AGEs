@@ -1,0 +1,44 @@
+@import "mixins-sass/colors";
+
+
+.icon-radiobuttons {
+    display: flex;
+    //margin-bottom: 1rem;
+
+    .icon {
+        width: 4rem;
+        height: 4rem;
+        display: inline-block;
+    }
+
+    .option-btn {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        flex-direction: row;
+        align-content: stretch;
+        color: $text-color-dark;
+        background-color: text-color-dark-faded-with-opacity(0.2);
+        /* border-color: text-color-dark-faded-with-opacity(0.3) !important; */
+        border: none;
+        border-radius: 0;
+
+        &.active, &:active {
+            background-color: text-color-dark-faded-with-opacity(0.4) !important;
+            color: $text-color-dark !important;
+            /* border-color: text-color-dark-faded-with-opacity(0.45) !important; */
+            border: none;
+
+            &:focus, &.focus {
+                box-shadow: 0 0 0 .2rem palette-secondary-color-darker-with-opacity(0.4) !important;
+            }
+        }
+
+        &:not(:first-child) {
+            margin-left: 0.125rem;
+        };
+    }
+
+    .option-text {
+        margin: 0;
+    }
+}

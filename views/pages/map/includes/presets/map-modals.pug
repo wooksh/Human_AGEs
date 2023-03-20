@@ -1,0 +1,276 @@
+include /mixins-pug/accordion-header/index.pug
+include /mixins-pug/query-builder/index.pug
+include /mixins-pug/dropdown/index.pug
+include /mixins-pug/simple-radiobuttons/index.pug
+include /mixins-pug/icon-checkbox/index.pug
+include /mixins-pug/spectrum-color-input/index.pug
+include /mixins-pug/textbox/index.pug
+
+include ./dictionaries/columns.pug
+include ./dictionaries/sessionDataTypes.pug
+
+
+-
+	var featuresSections = [
+		{'name': 'Remains', 'id': 'remains-modal-remains-accord'}, 
+		{'name': 'Settlement phases', 'id': 'phase-modal-remains-accord'}, 
+		{'name': 'Archeological sites', 'id': 'site-modal-remains-accord'}
+	];
+
+-
+	var fileTypes = {
+		'JSON': {
+			'label': 'JSON'
+		},
+		'CSV': {
+			'label': 'CSV'
+		}
+	}
+
+-
+	var imageTypes = {
+		'jpeg': {
+			'label': 'JPG'
+		},
+		'png': {
+			'label': 'PNG'
+		},
+		'pdf': {
+			'label': 'PDF'
+		}
+	}
+
+
+mixin query-builder-modal()
+	#query-builder-modal.modal.fade(data-backdrop='static' data-keyboard='false' tabindex='-1' role='dialog' aria-labelledby='staticBackdropLabel' aria-hidden='true')&attributes(attributes)
+		.modal-dialog.modal-dialog-centered.modal-xl
+			.modal-content
+				.modal-header
+					h5#staticBackdropLabel.modal-title Query builder
+					button.close(type='button' data-dismiss='modal' aria-label='Close')
+						span(aria-hidden='true') &times;
+				.modal-body
+					+query-builder()
+				.modal-footer
+					//-button#submit-rules.btn.btn-secondary(type='button') Confirm changes
+					//-button.btn.btn-secondary(type='button' data-dismiss='modal') Close
+
+					+custom-button('Apply')(id="submit-rules" class='mb-0 mr-2 palette-tertiary no-focus')
+					+custom-button('Close')(class='mb-0 mr-2 palette-tertiary no-focus' data-dismiss='modal')
+
+
+//-+query-builder-modal()
+
+
+mixin download-modal()
+	#download-modal.modal.fade(data-backdrop='static' data-keyboard='false' tabindex='-1' role='dialog' aria-labelledby='downloadTitle' aria-hidden='true')&attributes(attributes)
+		.modal-dialog.modal-dialog-centered
+			.modal-content
+				.modal-header
+					h5#downloadTitle.modal-title Download features
+					button.close(type='button' data-dismiss='modal' aria-label='Close')
+						span(aria-hidden='true') &times;
+				.modal-body
+					//-+dropdown('file-columns-select', columnsDic, 'Choose columns...')(class='file-columns-select' multiple=true)
+					h6.subsection-header Choose file type
+					+simple-radiobuttons('download-filetype', fileTypes, 'JSON')
+				.modal-footer
+					+custom-button('Download')(id="download-button" class='mb-0 mr-2 palette-tertiary no-focus')
+					+custom-button('Close')(class='mb-0 mr-2 palette-tertiary no-focus' data-dismiss='modal')
+
+
+//-+download-modal()
+
+
+mixin gradient-modal()
+	.map-modal(id="gradient-modal" title="Modify gradient appearance")&attributes(attributes)
+		.section-content
+			.gradient-input-wrapper.p-4
+				+gradient-input()(id="legend-layer-gradient" class="mb-4")
+				p Click on a handle to edit it's color
+			#legend-layer-gradient-color-picker
+
+//-+gradient-modal()
+
+
+mixin pattern-modal()
+	.map-modal(id="pattern-modal" title="Modify pattern appearance")&attributes(attributes)
+		.section-content
+			
+			#legend-region-color-settings.subsection.p-3.position-relative
+				h6.subsection-header Choose color to edit
+				+spectrum-color-input("#ff0000", "Edit background")(id="region-background-color-butt" class='mb-3 h-100 w-100 d-block')
+				#legend-region-background-color-picker
+				+spectrum-color-input("#ffff00", "Edit pattern")(id="region-pattern-color-butt" class='h-100 w-100 d-block')
+				#legend-region-pattern-color-picker
+			
+			#legend-pattern-setting.subsection.p-3.position-relative(style='z-index: 999999')
+				h6.subsection-header Pattern settings
+				p.mt-3.mb-2 Pattern type
+				+dropdown-no-picker('legend-select-pattern-type', patterns, "Choose a pattern type...")
+				p.mt-3.mb-2 Pattern scale
+				input(id='legend-pattern-scale' type="text" class="js-range-slider")
+				p.mt-3.mb-2 Pattern spacing
+				input(id='legend-pattern-spacing' type="text" class="js-range-slider")
+				p.mt-3.mb-2 Pattern angle
+				#pattern-anglepicker.text-center
+			
+
+//-+pattern-modal()
+
+
+mixin session-modal()
+	#session-modal.modal.fade(data-backdrop='static' data-keyboard='false' tabindex='-1' role='dialog' aria-labelledby='sessionTitle' aria-hidden='true')&attributes(attributes)
+		.modal-dialog.modal-dialog-centered.modal-lg
+			.modal-content
+				.modal-header
+					h5#sessionTitle.modal-title Choose data to be preserved in the session
+					//-h5#sessionTitle.modal-title Loading an imported session
+					//-h5#sessionTitle.modal-title Exporting a current session to a file
+					button.close(type='button' data-dismiss='modal' aria-label='Close')
+						span(aria-hidden='true') &times;
+				.modal-body
+					//-+dropdown('file-columns-select', columnsDic, 'Choose columns...')(class='file-columns-select' multiple=true)
+					form
+						each el, key in sessionDataTypes
+							.form-group.row.session-data-type.mb-3(id=`session-data-${key}`)
+								.col-6= el.name
+								.col-6
+									if el.options
+										each el2, key2 in el.options
+											.session-data-subtype(id=`session-data-${key2}`)
+												.form-check
+													- let inputId = `session-data-${key2}-subdata-${key}`;
+													input.form-check-input(type='checkbox' id=inputId data-name=`${key}__${key2}` checked='')
+													label.form-check-label(for=inputId)= el2.name
+									else
+										.form-check
+											- let inputId = `session-data-${key}-input`
+											input.form-check-input(type='checkbox' id=inputId data-name=`${key}` checked='')
+											label.form-check-label(for=inputId)
+												i all
+
+						.form-group.row
+							.col-sm-10
+								+custom-button('Select all options')(id="session-modal-select-all" class='mb-0 mr-2 palette-tertiary-light no-focus')
+								+custom-button('Deselect all options')(id="session-modal-deselect-all" class='mb-0 palette-tertiary-light no-focus')
+
+					//-+simple-radiobuttons('download-filetype', fileTypes, 'JSON')
+				.modal-footer
+					+custom-button('Confirm')(id="session-modal-button-confirm" class='mb-0 mr-2 palette-primary no-focus')
+					+custom-button('Cancel')(id="session-modal-button-cancel" class='mb-0 mr-2 palette-tertiary no-focus' data-dismiss='modal')
+
+
+					//-button#session-modal-button.btn.btn-secondary(type='button') Confirm
+					//-button.btn.btn-secondary(type='button') Cancel
+
+
+//-+session-modal()
+
+
+mixin photo-modal()
+	#photo-modal.modal.fade(data-backdrop='static' data-keyboard='false' tabindex='-1' role='dialog' aria-labelledby='photoTitle' aria-hidden='true')&attributes(attributes)
+		.modal-dialog.modal-dialog-centered.modal-lg
+			.modal-content.shadow
+				.modal-header
+					h5#photoTitle.modal-title Download current map view as an image
+					//-h5#sessionTitle.modal-title Loading an imported session
+					//-h5#sessionTitle.modal-title Exporting a current session to a file
+					button.close(type='button' data-dismiss='modal' aria-label='Close')
+						span(aria-hidden='true') &times;
+				.modal-body
+					//-+dropdown('file-columns-select', columnsDic, 'Choose columns...')(class='file-columns-select' multiple=true)
+					
+					.subsection
+						h6.subsection-header Image file type
+						+simple-radiobuttons('photo-image-type', imageTypes, 'jpeg')
+					//-
+						.subsection
+							h6.subsection-header Image DPI
+							input(id='photo-dpi')
+
+					//-
+						.form-group.row
+							.col-sm-10
+								+custom-button('Select all options')(id="session-modal-select-all" class='mb-0 mr-2 palette-tertiary-light no-focus')
+								+custom-button('Deselect all options')(id="session-modal-deselect-all" class='mb-0 palette-tertiary-light no-focus')
+
+					//-+simple-radiobuttons('download-filetype', fileTypes, 'JSON')
+				.modal-footer
+					+custom-button('Download')(id="photo-modal-button-confirm" class='mb-0 mr-2 palette-tertiary no-focus')
+					+custom-button('Cancel')(id="photo-modal-button-cancel" class='mb-0 mr-2 palette-tertiary no-focus' data-dismiss='modal')
+
+
+//-+photo-modal()
+
+
+mixin basemap-modal()
+	#basemap-modal.modal.fade(data-backdrop='static' data-keyboard='false' tabindex='-1' role='dialog' aria-labelledby='basemap-appearance' aria-hidden='true')&attributes(attributes)
+		.modal-dialog.modal-dialog-centered.modal-lg
+			.modal-content.shadow
+				.modal-header
+					h5#basemap-appearance.modal-title 
+					| Change&nbsp;
+					span#basemap-appearance-name
+					| &nbsp;basemap appearance settings
+					button.close(type='button' data-dismiss='modal' aria-label='Close')
+						span(aria-hidden='true') &times;
+
+				.modal-body
+					.subsection.basemap-layers-visibility
+						h6.subsection-header Basemap layers
+						+icon-checkbox('basemap-light-setting-water', 'simple', "show water", true)(class="basemap-layer-toggle" toggle-visibility="basemap-light-water")
+						+icon-checkbox('basemap-light-setting-boundaries', 'simple', "show contemporary political boundaries", false)(class="basemap-layer-toggle" toggle-visibility="basemap-light-boundaries")
+						+icon-checkbox('basemap-light-setting-labels', 'simple', "show name labels", false)(class="basemap-layer-toggle" toggle-visibility="basemap-light-labels")
+
+						h6.subsection-header Basemap colors 
+						//-p Set background color 
+						p Set background color
+						+spectrum-color-input("#ff0000", "Press to edit")(id="basemap-light-background-color" class="h-100 basemap-layer-color" target-layer="map-background")
+						p Set water reservoirs color
+						+spectrum-color-input("#ff0000", "Press to edit")(id="basemap-light-water-color" class="h-100 basemap-layer-color" target-layer="basemap-light-water")
+						p Set boundaries color
+						+spectrum-color-input("#ff0000", "Press to edit")(id="basemap-light-boundaries-color" class="h-100 basemap-layer-color" target-layer="basemap-light-boundaries")
+						p Set labels colors
+						+spectrum-color-input("#ff0000", "Press to edit")(id="basemap-light-labels-color" class="h-100 basemap-layer-color" target-layer="basemap-light-labels")
+
+				.modal-footer
+					+custom-button('Cancel')(id="basemap-modal-button-cancel" class='mb-0 mr-2 palette-tertiary no-focus' data-dismiss='modal')
+
+
+//-+basemap-modal()
+
+
+mixin map-features-settings-modal()
+	#map-features-settings-modal.modal.fade(data-backdrop='static' data-keyboard='false' tabindex='-1' role='dialog' aria-labelledby='features-appearance' aria-hidden='true')&attributes(attributes)
+		.modal-dialog.modal-dialog-centered.modal-lg
+			.modal-content.shadow
+				.modal-header
+					h5#basemap-features.modal-title Change map features appearance settings
+					button.close(type='button' data-dismiss='modal' aria-label='Close')
+						span(aria-hidden='true') &times;
+
+				.modal-body
+					.subsection
+						//-
+							h6.subsection-header Legend settings
+							p Fontsize
+							p Randomize colors (choose which one or all)
+						h6.subsection-header Title settings
+						div
+							span Map title
+							+icon-textbox('map-title-textbox', 'Type in map title...', 'edit', 'map-title')(class="map-features-textbox w-50" event-target="#map-title" option-name="map-title")
+						.mt-3
+							span Map subtitle
+							+icon-textbox('map-subtitle-textbox', 'Type in map subtitle...', 'edit', 'map-subtitle')(class="map-features-textbox w-50" event-target="#map-subtitle" option-name="map-subtitle")
+						//-
+							p Add to subtitle timeline filter value
+							p Fontsize
+						//-
+							h6.subsection-header Timeline settings
+							p Fontsize
+				.modal-footer
+					+custom-button('Cancel')(id="basemap-modal-button-cancel" class='mb-0 mr-2 palette-tertiary no-focus' data-dismiss='modal')
+
+
+//-+map-features-settings-modal()

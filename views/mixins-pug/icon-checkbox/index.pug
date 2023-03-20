@@ -1,0 +1,14 @@
+mixin icon-checkbox(id, checkboxClass, label = '', isToggled = true, iconTitle="")
+	.icon-checkbox-wrapper
+		if isToggled
+			button.form-check-input.btn.icon-checkbox.active(id=id data-toggle="button" aria-pressed="true" autocomplete="off" class=checkboxClass title=iconTitle)&attributes(attributes)
+				i.material-icons
+			if label && label != ''
+				label.form-check-label(for=id) !{label}
+		else
+			button.form-check-input.btn.icon-checkbox(id=id data-toggle="button" aria-pressed="false" autocomplete="off" class=checkboxClass title=iconTitle)&attributes(attributes)
+				i.material-icons
+			if label && label != ''
+				label.form-check-label(for=id) !{label}
+
+	//- &attributes(attributes)

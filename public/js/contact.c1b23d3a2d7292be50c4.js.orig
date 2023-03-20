@@ -1,0 +1,568 @@
+/******/ (() => { // webpackBootstrap
+/******/ 	var __webpack_modules__ = ({
+
+/***/ 4111:
+/***/ (() => {
+
+$(document).ready(function () {
+  var map = new google.maps.Map($('#map'), {
+    center: {
+      lat: 52.403830,
+      lng: 16.949086
+    },
+    zoom: 15
+  });
+});
+
+/***/ }),
+
+/***/ 802:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Farcheo_cache.0a2d445c106ef5902522.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 1087:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Farcheo_events.f8888f44eceec80e0b26.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 3678:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Farcheo_session.b7e5517589ebabb3e4a3.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 6603:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Farcheo_utilities.d286652910d0b1fd3485.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 6377:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Fcontact.332bc69565d68f22fd29.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 2763:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Clink defer rel=\"stylesheet\" href=\"\u002Fcss\u002Fcontact.89f9770506cff9d211cc.css\"\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 4161:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Clink defer rel=\"stylesheet\" href=\"\u002Fcss\u002Fmodules.2b77951e6bc2cada6847.css\"\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 4697:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Frequests.2ea6882bae2edfb6aa0f.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 8635:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Cscript defer type=\"text\u002Fjavascript\" src=\"\u002Fjs\u002Ftemplate_basic.ad4b8179f13090d24076.js\"\u003E\u003C\u002Fscript\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 7520:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;pug_html = pug_html + "\u003Clink defer rel=\"stylesheet\" href=\"\u002Fcss\u002Ftemplate_basic.0a69542d24ff35536e13.css\"\u003E";;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 3920:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;
+    var locals_for_with = (locals || {});
+    
+    (function (JSON, classes, lang, metadata, page, pageName) {
+      pug_html = pug_html + "\u003C!DOCTYPE html\u003E\u003Chtml" + (pug.attr("lang", lang, true, true)) + "\u003E\u003Chead\u003E\u003Cmeta charset=\"utf-8\"\u003E\u003Cmeta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\"\u003E\u003Cmeta http-equiv=\"X-UA-Compatible\" content=\"text\u002Fhtml; charset=utf-8\"\u003E\u003Cmeta name=\"robots\" content=\"noindex\"\u003E\u003Clink rel=\"shortcut icon\" href=\"#\"\u003E\u003Clink href=\"https:\u002F\u002Ffonts.googleapis.com\u002Ficon?family=Material+Icons\" rel=\"stylesheet\"\u003E\u003Clink rel=\"stylesheet\" href=\"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap@4.5.3\u002Fdist\u002Fcss\u002Fbootstrap.min.css\" integrity=\"sha384-TX8t27EcRE3e\u002FihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2\" crossorigin=\"anonymous\"\u003E\u003Clink rel=\"stylesheet\" href=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fmalihu-custom-scrollbar-plugin\u002F3.1.5\u002Fjquery.mCustomScrollbar.min.css\" integrity=\"sha256-JHGEmB629pipTkMag9aMaw32I8zle24p3FpsEeI6oZU=\" crossorigin=\"anonymous\"\u003E\u003Clink rel=\"stylesheet\" href=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjqueryui\u002F1.12.1\u002Fjquery-ui.min.css\" integrity=\"sha256-rByPlHULObEjJ6XQxW\u002FflG2r+22R5dKiAoef+aXWfik=\" crossorigin=\"anonymous\"\u003E\u003Clink rel=\"stylesheet\" href=\"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap-select@1.13.17\u002Fdist\u002Fcss\u002Fbootstrap-select.min.css\" integrity=\"sha256-VMPhaMmJn7coDSbzwqB0jflvb+CDnoAlfStC5RogOQo=\" crossorigin=\"anonymous\"\u003E" + (null == (pug_interp = __webpack_require__(7520).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(4161).call(this, locals)) ? "" : pug_interp) + "\u003Cscript\u003Ewindow.metadata = JSON.parse( " + (null == (pug_interp = JSON.stringify(metadata).replace(/<\//g, '<\\/')) ? "" : pug_interp) + " );\nwindow.name = \"" + (null == (pug_interp = pageName) ? "" : pug_interp) + "\";\nwindow.lang = \"" + (null == (pug_interp = lang) ? "" : pug_interp) + "\";\n\u002F\u002F-window.PlotlyConfig = {MathJaxConfig: 'local'};\n\n\n\u003C\u002Fscript\u003E" + (null == (pug_interp = __webpack_require__(2763).call(this, locals)) ? "" : pug_interp) + "\u003Ctitle\u003EHAGes - Human Archeogenomics\u003C\u002Ftitle\u003E\u003C\u002Fhead\u003E\u003Cbody\u003E";
+var classes = ['navbar', 'navbar-expand-md', 'navbar-dark', 'bg-dark', 'fixed-top']
+pug_mixins["nav-item"] = pug_interp = function(ref, name){
+var block = (this && this.block), attributes = (this && this.attributes) || {};
+if (ref === page) {
+pug_html = pug_html + "\u003Cli" + (pug.attrs(pug.merge([{"class": "nav-item active"},attributes]), true)) + "\u003E\u003Ca" + (" class=\"nav-link\""+pug.attr("href", "/" + ref, true, true)) + "\u003E" + (pug.escape(null == (pug_interp = name) ? "" : pug_interp)) + "\u003Cspan class=\"sr-only\"\u003E(current)\u003C\u002Fspan\u003E\u003C\u002Fa\u003E\u003C\u002Fli\u003E";
+}
+else {
+pug_html = pug_html + "\u003Cli" + (pug.attrs(pug.merge([{"class": "nav-item"},attributes]), true)) + "\u003E\u003Ca" + (" class=\"nav-link\""+pug.attr("href", "/" + ref, true, true)) + "\u003E" + (pug.escape(null == (pug_interp = name) ? "" : pug_interp)) + "\u003C\u002Fa\u003E\u003C\u002Fli\u003E";
+}
+};
+pug_html = pug_html + "\u003Cnav" + (pug.attr("class", pug.classes([classes], [true]), false, true)) + "\u003E\u003Ca" + (" class=\"navbar-brand\""+pug.attr("href", `/${lang}/home`, true, true)) + "\u003EHAGes - Explore Human Archeogenomics\u003C\u002Fa\u003E\u003Cbutton class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarsExampleDefault\" aria-controls=\"navbarsExampleDefault\" aria-expanded=\"false\" aria-label=\"Toggle navigation\"\u003E\u003Cspan class=\"navbar-toggler-icon\"\u003E\u003C\u002Fspan\u003E\u003C\u002Fbutton\u003E\u003Cdiv class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\"\u003E\u003Cul class=\"navbar-nav mr-auto\"\u003E";
+pug_mixins["nav-item"].call({
+attributes: {"class": "mx-2"}
+}, `${lang}/home`, "Main page");
+pug_mixins["nav-item"](`${lang}/map`, "Interactive map");
+pug_mixins["nav-item"](`${lang}/genomicdata`, "Genomic data");
+pug_mixins["nav-item"].call({
+attributes: {"class": "mx-2"}
+}, `${lang}/contact`, "Contact");
+pug_html = pug_html + "\u003C\u002Ful\u003E\u003C\u002Fdiv\u003E\u003C\u002Fnav\u003E\u003Cdiv id=\"site-wrapper\"\u003E\u003Cmain role=\"main\"\u003E\u003Cdiv class=\"container-fluid\"\u003E\u003Cdiv class=\"jumbotron jumbotron-fluid\" style=\"min-height: 50rem;\"\u003E\u003Cpicture class=\"jumbotron-background-image\"\u003E\u003Csource srcset=\"\u002Fimg\u002Fbg-future.jpg\"\u003E\u003Cimg class=\"img-fluid\" src=\"\u002Fimg\u002Fbg-future.jpg\" alt=\"966\"\u003E\u003C\u002Fpicture\u003E\u003Cdiv class=\"row h-100\"\u003E\u003Cdiv class=\"col-2\"\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"col-8\"\u003E\u003Cdiv class=\"p-5 d-flex mx-auto row\" id=\"contact-info-container\"\u003E\u003Cdiv class=\"card mx-auto\" style=\"width: 50%;\"\u003E\u003Cdiv class=\"card-body position-relative\"\u003E\u003Ch3\u003EContact information\u003C\u002Fh3\u003E\u003Cp\u003E\u003C\u002Fp\u003EThe Human AGEs database was created by the team of Molecular and Systems Biology department at the \u003Ca href=\"https:\u002F\u002Fwww.ibch.poznan.pl\u002Fen\u002Fhome\u002F\"\u003EInstitute of Bioorganic Chemistry Polish Academy of Sciences\u003C\u002Fa\u003E, Poznań, Poland.\nIn case of technical questions and suggestions please contact:\u003Cul\u003E\u003Cli\u003EŁukasz Ciecierski \u003Cb\u003Elciecierski@ibch.poznan.pl\u003C\u002Fb\u003E\u003C\u002Fli\u003E\u003Cli\u003EIreneusz Stolarek\u003Cb\u003Eistolarek@ibch.poznan.pl\u003C\u002Fb\u003E\u003C\u002Fli\u003E\u003Cli\u003EMarek Figlerowicz\u003Cb\u003Emarekf@ibch.poznan.pl\u003C\u002Fb\u003E\u003C\u002Fli\u003E\u003C\u002Ful\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003Cdiv class=\"col-2\"\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fdiv\u003E\u003C\u002Fmain\u003E\u003C\u002Fdiv\u003E" + (null == (pug_interp = __webpack_require__(539).call(this, locals)) ? "" : pug_interp) + "\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjquery\u002F3.3.1\u002Fjquery.min.js\" integrity=\"sha256-FgpCb\u002FKJQlLNfOu91ta32o\u002FNMZxltwRo8QtmkMRdAu8=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjquery-easing\u002F1.4.1\u002Fjquery.easing.min.js\" integrity=\"sha256-H3cjtrm\u002FztDeuhCN9I4yh4iN2Ybx\u002Fy1RM7rMmAesA0k=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjquery-mousewheel\u002F3.1.13\u002Fjquery.mousewheel.min.js\" integrity=\"sha256-jnOjDTXIPqall8M0MyTSt98JetJuZ7Yu+1Jm7hLTF7U=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fmalihu-custom-scrollbar-plugin\u002F3.1.5\u002Fjquery.mCustomScrollbar.min.js\" integrity=\"sha256-AKEjDiK2rz+d8TSPLNVNydvgJvOkG5veMAnc79FkiuE=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fpopper.js\u002F1.14.7\u002Fumd\u002Fpopper.min.js\" integrity=\"sha256-ZvOgfh+ptkpoa2Y4HkRY28ir89u\u002F+VRyDE7sB7hEEcI=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Ftwitter-bootstrap\u002F4.5.0\u002Fjs\u002Fbootstrap.bundle.min.js\" integrity=\"sha256-Xt8pc4G0CdcRvI0nZ2lRpZ4VHng0EoUDMlGcBSQ9HiQ=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fjson5@2.1.3\u002Fdist\u002Findex.min.js\" integrity=\"sha256-b6dyH0K\u002FnE4K1\u002Fd36PNAa96t19du7JXpzpcS9K3o4Sg=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdnjs.cloudflare.com\u002Fajax\u002Flibs\u002Fjqueryui\u002F1.12.1\u002Fjquery-ui.min.js\" integrity=\"sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E\u003Cscript defer src=\"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap-select@1.13.17\u002Fdist\u002Fjs\u002Fbootstrap-select.min.js\" integrity=\"sha256-QOE02Glo1C1gHzP96JOaxyIMt4XSFv\u002FexZaYLY4dwO0=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E";
+if (lang === 'pl') {
+pug_html = pug_html + "\u003Cscript defer src=\"https:\u002F\u002Fcdn.jsdelivr.net\u002Fnpm\u002Fbootstrap-select@1.13.17\u002Fjs\u002Fi18n\u002Fdefaults-pl_PL.js\" integrity=\"sha256-aWaZCaqYgueDr4CzKzw7FlKCuaoJEwOOM9LJ79aSmlk=\" crossorigin=\"anonymous\"\u003E\u003C\u002Fscript\u003E";
+}
+pug_html = pug_html + (null == (pug_interp = __webpack_require__(4697).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(6603).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(3678).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(802).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(1087).call(this, locals)) ? "" : pug_interp) + (null == (pug_interp = __webpack_require__(8635).call(this, locals)) ? "" : pug_interp) + "\u003Cscript async=\"\" defer=\"\" src=\"https:\u002F\u002Fmaps.googleapis.com\u002Fmaps\u002Fapi\u002Fjs?key=AIzaSyAN_zbV8S-azHGI0_jNx9TGBNowKvxyWWA&amp;callback=initMap\"\u003E\u003C\u002Fscript\u003E" + (null == (pug_interp = __webpack_require__(6377).call(this, locals)) ? "" : pug_interp) + "\u003C\u002Fbody\u003E\u003C\u002Fhtml\u003E";
+    }.call(this, "JSON" in locals_for_with ?
+        locals_for_with.JSON :
+        typeof JSON !== 'undefined' ? JSON : undefined, "classes" in locals_for_with ?
+        locals_for_with.classes :
+        typeof classes !== 'undefined' ? classes : undefined, "lang" in locals_for_with ?
+        locals_for_with.lang :
+        typeof lang !== 'undefined' ? lang : undefined, "metadata" in locals_for_with ?
+        locals_for_with.metadata :
+        typeof metadata !== 'undefined' ? metadata : undefined, "page" in locals_for_with ?
+        locals_for_with.page :
+        typeof page !== 'undefined' ? page : undefined, "pageName" in locals_for_with ?
+        locals_for_with.pageName :
+        typeof pageName !== 'undefined' ? pageName : undefined));
+    ;;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 539:
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var pug = __webpack_require__(7055);
+
+function template(locals) {var pug_html = "", pug_mixins = {}, pug_interp;;
+    var locals_for_with = (locals || {});
+    
+    (function (Date) {
+      pug_html = pug_html + "\u003Cfooter\u003E\u003Cp\u003EInstitute of Bioorganic Chemistry Polish Academy of Sciences, " + (pug.escape(null == (pug_interp = new Date().getFullYear()) ? "" : pug_interp)) + "\u003C\u002Fp\u003E\u003C\u002Ffooter\u003E";
+    }.call(this, "Date" in locals_for_with ?
+        locals_for_with.Date :
+        typeof Date !== 'undefined' ? Date : undefined));
+    ;;return pug_html;};
+module.exports = template;
+
+/***/ }),
+
+/***/ 7055:
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var pug_has_own_property = Object.prototype.hasOwnProperty;
+
+/**
+ * Merge two attribute objects giving precedence
+ * to values in object `b`. Classes are special-cased
+ * allowing for arrays and merging/joining appropriately
+ * resulting in a string.
+ *
+ * @param {Object} a
+ * @param {Object} b
+ * @return {Object} a
+ * @api private
+ */
+
+exports.merge = pug_merge;
+function pug_merge(a, b) {
+  if (arguments.length === 1) {
+    var attrs = a[0];
+    for (var i = 1; i < a.length; i++) {
+      attrs = pug_merge(attrs, a[i]);
+    }
+    return attrs;
+  }
+
+  for (var key in b) {
+    if (key === 'class') {
+      var valA = a[key] || [];
+      a[key] = (Array.isArray(valA) ? valA : [valA]).concat(b[key] || []);
+    } else if (key === 'style') {
+      var valA = pug_style(a[key]);
+      valA = valA && valA[valA.length - 1] !== ';' ? valA + ';' : valA;
+      var valB = pug_style(b[key]);
+      valB = valB && valB[valB.length - 1] !== ';' ? valB + ';' : valB;
+      a[key] = valA + valB;
+    } else {
+      a[key] = b[key];
+    }
+  }
+
+  return a;
+}
+
+/**
+ * Process array, object, or string as a string of classes delimited by a space.
+ *
+ * If `val` is an array, all members of it and its subarrays are counted as
+ * classes. If `escaping` is an array, then whether or not the item in `val` is
+ * escaped depends on the corresponding item in `escaping`. If `escaping` is
+ * not an array, no escaping is done.
+ *
+ * If `val` is an object, all the keys whose value is truthy are counted as
+ * classes. No escaping is done.
+ *
+ * If `val` is a string, it is counted as a class. No escaping is done.
+ *
+ * @param {(Array.<string>|Object.<string, boolean>|string)} val
+ * @param {?Array.<string>} escaping
+ * @return {String}
+ */
+exports.classes = pug_classes;
+function pug_classes_array(val, escaping) {
+  var classString = '',
+    className,
+    padding = '',
+    escapeEnabled = Array.isArray(escaping);
+  for (var i = 0; i < val.length; i++) {
+    className = pug_classes(val[i]);
+    if (!className) continue;
+    escapeEnabled && escaping[i] && (className = pug_escape(className));
+    classString = classString + padding + className;
+    padding = ' ';
+  }
+  return classString;
+}
+function pug_classes_object(val) {
+  var classString = '',
+    padding = '';
+  for (var key in val) {
+    if (key && val[key] && pug_has_own_property.call(val, key)) {
+      classString = classString + padding + key;
+      padding = ' ';
+    }
+  }
+  return classString;
+}
+function pug_classes(val, escaping) {
+  if (Array.isArray(val)) {
+    return pug_classes_array(val, escaping);
+  } else if (val && typeof val === 'object') {
+    return pug_classes_object(val);
+  } else {
+    return val || '';
+  }
+}
+
+/**
+ * Convert object or string to a string of CSS styles delimited by a semicolon.
+ *
+ * @param {(Object.<string, string>|string)} val
+ * @return {String}
+ */
+
+exports.style = pug_style;
+function pug_style(val) {
+  if (!val) return '';
+  if (typeof val === 'object') {
+    var out = '';
+    for (var style in val) {
+      /* istanbul ignore else */
+      if (pug_has_own_property.call(val, style)) {
+        out = out + style + ':' + val[style] + ';';
+      }
+    }
+    return out;
+  } else {
+    return val + '';
+  }
+}
+
+/**
+ * Render the given attribute.
+ *
+ * @param {String} key
+ * @param {String} val
+ * @param {Boolean} escaped
+ * @param {Boolean} terse
+ * @return {String}
+ */
+exports.attr = pug_attr;
+function pug_attr(key, val, escaped, terse) {
+  if (
+    val === false ||
+    val == null ||
+    (!val && (key === 'class' || key === 'style'))
+  ) {
+    return '';
+  }
+  if (val === true) {
+    return ' ' + (terse ? key : key + '="' + key + '"');
+  }
+  var type = typeof val;
+  if (
+    (type === 'object' || type === 'function') &&
+    typeof val.toJSON === 'function'
+  ) {
+    val = val.toJSON();
+  }
+  if (typeof val !== 'string') {
+    val = JSON.stringify(val);
+    if (!escaped && val.indexOf('"') !== -1) {
+      return ' ' + key + "='" + val.replace(/'/g, '&#39;') + "'";
+    }
+  }
+  if (escaped) val = pug_escape(val);
+  return ' ' + key + '="' + val + '"';
+}
+
+/**
+ * Render the given attributes object.
+ *
+ * @param {Object} obj
+ * @param {Object} terse whether to use HTML5 terse boolean attributes
+ * @return {String}
+ */
+exports.attrs = pug_attrs;
+function pug_attrs(obj, terse) {
+  var attrs = '';
+
+  for (var key in obj) {
+    if (pug_has_own_property.call(obj, key)) {
+      var val = obj[key];
+
+      if ('class' === key) {
+        val = pug_classes(val);
+        attrs = pug_attr(key, val, false, terse) + attrs;
+        continue;
+      }
+      if ('style' === key) {
+        val = pug_style(val);
+      }
+      attrs += pug_attr(key, val, false, terse);
+    }
+  }
+
+  return attrs;
+}
+
+/**
+ * Escape the given string of `html`.
+ *
+ * @param {String} html
+ * @return {String}
+ * @api private
+ */
+
+var pug_match_html = /["&<>]/;
+exports.escape = pug_escape;
+function pug_escape(_html) {
+  var html = '' + _html;
+  var regexResult = pug_match_html.exec(html);
+  if (!regexResult) return _html;
+
+  var result = '';
+  var i, lastIndex, escape;
+  for (i = regexResult.index, lastIndex = 0; i < html.length; i++) {
+    switch (html.charCodeAt(i)) {
+      case 34:
+        escape = '&quot;';
+        break;
+      case 38:
+        escape = '&amp;';
+        break;
+      case 60:
+        escape = '&lt;';
+        break;
+      case 62:
+        escape = '&gt;';
+        break;
+      default:
+        continue;
+    }
+    if (lastIndex !== i) result += html.substring(lastIndex, i);
+    lastIndex = i + 1;
+    result += escape;
+  }
+  if (lastIndex !== i) return result + html.substring(lastIndex, i);
+  else return result;
+}
+
+/**
+ * Re-throw the given `err` in context to the
+ * the pug in `filename` at the given `lineno`.
+ *
+ * @param {Error} err
+ * @param {String} filename
+ * @param {String} lineno
+ * @param {String} str original source
+ * @api private
+ */
+
+exports.rethrow = pug_rethrow;
+function pug_rethrow(err, filename, lineno, str) {
+  if (!(err instanceof Error)) throw err;
+  if ((typeof window != 'undefined' || !filename) && !str) {
+    err.message += ' on line ' + lineno;
+    throw err;
+  }
+  var context, lines, start, end;
+  try {
+    str = str || __webpack_require__(7835).readFileSync(filename, {encoding: 'utf8'});
+    context = 3;
+    lines = str.split('\n');
+    start = Math.max(lineno - context, 0);
+    end = Math.min(lines.length, lineno + context);
+  } catch (ex) {
+    err.message +=
+      ' - could not read from ' + filename + ' (' + ex.message + ')';
+    pug_rethrow(err, null, lineno);
+    return;
+  }
+
+  // Error context
+  context = lines
+    .slice(start, end)
+    .map(function(line, i) {
+      var curr = i + start + 1;
+      return (curr == lineno ? '  > ' : '    ') + curr + '| ' + line;
+    })
+    .join('\n');
+
+  // Alter exception message
+  err.path = filename;
+  try {
+    err.message =
+      (filename || 'Pug') +
+      ':' +
+      lineno +
+      '\n' +
+      context +
+      '\n\n' +
+      err.message;
+  } catch (e) {}
+  throw err;
+}
+
+
+/***/ }),
+
+/***/ 7835:
+/***/ (() => {
+
+/* (ignored) */
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be in strict mode.
+(() => {
+"use strict";
+/* harmony import */ var _js_googlemaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(4111);
+/* harmony import */ var _js_googlemaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_googlemaps_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _index_pug__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3920);
+/* harmony import */ var _index_pug__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_index_pug__WEBPACK_IMPORTED_MODULE_1__);
+// It must be imported before google maps from CDN loads up in a template
+ // Zastąp to OLem
+// Styles //
+
+ // Scripts //
+// import './js/index.js';
+
+/* Link .pug for assets injetion */
+
+
+})();
+
+/******/ })()
+;

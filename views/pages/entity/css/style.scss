@@ -1,0 +1,265 @@
+@import "mixins-sass/colors";
+
+
+/*---------------------------------------------------*/
+/*** COMPONENTS ***/
+/*---------------------------------------------------*/
+
+.darken-parameter-box {
+    padding: 0.5rem;
+    color: $text-color-light;
+    background-color: palette-tertiary-color-with-opacity(0.7);
+    border: 2px solid palette-tertiary-color-with-opacity(0.1);
+}
+
+.light-parameter-box {
+    padding: 0.5rem;
+    color: $text-color-dark;
+    background-color: palette-tertiary-color-lighter-with-opacity(0.7);
+    border: 2px solid palette-tertiary-color-lighter-with-opacity(0.1);
+}
+
+.coordinates-wrapper {
+    .coordinate {
+        width: 10rem;
+    }
+
+    span {
+        width: 4rem;
+    }
+}
+
+/*---------------------------------------------------*/
+/*** HEADER ***/
+/*---------------------------------------------------*/
+
+#map-wrapper {
+    // max-height: calc(100vh - 56px - 48px); // 100vh - nav_height - padding_value
+    // height: 100vh;
+    min-height: 50vh;
+    max-height: 95vh;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    border-bottom: palette-tertiary-color-with-opacity(0.7) 0.1rem solid;
+
+    &:after, &:before {
+        width: 10%;
+        left: 45%;
+        position: absolute;
+        background-color: palette-primary-color-with-opacity(0.5);
+        
+        display: block;
+        content: '';
+    }
+
+    &:after {
+        bottom: 0.3rem;
+        height: 0.15rem;
+    }
+
+    &:before {
+        bottom: -0.55rem;
+        height: 0.1rem;
+    }
+
+    & .option-button {
+        cursor: pointer;
+    }
+}
+
+
+.map-info {
+    position: absolute;
+    margin: 1.5rem 2.5rem;
+    display: inline-block;
+    font-size: 1.0rem;
+}
+
+
+#header-main-information {
+    font-size: 1.5rem;
+}
+
+
+#header-suplementary-information {
+    font-size: 1.2rem;
+}
+
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+/*---------------------------------------------------*/
+/*** CONTENT ***/
+/*---------------------------------------------------*/
+
+.entity-section {
+    & .section-title {
+        width: 100%;
+        border-bottom: palette-primary-color-with-opacity(0.3);
+    }
+
+    & .section-content {
+        padding: 1rem;
+    }
+}
+
+/*#map-options-menu {
+    background-color: rgba(206,206,206,0.75);
+    margin: 0;
+}*/
+
+.information-wrapper {
+    position: relative;
+    //margin: 0 auto;
+    width: 100%;
+
+    .prop-name {
+        width: 40%;
+    }
+}
+
+.source {
+    background-color: #eee;
+
+    border-left: 0.2em $palette-secondary-color solid;
+
+    &:hover {
+        border-left: 0.2em $palette-secondary-color-darker solid;
+    }
+}
+
+#admixtures-wrapper {
+    & .result-chart, & .sortable-placeholder {
+        position: relative;
+
+        display: inline-block;
+        padding: 15px;
+        font-size: 1rem;
+
+        border: 0.1rem $palette-tertiary-color-light solid;
+
+        margin-bottom: 1.5rem;
+        margin-right: 1.5rem;
+
+        z-index: 100;
+        
+        &:last-child {
+            margin-right: 0;
+        }
+
+        & .plot {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        & .label {
+            position: absolute;
+            top: 0;
+            z-index: 101;
+        }
+    }
+
+    & .sortable-placeholder {
+        border: 1.0rem $palette-tertiary-color-lightest dashed;
+        width: 130px;
+        height: 130px;
+    }
+}
+
+.no-results {
+    font-size: 1.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    font-style: italic;
+    color: $palette-tertiary-color;
+}
+
+#umap-wrapper, #pca-wrapper {
+    & .result-scatterplot, & .sortable-placeholder {
+        position: relative;
+
+        display: inline-block;
+        padding: 15px;
+        font-size: 1rem;
+
+        border: 0.2rem $palette-tertiary-color solid;
+
+        margin-bottom: 1.5rem;
+        margin-right: 1.5rem;
+
+        z-index: 100;
+
+        //width: 45%;
+        //height: 40vh;
+        
+        
+        &:last-child {
+            margin-right: 0;
+        }
+
+        & .plot {
+            /*position: relative;
+            width: 100%;
+            height: 100%;*/
+            height: 40vh;
+
+            position: relative;
+        }
+
+        & .label {
+            position: absolute;
+            top: 0;
+            z-index: 101;
+        }
+    }
+
+    & .sortable-placeholder {
+        border: 1.0rem $palette-tertiary-color-lightest dashed;
+        position: relative;
+        width: 45%;
+        height: 45%;
+    }
+}
+
+#regions-select-wrapper {
+    padding: .375em;
+}
+
+.toggle-arrow {
+    .tip {
+        background-color: $text-color-light !important;
+    }
+}
+
+.information-wrapper table td.prop-name {
+    background-color: #d8d8d8;
+}
+
+#region-wrapper .prop-name {
+    background-color: $palette-secondary-color-light;
+}
+
+
+/*.plotly {
+    height: 100%;
+
+    & .svg-container {
+        height: 100% !important;
+    }
+
+    & svg {
+        height: 100% !important;
+    }
+}*/
+
+/*$palette-secondary-color: rgb(255, 173, 66);
+$palette-secondary-color-darker: rgb(212, 134, 31);
+$palette-secondary-color-darkest: rgb(182, 116, 30);*/

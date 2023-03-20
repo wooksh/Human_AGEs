@@ -1,0 +1,72 @@
+@import 'Views/mixins-pug/icon-checkbox/style.scss';
+@import "mixins-sass/colors";
+
+
+.accordion-header {
+	width: 100%;
+    padding: 1.25em 0.75em 1.25em 1.25em;
+    font-size: 0.9em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-text {
+        margin: 0;
+    }
+
+    h4.header-text, .h4.header-text {
+        font-size: 1.5em;
+    }
+
+    .accordion-arrow {
+        position: relative;
+        bottom: 0.15em;
+        float: right;
+        font-size: 1.5em;
+        margin: 0 !important;
+    }
+
+
+	.icon-checkbox {
+		color: $text-color-lightest;
+	}
+}
+
+.accordion-subsection-header {
+    h4.header-text, .h4.header-text {
+        font-size: 1.3em;
+    }
+
+    background-color: $palette-tertiary-color;
+    color: $text-color-light;
+    /*padding-bottom: .3rem;*/
+    padding: 1em 1em 1em 1em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.button-accordion-header {
+    padding: 1em 1em 1em 0.5em;
+}
+
+
+.accordion-wrapper {
+    background-color: $palette-tertiary-color;
+    
+    & .icon-checkbox-wrapper {
+        margin: 0;
+    }
+}
+
+
+.layer .accordion-wrapper {
+    border-bottom: 0.3em #474747 solid; // it is to edit
+    box-shadow: 0 0.4em #474747;
+
+    //-o-border-image;
+    //border-image: linear-gradient(to right, red , yellow);
+    // border-color ...
+}

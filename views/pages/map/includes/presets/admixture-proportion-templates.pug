@@ -1,0 +1,10 @@
+include ./dictionaries/proportionOperators.pug
+
+div
+	div(id='admixture-proportion-template' class='mb-3 hidden')
+		h6.subsection-header.title.mt-0
+		div 
+			input(id='admixture-proportion-slider' type="text" class="js-range-slider proportion-slider")
+		.input-group.mt-2
+			span Operator: 
+				+simple-radiobuttons-inline('proportion-operator-option', proportionOperators, 'geq')

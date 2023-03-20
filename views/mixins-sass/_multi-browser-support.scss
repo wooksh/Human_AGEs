@@ -1,0 +1,45 @@
+/* @import "mixins-sass/_multi-browser-support"; */
+
+
+@mixin transition($css...){
+    @include crossBrowser(transition, $css);
+}
+
+@mixin transform($css...){
+    @include crossBrowser(transform, $css);
+}
+
+@mixin gradient($from, $to, $middle: null, $q1: null, $q2: null, $gradient-from-pos: 0%, $gradient-to-pos: 100%, $gradient-middle-pos: 50%, $q1-pos: 25%, $q2-pos: 75%, $direction: left) {
+    @if $middle {
+        @if $q1 {
+            background: -webkit-linear-gradient($direction, $from $gradient-from-pos, $q1 $q1-pos, $middle $gradient-middle-pos, $q2 $q2-pos, $to $gradient-to-pos);
+            background: -o-linear-gradient($direction, $from $gradient-from-pos, $q1 $q1-pos, $middle $gradient-middle-pos, $q2 $q2-pos, $to $gradient-to-pos);
+            background: -moz-linear-gradient($direction, $from $gradient-from-pos, $q1 $q1-pos, $middle $gradient-middle-pos, $q2 $q2-pos, $to $gradient-to-pos);
+            background: linear-gradient($direction, $from $gradient-from-pos, $q1 $q1-pos, $middle $gradient-middle-pos, $q2 $q2-pos, $to $gradient-to-pos);
+        } @else {
+            background: -webkit-linear-gradient($direction, $from $gradient-from-pos, $middle $gradient-middle-pos, $to $gradient-to-pos);
+            background: -o-linear-gradient($direction, $from $gradient-from-pos, $middle $gradient-middle-pos, $to $gradient-to-pos);
+            background: -moz-linear-gradient($direction, $from $gradient-from-pos, $middle $gradient-middle-pos, $to $gradient-to-pos);
+            background: linear-gradient($direction, $from $gradient-from-pos, $middle $gradient-middle-pos, $to $gradient-to-pos);
+        }
+        
+    } @else {
+        background: -webkit-linear-gradient($direction, $from $gradient-from-pos, $to $gradient-to-pos);
+        background: -o-linear-gradient($direction, $from $gradient-from-pos, $to $gradient-to-pos);
+        background: -moz-linear-gradient($direction, $from $gradient-from-pos, $to $gradient-to-pos);
+        background: linear-gradient(to $direction, $from $gradient-from-pos, $to $gradient-to-pos);
+    }
+}
+
+@mixin box-shadow($css)
+{
+    @include crossBrowser(box-shadow, $css);
+}
+
+@mixin crossBrowser($property, $css...) {
+    -webkit-#{$property} : $css;
+    -moz-#{$property} : $css;
+    -o-#{$property} : $css;
+    -ms-#{$property} : $css;
+    #{$property} : $css;
+}

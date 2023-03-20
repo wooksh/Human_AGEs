@@ -1,0 +1,38 @@
+div
+	li(id='session-template' class=`session object-container` style='display: none;' )&attributes(attributes)
+		+accordion-header-button('session-template-accordion', 'Session', 'session-activate', 'session-activate', true, false, iconTitle="Load dataset")(class="handle accordion-subsection-header session-header")
+		.collapse(id='session-template-accordion')
+			.sidebar-setting.object-content.palette-bg-color-light-bg
+				.subsection
+					//-h6.subsection-header Save options
+					.input-group
+						+button-textbox('session-download', 'Session file name...', 'Export', 'file_download', ariaLabel = '')(class='palette-tertiary-light no-focus' title="Export session to the file")
+						p.save-session-error-text.error-text
+					.input-group.mt-2
+						+custom-button('Save current map state', 'save')(id="session-save" class='mb-0 palette-tertiary-light no-focus w-100' title="Update session with current interactive map application state")
+						p.save-state-message-text.message-text
+
+				.subsection
+					h6.subsection-header Session name
+					+icon-textbox('session-name-textbox', 'Type in session name...', 'edit')
+
+				.subsection
+					h6.subsection-header Author name
+					+icon-textbox('session-author-textbox', 'Type in author name...', 'edit')
+
+				.subsection
+					h6.subsection-header Session description
+					textarea#session-description.description-textarea.form-control(rows=6)
+					//-.mt-2.clearfix
+					//-	+custom-button('Edit', 'edit')(id="session-description-edit-butt" class='mb-0 float-right palette-tertiary-light no-focus')
+
+				.subsection
+					h6.subsection-header Metadata
+					table.table.table-striped.table-bordered.meta-table
+						tbody
+							tr
+								th(scope='row') Creation date
+								td.session-date
+							tr
+								th(scope='row') Last edit date
+								td.session-edit-date

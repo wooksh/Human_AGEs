@@ -1,0 +1,64 @@
+//- data-subtext
+
+mixin selectOption(el, key)
+	-
+		var optionsAttributes = {};
+		if(el.datatokens) optionsAttributes['data-tokens'] = el.datatokens;
+		if(el.disabled) optionsAttributes['disabled'] = el.disabled;
+		if(el.subtext) optionsAttributes['data-subtext'] = el.subtext;
+		if(el.selected) optionsAttributes['selected'] = el.selected;
+		if(el.content) optionsAttributes['data-content'] = el.content;
+		if(el.title) optionsAttributes['title'] = el.title;
+		if(el.attributes)
+			Object.keys(el.attributes).forEach((attribute) => {
+				optionsAttributes[attribute] = el.attributes[attribute];
+			});
+
+	option(value=key)&attributes(optionsAttributes)= el.name
+
+
+//-mixin dropdown-no-picker(name, elements = {}, header = '', placeholder = 'Nothing selected...')
+mixin dropdown-no-picker(name, elements = {}, header = null, placeholder = 'Nothing selected...')
+	//-select.selectpicker(id=name name=name value=defaultEl data-style="" data-icon-base="Material Icons" virtual-scroll=100 data-header=header)&attributes(attributes)
+	//- .dropup
+	-
+		var headerText = header || '';
+		var placeholderText = header || placeholder;
+
+	select(data-none-selected-text=headerText id=name name=name data-icon-base="Material Icons" data-virtual-scroll=80 data-dropup-auto="true" data-header=placeholderText)&attributes(attributes)
+		each el, key in elements
+			if el.isOptgroup
+				-
+					var groupAttributes = {};
+					if(el.maxData) groupAttributes['data-max-options'] = el.maxData;
+
+				optgroup(label=el.name)&attributes(groupAttributes)
+					each el2, key2 in el.options
+						+selectOption(el2, key2)
+			else
+				+selectOption(el, key)
+
+
+//-mixin dropdown(name, elements, defaultEl = '', header = '')
+mixin dropdown(name, elements = {}, header = null, placeholder = 'Nothing selected...')
+	//-
+		+dropdown-no-picker(name, elements, header, placeholder)(class=) ???
+	
+	//-select.selectpicker(id=name name=name value=defaultEl data-style="" data-icon-base="Material Icons" virtual-scroll=100 data-header=header)&attributes(attributes)
+	//- .dropup
+	-
+		var headerText = header || '';
+		var placeholderText = header || placeholder;
+
+	select.selectpicker(data-none-selected-text=headerText id=name name=name data-icon-base="Material Icons" virtual-scroll=80 data-dropup-auto="true" data-header=placeholderText)&attributes(attributes)
+		each el, key in elements
+			if el.isOptgroup
+				-
+					var groupAttributes = {};
+					if(el.maxData) groupAttributes['data-max-options'] = el.maxData;
+
+				optgroup(label=el.name)&attributes(groupAttributes)
+					each el2, key2 in el.options
+						+selectOption(el2, key2)
+			else
+				+selectOption(el, key)

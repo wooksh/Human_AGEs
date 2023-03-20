@@ -1,0 +1,10 @@
+mixin spectrum-color-input(color = "#ff0000", text = "")
+    button.spectrum-color-input.btn.position-relative.checkerboard(type="button" value=color)&attributes(attributes)
+        .text-wrapper.position-relative(style='z-index: 2')
+            if text !== ""
+                span.label= text
+                | &nbsp; &nbsp;
+            i.material-icons
+                | edit       
+
+        .color.position-absolute(style=`z-index: 1; background-color: ${color}`)

@@ -1,0 +1,8 @@
+//- Direction: left, right, top, bottom
+mixin toggle-arrow(direction, thickness = 0.1, length = 0.75, positionFix = 1.05)
+    - var top = (Math.sqrt(2) * (thickness - length) / 2.0) * positionFix; 
+    - var styleTop = `top: ${top/2}em; width: ${length}em; height: ${thickness}em`;
+    - var styleBottom = `top: ${-top/2}em; width: ${length}em; height: ${thickness}em`;
+    span.toggle-arrow(class=direction)&attributes(attributes)
+        span.tip(style=styleTop)
+        span.tip(style=styleBottom)

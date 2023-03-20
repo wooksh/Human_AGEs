@@ -1,0 +1,63 @@
+extends /templates/basic/index.pug
+
+
+block append links
+	include /assets/entity_remains-styles.pug
+	//-include /assets/archeo_map-styles.pug
+
+	//- Load passed template variables -//
+	script. 
+		window.entityFeature = JSON.parse( !{JSON.stringify(entityData).replace(/<\//g, '<\\/')} );
+		window.entityName = "!{entityName}";
+		window.databaseName = "!{databaseName}";
+		window.entityId = "!{entityId}";
+		window.entityType = "!{entityType}";
+		window.databaseId = "!{databaseId}";
+		window.entityDbName = "!{entityDbName}";
+
+
+
+block content
+	include /mixins-pug/accordion-header/index.pug
+	include /mixins-pug/custom-button/index.pug
+	include /mixins-pug/dropdown/index.pug
+
+	- var remains = JSON.parse(entityData);
+
+	if entityType == 'remains'
+		include remains.pug
+	else if entityType == 'person'
+		include person.pug
+
+
+block hidden
+	//-include includes/presets/map-modals.pug
+	include /mixins-pug/map-modal/index.pug
+
+	#result-chart-template.result-chart.hidden
+		.plot
+		p.label
+
+	#result-scatterplot-template.result-scatterplot.hidden
+		.plot
+		p.label
+
+
+block append footer						
+	
+
+block append scripts
+	script(defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tinycolor/1.4.2/tinycolor.min.js" integrity="sha512-+aXA9mgbUvFe0ToTlbt8/3vT7+nOgUmFw29wfFCsGoh8AZMRSU0p4WtOvC1vkF2JBrndPN2TuNZsHPAKPPxe8Q==" crossorigin="anonymous" referrerpolicy="no-referrer")
+	script(defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.0.0/d3.min.js" integrity="sha512-0x7/VCkKLLt4wnkFqI8Cgv6no+AaS1TDgmHLOoU3hy/WVtYta2J6gnOIHhYYDJlDxPqEqAYLPS4gzVex4mGJLw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+	script(defer type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3-cloud/1.2.5/d3.layout.cloud.min.js" integrity="sha512-HjKxWye8lJGPu5q1u/ZYkHlJrJdm6KGr89E6tOrXeKm1mItb1xusPU8QPcKVhP8F9LjpZT7vsu1Fa+dQywP4eg==" crossorigin="anonymous" referrerpolicy="no-referrer")
+	script(defer type="text/javascript" src="https://cdn.jsdelivr.net/npm/seedrandom@3.0.5/seedrandom.min.js" integrity="sha256-0usXoFraKr8ZyLyx8PGuYrttpdWaadxkFM7QhwSojNE=" crossorigin="anonymous")
+	script(defer type="text/javascript" src="https://unpkg.com/bootstrap-table@1.20.0/dist/bootstrap-table.min.js")
+	script(defer type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.8.0/chart.min.js' integrity='sha512-sW/w8s4RWTdFFSduOTGtk4isV1+190E/GghVffMA9XczdJ2MDzSzLEubKAs5h0wzgSJOQTRYyaz73L3d6RtJSg==' crossorigin='anonymous')
+	script(defer src='https://cdnjs.cloudflare.com/ajax/libs/plotly.js/1.33.1/plotly-basic.min.js' integrity='sha256-qPutqhXQitI6ydhltlGqtkrcj2rkNRQde60nRB3BIgg=' crossorigin='anonymous')
+
+	include /assets/archeo_ui-scripts.pug
+	include /assets/archeo_search-scripts.pug
+	include /assets/archeo_legend-scripts.pug
+	include /assets/ol-scripts.pug
+	include /assets/archeo_map-scripts.pug
+	include /assets/entity_remains-scripts.pug

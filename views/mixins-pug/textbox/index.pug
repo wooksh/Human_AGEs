@@ -1,0 +1,38 @@
+include /mixins-pug/custom-button/index.pug
+
+
+mixin icon-textbox(id, placeholder, iconName, ariaLabel = '', classes = "")
+	.input-group.icon-textbox-wrapper&attributes(attributes)
+		input.form-control(class=classes, id=id type='text' aria-label=ariaLabel placeholder=placeholder)
+		.input-group-append
+			i.material-icons.icon= iconName
+			.spinner-border.status.hidden(role='status')
+
+
+mixin button-textbox(id, placeholder, buttonText, iconName, ariaLabel = '')
+	.input-group.button-textbox-wrapper
+		input.form-control(id=id type='text' aria-label=ariaLabel placeholder=placeholder)
+
+		.input-group-append
+			+custom-button(buttonText, iconName)(id=id+"-button" class="palette-primary no-focus")&attributes(attributes)
+
+
+mixin button-input(id, buttonText, spinnerValue, iconName, ariaLabel = '')
+	.input-group.button-textbox-wrapper
+		.form-control.p-0.h-100.border-0
+			input(id=id aria-label=ariaLabel value=spinnerValue)
+
+		.input-group-append
+			+custom-button(buttonText, iconName)(id=id+"-button" class="palette-primary no-focus")&attributes(attributes)
+
+
+mixin button-icon-textbox(id, placeholder, buttonText, textIconName, buttIconName, ariaLabel = '')
+	.input-group.icon-button-textbox-wrapper
+		span.form-control.p-0
+			input.form-control(id=id type='text' aria-label=ariaLabel placeholder=placeholder)
+
+			.input-group-append.icon-append
+				i.material-icons= textIconName
+
+		.input-group-append
+			+custom-button(buttonText, buttIconName)(id=id+"-button" class="palette-primary no-focus")&attributes(attributes)

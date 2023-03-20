@@ -1,0 +1,440 @@
+@import "mixins-sass/multi-browser-support";
+@import "mixins-sass/colors";
+
+/*---------------------------------------------------*/
+/*** SETUP ***/
+/*---------------------------------------------------*/
+
+$height-increase: 0.94rem;
+$bar-size: 0.75rem;
+$increased-bar-size: $bar-size + $height-increase;
+$handle-size: 1.125rem;;
+$increased-handle-size: $handle-size + $height-increase;
+$grid-size: 1.25rem;;
+$increased-grid-size: $grid-size + $height-increase;
+$grid-font-size: 0.725rem;
+$zero-year-font-size: $grid-font-size + 0.25rem;
+$interval-texts-size: $grid-font-size + 0.125rem;
+
+/*** Colors ***/
+
+$dark-timeline-text-color: #282828;
+ 
+/*---------------------------------------------------*/
+/*** SLIDER ***/
+/*---------------------------------------------------*/
+
+#time-controls-wrapper {
+    margin-top: 1.5em;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0.625rem;
+
+    &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        height: 100%; //80%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.4);
+    }
+}
+
+.timeline-wrapper {
+    //width: 100%;
+    left: 0;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+
+    /*&:last-child {
+        width: 100%;
+    }*/
+}
+
+#timeline {
+    background: rgb(255, 239, 187);
+
+    & .slider-track-high, & .slider-track-low {
+        background: rgb(236, 221, 172);
+    }
+}
+
+/*---------------------------------------------------*/
+/*** Ion.RangeSlider SIZE ***/
+/*---------------------------------------------------*/
+
+.timeline-wrapper {
+    & .irs {
+        font-size: inherit !important;
+
+        & .irs-from, & .irs-to, & .irs-single {
+            font-size: $interval-texts-size !important;
+        }
+
+        & .irs-line {
+            border-radius: .25rem 0 0 .25rem;
+        }
+
+        & .irs-line, & .irs-bar {
+            height: $increased-bar-size !important;
+        }
+
+        & .irs-grid {
+            bottom: -$height-increase !important;
+
+            & .irs-grid-pol {
+                width: 0.125rem !important;
+            }
+
+            & .irs-grid-text {
+                font-size: $grid-font-size;
+            }
+        }
+
+        & .irs-handle {
+            height: $increased-handle-size !important;
+            width: $increased-handle-size !important;
+            top: 1.375rem !important;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            & > i:first-child {
+                width: 20% !important;
+                //border-radius: 100% !important;
+                left: 40% !important;
+                margin: 0 !important;
+                //border-width: 0.25rem;
+                //border-style: solid;
+                border:none;
+
+                /*&:after {
+                    content: '';
+                    height: 25%;
+                    width: 25%;
+                    border-radius: 100%;
+                    top: 25%;
+                    left: 25%;
+                    position: absolute;
+                }*/
+            }
+        }
+    }
+}
+
+
+.timeline-wrapper.circular {
+    & .irs {
+        & .irs-handle {
+            height: $increased-handle-size !important;
+            width: $increased-handle-size !important;
+            top: 1.375rem !important;
+
+            &:hover {
+                cursor: pointer;
+            }
+
+            & > i:first-child {
+                width: 100% !important;
+                border-radius: 100% !important;
+                left: 0 !important;
+                margin: 0 !important;
+                border-width: 0.25rem;
+                border-style: solid;
+
+                &:after {
+                    content: '';
+                    height: 25%;
+                    width: 25%;
+                    border-radius: 100%;
+                    top: 25%;
+                    left: 25%;
+                    position: absolute;
+                }
+            }
+        }
+    }
+}
+
+
+.present-switch-wrapper {
+    display: inline-block;
+    right: 1%;
+    width: 12%;
+    height: 50%;
+    position: absolute;
+    font-size: 0.8rem;
+
+    & .material-icons {
+        font-size: 1.1em;
+    }
+
+    & .toggle {
+        width: 100% !important;
+        min-height: 0 !important;
+        border-radius: 0 .25rem .25rem 0;
+    }
+
+    & .toggle.btn {
+        min-width: 3.7rem;
+    }
+
+    & .btn {
+        font-size: 1em;
+        padding-top: 0.2em;
+    }
+
+    & .btn-present-time {
+        border: 0.1rem solid $palette-primary-color;
+
+        &.toggle-on {
+            //@include gradient(#7700ff, #0000ff);
+            //@include gradient(#7700ff, $palette-primary-color);
+            background-color: $palette-secondary-color;
+            color: $text-color-dark;
+            //border: 0.125rem solid $palette-primary-color;
+        }
+
+        & .btn {
+            padding: 0.1em 0 0.1em 1.0em;
+        }
+
+        & label.btn {
+            padding-right: 0 !important;
+        }
+
+        & .toggle-handle {
+            display: none;
+        }
+
+        &.toggle-off {
+            //border: 0.125rem solid #7700ff;
+            //border: 0.125rem solid $palette-primary-color;
+            background-color: $palette-primary-color-lightest;
+        }
+
+        /*&.off {
+            &.toggle-off {
+                border: 0.125rem solid blue;
+            }
+        }*/
+        // box-shadow: 2px 1000px 1px #fff inset;
+    }
+}
+
+/*---------------------------------------------------*/
+/*** Ion.RangeSlider COLOR STYLES ***/
+/*---------------------------------------------------*/
+
+/* Default */
+
+$handle-color: $palette-secondary-color;
+
+$primary-color: $palette-primary-color;
+$background-color: $palette-primary-color-lightest;
+
+.timeline-wrapper {
+    & .irs-from, & .irs-to, & .irs-single {
+        background-color: #6e6e6e;
+        
+        &:before {
+            border-top-color: #6e6e6e;
+        }
+    }
+
+    & .irs-grid {
+        & .irs-grid-pol {
+            background-color: #a8a8a8;
+        }
+
+        & .irs-grid-text {
+            color: $dark-timeline-text-color;
+        }
+    }
+
+    & .irs-line {
+        background-color: $background-color;
+    }
+
+    & .irs-handle {
+        & > i:first-child {
+            border-color: $primary-color;
+            background-color: $handle-color;
+
+            &:after {
+                background-color: rgb(236, 236, 236);
+            }
+        }
+
+        &:hover {
+            & > i:first-child {
+                background-color: darken( $handle-color, 10% );
+            }
+        }
+    }
+}
+
+$handle-color: $palette-primary-color;
+$primary-color: $palette-secondary-color;
+$background-color: $palette-primary-color-lightest;
+
+.timeline-wrapper .irs-bar {
+    overflow: hidden;
+
+    &:after {
+        position: relative;
+        display: block;
+        text-align: center;
+        color: $palette-primary-color;
+        font-weight: bold;
+        font-style: italic;
+        letter-spacing: 0.2em;
+    }
+}
+
+.timeline-wrapper {
+	&.time-theme {
+		& .irs-bar {
+			background-color: $primary-color;
+
+            &:after {
+                content: "filter";
+            }
+		}
+
+        & .irs-line {
+            background-color: $background-color;
+        }
+
+		& .irs-handle {
+			& > i:first-child {
+				border-color: $handle-color;
+				background-color: $handle-color;
+			}
+
+			&:hover {
+				& > i:first-child {
+					background-color: darken( $handle-color, 10% );
+				}
+			}
+		}
+    }
+}
+
+
+$handle-color: $palette-primary-color;
+$primary-color: $palette-primary-color-lightest;
+$background-color: $palette-primary-color;
+
+.timeline-wrapper {
+	&.range-theme {
+		& .irs-bar {
+			background-color: $primary-color;
+
+            &:after {
+                content: "range";
+            }
+		}
+
+        & .irs-line {
+            background-color: $background-color;
+        }
+
+		& .irs-handle {
+			& > i:first-child {
+				border-color: $background-color;
+				background-color: $handle-color;
+			}
+
+			&:hover {
+				& > i:first-child {
+					background-color: darken( $handle-color, 10% );
+				}
+			}
+		}
+    }
+}
+
+$gradient-from-color: #edbc33; //hsl(0, 100%, 50%);
+$gradient-to-color: #5a1beb; //hsl(240, 100%, 50%);
+$gradient-middle-color: #ff0060; //null; //hsl(120, 100%, 50%);
+$gradient-q1-color: #ff7a2e;//hsl(60, 100%, 50%);
+$gradient-q2-color: #e900a5; // hsl(180, 100%, 50%);
+
+.timeline-wrapper {
+	&.gradient {
+		& .irs-bar {
+			@if $gradient-middle-color {
+				@if $gradient-q1-color {
+					@include gradient($gradient-from-color, $gradient-to-color, $gradient-middle-color, $gradient-q1-color, $gradient-q2-color);
+				} @else {
+					@include gradient($gradient-from-color, $gradient-to-color, $gradient-middle-color);
+				}
+			} @else {
+				@include gradient($gradient-from-color, $gradient-to-color);
+			}
+		}
+
+		& .irs-handle.from {
+			& > i:first-child {
+				border-color: #141414;
+				background-color: $gradient-from-color;
+
+				&:after {
+					background-color: rgba(255, 255, 255, 0.8);
+				}
+			}
+
+			&:hover > i:first-child {
+				background-color: darken( $gradient-from-color, 10% );
+			}
+		}
+
+		& .irs-handle.to {
+			& > i:first-child {
+				border-color: #141414;
+				background-color: $gradient-to-color;
+
+				&:after {
+					background-color: rgba(255, 255, 255, 0.9);
+				}
+			}
+
+			&:hover > i:first-child {
+				background-color: darken( $gradient-to-color, 10% );
+			}
+		}
+    }
+}
+
+/*---------------------------------------------------*/
+/*** MARKS ***/
+/*---------------------------------------------------*/
+
+.zero_year {
+    color: $dark-timeline-text-color !important;
+    font-weight: bold !important;
+    font-size: $zero-year-font-size !important;
+    left: calc(50% + 1px) !important;
+    bottom: -2px !important;
+}
+
+.mark {
+    display: block;
+    position: absolute;
+    top: 45px;
+    background: #f00;
+    padding: 1px 3px;
+    border-radius: 3px;
+    color: #eee;
+    margin-left: -10px;
+    left: 50% !important;
+    font-weight: bold;
+}
+

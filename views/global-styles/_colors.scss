@@ -1,0 +1,87 @@
+@import "mixins-sass/colors";
+
+/*---------------------------------------------------*/
+/*** CLASSES ***/
+/*---------------------------------------------------*/
+
+.icon-light {
+    color: $text-color-light;
+}
+
+.icon-dark {
+    color: $text-color-dark;
+}
+
+.form-control {
+    background-color: $background-color-light;
+}
+
+/** Primary palette **/
+.palette-primary-color {
+    color: $palette-primary-color;
+}
+
+.palette-primary-color-bg {
+    background-color: $palette-primary-color;
+}
+
+.palette-primary-color-light-bg {
+    background-color: $palette-primary-color-light;
+}
+
+.palette-primary-color-lightest-bg {
+    background-color: $palette-primary-color-lightest;
+}
+
+.palette-primary-color-dark-bg {
+    background-color: $palette-primary-color-dark;
+}
+
+.palette-primary-color-darkest-bg {
+    background-color: $palette-primary-color-darkest;
+}
+
+/** Tertiary palette **/
+.palette-tertiary-color-bg {
+    background-color: $palette-tertiary-color;
+}
+
+.palette-tertiary-color-light-bg {
+    background-color: $palette-tertiary-color-light;
+}
+
+.palette-tertiary-color-lighter-bg {
+    background-color: $palette-tertiary-color-lighter;
+}
+
+.palette-tertiary-color-lightest-bg {
+    background-color: $palette-tertiary-color-lightest;
+}
+
+.palette-tertiary-color-dark-bg {
+    background-color: $palette-tertiary-color-dark;
+}
+
+.palette-bg-color-light-bg {
+    background-color: $background-color-light;
+}
+
+.palette-bg-color-lightest-bg {
+    background-color: $background-color-lightest;
+}
+
+.text-color-light {
+    color: $text-color-light;
+}
+
+.text-color-light-faded {
+    color: $text-color-light-faded;
+}
+
+.text-color-dark {
+    color: $text-color-dark;
+}
+
+.text-color-dark-faded {
+    color: $text-color-dark-faded;
+}

@@ -1,0 +1,37 @@
+-
+    var mapToolbox = {
+        "map-options":{
+            "isHeader": true,
+            "name": "Options"
+        },
+        "map-options-basemap": {
+            "name": "Basemap",
+            "isSubmenu": true,
+            "options": {
+                'map-options-light-basemap': {"isToggle": true, "name": "Light", "class": "radio-button basemap-option", "option-name": "Light"},
+                'map-options-imagery-basemap': {"isToggle": true, "name": "Imagery", "class": "radio-button basemap-option", "option-name": "Imagery"},
+                'map-options-osm-basemap': {"isToggle": true, "name": "OSM", "class": "radio-button basemap-option", "option-name": "OSM"},
+                'map-options-basemap-divider': {"isDivider": true},
+                'map-options-basemap-appearance': {"name": "Edit appearance", "class": "dropdown-item-toggle"},
+            }
+        },
+        "map-options-features": {
+            "name": "Map features",
+            "isSubmenu": true,
+            "options": {
+                'map-options-timeline-feature': {"isActive": true, "isToggle": true, "name": "Timeline", "class": "active checkbox", "toggle-target": "#time-controls-wrapper", "option-name": "timeline"},
+                'map-options-controls-feature': {"isActive": true, "isToggle": true, "name": "Map controls", "class": "active checkbox", "toggle-target": "#map-controls-panel", "option-name": "controls"},
+                'map-options-legend-feature': {"isActive": true, "isToggle": true, "name": "Legend", "class": "active checkbox", "toggle-target": "#legend-wrapper", "option-name": "legend"},
+                'map-options-title-feature': {"isActive": false, "isToggle": true, "name": "Map title", "class": "checkbox", "toggle-target": "#map-title-wrapper", "option-name": "title"},
+                'map-options-scale-feature': {"isActive": true, "isToggle": true, "name": "Scale", "class": "active checkbox", "toggle-target": "#map-scale", "option-name": "scale"},
+                'map-options-features-divider': {"isDivider": true},
+                'map-options-features-appearance': {"name": "Edit appearance", "class": "dropdown-item-toggle"}
+            }
+        },
+        "map-actions":{
+            "isHeader": true,
+            "name": "Actions"
+        },
+        'map-options-screenshot': "Export map to image",
+        'map-options-fullscreen': "Toggle fullscreen"
+    };

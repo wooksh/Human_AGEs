@@ -1,0 +1,81 @@
+{
+    "en": {
+        "map": {
+            "tooltips": {
+                "tp_sp-cl-modes": "<i>Distance clustering</i> offers dynamic overview of data distribution. <i>Region clustering</i> is conservative. <b>Both can be combined</b> to analyze regional localities.<br><a target='_blank' rel='noopener noreferrer' href='/en/faq'>Read more</a>",
+                "tp_sp-cl-ap": "<i>Cluster boundary</i> approximates it's area. Because of the map projection, the boundary's area and position might be different than in reality on a globe.<br><a target='_blank' rel='noopener noreferrer' href='/en/faq?id=question3#question3'>Read more</a>",
+                "tp_sp-cl-range": "Affects cluster area. <i>Relative distance</i> may change the contents of clusters on map zoom. <i>Absolute distance</i> is conservative.",
+                "tp_sp-cl-dist_BACKUP": "Affects distance between clusters pins and may improve readability. By default, the pin is at the cluster's centroid.",
+                "tp_sp-cl-dist": "It determines position at which the cluster should be drawn. Cluster origin is it's first sample's position, while cluster centroid is calculated from all cluster's samples positions. This option affects distance between clusters drawings and may improve readability.",
+                "tp_att-cl-sl": "Choose an attribute which options you want to change. You can purge all created groups by using the reset button.",
+                "tp_att-cl-bw": "Here you can browse either ungrouped values or created groups. Use radio buttons to switch between views.",
+                "tp_att-cl-gp": "Here you can either create a new group or add more values to an existing group by providing it's name. The <b>values</b> to add <b>must be selected</b> in the browser.",
+                "tp_att-cl-mg": "<i>Modify group</i> option lets you exclude attribute's values from a chosen group. You can do it by double-clicking the value in the browser. The <i class='material-icons'>group_work</i> icon means that value is included to the group.",
+                "tp_att-cl-ga": "Define prefix which will be added to every name of automaticaly created groups.",
+                "tp_att-cl-tl": "Assign attribute's values to groups named after values' parents in the data tree at a given tree level. If a value does not have a parent at the given tree level, it remains ungrouped.",
+                "tp_att-cl-rw": "Assign attribute's values to groups named after values' word roots. The word roots are found by taking prefixes of the values.",
+                "tp_time-flt-inter": "Set time filter's interval. Only objects which dating overlaps the filter's interval will be shown on the map.",
+                "tp_time-flt-rang": "Set time filter's minimum and maximum range. It helps to focus on a particular time period for which there are more samples.",
+                "tp_time-flt-flt": "<ul><li>Choose whether to show or hide contemporary objects.</li><li>Choose whether to apply time filter to the regions.</li></ul>",
+                "tp_time-flt-app": "Choose whether to show how much the object's dating overlaps with the time filter interval. This is visualized as objects' opacity. E.g. for more opaque object their dating overlaps in lesser extent with the time filter.<br><a target='_blank' rel='noopener noreferrer' href='/en/faq?id=question3#question3'>Read more</a>",
+                "tp_time-flt-opt": "Choose whether to trigger time filtering event only when you release the timeline interval or handle. For big datasets it helps to save a lot of time.",
+                "tp_att-flt-sl": "Choose an attribute which options you want to change. You can also trigger the filtering for the chosen attribute. The objects are filtered by all the active filters collectively.",
+                "tp_att-flt-bw": "Here you can browse chosen attribute's values. Trigger their filtering by double clicking their names or by using the control buttons.",
+                "tp_att-flt-tree": "Filter attribute's values by their position in the data tree. The position is defined as the tree level or depth.",
+                "tp_att-flt-pr": "Filter objects by their admixture components values. You can define constraints independently for each component.",
+                "tp_reg-flt-sl": "Choose a region type which options you want to change. The objects clustered by regions will be filtered together with the corresponding regions.",
+                "tp_reg-flt-bw": "Here you can browse chosen type's regions. Trigger their filtering by double clicking their names or by using the control buttons.",
+                "tp_layer-src-sl": "Choose one of the loaded datasets to display in on the map. Dataset's objects appearance will be determined by the layers settings.",
+                "tp_layer-attr-sl": "Choose which attribute of the dataset's objects should be display on the map. Objects of different databases may have different attributes.",
+                "tp_layer-type-sl": "<ul><li>Single value representations enable to compare different groups of objects by their quantities.</li><li>Multiple values representations enable <b>additionaly</b> to compare different groups of objects by their composition.</li></ul>",
+                "tp_layer-app-name": "Choose whether to show layer's name below every object displayed by this layer.",
+                "tp_layer-app-color": "Set unique color of the feature to make it distinguishable on the map. Layer blending option defines how layer objects should blend with colors of the other objects and map underneath. It's useful for visualisation of heatmaps overlap.",
+                "tp_layer-app-point": "Options defining appearance of the layer's objects' pointers, which link graphical representation of the objects with their spatial origin.",
+                "tp_layer-pos-ang": "Set an angle at which layer's objects' representations are placed in relation to their spatial origin.",
+                "tp_layer-pos-off": "Set an offset distance at which layer's objects' representations are placed in relation to their spatial origin.<br>You can choose if the offset value should be relative to the cluster's size.",
+                "tp_layer-size-rang": "Size range determinines minimum and maximum size of the displayed objects and clusters. The cluster size can be altered by data weighting settings. If weighting is disabled, the max value of the range is taken as the objects size.",
+                "tp_layer-size-font": "Adjust font size ratio to fit big numbers into the object. Font size is also relative to the object's size.",
+                "tp_layer-w-app": "Determine how the data weight information should be presented.",
+                "tp_layer-w-val": "Choose whether the displayed weight value should be the weight itself or the count of the cluster, that is being weighted.",
+                "tp_layer-w-fun": "Weight function determines the dynamic of the weight change. Useful when comparing datasets of different sizes. You should fit weight function to the counts normalization type.",
+                "tp_layer-w-norm": "Counts normalization method can transform raw counts into fractions, which might be better to utilize by certain weight functions. <br><b>The counts are normalized only in relation to the size of layer's dataset.</b>",
+                "tp_layer-w-growth": "Set weighting function growth factor. It determines the steepness of the function.",
+                "tp_layer-w-scale": "Set counts scaling factor. It scales the raw counts, which may be useful in comparsion of datasets of different sizes.",
+                "tp_layer-other-freq": "Values below given frequency in the objects cluster will be included into <i>OTHER</i> group. This group can be filtered, so you can filter attribute values basing on their frequency.",
+                "tp_layer-other-cn": "Values below given count in the objects cluster will be included into <i>OTHER</i> group. This group can be filtered, so you can filter attribute values basing on their count.",
+                "tp_layer-flt-bw": "Here you can browse layer's attribute's values. Trigger their filtering by double clicking their names or by using the control buttons.<br>Layer's attribute filtering works independently to global attributes filtering. It's useful to emphasize different parts of the same dataset using different layers.",
+                "tp_layer-pie-lab": "Change appearance of the attribute's values labels drawn around the piechart. E.g. you can determine whether the labels should be drawn always, never or on specific action.",
+                "tp_layer-point-app": "Change appearance of the point's body. By disabling the body drawing and setting the weight to be represented by value, you can make the layer display only count numbers. Useful as an overlay for heatmap.",
+                "tp_layer-tag-app": "Change appeareance of the tags cloud. E.g. adding comma to the end of the layer's attribute values may improve readability for dense clouds.",
+                "tp_layer-tag-plac": "<ul><li>Tags strategy placement determines a shape of the path on which subsequent tags are placed in the cloud.</li><li>Placement step determines the distance between two subsequent tags. You can try to change this parameter, if some of the tags are overlapping and you want to keep the cloud density.</li><li>Padding size determines density of the cloud. The bigger the padding, the more free space is saved around the tags.</li></ul>",
+                "tp_layer-heat-rad": "Set radius of the heatmap.",
+                "tp_layer-heat-blur": "Set blur of the heatmap.",
+
+                "tp_sess-man-imp": "Choosing any of the predefined sessions will import it into your browser. Later, you can load it on your map.",
+                "tp_sess-man-loc": "You can import your own or shared session from your local disk. Later, you can load it on your map.",
+                "tp_sess-man-new": "Create a new session, which will store current state of the interactive map application. Useful to save your progress or share your work with other.",
+                "tp_sess-man-ld": "Here are all imported sessions either from your local disk or from our remote resources. You can load them on your map by clicking <i class='material-icons'>play_arrow</i> icon. Green label indicates which session is currently loaded.",
+
+                "tp_user-data-import": "Here you can browse and load your own dataset formatted as JSON or CSV file. You can read more about possible content of the user dataset file <a href='http://localhost:8000/en/faq?id=question0#question0'>here</a>. Example user input data files are provided below.",
+
+                "tp_db-q-db": "Choose a data source stored in our graph database. From this data source you can later import a specific dataset.",
+                "tp_db-q-flt": "To import specific dataset, you can define it's content by creating a set of filters. Filters take the form of nested logical statements.",
+                "tp_db-q-body": "This textbox contains the query in a JSON format. You can also paste here shared query JSON to import the same dataset someone other has used.",
+                
+                "tp_ld-dt-samp": "<ul><li>Random sampling helps to reduce number of visualized objects in case of big datasets.</li><li>Samples shuffling can affect results of dynamic clustering by distance and could make it more appealing.</li></ul>",
+                "tp_ld-dt-query": "This is query in a JSON format, that was used to fetch the dataset from the database. You can copy it and share it with other or place it in a publication."
+            }
+        },
+        "plot": {
+            "tooltips": {
+            
+            }
+        },
+        "browser": {
+            "tooltips": {
+            
+            }
+        }
+    },
+    "pl": {}
+}

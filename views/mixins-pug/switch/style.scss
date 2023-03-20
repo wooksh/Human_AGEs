@@ -1,0 +1,31 @@
+@import "mixins-sass/colors";
+
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: $text-color-light;
+    border-color: $palette-secondary-color-darker;
+    background-color: $palette-secondary-color-darker;
+}
+
+.custom-switch .custom-control-input:checked ~ .custom-control-label::after {
+    background-color: $background-color-light;
+}
+
+.custom-control-input:not(:disabled):active ~ .custom-control-label::before {
+    color: $text-color-light;
+    background-color: palette-secondary-color-with-opacity(0.5);
+    border-color: palette-secondary-color-with-opacity(0.5);
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: 0 0 0 .2rem palette-secondary-color-darker-with-opacity(.25);
+}
+
+.custom-switch .custom-control-label::after {
+    background-color: $palette-primary-color-light;
+}
+
+.custom-control-label::before {
+    background-color: $background-color-light;
+    border: none;
+}

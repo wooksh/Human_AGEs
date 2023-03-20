@@ -1,0 +1,54 @@
+include /mixins-pug/accordion-header/index.pug
+include /mixins-pug/custom-button/index.pug
+
+
+mixin question(index, questionText)
+    .question-wrapper(id=index)
+        +accordion-header-icon(index + "_accordion", questionText, "question_answer", isCollapsed = true, isButtonPressed = true, classes = "question")
+        .collapse(id=index + "_accordion")
+            .answer.p-3.mt-2
+                block
+                .d-flex.justify-content-between
+                    div
+                        //-+custom-button-link("/", '</Link>', null)(class='palette-tertiary-light outline no-focus mb-0')
+                    div
+                        - let url = `?id=${index}#${index}`
+                        +custom-button-link(url, '</Link>', null)(class='palette-tertiary-light outline no-focus mb-0')
+
+
++question("question1", "The website's style after the page loaded seems incomplete - icons are missing and fonts look out of place.")
+    p For optimization of the website's loading time we use 
+        b CDN 
+        | services (#[b C]ontent #[b D]elivery #[b N]etwork), which host and provide most of the used third-party static content such as JSON scripts, fonts and icons.
+        | Although CDNs are designed to handle heavy internet traffic, it may occasionally happen that a connection to the provider couldn't be established.
+        | As the neccessary content can't be downloaded by the user's browser, it results in missing content on a client-side.
+        | Fortunately, such pitfalls do not last long. Because of that we encourage You to ignore the issue and refresh or reconnect to the visited page once again.
+        br
+        | This problem tackles mostly first-time visitors, because, once acquired, static content Swill be cached on Your local computer by the browser and can be used again in the future.
++question("question2", "I am Firefox user and the interactive map doesn't load up properly. In the browser console I get \"WebglAllowWindowsNativeGl\" and/or \"FEATURE_FAILURE_WEBGL_EXHAUSTED_DRIVERS\" error.")
+    p This error could occur due to recent Firefox or hardware drivers update that happend on Your system, which may interfere with the functionality of WebGL - the utility that partialy runs interactive map.
+        | To fix it you need to change a "
+        b webgl.force-enabled
+        | " setting to "
+        b true
+        | " at Firefox 
+        b about:config 
+        | page.
+        br
+        | This problem has been also described at Mozilla Support 
+        a(href="https://support.mozilla.org/en-US/questions/1334668") page
+        | .
++question("question3", "Heatmaps are not visible. In the browser console there is a \"WebGL context was lost\" warning.")
+    p This error is connected to the extensive usage of your GPU by multiple applications. Please make sure that you are running only one instance of the interactive map in your browser at the same time. You may also close any GPU dependent programs run locally on your computer and any other map-based web applications. Also, simple reloading the page often solves the issue.
+        br
+        | For more in-depth explanation, please visit this support 
+        a(href="https://support.mozilla.org/en-US/questions/1334668") page
+        | .
++question("question4", "Sometimes when I browse the interactive map I encounter a case, where boundaries of two clusters overlap and a feature from the first cluster lays in a boundary of the other. How is that possible? Shouldn't the second cluster include that feature?")
+    p The cluster is created by grouping together any yet unassigned features which lay within given radius from the cluster center. The important thing to note is that distance determination happens on a globe, while the result is shown on a flat plane. 
+        | The distances distortions that result from the sphere on the plane projection may in a consequence lead to misleading boundaries visualisation. 
+        br
+        | For example, on the pictures below you can see two regions laying on the globe (left), and the same regions projected to the plane (right). The world coordinates of each vertex are exactly the same on both pictures.
+        img.my-4.d-block.mx-auto(src="/img/faq/distortion_sm.jpg")
+        | To prevent such situations, you can use region clustering which is invariant on data and map view changes. You could also try to shuffle your dataset samples (source URL), which may change origin positions of the clusters to more favorable ones.
+        | In the future, we will consider adding an option to change type of map projection and to visualize data on the globe, to further tackle this issue.

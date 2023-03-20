@@ -1,0 +1,29 @@
+@import "mixins-sass/colors";
+@import "mixins-sass/multi-browser-support.scss";
+
+
+/* Hide number input's controls for Chrome & Opera */
+.plain-number-input::-webkit-outer-spin-button,
+.plain-number-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Hide number input's controls for Mozilla */
+.plain-number-input {
+    -moz-appearance: textfield;
+}
+
+.plain-number-input, .plain-text-input {
+    border-bottom: 0.125em $palette-tertiary-color solid !important;
+    //padding: 0 0.5em !important;
+    font-size: 1em;
+    background-color: $background-color-light;
+    border-radius: 0;
+    color: $text-color-dark;
+    @include transition(all 0.2s);
+
+    &:focus, &:active {
+        border-bottom: 0.125em $palette-secondary-color-darker solid;
+    }
+}

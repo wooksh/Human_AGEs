@@ -1,0 +1,300 @@
+@import './mixins-sass/multi-browser-support.scss';
+@import "mixins-sass/colors";
+
+/*---------------------------------------------------*/
+/*** MASONRY ***/
+/*---------------------------------------------------*/
+
+@-webkit-keyframes pop-in {
+	0% { opacity: 0; -webkit-transform: scale(0.5); }
+	100% { opacity: 1; -webkit-transform: scale(1); }
+}
+@-moz-keyframes pop-in {
+	0% { opacity: 0; -moz-transform: scale(0.5); }
+	100% { opacity: 1; -moz-transform: scale(1); }
+}
+@keyframes pop-in {
+	0% { opacity: 0; transform: scale(0.5); }
+	100% { opacity: 1; transform: scale(1); }
+}
+
+#tile-container {
+	position: relative;
+	padding: 10vw 9.5vw 10vw 9.5vw;
+}
+
+#tile-container:after {
+	-moz-box-shadow: inset 0 0 3em #888;  
+	-webkit-box-shadow: inset 0 0 3em #888;   
+	box-shadow: inset 0 0 3em #888;
+	
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	content: "";
+	display: block;
+}
+
+
+.grid {
+  position: relative;
+  margin: 0 auto;
+  z-index: 5;
+}
+
+/* clearfix */
+.grid:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.grid-sizer {
+	width: 33%; /* Empty element for item sizing */
+}
+
+.gutter-sizer { 
+	width: 1%; 
+}
+
+.grid-item {
+	float: left;
+	background: #252525 url('/img/noise.png') top left repeat;
+	border: 0.25rem solid #252525;
+	z-index: 4;
+	margin-bottom: 1vw;
+	overflow: hidden;
+	border: 0.2rem solid #acdeff $palette-tertiary-color;
+
+	width: 32%;
+	height: 20vw;
+
+	// opacity: 0;
+	
+	transition:
+		border 0.15s linear;
+
+	-webkit-transition:
+		border 0.15s linear;
+		
+	-o-transition:
+		border 0.15s linear;
+		
+	-moz-transition:
+		border 0.15s linear;
+	
+	filter: drop-shadow(0 0 0.2rem #111);
+	-webkit-filter: drop-shadow(0 0 0.2rem #111);
+
+	&:hover .grid-item--header {
+		background-color: rgba(0, 0, 0, 0.3);
+	}
+
+	&:hover, &.grid-item--pop {
+		border: 0.2rem solid $palette-secondary-color;
+	}
+}
+
+
+.item-visible {
+	-webkit-animation: pop-in 0.5s;
+	-moz-animation: pop-in 0.5s;
+	-ms-animation: pop-in 0.5s;
+	-o-animation: pop-in 0.5s;
+	animation-fill-mode: forwards;
+	animation-delay: 0.15s;
+}
+
+
+.grid-item--pop {
+	z-index: 20;
+}
+
+/* .step-image */
+.grid-item--image {
+	position: absolute;
+	display: inline-block;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	//overflow: hidden;
+
+	/*img {
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+	}*/
+}
+
+.step-image, .tile-image {
+	width: 100%;
+	height: 100%;
+
+	background-size: cover;
+	background-position: center center;
+}
+
+.tile-image {
+	filter: blur(0);
+
+	&.blur {
+		filter: blur(4px);
+	}
+}
+
+.popping-out {
+	& .grid-item--image img {
+		@include transition(padding 800ms cubic-bezier(0.215, 0.61, 0.355, 1));
+	}
+}
+
+.grid-item--gigante {
+	& .grid-item--image img {
+		@include transition(padding 800ms cubic-bezier(0.55, 0.055, 0.675, 0.19));
+		width: 50% !important;
+		padding: 1.5rem;
+	}
+}
+
+.grid-item--header {
+	color: #eee;
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: 20;
+	padding: .5rem;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.2);
+
+	& h5, & hr, & h6 {
+		$shadow-color: rgba(17, 17, 17, 0.8);
+		filter: 
+			drop-shadow(0.1rem 0.1rem 0.2rem $shadow-color)
+			drop-shadow(0 0 0.2rem $shadow-color);
+		-webkit-filter:
+			drop-shadow(0.1rem 0.1rem 0.1rem $shadow-color)
+			drop-shadow(0 0 0.2rem $shadow-color);
+	}
+	
+	& h5, & h6 {
+		margin-bottom: .1rem;
+	}
+
+	& hr {
+		margin: .5rem 0 .3rem 0;
+		filter: none;	
+		border-top: 0.1rem solid rgba(238, 238, 238, 0.2);
+	}
+
+	@include transition(background-color 200ms ease, bottom 200ms ease);
+}
+
+.grid-item--content {
+	display: none;
+	color: #eee;
+	top: 0;
+	right: 0;
+	width: 40%;
+	height: 100%;
+	position: absolute;
+	background: $palette-tertiary-color-dark url('/img/noise.png') top left repeat;
+	padding: 3rem 1.5rem 1.5rem 1.5rem;
+
+	& .content--header {
+		text-align: left;
+		color: #eee;
+	}
+
+	& .content--text {
+		text-align: justify;
+	}
+
+	& .position {
+		color: #aaa;
+	}
+
+	& .header {
+		height: 15%;
+		border-bottom: 0.1rem solid rgba(238, 238, 238, 0.2);
+	}
+
+	& .content {
+		position: relative;
+		padding: 1rem 0;
+		height: 75%;
+
+		& .scrollable {
+			position: relative;
+			height: 90%;
+			padding: 0 1rem;
+			overflow-y: scroll;
+		}
+	}
+
+	& .options {
+		position: relative;
+		padding-top: 1rem;
+		border-top: 0.1rem solid rgba(238, 238, 238, 0.2);
+		height: 10%;
+	}
+
+	& .step {
+		background-color: $palette-tertiary-color-dark;
+
+		&:hover {
+			background-color: $palette-tertiary-color;
+		}
+	}
+}
+
+
+.cancel--button {
+	position: absolute;
+	color: $text-color-light;
+	font-size: 2rem;
+
+  top: 0.5rem;
+  right: 0.5rem;
+
+	opacity: 0.6;
+	z-index: 30;
+	display: none;
+	cursor: pointer;
+	
+	transition:
+		opacity 0.2s linear;
+
+	-webkit-transition:
+		opacity 0.2s linear;
+		
+	-o-transition:
+		opacity 0.2s linear;
+		
+	-moz-transition:
+		opacity 0.2s linear;
+}
+.cancel--button:hover {
+  opacity: 1;
+}
+
+.layer {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 10;
+	
+	transition: background 0.15s linear;
+}	
+
+.layer:hover {
+	cursor: pointer;
+}
+
+.examples-filters button {
+    color: $text-color-light !important;
+}

@@ -1,0 +1,163 @@
+include ./includes/results.pug
+include ./includes/dictionaries/regions.pug
+
+
+-
+	var mapOptions = {
+		'light-basemap': "Show Light basemap",
+		'imagery-basemap': "Show Imagery basemap",
+		'osm-basemap': "Show OSM basemap"
+	}
+
+
+#map-wrapper
+	#map.map
+	#header-suplementary-information.map-info.start-0.top-0
+		.light-parameter-box.d-block place
+		.darken-parameter-box= remains.place.name || '-'
+	
+	.map-info.end-0.top-0
+		+custom-button-dropleft('map-options-menu', mapOptions, text = 'Basemap', iconName = 'map', buttonTitle="Show base map options")(class='palette-tertiary-light no-focus position-relative no-text' style='z-index:10;')
+
+
+	.map-info.end-0.bottom-0
+		.light-parameter-box.d-block 
+			span.d-inline-block coordinates
+			i#coordinates-restore.d-inline-block.float-right.material-icons.option-button settings_backup_restore
+		.darken-parameter-box.coordinates-wrapper
+			span#map-latitude= remains.coordinates.latitude
+			//-span &nbsp;&nbsp;lat.
+			span=", "
+			span#map-longitude= remains.coordinates.longitude
+			//-span &nbsp;&nbsp;long.
+
+	#header-main-information.map-info.start-0.bottom-0
+		.light-parameter-box Person
+		.darken-parameter-box #{remains.id}
+			
+#content-wrapper
+	#content
+		.row
+			.col
+				h2.section-title.subsection-header Sample information
+		.row.my-5
+			.col-3
+				.row
+					.content.information-wrapper
+						h3.section-title General
+						.section-content
+							table.table
+								tbody
+									tr
+										td.prop-name Entity
+										td= entityName || '-'
+								tbody
+									tr
+										td.prop-name Database ID
+										td= remains.database_id || '-'
+								tbody
+									tr
+										td.prop-name Data source
+										td= databaseName || '-'
+								tbody
+									tr
+										td.prop-name Data source ID
+										td= remains.full_sample.id ? remains.full_sample.id : '-'
+								tbody
+									tr
+										td.prop-name Population
+										td= remains.population ? remains.population : '-'
+
+			.col-3
+				.row
+					.content.information-wrapper
+						h3.section-title Location
+						.section-content
+							table.table
+								//- ArcheoSession.get().map
+								tbody
+									tr
+										td.prop-name Place
+										td= remains.place.name ? remains.place.name : '-'
+								tbody
+									tr
+										td.prop-name Regions
+										td#regions-select-wrapper
+											- delete regionsDic['cultures']
+											+dropdown('regions-select', regionsDic, 'Choose region to show')(multiple data-max-options="1" data-style="btn-gray")
+									tr#region-wrapper.hidden
+										td.prop-name Region name
+										td#region-name
+
+							#other-regions-wrapper.hidden
+								p Other regions in which the object is located:
+								ul#regions-list
+						
+			.col-3
+				.row
+					.content.information-wrapper
+						h3.section-title Genomic
+						.section-content
+							table.table
+								tbody
+									tr
+										td.prop-name Haplogroup Y
+										td= remains.haplogroup_y && remains.haplogroup_y.value ? remains.haplogroup_y.value : '-'
+								tbody
+									tr
+										td.prop-name Haplogroup Mt
+										td= remains.haplogroup_mt && remains.haplogroup_mt.value ? remains.haplogroup_mt.value : '-'
+								tbody
+									tr
+										td.prop-name Sex
+										td= remains.sex && remains.sex.value ? remains.sex.value : '-'
+
+		.row.my-5
+			.col
+				h2.section-title.subsection-header Analysis information
+
+				+results-accordion('admixtures', 'Admixture results')
+				+results-accordion('pca', 'PCA results')
+				+results-accordion('umap', 'UMAP results')
+
+		.row.my-5
+			.col
+				//-h2.section-title.subsection-header Sample information
+				h2.section-title.subsection-header Source information
+
+				each source, index in remains.sources
+
+					if index > 0
+						.mb-4
+
+					if source.type_id == 'database'
+						.source.p-3(source-id=index)
+							i.material-icons.mr-3 storage
+
+							a(href=source.hyperlink)
+								b.palette-primary-color= source.name
+							| .
+							div.text-right.mt-2
+								+custom-button-image('/img/icons/bibtex.png')(class='bibtex-button palette-tertiary-light outline no-focus mr-2 mb-0')
+								+custom-button-link(source.hyperlink, '</Link>', null)(class='palette-tertiary-light outline no-focus mb-0')
+
+					else if source.type_id == 'article'
+						.source.p-3(source-id=index)
+							i.material-icons.mr-3 insert_drive_file
+							a(href=source.hyperlink)
+								b.palette-primary-color= source.name
+							| .&nbsp;
+							span= source.authors.join(", ") + ". "
+							i= source.publisher
+							span= " - " + source.date.year + ", "
+							span= source.volume_and_issue + ", "
+							span= source.pages + ". "
+							div.text-right.mt-2
+								+custom-button-image('/img/icons/bibtex.png')(class='bibtex-button palette-tertiary-light outline no-focus mr-2 mb-0')
+								+custom-button-link(source.hyperlink, '</Link>', null)(class='palette-tertiary-light outline no-focus mb-0')
+		
+		.row.my-5
+			.col
+				h2.section-title.subsection-header Download 
+
+				a(href=`/${lang}/download/db/${databaseId}/entity/${entityType}/${entityId}`) Download full sample annotation

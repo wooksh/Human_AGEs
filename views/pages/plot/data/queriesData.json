@@ -1,0 +1,13 @@
+{
+	"PCA": { 
+		"selectionSet": [
+			"plot_data"
+		]
+	},
+	"UMAP": { 
+		"selectionSet": [
+			"plot_data"
+		]
+	},
+	"default": {}
+}

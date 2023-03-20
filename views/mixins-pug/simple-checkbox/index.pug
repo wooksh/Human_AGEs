@@ -1,0 +1,4 @@
+mixin simple-checkbox(id, label, isToggled = true)
+	.simple-checkbox-wrapper&attributes(attributes)
+		input.form-check-input(id=id type='checkbox' value=isToggled)
+		label.form-check-label(for=id)= label

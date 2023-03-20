@@ -1,0 +1,52 @@
+mixin carousel-item(item)
+    img.d-block.w-100(src=item["bg"], alt=item["alt"])
+    .carousel-caption.d-none.d-md-block
+        h5= item["title"]
+        p= item["descr"]
+
+
+mixin carousel-items-generator(items)
+    ol.carousel-indicators
+        each val, index in items
+            if index === 0
+                li.active(data-target='#carouselNews' data-slide-to=index)
+            else
+                li(data-target='#carouselNews' data-slide-to=index)
+    .carousel-inner
+        each val, index in items
+            if index === 0
+                .carousel-item.active
+                    +carousel-item(val)
+            else
+                .carousel-item
+                    +carousel-item(val)
+
+#carouselNews.carousel.slide(data-ride='carousel')
+    - 
+        var items = [{
+                bg: 'https://via.placeholder.com/1500x550',
+                alt: 'First slide',
+                title: 'Aktualizacja bazy danych 4.2.1',
+                descr: 'W ostatniej aktualizacji dodano lokalizacje karczm, w których Piastowie kosztowali najlepszego polskiego miodu'
+            },
+            {
+                bg: 'https://via.placeholder.com/1500x550',
+                alt: 'Second slide',
+                title: 'Aktualizacja bazy danych 4.2.2',
+                descr: 'W ostatniej aktualizacji dodano lokalizacje karczm, w których Piastowie kosztowali najlepszego polskiego miodu'
+            },
+            {
+                bg: 'https://via.placeholder.com/1500x550',
+                alt: 'Third slide',
+                title: 'Aktualizacja bazy danych 4.2.3',
+                descr: 'W ostatniej aktualizacji dodano lokalizacje karczm, w których Piastowie kosztowali najlepszego polskiego miodu'
+            }]
+    
+    +carousel-items-generator(items)
+
+    a.carousel-control-prev(href='#carouselNews' role='button' data-slide='prev')
+        span.carousel-control-prev-icon(aria-hidden='true')
+        span.sr-only Previous
+    a.carousel-control-next(href='#carouselNews' role='button' data-slide='next')
+        span.carousel-control-next-icon(aria-hidden='true')
+        span.sr-only Next

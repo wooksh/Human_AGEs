@@ -1,0 +1,73 @@
+{
+    "_meta": {
+        "name": "Blank",
+        "author": "HumanAGEs Team",
+        "description": "This is a blank session for a clear start..",
+        "lang": "en",
+        "creationDate": "Fri Jan 14 2022 14:00:45 GMT+0100 (Central European Standard Time)",
+        "editDate": "Fri Jan 14 2022 16:22:45 GMT+0100 (Central European Standard Time)"
+    },
+    "datasets": {
+        "_order": [],
+        "_counter": 0
+    },
+    "layers": {
+        "_order": [],
+        "_counter": 0
+    },
+    "clustering": {
+        "features": {
+            "range": 200,
+            "distance": 0,
+            "clusterAtCentroid": true,
+            "showRegions": true,
+            "labelPosition": "cluster",
+            "method": {
+                "distance": "relative",
+                "region": null
+            }
+        },
+        "attributes": {}
+    },
+    "filters": {
+        "timeline": {
+            "isActive": true,
+            "yearFrom": -33000,
+            "yearTo": -27000,
+            "minYear": -36000,
+            "maxYear": 2000,
+
+            "showPresent": true,
+            "eventOnFinish": false,
+            "doFilterRegions": true,
+            "showPropability": true
+        },
+        "attributes": {
+            "isActive": true,
+            "attributeId": "haplogroup_y",
+            "attributeType": "tree",
+            "attributeSearchUseRegex": false,
+            "groupSearchUseRegex": false,
+            "available": [],
+            "configs": {}
+        },
+        "regions": {
+            "isActive": true
+        }
+    },
+    "legend": {
+        "attributes": {
+            "OTHER": {"color": "rgba(126,126,126,1.0)"},
+            "MISSING": {"color": "rgba(0,0,0,1.0)"}
+        },
+        "regions": {}
+    },
+    "features": {},
+    "map": {
+        "position": [19.657016, 52.205848],
+        "zoom": 4,
+        "dataProjection": "EPSG:4326",
+        "mapProjection": "EPSG:3857",
+        "baseLayers": {}
+    }
+}

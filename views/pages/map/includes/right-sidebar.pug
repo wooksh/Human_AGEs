@@ -1,0 +1,344 @@
+include ./presets/dictionaries/clustering.pug
+include ./presets/dictionaries/attributeClustering.pug
+include ./presets/dictionaries/regionsLabel.pug
+
+
+include /mixins-pug/toggle-arrow/index.pug
+include /mixins-pug/textbox/index.pug
+include /mixins-pug/spectrum-color-input/index.pug
+include /mixins-pug/simple-radiobuttons/index.pug
+include /mixins-pug/tooltip/index.pug
+
+
+#right-sidebar.sidebar-wrapper.right.active
+	nav.sidebar
+		.sidebar-title.section
+			.section-header
+				h5.header-text.mb-0
+					| Map management
+					i.material-icons.ml-3 map
+		#grouping-section.section
+			- var targetId = 'clustering-options';
+			+accordion-header(targetId, 'Map grouping', true)(class="section-header collapsed")
+			.collapse(id=targetId)
+				.palette-primary-color-lightest-bg.section-content.object-content.sidebar-setting
+					.subsection
+						.object-container
+							- var targetId = 'features-clustering';
+							+accordion-header-settings(targetId, 'Spatial clustering', true)(class="accordion-subsection-header collapsed")
+							.collapse.session-option(id=targetId)
+								.sidebar-setting.object-content.palette-bg-color-light-bg
+									.subsection
+										h6.subsection-header Spatial clustering modes
+											+tooltip("tp_sp-cl-modes")
+										+dropdown-no-picker('clustering-mode-select', clusteringDic, 'Choose modes...')(class='clustering-mode-select session-option' multiple=true)
+
+									#cluster-settings-wrapper
+										.subsection
+											h6.subsection-header Cluster appearance
+												+tooltip("tp_sp-cl-ap")
+											+icon-checkbox('region-show', 'simple session-option', "always show cluster boundaries", false)
+										
+										.subsection
+											h6.subsection-header Clustering modes options
+											#distance-clustering-wrapper.card.settings
+												- var targetId = 'distance-clustering';
+												+accordion-header-settings(targetId, 'Distance clustering', true)(class="card-header")
+												.show.collapse(id=targetId)
+													.card-body
+														.subsection
+															h6.subsection-header Clustering range
+																+tooltip("tp_sp-cl-range")
+															input.setting.session-option(id='clustering-slider' type="text" class="js-range-slider clustering-slider")
+															//-h6.subsection-header Clusters in-between distance
+														.subsection.distance-slider-wrapper
+															h6.subsection-header Cluster object position
+																+tooltip("tp_sp-cl-dist")
+															input.setting.session-option(id='distance-slider' type="text" class="js-range-slider distance-slider")
+
+										.subsection
+											#region-clustering-wrapper.card.settings
+												- targetId = 'region-clustering';
+												+accordion-header-settings(targetId, 'Region clustering', true)(class="card-header")
+												.show.collapse(id=targetId)
+													.card-body
+														.subsection
+															h6.subsection-header Clusters placement
+															+icon-checkbox('cluster-at-centroid', 'simple session-option', "at region's centroid", true)
+															
+															h6.subsection-header Clusters labels appearance
+															span Place region labels
+															+simple-radiobuttons('region-label-position', regionsLabel, 'cluster')(class="session-option")
+
+					.subsection
+						.object-container
+							- var targetId = 'attributes-clustering';
+							+accordion-header-settings(targetId, 'Attributes grouping', true)(class="accordion-subsection-header collapsed")
+							.collapse.session-option(id=targetId)
+								.sidebar-setting.object-content.palette-bg-color-light-bg
+									.subsection
+										h6.subsection-header Choose an attribute
+											+tooltip("tp_att-cl-sl")
+										+dropdown-no-picker('select-cluster-attribute', {}, 'Choose an attribute...')(class='select-cluster-attribute')
+										div.mt-3.d-none
+											+dropdown('select-cluster-attribute-type', {}, 'Choose a type...')(class='select-cluster-attribute-type')
+										.input-group.mt-3
+											+custom-button('Reset settings', 'settings_backup_restore')(id="attribute-clustering-reset" class='palette-tertiary-light no-focus w-100 mb-0' disabled='' title="Remove all groups")
+
+									#attribute-grouping-wrapper.hidden.mb-2
+										.subsection
+											h6.subsection-header Values & groups browser 
+												+tooltip("tp_att-cl-bw")
+											.input-group
+												+icon-textbox('cluster-group-search', 'Filter values...', 'filter_list', 'group-filter')
+											+icon-checkbox('group-cluster-regex', 'simple', 'use regex', false)(class='mt-1 mb-3 small-checkbox')
+											
+											.mb-1
+												span.mr-2 Showing:
+												+simple-radiobuttons-inline('attributes-clustering-object', attributesClusteringPanelChoice, 'attributes')
+											
+											select#select-attribute-cluster-browser.form-control(multiple='' class="filter-box")
+											p#modifying-message-text.message-text.mt-2
+
+											.mt-2
+												div.input-group
+													+custom-button('Select all')(id="attribute-cluster-select-all" class='mb-0 float-left palette-tertiary-light no-focus' style="width: 48%;" title="Select all values/groups currently visible in the browser")
+													+custom-button('Deselect all')(id="attribute-cluster-unselect-all" class='ml-2 mb-0 float-right palette-tertiary-light no-focus' style="width: 48%;" title="Deselect all values/groups currently visible in the browser")
+												div.input-group.mt-2
+													+custom-button('Invert selection')(id="attribute-cluster-select-invert" class='w-100 mb-0 float-left palette-tertiary-light no-focus' title="Invert selection of all values/groups currently visible in the browser")
+											#tree-clustering-select-panel.hidden
+												.input-group.mt-2
+													+button-icon-textbox('attribute-clustering-ancestors', 'Ancestors of...', 'Select', 'search', '', ariaLabel = '')(class='palette-tertiary-light no-focus' title="Select all values that are ancestors of given value in the data tree")
+												.input-group.mt-2
+													+button-icon-textbox('attribute-clustering-descendants', 'Descendants of...', 'Select', 'search', '', ariaLabel = '')(class='palette-tertiary-light no-focus' title="Select all values that are descendants of given value in the data tree")
+
+										#attributes-clustering-attribute-panel.subsection
+											//-h6.subsection-header Add selected values to the group
+											//-h6.subsection-header Create group or expand it with values
+											h6.subsection-header Add values to group
+												+tooltip("tp_att-cl-gp")
+											.mt-2
+												.input-group.mt-2
+													+button-textbox('attribute-cluster-new-group', 'Group\'s name...', 'Add', 'add', ariaLabel = '')(class='palette-primary no-focus' title="Add selected values to the given group, which will be created or expanded")
+													p#new-group-error-text.error-text.mt-2
+													p#new-group-message-text.message-text.mt-2
+
+										#attributes-clustering-group-panel.subsection.mt-2.hidden
+											h6.subsection-header Manage groups
+												+tooltip("tp_att-cl-mg")
+											.input-group
+												+custom-button('Modify group')(id="group-modify" class='mb-0 float-left palette-primary no-focus' style="width: 46.5%;" title="Change content of the group by excluding some of it's values")
+												+custom-button('Remove groups')(id="group-remove" class='ml-2 mb-0 float-right palette-tertiary-light no-focus' style="width: 50.5%;" title="Remove selected groups")
+												
+											#grouping-buttons-panel.input-group.mt-2.hidden
+												+custom-button('Group all')(id="attribute-cluster-group-all" class='mb-0 float-left palette-tertiary-light no-focus' style="width: 48%;" title="Add all selected values to the group")
+												+custom-button('Ungroup all')(id="attribute-cluster-ungroup-all" class='ml-2 mb-0 float-right palette-tertiary-light no-focus' style="width: 48%;" title="Exclude all selected values from the group")
+												
+											p#manage-group-error-text.error-text.mt-2
+											p#manage-group-message-text.message-text.mt-2
+
+										#tree-level-clustering.subsection.hidden.mt-4
+											.card.settings
+												- var targetId = 'automatic-grouping';
+												+accordion-header-settings(targetId, 'Automatic grouping', true)(class="card-header")
+												.show.collapse(id=targetId)
+													.card-body
+														.subsection.mb-2
+															p
+																| Automatic grouping 
+																b overwrites 
+																| all previous grouping settings.
+
+														.subsection
+															h6.mb-2.subsection-header Groups appearance
+																+tooltip("tp_att-cl-ga")
+															+icon-textbox('attribute-clustering-prefix', 'Add prefix to group name...', 'edit', 'group-prefix')
+
+														.subsection.mt-2
+															h6.mb-2.subsection-header Group by a tree level
+																+tooltip("tp_att-cl-tl")
+															input.setting.session-option(id='attribute-clustering-tree-level-slider' type="text" class="js-range-slider clustering-slider")
+															+custom-button('Group')(id="attribute-clustering-tree-level-button" class='palette-primary no-focus mt-2 mb-3 ml-auto d-block' title="Automatically group values")
+
+														.subsection.mt-2
+															h6.mb-2.subsection-header Group by root word of length
+																+tooltip("tp_att-cl-rw")
+															+button-input('attribute-clustering-root-word-input', 'Group', 1)(title="Automatically group values")
+
+
+		#filtering-section.section
+			- var targetId = 'filtering-options';
+			+accordion-header(targetId, 'Map filtering', true)(class="section-header collapsed")
+			.collapse(id=targetId)
+				.palette-primary-color-lightest-bg.section-content
+					.subsection
+						.object-container
+							- var targetId = 'time-filter';
+							+accordion-header-button(targetId, 'Time filter', targetId+"_trigger", 'checkbox session-option', false, true, iconTitle="Toggle the filter")(class="accordion-subsection-header collapsed")
+							.collapse.session-option(id=targetId)
+								.sidebar-setting.object-content.palette-bg-color-light-bg
+									.subsection
+										h6.subsection-header Set time filter
+											+tooltip("tp_time-flt-inter")
+										+years-range-spinner()(id="filter-from-to")
+									
+									.subsection
+										h6.subsection-header Set time filter's range
+											+tooltip("tp_time-flt-rang")
+										+years-range-spinner()(id="filter-min-max")
+										p.mt-3 Minimal year is 
+											span.years-text #{minYear}, 
+											|, maximal is 
+											span.years-text #{maxYear}
+											|.
+
+									.subsection
+										h6.subsection-header Filtering options
+											+tooltip("tp_time-flt-flt")
+										+icon-checkbox('time-filter-present-toggle', 'simple session-option', 'show present time data', true)
+										+icon-checkbox('time-filter-regions-filter-toggle', 'simple session-option', 'do filter regions by time', true)
+						
+									.subsection
+										h6.subsection-header Appearance options
+											+tooltip("tp_time-flt-app")
+										+icon-checkbox('time-filter-propability-toggle', 'simple session-option', 'show time inclusion', true)
+
+									.subsection
+										h6.subsection-header Optimization options
+											+tooltip("tp_time-flt-opt")
+										+icon-checkbox('time-filter-onfinish-toggle', 'simple session-option', 'event only on release', false)
+
+						.object-container.mt-3
+							- var targetId = 'attribute-filter';
+							+accordion-header-button(targetId, 'Attribute filter', targetId+"_trigger", 'checkbox session-option', false, true, iconTitle="Toggle the filter")(class="accordion-subsection-header collapsed")
+							.collapse(id=targetId)
+								.sidebar-setting.object-content.palette-bg-color-light-bg
+									.subsection
+										h6.subsection-header Choose an attribute to filter
+											+tooltip("tp_att-flt-sl")
+										+dropdown-no-picker('select-filter-attribute', {}, 'Choose an attribute...')(class='select-filter-attribute session-option')
+										div.mt-3.d-none
+											+dropdown('select-filter-attribute-type', {}, 'Choose a type...')(class='select-filter-attribute-type')
+										
+									#attribute-filter-wrapper.hidden
+										.subsection
+											+icon-checkbox('attribute-filter-switch', 'simple', 'is filtering active', false)(class='mt-3')
+					
+										.subsection
+											h6.subsection-header Values browser
+												+tooltip("tp_att-flt-bw")
+											fieldset#attribute-filtering-panel(disabled="disabled")
+												.input-group
+													+custom-button('Reset settings', 'settings_backup_restore')(id="attribute-filter-reset" class='palette-tertiary-light no-focus w-100' title="Make all values pass through the filter")
+												.input-group
+													//-input#filter-attribute-search.form-control(placeholder="Search attributes")
+													+icon-textbox('filter-attribute-search', 'Filter attributes...', 'filter_list', 'attribute-filter')
+			
+												+icon-checkbox('attribute-filter-regex', 'simple', 'use regex', false)(class='mt-1 mb-3 small-checkbox')
+												select#select-attribute-filter-browser.form-control(multiple='' class="filter-box")
+
+												.input-group.mt-2
+													+custom-button('Select all')(id="attribute-filter-select-all" class='mb-0 float-left palette-tertiary-light no-focus' style="width: 48%;" title="Select all values currently visible in the browser")
+													+custom-button('Deselect all')(id="attribute-filter-unselect-all" class='ml-2 mb-0 float-right palette-tertiary-light no-focus' style="width: 48%;" title="Deselect all values currently visible in the browser")
+												.input-group.mt-2
+													+custom-button('Invert selection')(id="attribute-filter-select-invert" class='w-100 mb-0 float-left palette-tertiary-light no-focus' title="Invert all values currently visible in the browser")
+
+												#tree-filter-select-panel.hidden
+													.input-group.mt-2
+														+button-icon-textbox('attribute-filtering-ancestors', 'Ancestors of...', 'Select', 'search', '', ariaLabel = '')(class='palette-tertiary-light no-focus' title="Select all values that are ancestors of given value in the data tree")
+													.input-group.mt-2
+														+button-icon-textbox('attribute-filtering-descendants', 'Descendants of...', 'Select', 'search', '', ariaLabel = '')(class='palette-tertiary-light no-focus' title="Select all values that are descendants of given value in the data tree")
+
+												.input-group.mt-2
+													+custom-button('Filter')(id="attribute-filter-unfilter-all" class='mb-0 float-left palette-tertiary-light no-focus positive' style="width: 48%;" title="Filter all selected values")
+													+custom-button('Filter out')(id="attribute-filter-filter-all" class='ml-2 mb-0 float-right palette-tertiary-light no-focus negative' style="width: 48%;" title="Filter out all selected values")
+												
+												.subsection
+													#tree-level-filtering.subsection.hidden.mt-4
+														.card.settings
+															- var targetId = 'tree-filtering';
+															+accordion-header-settings(targetId, 'Automatic filtering', true)(class="card-header")
+															.show.collapse(id=targetId)
+																.card-body
+																	.subsection.mb-2
+																		p
+																			| Automatic grouping 
+																			b overwrites 
+																			| all previous grouping settings.
+																	.subsection
+																		h6.mb-2.subsection-header Filter by a tree level
+																			+tooltip("tp_att-flt-tree")
+																		input.setting.session-option(id='attribute-filtering-tree-level-slider' type="text" class="js-range-slider filtering-slider")
+																		+custom-button('Filter')(id="attribute-filtering-tree-level-button" class='palette-primary no-focus mt-2 mb-3 ml-auto d-block' title="Automatically filter values")
+												.subsection
+													#admixture-filtering.subsection.hidden.mt-4
+														.card.settings
+															- var targetId = 'admixture-filtering-accordion';
+															+accordion-header-settings(targetId, 'Filtering by quantity', true)(class="card-header")
+															.show.collapse(id=targetId)
+																.card-body
+																	.subsection
+																		h6.mb-2.subsection-header Filter by proportions
+																			+tooltip("tp_att-flt-pr")
+																		#admixture-filtering-options.subsection
+
+
+						.object-container.mt-3
+							- var targetId = 'region-filter';
+							+accordion-header-button(targetId, 'Region filter', targetId+"_trigger", 'checkbox session-option', false, true, iconTitle="Toggle the filter")(class="accordion-subsection-header collapsed")
+							.collapse(id=targetId)
+								.sidebar-setting.object-content.palette-bg-color-light-bg
+									.subsection
+										h6.subsection-header Choose a region type to filter
+											+tooltip("tp_reg-flt-sl")
+										+dropdown-no-picker('select-filter-region', {}, 'Choose a region type...')(class='select-filter-region-type session-option')
+									#region-filter-wrapper.hidden
+										.subsection
+											.input-group.mt-3
+												+custom-button('Reset settings', 'settings_backup_restore')(id="region-filter-reset" class='palette-tertiary-light no-focus w-100' title="Make all regions pass through the filter")
+											h6.subsection-header Filter regions
+												+tooltip("tp_reg-flt-bw")
+											.input-group
+												+icon-textbox('filter-region-search', 'Filter regions...', 'filter_list')
+											+icon-checkbox('region-filter-regex', 'simple', 'use regex', false)(class='mt-1 mb-3 small-checkbox')
+											select#select-filter-region-values.form-control(multiple='' class="filter-box")
+
+										.subsection.mt-2
+											.input-group
+												+custom-button('Select all')(id="region-filter-select-all" class='mb-0 float-left palette-tertiary-light no-focus' style="width: 48%;" title="Select all regions currently visible in the browser")
+												+custom-button('Deselect all')(id="region-filter-unselect-all" class='ml-2 mb-0 float-right palette-tertiary-light no-focus' style="width: 48%;" title="Deselect all regions currently visible in the browser")
+											.input-group.mt-2
+												+custom-button('Invert selection')(id="region-filter-select-invert" class='w-100 mb-0 float-left palette-tertiary-light no-focus' title="Invert all regions currently visible in the browser")
+
+											.input-group.mt-2
+												+custom-button('Filter')(id="region-filter-unfilter-all" class='mb-0 float-left palette-tertiary-light no-focus positive' style="width: 48%;" title="Filter all selected regions")
+												+custom-button('Filter out')(id="region-filter-filter-all" class='ml-2 mb-0 float-right palette-tertiary-light no-focus negative' style="width: 48%;" title="Filter out all selected regions")
+
+		hr.section-breaker
+	
+		#layers-section.section
+			- var targetId = 'appearance-options';
+			+accordion-header(targetId, 'Created map layers')(class="section-header")
+			.show.collapse(id=targetId)
+				.palette-primary-color-lightest-bg.section-content
+					.subsection
+						+custom-button("Create a new layer", "library_add", null, true, "Creating layer...")(disabled=true id="new-layer-button" class="palette-primary no-focus w-100 h-100 justify-content-center mx-auto" title="Create new data presenting map layer")
+
+						.subsection
+							div(id='layer-trash' class=`accordion-header accordion-subsection-header trash-container`) 
+								span Drop a layer here to remove it
+									i.material-icons.ml-2= 'delete'
+
+						h6.subsection-header
+
+						ul#layers-container.subsection
+							.absence-prompt No layer is available
+
+	//- i.material-icons map
+
+	.sidebar-trigger(title="Toggle map management panel")
+		.label 
+			span 
+				i.material-icons.mr-3 map
+				| map management
+		+toggle-arrow("right")(class="sidebar-arrow active")

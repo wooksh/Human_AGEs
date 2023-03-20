@@ -1,0 +1,111 @@
+@import "mixins-sass/shapes";
+
+
+body {
+    background-color: rgb(41, 41, 41);
+}
+
+/*---------------------------------------------------*/
+/*** JUMBOTRON ***/
+/*---------------------------------------------------*/
+
+.jumbotron {
+    position: relative;
+    width: 100%;
+    //height: calc(100vh - 52px);
+    color: #222;
+    padding: 0;
+    margin-bottom: 0;
+    overflow: hidden;
+
+    .jumbotron-background-image {
+        position: absolute;
+        /* Tymczasowo ! */
+        //- filter: grayscale(100%) contrast(10%);
+        //- -webkit-filter: grayscale(100%) opacity(20%);
+
+        & > img {
+            width: 100vw;
+        }
+    }
+
+    & > .container-fluid {
+        padding-top: 1rem;
+    }
+
+    & .left-side, & .right-side {
+        padding: 2rem;
+    }
+
+    & .row {
+        margin-bottom: 50px;
+    }
+
+    & .row:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*---------------------------------------------------*/
+/*** FORM ***/
+/*---------------------------------------------------*/
+
+#contact-form-container {
+    background-color: rgb(248, 248, 248);
+}
+
+/*---------------------------------------------------*/
+/*** CARD ***/
+/*---------------------------------------------------*/
+
+.card {
+    width: 25rem;
+    height: 22rem;
+    background-color: rgba(248, 248, 248, 0.5);
+}
+
+/*---------------------------------------------------*/
+/*** ICONS ***/
+/*---------------------------------------------------*/
+
+$size: 60px;
+.icons-section {
+    position: absolute;
+    bottom: -($size / 2);
+    right: 0;
+}
+
+.icon-wrapper {
+    display: inline-block;
+    height: $size;
+    width: $size;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.dot {
+    @include dot(100%, 2px, 4px, rgb(212, 212, 212), #eee, rgb(196, 196, 196), "shrink");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#site-wrapper {
+    min-height: initial !important;
+}
+
+/*---------------------------------------------------*/
+/*** MAP ***/
+/*---------------------------------------------------*/
+
+#map-header {
+    background-color: #292929;
+    color: #eee;
+    padding: 2rem 4rem;
+}
+
+#map {
+    height: 300px;
+    width: 100%;
+}

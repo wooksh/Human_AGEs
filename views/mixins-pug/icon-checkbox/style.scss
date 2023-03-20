@@ -1,0 +1,157 @@
+@import "mixins-sass/colors";
+
+.accordion-wrapper button.icon-checkbox {
+	&:hover {
+		background-color: rgba(0,0,0,0.1);
+	}
+
+	&:active {
+		background-color: rgba(0,0,0,0.2);
+	}
+}
+
+button.icon-checkbox {
+	border-radius: 0;
+	border: 0;
+	padding: 1em 0.5em 1em 1em !important;
+	outline: none !important;
+	box-shadow: none !important;
+	
+	&.form-check-input {
+        position: relative;
+		margin: 0;
+    }
+
+	&:hover {
+		color: #bbb !important;
+	}
+
+	&:active {
+		color: rgb(158, 158, 158) !important;
+	}
+
+	/* Different icons' classes */
+	&.session-activate {
+		border-left: 0.5em $palette-tertiary-color solid;
+
+		padding: 0.75em 0em 0.75em 0.25em !important;
+		font-size: 1.25em;
+		height: 100%;
+
+		& > .material-icons::before {
+			font-family: 'Material Icons';
+			content: 'play_arrow';
+		}
+
+		&.active {
+			border-left: 0.5em #29a61e solid;
+		}
+	}
+
+	&.radio-button {
+		& {
+			& > .material-icons::before {
+				height: 1em;
+				width: 1em;
+				background-color: #fff;
+				border-radius: 50%;
+				display: inline-block;
+			}
+		}
+
+		& {
+			& > .material-icons::after {
+				font-family: 'Material Icons';
+				content: "radio_button_unchecked";
+			}
+		}
+
+		&.active {
+			& > .material-icons::after {
+				content: "radio_button_checked";
+			}
+		}
+	}
+
+	&.visibility {
+		& {
+			& > .material-icons::before {
+				font-family: 'Material Icons';
+				content: "visibility_off";
+			}
+		}
+
+		&.active {
+			& > .material-icons::before {
+				content: "visibility";
+			}
+		}
+	}
+
+	&.checkbox {
+		padding: 0.75em 0em 0.75em 0.75em !important;
+		& {
+			& > .material-icons::before {
+				font-family: 'Material Icons';
+				content: 'check_box_outline_blank';
+			}
+		}
+
+		&.active {
+			& > .material-icons::before {
+				content: 'check_box';
+			}
+		}
+	}
+
+	&.simple {
+		color: $text-color-dark;
+		background-color: $palette-tertiary-color-lightest;
+		padding: 0 !important;
+
+		&.form-check-input {
+			margin: 0 0.5em 0 0;
+		}
+
+		& {
+			& > .material-icons::before {
+				font-family: 'Material Icons';
+				content: 'done';
+				visibility: hidden;
+			}
+		}
+
+		&.active {
+			& > .material-icons::before {
+				visibility: visible;
+			}
+		}
+	}
+
+
+	&.file_download {
+		/*&.form-check-input {
+			margin: 0 0.5em 0 0;
+		}*/
+
+		& > .material-icons::before {
+			font-family: 'Material Icons';
+			content: 'file_download';
+			//visibility: hidden;
+		}	
+	}
+
+	& .material-icons {
+		pointer-events: none;
+	}
+
+	&:focus {
+		box-shadow: none;
+	}
+}
+
+.icon-checkbox-wrapper {
+	margin-bottom: 0.5em;
+	display: block;
+	//font-size: 0.9em;
+}

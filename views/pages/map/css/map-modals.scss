@@ -1,0 +1,88 @@
+@import "mixins-sass/colors";
+
+
+.dropdown-submenu {
+    position:relative;
+}
+
+
+.dropdown-submenu > .dropdown-menu {
+    position:absolute;
+    top: 0;
+    left: -90%;
+    margin-top:-6px;
+}
+
+
+/* rotate caret on hover */
+.dropdown-menu > li > a:hover:after {
+    text-decoration: underline;
+    transform: rotate(90deg);
+} 
+
+
+.map-modal {
+    position: relative;
+    width: 100% !important;
+    background-color: $background-color-light;
+    font-size: 0.8rem;
+    position: relative;
+    overflow-y: scroll;
+
+    &.ui-dialog-content {
+        padding: 0 !important;
+        //overflow: hidden;
+        overflow-y: scroll;
+    }
+
+    /*& .accordion-arrow > .tip {
+        //background-color: $text-color-dark !important;
+    }*/
+
+    & .accordion-header {
+        //background-color: $background-color-lightest !important;
+        
+        & .header-text {
+            font-size: 1.2em;
+        }
+    }
+
+    /*& .section-content {
+        background-color: $background-color-lightest !important;
+        font-size: 1em;
+        min-height: 5em;
+        margin-bottom: 1em;
+    }*/
+}
+
+
+#query-builder-modal {
+	& .modal-xl {
+		max-width: 90%;
+	}
+}
+
+.anno {
+    width: 29rem;
+}
+
+
+.anno-target-decoration {
+    //outline: none; // 0.3rem solid $palette-secondary-color !important;
+    position: relative;
+    //box-shadow: none;
+    //box-shadow: inset 0 0 0 0.3rem $palette-secondary-color !important;
+
+    &:after {
+        pointer-events: none;
+        content:'';
+        display:block;
+        box-shadow: inset 0 0 0 0.3rem $palette-secondary-color !important;
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        z-index: 1000000;
+    }
+}

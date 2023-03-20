@@ -1,0 +1,21 @@
+{
+    "special": {
+        "isOptgroup": true,
+        "name": "Special attributes",
+        "options": {
+            "MISSING": {
+                "name": "missing",
+                "filtered": false
+            },
+            "OTHER": {
+                "name": "other",
+                "filtered": false
+            }
+        }
+    },
+    "attributes": {
+        "isOptgroup": true,
+        "name": "Data attributes",
+        "options": {}
+    }
+}

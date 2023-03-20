@@ -1,0 +1,5 @@
+{
+	"map-modal": ["#map"],
+	"cluster-strategy-change": ["#map"],
+	"map-regions-updated": ["#region-wrapper", "#regions-list-wrapper"]
+}

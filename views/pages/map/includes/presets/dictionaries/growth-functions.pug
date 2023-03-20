@@ -1,0 +1,47 @@
+//- 'content': 'Linear: \\[ f_{weight}(x) = \\frac{a^{x*C} - 1}{a - 1} \\]' 
+//- \\[ f_{weight}(x) = (x*C)^{a} \\]
+//- \\[ f_{weight}(x) = a*x*C \\]
+-
+	var growthFunctions = {
+		'none': { 
+			'name': 'None', 
+			'content': 'None' 
+		},
+		'linear': { 
+			'name': 'Linear', 
+			'content': 'Linear' 
+		},
+		'polynomial': { 
+			'name': 'Polynomial', 
+			'content': 'Polynomial'
+		},
+		'exponential': { 
+			'name': 'Exponential', 
+			'selected': true, 
+			'content': 'Exponential'
+		}
+	};
+
+	var growthFunctions_BU = {
+		'none': { 
+			'name': 'None', 
+			'content': 'None: \\( w = 1 \\)' 
+		},
+		'linear': { 
+			'name': 'Linear', 
+			'content': 'Linear: \\( w = ax\'C \\)' 
+		},
+		'polynomial': { 
+			'name': 'Polynomial', 
+			'content': 'Polynomial: \\( w = (x\'C)^{a} \\)'
+		},
+		'logarithmic': { 
+			'name': 'Logarithmic', 
+			'content': 'Logarithmic: \\( w = log_a (Cx\') \\)'
+		},
+		'exponential': { 
+			'name': 'Exponential', 
+			'selected': true, 
+			'content': 'Exponential: \\( w = \\frac{a^{x\'C} - 1}{a - 1} \\)'
+		}
+	};

@@ -1,0 +1,109 @@
+{
+	"remains": {
+		"remains": [],
+		"genetical_sex": ["this_is_sex", "Sex"],
+		"archaeological_site": ["this_in_archaeologicalsite", "ArchaeologicalSite"],
+		"use_phase_part_of_period": ["this_from_time_usephase", "UsePhase", "this_from_time_archaeologicalperiod", "ArchaeologicalPeriod"],
+		"use_phase": ["this_from_time_usephase", "UsePhase"],
+		"use_phase_function": ["this_from_time_usephase", "UsePhase", "this_is_usephasefunction", "UsePhaseFunction"],
+
+		"use_phase_from_culture": ["this_from_time_usephase", "UsePhase", "this_from_time_culture", "Culture"],
+		"use_phase_part_of_culture": ["this_from_time_usephase", "UsePhase", "this_part_of_culture", "Culture"],
+		
+
+		"political_region": ["this_in_archaeologicalsite", "ArchaeologicalSite", "this_in_politicalregion", "PoliticalRegion"],
+		"geographical_region": ["this_in_archaeologicalsite", "ArchaeologicalSite", "this_in_geographicalregion", "GeographicalRegion"],
+		"cultural_region": ["this_in_archaeologicalsite", "ArchaeologicalSite", "this_in_culture", "Culture"],
+
+
+		"haplogroup_y": ["this_has_haplogroupy", "HaplogroupY"],
+		"haplogroup_mt": ["this_has_haplogroupmt", "HaplogroupMt"],
+		"dating": ["this_from_time_dating", "Dating"],
+		"dating_type": ["this_from_time_dating", "Dating", "this_is_datingtype", "DatingType"],
+		"dating_culture": ["this_from_time_dating", "Dating", "this_from_time_culture", "Culture"],
+		"sample": ["sample_of_this", "Sample"],
+		"source": ["sample_of_this", "Sample", "this_published_in_source", "Source"],
+		"source_author": ["sample_of_this", "Sample", "this_published_in_source", "Source", "author_of_this", "Author"],
+
+		"result_admixture":["sample_of_this", "Sample", "this_has_admixture", "Admixture"],
+		"result_admixture_k2":["sample_of_this", "Sample", "this_has_admixture_k2", "Admixture_k2"],
+		"result_admixture_k3":["sample_of_this", "Sample", "this_has_admixture_k3", "Admixture_k3"],
+		"result_admixture_k4":["sample_of_this", "Sample", "this_has_admixture_k4", "Admixture_k4"],
+		"result_admixture_k6":["sample_of_this", "Sample", "this_has_admixture_k6", "Admixture_k6"],
+		"result_admixture_k7":["sample_of_this", "Sample", "this_has_admixture_k7", "Admixture_k7"],
+		"result_admixture_k8":["sample_of_this", "Sample", "this_has_admixture_k8", "Admixture_k8"],
+		"result_admixture_k9":["sample_of_this", "Sample", "this_has_admixture_k9", "Admixture_k9"],
+		"result_admixture_k10":["sample_of_this", "Sample", "this_has_admixture_k10", "Admixture_k10"],
+		"result_admixture_k11":["sample_of_this", "Sample", "this_has_admixture_k11", "Admixture_k11"],
+		"result_admixture_k12":["sample_of_this", "Sample", "this_has_admixture_k12", "Admixture_k12"],
+		"result_admixture_k13":["sample_of_this", "Sample", "this_has_admixture_k13", "Admixture_k13"],
+		"result_admixture_k14":["sample_of_this", "Sample", "this_has_admixture_k14", "Admixture_k14"],
+		"result_admixture_k16":["sample_of_this", "Sample", "this_has_admixture_k16", "Admixture_k16"],
+		"result_admixture_k17":["sample_of_this", "Sample", "this_has_admixture_k17", "Admixture_k17"],
+		"result_admixture_type":["sample_of_this", "Sample", "this_has_admixture", "Admixture", "this_is_admixtureresult", "AdmixtureResult"],
+		
+		"result_pca":["sample_of_this", "Sample", "this_has_pca", "PCA"],
+		"result_pca_world":["sample_of_this", "Sample", "this_has_pca_world", "PCA_World"],
+		"result_pca_eurasia":["sample_of_this", "Sample", "this_has_pca_eurasia", "PCA_Eurasia"],
+		"result_pca_eas":["sample_of_this", "Sample", "this_has_pca_eas", "PCA_EAS"],
+		"result_pca_africa":["sample_of_this", "Sample", "this_has_pca_africa", "PCA_Africa"],
+		"result_pca_type":["sample_of_this", "Sample", "this_has_pca", "PCA", "this_is_pcaresult", "PCAResult"],
+		
+		"result_umap":["sample_of_this", "Sample", "this_has_umap", "UMAP"],
+		"result_umap_world":["sample_of_this", "Sample", "this_has_umap_world", "UMAP_World"],
+		"result_umap_eurasia":["sample_of_this", "Sample", "this_has_umap_eurasia", "UMAP_Eurasia"],
+		"result_umap_eas":["sample_of_this", "Sample", "this_has_umap_eas", "UMAP_EAS"],
+		"result_umap_africa":["sample_of_this", "Sample", "this_has_umap_africa", "UMAP_Africa"],
+		"result_umap_type":["sample_of_this", "Sample", "this_has_umap", "UMAP", "this_is_umapresult", "UMAPResult"],
+		
+		"past_population":["this_part_of_pastpopulation", "PastPopulation"]
+	},
+	"person": {
+		"person": [],
+		"genetical_sex": ["this_is_sex", "Sex"],
+		"place": ["this_in_place", "Place"],
+		
+		"political_region": ["this_in_place", "Place", "this_in_politicalregion", "PoliticalRegion"],
+		"geographical_region": ["this_in_place", "Place", "this_in_geographicalregion", "GeographicalRegion"],
+		"cultural_region": ["this_in_place", "Place", "this_in_culture", "Culture"],
+
+		"haplogroup_y": ["this_has_haplogroupy", "HaplogroupY"],
+		"haplogroup_mt": ["this_has_haplogroupmt", "HaplogroupMt"],
+		"sample": ["sample_of_this", "Sample"],
+		"source": ["sample_of_this", "Sample", "this_published_in_source", "Source"],
+		"source_author": ["sample_of_this", "Sample", "this_published_in_source", "Source", "author_of_this", "Author"],
+
+		"result_admixture":["sample_of_this", "Sample", "this_has_admixture", "Admixture"],
+		"result_admixture_k2":["sample_of_this", "Sample", "this_has_admixture_k2", "Admixture_k2"],
+		"result_admixture_k3":["sample_of_this", "Sample", "this_has_admixture_k3", "Admixture_k3"],
+		"result_admixture_k4":["sample_of_this", "Sample", "this_has_admixture_k4", "Admixture_k4"],
+		"result_admixture_k6":["sample_of_this", "Sample", "this_has_admixture_k6", "Admixture_k6"],
+		"result_admixture_k7":["sample_of_this", "Sample", "this_has_admixture_k7", "Admixture_k7"],
+		"result_admixture_k8":["sample_of_this", "Sample", "this_has_admixture_k8", "Admixture_k8"],
+		"result_admixture_k9":["sample_of_this", "Sample", "this_has_admixture_k9", "Admixture_k9"],
+		"result_admixture_k10":["sample_of_this", "Sample", "this_has_admixture_k10", "Admixture_k10"],
+		"result_admixture_k11":["sample_of_this", "Sample", "this_has_admixture_k11", "Admixture_k11"],
+		"result_admixture_k12":["sample_of_this", "Sample", "this_has_admixture_k12", "Admixture_k12"],
+		"result_admixture_k13":["sample_of_this", "Sample", "this_has_admixture_k13", "Admixture_k13"],
+		"result_admixture_k14":["sample_of_this", "Sample", "this_has_admixture_k14", "Admixture_k14"],
+		"result_admixture_k16":["sample_of_this", "Sample", "this_has_admixture_k16", "Admixture_k16"],
+		"result_admixture_k17":["sample_of_this", "Sample", "this_has_admixture_k17", "Admixture_k17"],
+		"result_admixture_type":["sample_of_this", "Sample", "this_has_admixture", "Admixture", "this_is_admixtureresult", "AdmixtureResult"],
+		
+		"result_pca":["sample_of_this", "Sample", "this_has_pca", "PCA"],
+		"result_pca_world":["sample_of_this", "Sample", "this_has_pca_world", "PCA_World"],
+		"result_pca_eurasia":["sample_of_this", "Sample", "this_has_pca_eurasia", "PCA_Eurasia"],
+		"result_pca_eas":["sample_of_this", "Sample", "this_has_pca_eas", "PCA_EAS"],
+		"result_pca_africa":["sample_of_this", "Sample", "this_has_pca_africa", "PCA_Africa"],
+		"result_pca_type":["sample_of_this", "Sample", "this_has_pca", "PCA", "this_is_pcaresult", "PCAResult"],
+		
+		"result_umap":["sample_of_this", "Sample", "this_has_umap", "UMAP"],
+		"result_umap_world":["sample_of_this", "Sample", "this_has_umap_world", "UMAP_World"],
+		"result_umap_eurasia":["sample_of_this", "Sample", "this_has_umap_eurasia", "UMAP_Eurasia"],
+		"result_umap_eas":["sample_of_this", "Sample", "this_has_umap_eas", "UMAP_EAS"],
+		"result_umap_africa":["sample_of_this", "Sample", "this_has_umap_africa", "UMAP_Africa"],
+		"result_umap_type":["sample_of_this", "Sample", "this_has_umap", "UMAP", "this_is_umapresult", "UMAPResult"],
+
+		"present_population":["this_part_of_presentpopulation", "PresentPopulation"]
+	}
+}

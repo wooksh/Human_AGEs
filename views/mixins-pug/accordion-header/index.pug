@@ -1,0 +1,60 @@
+include /mixins-pug/toggle-arrow/index.pug
+include /mixins-pug/icon-checkbox/index.pug
+
+
+//- Call: +accordionHeader(xyz)(class="x y z")
+mixin accordion-header(targetId, title, isCollapsed = false)
+	if isCollapsed == true
+		.accordion-header.collapsable.collapsed(role="button" data-toggle="collapse" data-target="#"+targetId aria-expanded=false)&attributes(attributes)
+			h4.header-text= title
+			- var direction = 'top';
+			+toggle-arrow(direction, 0.2, 0.75)(class="accordion-arrow")
+	else
+		.accordion-header.collapsable(role="button" data-toggle="collapse" data-target="#"+targetId aria-expanded=true)&attributes(attributes)
+			h4.header-text= title
+			- var direction = 'bottom';
+			+toggle-arrow(direction, 0.2, 0.75)(class="accordion-arrow")
+
+
+mixin accordion-header-button(targetId, title, iconId, iconClass, isCollapsed = false, isButtonPressed = true, iconTitle="", classes = "")
+	.accordion-wrapper.group(role="group")
+		+icon-checkbox(iconId, iconClass, '', isButtonPressed, iconTitle = iconTitle)(class = "m-0 p-0")&attributes(attributes)
+
+		if isCollapsed == true
+			.button-accordion-header.accordion-header.collapsable.collapsed(class = classes, role="button" data-toggle="collapse" data-target="#"+targetId aria-expanded=false)&attributes(attributes)
+				h4.header-text= title
+				- var direction = 'top';
+				+toggle-arrow(direction, 0.125, 0.65)(class="accordion-arrow")
+		else 
+			.accordion-header.collapsable(class = classes, role="button" data-toggle="collapse" data-target="#"+targetId aria-expanded=true)&attributes(attributes)
+				h4.header-text= title
+				- var direction = 'bottom';
+				+toggle-arrow(direction, 0.125, 0.65)(class="accordion-arrow")
+
+
+mixin accordion-header-icon(targetId, title, iconClass, isCollapsed = false, isButtonPressed = true, classes = "")
+	.accordion-wrapper.group(class = classes, role="group")
+		i.material-icons.mr-3= iconClass
+		if isCollapsed == true
+			.accordion-header.collapsable.collapsed(role="button" data-toggle="collapse" data-target="#"+targetId aria-expanded=false)&attributes(attributes)
+				h4.header-text= title
+				- var direction = 'top';
+				+toggle-arrow(direction, 0.125, 0.65)(class="accordion-arrow")
+		else 
+			.accordion-header.collapsable(role="button" data-toggle="collapse" data-target="#"+targetId aria-expanded=true)&attributes(attributes)
+				h4.header-text= title
+				- var direction = 'bottom';
+				+toggle-arrow(direction, 0.125, 0.65)(class="accordion-arrow")
+
+
+mixin accordion-header-settings(targetId, title, isCollapsed = false)
+	if isCollapsed == true
+		.accordion-header.collapsable.collapsed(role="button" data-toggle="collapse" data-target="#"+targetId)&attributes(attributes)
+			h4.header-text= title
+			- var direction = 'top';
+			+toggle-arrow(direction, 0.05, 0.5)(class="accordion-arrow")
+	else
+		.accordion-header.collapsable(role="button" data-toggle="collapse" data-target="#"+targetId)&attributes(attributes)
+			h4.header-text= title
+			- var direction = 'bottom';
+			+toggle-arrow(direction, 0.05, 0.5)(class="accordion-arrow")

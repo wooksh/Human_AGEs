@@ -1,0 +1,5 @@
+//- help help_outline info_outline
+mixin tooltip(id, placement="top", iconName="help_outline")
+    //- title=text .btn(type="button") 
+    button.archeo-tooltip(tooltip-id=id, type="button", data-tippy-placement=placement)
+        i.material-icons.tooltip-icon= iconName

@@ -1,0 +1,1 @@
+grunt --plugins=bt-tooltip-errors,bt-selectpicker --languages=en,pl

@@ -1,0 +1,48 @@
+{
+    "Remains": {
+		"selectionSet": [
+			"site(lang: $lang)",
+			"sex(lang: $lang)",
+			"developmental_stages(lang: $lang)",
+			"coordinates",
+			"id",
+			"dating",
+			"haplogroup_y",
+			"haplogroup_mt",
+			"age",
+			"base_haplogroups_y",
+			"base_haplogroups_mt"
+		]
+	},
+	"Person": {
+		"selectionSet": [
+			"sex(lang: $lang)",
+			"coordinates",
+			"id",
+			"haplogroup_y",
+			"haplogroup_mt"
+		]
+	},
+    "Place": {
+		"selectionSet": [
+			"name(lang: $lang)",
+			"coordinates {latitude, longitude}",
+			"id",
+			"is_archaeological_site"
+		]
+	},
+    "UsePhase": {
+		"selectionSet": [
+			"coordinates",
+			"id",
+			"dating",
+			"culture(lang: $lang)",
+			"function(lang: $lang)"
+		]
+	},
+	"default": {
+		"variablesDeclarations": {
+			"$lang": "String"
+		}
+	}
+}

@@ -1,0 +1,38 @@
+extends /templates/basic/index.pug
+include includes/tile.pug
+//- include /mixins- /dropdown/dropdown. 
+//-include /mixins-pug/select/select.pug
+
+block append links
+    include /assets/examples-styles.pug
+    script. 
+        window.exampleId = "!{exampleId}";
+
+
+block content
+    include includes/tilesData.pug 
+    #content-wrapper
+        #content
+            #team-section.mb-5.container-fluid
+                h1.mb-4 Examples
+                .mb-4
+                    h5.d-inline.font-weight-normal.mr-3 Filter by
+                    .examples-filters
+                        //-
+                            span.layer-types
+                                each tag in ['heatmap', 'piecharts', 'tags', 'points']
+                                    button(type="button" class="example-tag-toggle btn btn-primary mr-2" data-toggle="button" aria-pressed="false" autocomplete="off")= tag
+                        span.tags
+                            each tag in ["heatmap", "points", "piecharts", "tags", "distance clustering", "region clustering", "cultures", "haplogroups", "admixture", "multiple periods", "multiple attributes"]
+                                button(type="button" class="example-tag-toggle btn btn-primary mr-2" data-toggle="button" aria-pressed="false" autocomplete="off")= tag 
+
+                .content-fluid.mb-4
+                    .grid
+                        - var descr = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi delectus facilis dolorum officiis nemo tempora ad non, aliquid sed similique cupiditate inventore impedit quae odio dolore soluta explicabo nisi laborum?'
+                        each tileData in tilesData
+                            +tile(tileData.id, tileData.image, tileData.sessionLink, tileData.title, tileData.description, tileData.content)
+
+block append scripts
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js' integrity='sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=' crossorigin='anonymous')
+    //-script(src="js/about.bundle.js")
+    include /assets/examples-scripts.pug

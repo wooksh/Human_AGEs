@@ -1,0 +1,8 @@
+mixin years-range-spinner()
+	.years-range-spinner.d-flex&attributes(attributes)
+		//- .w-100
+		span.input-years-from.w-100
+			input.form-control-sm.w-100.plain-text-input(value=0, type='text', autocomplete="off", is_year="")
+		hr.range-line.w-25
+		span.input-years-to.w-100
+			input.form-control-sm.w-100.plain-text-input(value=0, type='text', autocomplete="off", is_year="")

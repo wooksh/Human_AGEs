@@ -1,0 +1,51 @@
+{
+  "_from": "webpack-pug-manifest-plugin@^0.1.0",
+  "_id": "webpack-pug-manifest-plugin@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha512-xUp52ikYRJugPUOOFbwAf801zAL72vQgUAZzNwwWJNTmBkm8tjlQ48ECMDhKcg3AkLaIRC46I04dPqzY55hS3A==",
+  "_location": "/webpack-pug-manifest-plugin",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "webpack-pug-manifest-plugin@^0.1.0",
+    "name": "webpack-pug-manifest-plugin",
+    "escapedName": "webpack-pug-manifest-plugin",
+    "rawSpec": "^0.1.0",
+    "saveSpec": null,
+    "fetchSpec": "^0.1.0"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/webpack-pug-manifest-plugin/-/webpack-pug-manifest-plugin-0.1.0.tgz",
+  "_shasum": "0ebc475ff4c39b6611613059aa5db5f9f0c01a69",
+  "_spec": "webpack-pug-manifest-plugin@^0.1.0",
+  "_where": "/home/alcedo/Desktop/Praca/Praca/IChB/portal-piastowie/Website/nodejs",
+  "author": {
+    "name": "TC Schiller",
+    "url": "https://www.tcschiller.com"
+  },
+  "bugs": {
+    "url": "https://github.com/tcschiller/webpack-pug-manifest-plugin/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Webpack plugin that outputs script tags into a pug formatted file",
+  "homepage": "https://github.com/tcschiller/webpack-pug-manifest-plugin#readme",
+  "keywords": [
+    "webpack",
+    "pug",
+    "manifest",
+    "plugin"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "webpack-pug-manifest-plugin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tcschiller/webpack-pug-manifest-plugin.git"
+  },
+  "version": "0.1.0"
+}

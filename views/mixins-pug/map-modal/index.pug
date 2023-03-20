@@ -1,0 +1,36 @@
+include /mixins-pug/accordion-header/index.pug
+include /mixins-pug/dropdown/index.pug
+include /mixins-pug/textbox/index.pug
+include /mixins-pug/custom-button/index.pug
+
+
+
+#column-toggle-dropdown-attribute-template.hidden.dropdown-item.attribute-wrapper.dropdown-item-toggle(attribute-id='')
+    input.mr-3(type='checkbox')
+    label Text
+
+
+#column-toggle-dropdown-attribute-type-template.hidden.dropdown.dropright
+    .dropdown-item.dropdown-toggle.attribute-type-wrapper(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false') Text
+    .dropdown-menu
+
+
+li(id='features-dataset-template' class=`dataset object-container hidden`)
+    +accordion-header-button('features-dataset-accordion-template', 'Dataset #1', '', '')(class="handle accordion-subsection-header collapsed")
+    .collapse(id='features-dataset-accordion-template')
+        .sidebar-setting.object-content.palette-bg-color-light-bg
+            .subsection.d-inline-block
+                +icon-textbox('features-dataset-search', 'Filter by attributes...', 'filter_list', 'samples-filter')
+
+            .subsection.d-inline-block
+
+                .column-toggle-dropdown.dropdown.mt-3
+                    +custom-button("Show columns", "visibility")(class="column-toggle-dropdown palette-primary no-focus" type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    .dropdown-menu
+
+            .subsection.samples-section
+                .table-wrapper 
+                    .table
+
+    .features-map-modal.map-modal.loading.hidden(id="features-map-modal-template" title="Cluster details")
+        .map-modal-content.p-2.pr-3

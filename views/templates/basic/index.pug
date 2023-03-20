@@ -1,0 +1,105 @@
+doctype html
+html(lang=lang)
+	head
+		block metas
+			meta(charset="utf-8")
+			//-meta(http-equiv="content-type" content="text/html; charset=utf-8")
+			meta(name="viewport", content="width=device-width, initial-scale=1.0")
+			meta(http-equiv="X-UA-Compatible" content="text/html; charset=utf-8")
+			meta(name="robots" content="noindex")
+		block links
+			link(rel="shortcut icon", href="#")
+			//-link(rel="prefetch,stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" as="style") 
+			link(rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons") 
+			//- Material icons; SRI key?
+			//- Bootstrap core CSS
+			//-link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha256-aAr2Zpq8MZ+YA/D6JtRD3xtrwpEz2IqOS+pWD/7XKIw=" crossorigin="anonymous")
+			
+			//- Trying to load newer bootrstrap
+			link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css' integrity='sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2' crossorigin='anonymous')
+			//-link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x' crossorigin='anonymous')
+			
+			link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css", integrity="sha256-JHGEmB629pipTkMag9aMaw32I8zle24p3FpsEeI6oZU=", crossorigin="anonymous")
+
+			link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css' integrity='sha256-rByPlHULObEjJ6XQxW/flG2r+22R5dKiAoef+aXWfik=' crossorigin='anonymous')
+			link(rel='stylesheet' href='https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.17/dist/css/bootstrap-select.min.css' integrity='sha256-VMPhaMmJn7coDSbzwqB0jflvb+CDnoAlfStC5RogOQo=' crossorigin='anonymous')
+
+			include /assets/template_basic-styles.pug
+			include /assets/modules-styles.pug
+
+			//- Load passed template variables -//
+			script. 
+				window.metadata = JSON.parse( !{JSON.stringify(metadata).replace(/<\//g, '<\\/')} );
+				window.name = "!{pageName.replace(/<\//g, '<\\/')}";
+				window.lang = "!{lang.replace(/<\//g, '<\\/')}";
+				window.dictionary = JSON.parse( !{JSON.stringify(dictionary).replace(/<\//g, '<\\/')} );
+
+		block title
+			title Human Archeogenomics
+
+	body.loading
+		block nav
+			include includes/navbar.pug
+
+		#loading-page-wrapper
+			block loading-page
+			
+		#site-wrapper
+			block left-sidebar
+			
+			main(role="main")
+				block content
+
+			block right-sidebar
+
+		block footer
+			include includes/footer.pug
+
+		block hidden
+
+		block scripts
+			//-script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", crossorigin="anonymous")
+			//-script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js' integrity='sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=' crossorigin='anonymous')
+			
+			script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js", integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=", crossorigin="anonymous")
+			//-script(src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous")
+			
+			script(defer src='https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js' integrity='sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=' crossorigin='anonymous')
+			script(defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mousewheel/3.1.13/jquery.mousewheel.min.js", integrity="sha256-jnOjDTXIPqall8M0MyTSt98JetJuZ7Yu+1Jm7hLTF7U=", crossorigin="anonymous")
+			script(defer src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.js", integrity="sha256-AKEjDiK2rz+d8TSPLNVNydvgJvOkG5veMAnc79FkiuE=", crossorigin="anonymous")
+
+			//- ---script(defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js", integrity="sha256-ZvOgfh+ptkpoa2Y4HkRY28ir89u/+VRyDE7sB7hEEcI=", crossorigin="anonymous")
+			//- ---script(defer src='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.bundle.min.js' integrity='sha256-Xt8pc4G0CdcRvI0nZ2lRpZ4VHng0EoUDMlGcBSQ9HiQ=' crossorigin='anonymous')
+			
+			script(src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous")
+			//-script(defer src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer")
+			//-script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.3.3/umd/popper.min.js" integrity="sha512-ET2VjqOvCOCo7OQIBbY/HSXcBZdQ4t5rMhyHZdwuro/FKgcbNGI9YB3adCM7tiwHNl14SFdU1/TrEM+odXzgAw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+			script(src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous")
+			
+			//-script(src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/js/bootstrap.bundle.min.js" integrity="sha512-iceXjjbmB2rwoX93Ka6HAHP+B76IY1z0o3h+N1PeDtRSsyeetU3/0QKJqGyPJcX63zysNehggFwMC/bi7dvMig==" crossorigin="anonymous" referrerpolicy="no-referrer")
+
+			//- Trying to load newer bootstrap
+			//-script(src='https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js' integrity='sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN' crossorigin='anonymous')
+			//-script(src='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js' integrity='sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s' crossorigin='anonymous')
+
+			//-script(src='https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js' integrity='sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p' crossorigin='anonymous')
+			//-script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js' integrity='sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4' crossorigin='anonymous')
+			
+			script(defer src='https://cdn.jsdelivr.net/npm/json5@2.1.3/dist/index.min.js' integrity='sha256-b6dyH0K/nE4K1/d36PNAa96t19du7JXpzpcS9K3o4Sg=' crossorigin='anonymous')
+			
+			script(defer src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js' integrity='sha256-KM512VNnjElC30ehFwehXjx1YCHPiQkOPmqnrWtpccM=' crossorigin='anonymous')
+			
+			script(src='https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.17/dist/js/bootstrap-select.min.js' integrity='sha256-QOE02Glo1C1gHzP96JOaxyIMt4XSFv/exZaYLY4dwO0=' crossorigin='anonymous')
+			if lang === 'pl'
+				script( src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.13.17/js/i18n/defaults-pl_PL.js" integrity="sha256-aWaZCaqYgueDr4CzKzw7FlKCuaoJEwOOM9LJ79aSmlk=" crossorigin="anonymous")
+
+			include /assets/archeo_requests-scripts.pug
+			include /assets/archeo_utilities-scripts.pug
+			include /assets/archeo_session-scripts.pug
+			include /assets/archeo_cache-scripts.pug
+			include /assets/archeo_events-scripts.pug
+
+			include /assets/template_basic-scripts.pug
+
+			

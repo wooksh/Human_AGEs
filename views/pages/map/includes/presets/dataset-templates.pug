@@ -1,0 +1,78 @@
+div
+	li(id='dataset-template' class=`dataset object-container` style='display: none;' )&attributes(attributes)
+		+accordion-header-button('dataset-template-accordion', 'Dataset', 'file_download', 'file_download', false, true, iconTitle="Download the dataset associated data")(class="handle accordion-subsection-header collapsed")
+		.collapse(id='dataset-template-accordion')
+			.sidebar-setting.object-content.palette-bg-color-light-bg
+				.subsection
+					h6.subsection-header.mt-0 Sampling
+						+tooltip("tp_ld-dt-samp")
+					input.setting(id='dataset-sample-size-slider' type="text" class="js-range-slider")
+					+custom-button('Sample dataset', 'colorize', null, true, "Sampling dataset...")(class='sample-button mb-1 mt-2 w-100 palette-tertiary-light no-focus' title="Randomly sample dataset")
+					+custom-button('Shuffle samples', 'shuffle', null, true, "Shuffling samples...")(class='shuffle-button mb-1 mt-2 w-100 palette-tertiary-light no-focus' title="Shuffle dataset's samples")
+					p.sampling-message-text.message-text.mt-2
+				.subsection
+					h6.subsection-header Dataset name
+					+icon-textbox('dataset-name-textbox', 'Type in new dataset name...', 'edit')
+
+				.subsection
+					h6.subsection-header Metadata
+					table.table.table-striped.table-bordered.meta-table
+						tbody
+							tr
+								th(scope='row') Dating range
+								td#dataset-dating
+							tr
+								th(scope='row') Size
+								td
+									span#dataset-size
+									span &nbsp;features
+							tr
+								th(scope='row') Data source
+								td#dataset-database
+							tr
+								th(scope='row') Object type
+								td#dataset-object-type
+
+				.subsection
+					h6.subsection-header Dataset query
+						+tooltip("tp_ld-dt-query")
+					textarea#dataset-query-textarea.form-control.dataset-query-textarea(rows=10 readonly)
+					.mt-2.clearfix
+						+custom-button('Copy', 'content_copy')(id="dataset-copy-query" class='mb-0 float-right palette-tertiary-light no-focus' title="Copy dataset query to clipboard")
+
+div
+	li(id='user-dataset-template' class=`dataset object-container` style='display: none;' )&attributes(attributes)
+		+accordion-header('user-dataset-template-accordion', 'User dataset')(class="handle accordion-subsection-header collapsed")
+		.collapse(id='user-dataset-template-accordion')
+			.sidebar-setting.object-content.palette-bg-color-light-bg
+				.subsection
+					h6.subsection-header.mt-0 Sampling
+						+tooltip("tp_ld-dt-samp")
+					input.setting(id='user-dataset-sample-size-slider' type="text" class="js-range-slider")
+					+custom-button('Sample dataset', 'colorize', null, true, "Sampling dataset...")(class='sample-button mb-1 mt-2 w-100 palette-tertiary-light no-focus' title="Randomly sample dataset")
+					+custom-button('Shuffle samples', 'shuffle', null, true, "Shuffling samples...")(class='shuffle-button mb-1 mt-2 w-100 palette-tertiary-light no-focus' title="Shuffle dataset's samples")
+					p.sampling-message-text.message-text.mt-2
+				.subsection
+					h6.subsection-header Dataset name
+					+icon-textbox('user-dataset-name-textbox', 'Type in new dataset name...', 'edit')
+
+				.subsection
+					h6.subsection-header Metadata
+					table.table.table-striped.table-bordered.meta-table
+						tbody
+							tr
+								th(scope='row') Dating range
+								td#user-dataset-dating
+							tr
+								th(scope='row') Size
+								td
+									span#user-dataset-size
+									span &nbsp;features
+							tr
+								th(scope='row') Data source
+								td
+									span user
+							tr
+								th(scope='row') Object type
+								td
+									span custom

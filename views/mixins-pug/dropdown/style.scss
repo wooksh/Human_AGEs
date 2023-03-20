@@ -1,0 +1,43 @@
+@import "mixins-sass/colors";
+
+
+.bootstrap-select {
+    background-color: $background-color-light;
+    display: flex;
+    width: 100% !important;
+
+    .bs-searchbox {
+        margin-bottom: 0.5rem;
+    }
+
+    .dropdown-item {
+        font-size: 0.9rem;
+        padding: 0.4rem 1rem;
+
+        &.active, &:active {
+            color: $text-color-light;
+            background-color: $palette-secondary-color-darker;
+        }
+
+        .text > small.text-muted {
+            display: block;
+            font-size: 0.8em;
+            padding-left: 0;
+        }
+    }
+
+    .btn {
+        color: $text-color-dark;
+        border-radius: 0;
+    }
+
+    & > .dropdown-toggle {
+        &:after {
+            color: $text-color-dark;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 .2rem palette-secondary-color-darker-with-opacity(.25);
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "RemainsAADR": {
+        "": {},
+        "sex": {
+            "name": "Sex",
+            "entity": "Sex",
+            "selected": false
+        },
+        "haplogroup_y": {
+			"name": "Haplogroup Y",
+            "entity": "HaplogroupY",
+			"type": "tree",
+            "selected": false
+        },
+        "haplogroup_mt": {
+			"name": "Haplogroup Mt",
+            "entity": "HaplogroupMt",
+			"type": "tree",
+            "selected": false
+        },
+        "results": {
+            "isOptgroup": true,
+            "name": "Analysis results",
+            "options": {
+                "admixture": {
+                    "name": "Admixture",
+                    "entity": "Admixture",
+                    "type": "admixture",
+                    "selected": false
+                }
+            }
+        }
+    },
+    "PersonAADR": {
+        "": {},
+        "sex": {
+            "name": "Sex",
+            "entity": "Sex",
+            "selected": false
+        },
+        "haplogroup_y": {
+			"name": "Haplogroup Y",
+            "entity": "HaplogroupY",
+			"type": "tree",
+            "selected": false
+        },
+        "haplogroup_mt": {
+			"name": "Haplogroup Mt",
+            "entity": "HaplogroupMt",
+			"type": "tree",
+            "selected": false
+        }
+    },
+    "PersonEMPOP": {
+        "": {},
+        "haplogroup_mt": {
+			"name": "Haplogroup Mt",
+            "entity": "HaplogroupMt",
+			"type": "tree",
+            "selected": false
+        }
+    }
+}

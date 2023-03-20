@@ -1,0 +1,28 @@
+@import "mixins-sass/colors";
+
+
+button.archeo-tooltip {
+    //color: $text-color-dark-faded;
+    //color: $palette-tertiary-color-light;
+    
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+    &:hover {
+        background-color: transparent;
+    }
+
+    &.focus, &:focus {
+        box-shadow: none;
+        outline: none;
+    }
+}
+
+.tooltip-icon {
+    color: rgb(130,130,130);
+}

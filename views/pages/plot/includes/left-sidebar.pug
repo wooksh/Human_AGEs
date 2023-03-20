@@ -1,0 +1,67 @@
+include /mixins-pug/accordion-header/index.pug
+include /mixins-pug/icon-text-list/index.pug
+include /mixins-pug/toggle-arrow/index.pug
+include /mixins-pug/icon-radiobuttons/index.pug
+include /mixins-pug/dropdown/index.pug
+include /mixins-pug/custom-button/index.pug
+include /mixins-pug/years-range-spinner/index.pug
+include /mixins-pug/switch/index.pug
+include /mixins-pug/textbox/index.pug
+include /mixins-pug/tooltip/index.pug
+
+include /pages/map/includes/presets/dictionaries/datasets.pug
+include /pages/map/includes/presets/dictionaries/sessions.pug
+
+
+#left-sidebar.sidebar-wrapper.left.active
+	nav.sidebar
+		#queries-section.section 
+			- var targetId = 'query-creator';
+			+accordion-header(targetId, 'Database queries')(class="section-header collapsed")
+			.collapse(id=targetId)
+				.palette-primary-color-lightest-bg.section-content
+					.subsection
+						h6.subsection-header.mt-0 Choose data source
+							+tooltip("tp_db-q-db")
+						+dropdown("select-query-dataset", datasetsDic, null, null)
+
+					.subsection
+						h6.subsection-header Database query filters
+							+tooltip("tp_db-q-flt")
+						+custom-button("Query builder", "filter_list", 0)(id="query-filters-button" class="palette-primary no-focus w-100 justify-content-center mx-auto mb-2" data-toggle='modal' data-target='#query-builder-modal' title="Define query filters")
+
+					.subsection
+						h6.subsection-header Database query content
+							+tooltip("tp_db-q-body")
+						textarea#query-call-textarea.form-control(rows=10)
+
+						+custom-button("Send query", "search", null, true, "Fetching dataset...")(id="query" class="palette-primary no-focus w-100 justify-content-center mx-auto mt-2 mb-0" title="Send the query and import dataset")
+						
+						p#query-call-error-text.error-text
+						p#query-call-warning-text.warning-text
+
+		hr.section-breaker
+
+		#datasets-section.section 
+			- var targetId = 'imported-datasets';
+			+accordion-header(targetId, 'Loaded datasets')(class="section-header")
+			.show.collapse(id=targetId)
+				.palette-primary-color-lightest-bg.section-content
+					.subsection
+						div(id='dataset-trash' class=`accordion-header accordion-subsection-header trash-container`) 
+							span Drop a dataset here to remove it
+								i.material-icons.ml-2= 'delete'
+
+					h6.subsection-header.mt-2
+
+					#datasets-container.subsection
+						.absence-prompt No dataset is available
+
+
+	//- apps library_books library_books storage swap_vertical_circle	
+	.sidebar-trigger(title="Toggle data management panel")
+		.label 
+			span 
+				| data management
+				i.material-icons.ml-3 storage
+		+toggle-arrow("left")(class="sidebar-arrow active")

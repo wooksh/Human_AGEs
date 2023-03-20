@@ -1,0 +1,50 @@
+mixin nav-item(lang, ref, name)
+    if ref === pageName
+        li.nav-item.active&attributes(attributes)
+            a.nav-link(href="/" + lang + "/" + ref)= name
+                span.sr-only (current)
+    else
+        li.nav-item&attributes(attributes)
+                a.nav-link(href="/" + lang + "/" + ref)= name
+
+
+mixin nav-dropdown-item(lang, ref, name)
+    if ref === pageName
+        a.dropdown-item(href="/" + lang + "/" + ref)= name
+    else
+        a.dropdown-item(href="/" + lang + "/" + ref)= name
+
+
+
+nav(class="navbar navbar-expand-md navbar-dark bg-dark fixed-top px-3")
+    a.navbar-brand(href=`/${lang}/home`) Archeogenomics.eu&nbsp;&nbsp;|&nbsp;&nbsp;Human AGEs
+    button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbar-wrapper", aria-controls="#navbar-wrapper", aria-expanded="false", aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+    
+    #navbar-wrapper.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+            +nav-item(lang, `home`, "Main page")(class='mx-2')
+
+            li.nav-item.dropdown
+                .nav-link.dropdown-toggle(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    | Applications
+                .dropdown-menu.bg-dark(aria-labelledby='navbar-browse')
+                    +nav-dropdown-item(lang, `map`, "Interactive map")
+                    +nav-dropdown-item(lang, `plot`, "Interactive plot")
+
+            //-+nav-item(lang, `browser`, "Browse & Download")
+
+            li.nav-item.dropdown
+                .nav-link.dropdown-toggle(data-toggle='dropdown' aria-haspopup='true' aria-expanded='false')
+                    | Help
+                .dropdown-menu.bg-dark(aria-labelledby='navbar-browse')
+                    +nav-dropdown-item(lang, "examples", "Examples")
+                    //-+nav-dropdown-item(lang, "examples", "Examples & Tutorials")
+                    //-+nav-dropdown-item(lang, "faq", "Manual")                                            
+                    +nav-dropdown-item(lang, "faq", "FAQ")
+
+            //-+nav-item(lang, `about`, "About")(class='mx-2')
+            +nav-item(lang, `contact`, "Contact")(class='mx-2')
+
+        ul.navbar-nav.ml-auto
+            block navright
